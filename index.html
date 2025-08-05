@@ -3,28 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sovereign Debt Digest | Kepler Karst Law Firm</title>
-    <meta name="description" content="Weekly analysis of sovereign debt developments, restructuring cases, and international financial law insights from Kepler Karst.">
-    <meta name="keywords" content="sovereign debt, restructuring, IMF, World Bank, Paris Club, debt sustainability, international law">
-    <meta property="og:title" content="Sovereign Debt Digest | Kepler Karst Law Firm">
-    <meta property="og:description" content="Weekly analysis of sovereign debt developments and international financial law insights">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="[URL]">
-    <meta name="twitter:card" content="summary_large_image">
-    
+    <title>Sovereign Debt Weekly Digests | Kepler Karst</title>
     <style>
         :root {
             --e-global-color-primary: #000000;
             --e-global-color-secondary: #F1EEA4;
             --e-global-color-text: #000000;
-            --e-global-color-accent: #000000;
-            --e-global-color-eafa1f3: #00000024;
-            --e-global-color-04963ab: #FFFFFF;
             --e-global-typography-primary-font-family: "Blacker Pro";
             --e-global-typography-primary-font-weight: 700;
-            --e-global-typography-secondary-font-family: "Blacker Pro";
-            --e-global-typography-secondary-font-weight: 400;
-            --e-global-typography-accent-font-weight: 500;
         }
         
         * {
@@ -44,9 +30,6 @@
             background-color: var(--e-global-color-secondary);
             padding: 1rem 2rem;
             border-bottom: 2px solid var(--e-global-color-primary);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
         
         .header-content {
@@ -62,7 +45,6 @@
             font-weight: var(--e-global-typography-primary-font-weight);
             font-size: 1.5rem;
             color: var(--e-global-color-primary);
-            text-decoration: none;
         }
         
         .logo-subtitle {
@@ -71,80 +53,26 @@
             margin-top: -0.2rem;
         }
         
-        .nav {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-        
-        .nav a {
-            color: var(--e-global-color-primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
-        }
-        
-        .nav a:hover {
-            opacity: 0.7;
-        }
-        
-        .cta-button {
-            background-color: var(--e-global-color-primary);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            background-color: #333;
-        }
-        
         .hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23f1eea4"/><text x="600" y="300" text-anchor="middle" font-family="Arial" font-size="48" fill="%23000">#BRAVE ADVOCACY</text></svg>');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
-            padding: 6rem 2rem;
+            padding: 4rem 2rem;
         }
         
         .hero h1 {
             font-family: var(--e-global-typography-primary-font-family);
             font-weight: var(--e-global-typography-primary-font-weight);
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
         
         .hero .subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+            font-size: 1.2rem;
             opacity: 0.9;
-        }
-        
-        .hero .description {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            opacity: 0.8;
-        }
-        
-        .hero-cta {
-            display: inline-block;
-            background-color: var(--e-global-color-secondary);
-            color: var(--e-global-color-primary);
-            padding: 1rem 2rem;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            transition: transform 0.3s ease;
-        }
-        
-        .hero-cta:hover {
-            transform: translateY(-2px);
         }
         
         .container {
@@ -153,196 +81,58 @@
             padding: 2rem;
         }
         
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
+        .digests {
+            margin: 3rem 0;
         }
         
-        .feature {
-            background-color: #f8f8f8;
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--e-global-color-primary);
+        .digest-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            transition: box-shadow 0.3s ease;
         }
         
-        .feature h3 {
-            font-family: var(--e-global-typography-primary-font-family);
-            font-weight: var(--e-global-typography-primary-font-weight);
-            margin-bottom: 1rem;
-            color: var(--e-global-color-primary);
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--e-global-color-primary);
-        }
-        
-        .latest-digest {
-            background-color: var(--e-global-color-secondary);
-            padding: 3rem 2rem;
-            margin: 4rem 0;
-            border-radius: 8px;
-        }
-        
-        .latest-digest h2 {
-            font-family: var(--e-global-typography-primary-font-family);
-            font-weight: var(--e-global-typography-primary-font-weight);
-            margin-bottom: 1rem;
-            color: var(--e-global-color-primary);
-            text-align: center;
-        }
-        
-        .digest-preview {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            margin: 2rem 0;
+        .digest-item:hover {
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
+        .digest-item h3 {
+            font-family: var(--e-global-typography-primary-font-family);
+            font-weight: var(--e-global-typography-primary-font-weight);
+            margin-bottom: 0.5rem;
+        }
+        
+        .digest-item h3 a {
+            color: var(--e-global-color-primary);
+            text-decoration: none;
+        }
+        
+        .digest-item h3 a:hover {
+            text-decoration: underline;
+        }
+        
         .digest-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
             font-size: 0.9rem;
             color: #666;
-        }
-        
-        .digest-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-        
-        .stat {
-            text-align: center;
-            padding: 1rem;
-            background-color: #f8f8f8;
-            border-radius: 4px;
-        }
-        
-        .stat-number {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--e-global-color-primary);
-        }
-        
-        .stat-label {
-            font-size: 0.8rem;
-            color: #666;
-        }
-        
-        .about-section {
-            margin: 4rem 0;
-            padding: 3rem 0;
-            border-top: 1px solid #e0e0e0;
-        }
-        
-        .about-section h2 {
-            font-family: var(--e-global-typography-primary-font-family);
-            font-weight: var(--e-global-typography-primary-font-weight);
-            margin-bottom: 2rem;
-            color: var(--e-global-color-primary);
-            text-align: center;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        .about-text p {
             margin-bottom: 1rem;
-        }
-        
-        .about-image {
-            background-color: var(--e-global-color-secondary);
-            height: 300px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--e-global-typography-primary-font-family);
-            font-weight: var(--e-global-typography-primary-font-weight);
-            color: var(--e-global-color-primary);
-            font-size: 1.5rem;
         }
         
         .footer {
             background-color: var(--e-global-color-primary);
             color: white;
             text-align: center;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .footer-section {
-            margin-bottom: 2rem;
-        }
-        
-        .footer h3 {
-            font-family: var(--e-global-typography-primary-font-family);
-            font-weight: var(--e-global-typography-primary-font-weight);
-            margin-bottom: 1rem;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 1rem 0;
-        }
-        
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            opacity: 1;
+            padding: 2rem;
+            margin-top: 3rem;
         }
         
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
-            .nav {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .digest-meta {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
+            .container {
+                padding: 1rem;
             }
         }
     </style>
@@ -350,120 +140,39 @@
 <body>
     <header class="header">
         <div class="header-content">
-            <a href="/" class="logo">
+            <div class="logo">
                 KEPLER—KARST<br>
                 <span class="logo-subtitle">LAW FIRM</span>
-            </a>
-            <nav class="nav">
-                <a href="#about">About</a>
-                <a href="#latest">Latest Digest</a>
-                <a href="#features">Features</a>
-                <a href="/weekly-digest.html" class="cta-button">View Latest</a>
+            </div>
+            <nav>
+                <span style="font-weight: bold; color: var(--e-global-color-primary);">Sovereign Debt Weekly</span>
             </nav>
         </div>
     </header>
 
     <section class="hero">
         <h1>#BRAVE ADVOCACY</h1>
-        <p class="subtitle">Sovereign Debt Digest</p>
-        <p class="description">Weekly analysis of the most relevant sovereign debt developments, restructuring cases, and international financial law insights from leading global sources.</p>
-        <a href="/weekly-digest.html" class="hero-cta">Read Latest Digest</a>
+        <p class="subtitle">Sovereign Debt Weekly Digests</p>
     </section>
 
     <main class="container">
-        <section class="features">
-            <div class="feature">
-                <div class="feature-icon">📊</div>
-                <h3>Comprehensive Coverage</h3>
-                <p>Analysis of 10-20 most relevant sovereign debt developments each week, sourced from leading financial publications and official institutions.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🎯</div>
-                <h3>Expert Scoring</h3>
-                <p>Rigorous relevance scoring system ensures only the most impactful developments make the cut, with detailed metrics and analysis.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">⚖️</div>
-                <h3>Legal Expertise</h3>
-                <p>Insights from Kepler Karst's expertise in restructuring, insolvency, and sovereign finance, providing context beyond the headlines.</p>
-            </div>
-        </section>
+        <section class="digests">
+            <h2 style="font-family: var(--e-global-typography-primary-font-family); font-weight: var(--e-global-typography-primary-font-weight); margin-bottom: 2rem; color: var(--e-global-color-primary);">Available Digests</h2>
 
-        <section id="latest" class="latest-digest">
-            <h2>Latest Weekly Digest</h2>
-            <div class="digest-preview">
-                <div class="digest-meta">
-                    <span>Week of [DATE] to [DATE]</span>
-                    <span>Published [DATE]</span>
-                </div>
-                <h3>Key Highlights This Week</h3>
-                <p>This week's digest covers significant developments in sovereign debt restructuring, including [KEY TOPICS]. The analysis includes [NUMBER] articles from [NUMBER] sources, with particular focus on [SPECIFIC AREAS].</p>
-                
-                <div class="digest-stats">
-                    <div class="stat">
-                        <div class="stat-number">15</div>
-                        <div class="stat-label">Articles Analyzed</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">8</div>
-                        <div class="stat-label">Countries Covered</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">3</div>
-                        <div class="stat-label">Restructuring Cases</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">2</div>
-                        <div class="stat-label">IMF Programs</div>
-                    </div>
-                </div>
-                
-                <a href="/weekly-digest.html" class="cta-button" style="display: inline-block; margin-top: 1rem;">Read Full Digest</a>
-            </div>
-        </section>
+            <article class="digest-item">
+                <h3><a href="05082025.html" target="_blank">Sovereign Debt Weekly — 29-07-2025 to 04-08-2025</a></h3>
+                <div class="digest-meta">Published: August 5, 2025</div>
+                <p>Weekly digest covering sovereign debt developments including Zambia's IMF extension request, Argentina's reserve targets adjustment, and climate-resilience financing in Sri Lanka.</p>
+            </article>
 
-        <section id="about" class="about-section">
-            <h2>About Sovereign Debt Digest</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>The Sovereign Debt Digest is Kepler Karst's weekly analysis of the most significant developments in sovereign debt markets, restructuring cases, and international financial law.</p>
-                    
-                    <p>Our team monitors over 50 leading sources including Financial Times, Bloomberg, Reuters, IMF, World Bank, and specialized publications to bring you the most relevant insights each week.</p>
-                    
-                    <p>Using our proprietary scoring system, we identify the top 20 most impactful developments, providing concise analysis of restructuring progress, debt sustainability metrics, innovative instruments, and forward-looking implications.</p>
-                    
-                    <p>This digest serves as an essential resource for legal professionals, financial institutions, government officials, and anyone with an interest in sovereign debt markets and international financial law.</p>
-                </div>
-                <div class="about-image">
-                    #BRAVE ADVOCACY<br>
-                    <span style="font-size: 1rem; font-weight: 400;">Sovereign Debt Expertise</span>
-                </div>
-            </div>
+            <!-- Add more digests here as they become available -->
         </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Kepler Karst Law Firm</h3>
-                <p>Leading global law firm specialized in restructuring and insolvencies, special situations, sovereign debt, and white collar crime.</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <div class="footer-links">
-                    <a href="/weekly-digest.html">Latest Digest</a>
-                    <a href="https://www.keplerkarst.com/en/" target="_blank">Main Website</a>
-                    <a href="#about">About</a>
-                    <a href="#features">Features</a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <p>&copy; 2025 Kepler Karst Law Firm. All rights reserved.</p>
-                <p style="margin-top: 0.5rem; opacity: 0.8;">Weekly sovereign debt analysis and insights</p>
-            </div>
-        </div>
+        <p>&copy; 2025 Kepler Karst Law Firm. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Weekly sovereign debt analysis and insights</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">Generated in partnership by: Rodrigo Olivares, Laura Villarraga and Juan Giraldo</p>
     </footer>
 </body>
 </html> 
