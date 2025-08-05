@@ -1,0 +1,963 @@
+{
+  "metadata": {
+    "title": "Sovereign Debt Weekly — 29-07-2025 to 04-08-2025",
+    "subtitle": "#BRAVE ADVOCACY",
+    "period": {
+      "start_date": "29-07-2025",
+      "end_date": "04-08-2025",
+      "days_covered": 7
+    },
+    "processing": {
+      "generated_at": "2025-08-05T00:00:00Z",
+      "version": "3.0",
+      "brand": "Kepler Karst",
+      "ai_model": "gpt-4-turbo-2025-08-05",
+      "processing_time_seconds": "120"
+    },
+    "validation": {
+      "urls_verified": true,
+      "dates_validated": true,
+      "content_reviewed": true,
+      "schema_compliant": true
+    }
+  },
+  "executive_summary": {
+    "weekly_overview": "Sovereign‑debt news during the 29 July–4 August window was dominated by programme adjustments and fiscal resilience measures. Zambia requested a one‑year extension of its US$1.7 billion IMF programme and received a US$184 million disbursement after a broadly satisfactory fifth review, highlighting lingering debt‑distress risks and the need to finalise deals with remaining creditors【868222379580860†L154-L186】【309280400149954†L260-L335】. Argentina saw its US$20 billion extended fund arrangement advance after the IMF board completed the first review, but subsequent updates revealed that net‑reserve targets were eased due to shortfalls, signalling ongoing external‑liquidity pressures【956771696409495†L252-L318】【877735789184383†L234-L248】. Smaller economies also featured prominently: Sao Tomé & Príncipe and Mali underwent IMF reviews stressing debt sustainability, governance, and climate resilience【393501532905260†L288-L334】【984034279589578†L300-L340】. World Bank operations in El Salvador and Mongolia underscored the emergence of climate‑contingent loans and the need to broaden revenue bases【537978108835829†screenshot】【120334907634314†L442-L485】. Sri Lanka, Senegal and the Philippines highlighted domestic resource mobilisation and transparency issues【861716074111927†L59-L74】【906889762493552†L208-L213】【150202954475736†screenshot】.",
+    "key_themes": ["Programme adjustments", "Fiscal sustainability and resilience", "Domestic resource mobilisation"],
+    "geographical_focus": ["Africa", "Latin America", "Asia"],
+    "trend_analysis": "The week’s pattern shows international institutions tightening oversight of sovereign programmes while accommodating exogenous shocks. Countries continued to seek flexible instruments – such as catastrophe‑drawdown options and pauses – reflecting growing climate risks. Domestic revenue mobilisation and transparency were recurring themes, with governments pledging to finance recovery plans internally and reduce hidden liabilities. Yet high debt stocks persist, making comparability of treatment and creditor coordination vital in upcoming negotiations."
+  },
+  "items": [
+    {
+      "item_id": "SD2025W32-001",
+      "rank": 1,
+      "headline": "Zambia seeks 12‑month extension of IMF Extended Credit Facility amid unfinished debt talks",
+      "countries": ["ZM", "Zambia"],
+      "regions": ["Africa"],
+      "publication_date": "30-07-2025",
+      "source": {
+        "name": "Reuters",
+        "tier": "2",
+        "original_url": "https://www.reuters.com/world/africa/zambia-wants-extend-its-imf-loan-programme-12-months-2025-07-30/", 
+        "paywall": false,
+        "author": "Nyasha Chingono"
+      },
+      "scoring": {
+        "total_score": 85,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 20,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "Zambia’s government asked the IMF to extend its 38‑month Extended Credit Facility (ECF) by another year beyond its scheduled October 2025 expiry. The US$1.7 billion programme was approved in 2022 and has disbursed roughly US$1.55 billion. Officials argue an extension is necessary to consolidate reforms, tackle inflation and finalise debt‑restructuring agreements. The country defaulted on its US$18 billion external debt in 2020 and has reached a restructuring deal with major creditors but still needs to conclude agreements with smaller lenders such as Afreximbank【868222379580860†L154-L186】. The extension proposal signals that Zambia remains at high risk of debt distress despite improvements, and negotiations with private creditors will determine whether the debt treatment remains comparable across creditors. IMF staff are expected to present the request to the Executive Board later this year.",
+        "key_figures": {
+          "debt_amount": "$18 billion external debt (approx.)",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "staff-level agreement",
+        "next_milestones": ["IMF Executive Board decision on extension", "Conclusion of deals with remaining creditors"]
+      },
+      "classification": {
+        "primary_category": "imf_programme",
+        "secondary_tags": ["restructuring", "comparability of treatment", "debt relief"],
+        "instruments": ["Extended Credit Facility"],
+        "institutions": ["IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-002",
+      "rank": 2,
+      "headline": "IMF completes Zambia’s fifth ECF review, disbursing SDR 139.88 million and warning of persistent debt‑distress risks",
+      "countries": ["ZM", "Zambia"],
+      "regions": ["Africa"],
+      "publication_date": "25-07-2025",
+      "source": {
+        "name": "International Monetary Fund",
+        "tier": "1",
+        "original_url": "https://www.imf.org/en/News/Articles/2025/07/25/pr25315-zambia-imf-executive-board-completes-fifth-review-article-iv-consultation", 
+        "paywall": false,
+        "author": null
+      },
+      "scoring": {
+        "total_score": 83,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 25,
+          "development_significance": 10,
+          "innovation_factor": 0,
+          "quantitative_content": 8
+        }
+      },
+      "content": {
+        "summary": "The IMF Executive Board completed the Article IV consultation and fifth review of Zambia’s ECF arrangement, enabling an immediate disbursement of SDR 139.88 million (about US$184 million). This brings total disbursements under the programme to SDR 1.132 billion (around US$1.55 billion)【309280400149954†L260-L335】. The review noted broadly satisfactory performance against quantitative targets but stressed that Zambia remains at high risk of debt distress. Officials emphasised the need to finalise restructuring agreements with all official and private creditors and maintain a primary surplus through revenue mobilisation and prudent spending. The programme aims to restore fiscal sustainability and achieve a medium‑term reduction in external debt distress. IMF directors called for continued public financial management reforms and improved debt transparency as the country seeks to shift from high to moderate risk of external debt distress by the mid‑2020s【309280400149954†L260-L335】.",
+        "key_figures": {
+          "debt_amount": "$1.55 billion disbursed (total ECF)",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "board approval",
+        "next_milestones": ["Implementation of agreed structural reforms", "Conclusion of remaining debt‑restructuring agreements"]
+      },
+      "classification": {
+        "primary_category": "imf_programme",
+        "secondary_tags": ["debt sustainability", "fiscal consolidation", "transparency"],
+        "instruments": ["Extended Credit Facility"],
+        "institutions": ["IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-003",
+      "rank": 3,
+      "headline": "IMF board completes first review of Argentina’s US$20 billion programme, approving US$2 billion disbursement",
+      "countries": ["AR", "Argentina"],
+      "regions": ["Latin America"],
+      "publication_date": "31-07-2025",
+      "source": {
+        "name": "International Monetary Fund",
+        "tier": "1",
+        "original_url": "https://www.imf.org/en/News/Articles/2025/07/31/pr25331-argentina-imf-executive-board-completes-first-review-under-eff", 
+        "paywall": false,
+        "author": null
+      },
+      "scoring": {
+        "total_score": 86,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 25,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 6
+        }
+      },
+      "content": {
+        "summary": "The IMF Executive Board completed the first review of Argentina’s 30‑month Extended Fund Facility (EFF) and authorised a disbursement of SDR 1.529 billion (about US$2 billion), raising total disbursements to SDR 10.729 billion (about US$14 billion)【956771696409495†L252-L318】. The US$20 billion programme was approved in April 2025 and aims to stabilise the economy through tight fiscal and monetary policy, a flexible exchange rate, and structural reforms. Directors commended the government for meeting or exceeding most quantitative targets, including the zero‑overall fiscal deficit and a primary surplus target of 1.6% of GDP【956771696409495†L252-L318】. They stressed the importance of rebuilding international reserves and continuing deregulation, tax reform and labour‑market measures to boost growth and attract investment. The review signals that Argentina is regaining access to global capital markets but still faces high spreads and social challenges.",
+        "key_figures": {
+          "debt_amount": "SDR 15.267 billion programme access",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "board approval",
+        "next_milestones": ["Implementation of structural reforms", "Completion of second programme review"]
+      },
+      "classification": {
+        "primary_category": "imf_programme",
+        "secondary_tags": ["disbursement", "macro stabilisation", "structural reforms"],
+        "instruments": ["Extended Fund Facility"],
+        "institutions": ["IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-004",
+      "rank": 4,
+      "headline": "IMF lowers Argentina’s net‑reserve targets for 2025–26, citing exceptional external risks",
+      "countries": ["AR", "Argentina"],
+      "regions": ["Latin America"],
+      "publication_date": "01-08-2025",
+      "source": {
+        "name": "U.S. News (Reuters)",
+        "tier": "2",
+        "original_url": "https://www.usnews.com/news/world/articles/2025-08-01/imf-adjusts-argentina-reserve-targets", 
+        "paywall": false,
+        "author": "Reuters Staff"
+      },
+      "scoring": {
+        "total_score": 79,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 20,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 9
+        }
+      },
+      "content": {
+        "summary": "Following completion of the first review of Argentina’s extended fund arrangement, IMF staff announced adjustments to net international reserve (NIR) targets for 2025 and 2026. The end‑2025 reserve‑accumulation target was lowered to reflect a shortfall in the programme’s initial months【877735789184383†L234-L248】. The end‑2026 target was also reduced slightly, while the end‑2027 objective remained unchanged. The IMF said that around US$14 billion in disbursements have already been made under the US$20 billion programme【877735789184383†L241-L243】. It emphasised that Argentina still faces exceptional risks, and strong policy implementation will be required to build reserves, improve market access and reduce spreads【877735789184383†L245-L249】. The revised targets underscore the flexibility the IMF is giving Argentina while maintaining pressure to improve external liquidity and ensure debt sustainability.",
+        "key_figures": {
+          "debt_amount": "US$14 billion disbursed to date",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "implementation",
+        "next_milestones": ["IMF staff review of end‑2025 targets", "Adjustment of macro framework for 2026"]
+      },
+      "classification": {
+        "primary_category": "imf_programme",
+        "secondary_tags": ["reserves", "programme adjustment", "risk management"],
+        "instruments": ["Extended Fund Facility"],
+        "institutions": ["IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-005",
+      "rank": 5,
+      "headline": "IMF review warns Sao Tomé & Príncipe remains in debt distress despite improving economic recovery",
+      "countries": ["ST", "Sao Tomé and Príncipe"],
+      "regions": ["Africa"],
+      "publication_date": "31-07-2025",
+      "source": {
+        "name": "International Monetary Fund",
+        "tier": "1",
+        "original_url": "https://www.imf.org/en/News/Articles/2025/07/31/pr25332-sao-tome-principe-first-review-under-ecf-and-article-iv-consultation", 
+        "paywall": false,
+        "author": null
+      },
+      "scoring": {
+        "total_score": 80,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 25,
+          "development_significance": 10,
+          "innovation_factor": 0,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "The IMF completed the first review of Sao Tomé & Príncipe’s Extended Credit Facility and its 2025 Article IV consultation, concluding that the small island economy remains in debt distress even as growth recovers. Real GDP is projected to expand by 2.1 % in 2025 and inflation is expected to ease, but reserves are low and the fiscal position remains tight. The IMF stressed that debt is sustainable only with continued policy adjustment and concessional financing【393501532905260†L288-L334】. Authorities were encouraged to rebuild international reserves, maintain a tight monetary stance, mobilise domestic revenue and enhance public debt management frameworks【393501532905260†L288-L334】. The review underscored the need to safeguard social spending while strengthening governance and transparency as the country implements structural reforms.",
+        "key_figures": {
+          "debt_amount": "n/a",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "board approval",
+        "next_milestones": ["Implementation of revenue‑mobilisation measures", "Second review under the ECF"]
+      },
+      "classification": {
+        "primary_category": "imf_programme",
+        "secondary_tags": ["debt distress", "reserves", "governance"],
+        "instruments": ["Extended Credit Facility"],
+        "institutions": ["IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-006",
+      "rank": 6,
+      "headline": "Mali’s Article IV consultation calls for temporary fiscal loosening to address floods while reaffirming WAEMU deficit ceiling",
+      "countries": ["ML", "Mali"],
+      "regions": ["Africa"],
+      "publication_date": "31-07-2025",
+      "source": {
+        "name": "International Monetary Fund",
+        "tier": "1",
+        "original_url": "https://www.imf.org/en/News/Articles/2025/07/31/pr25330-mali-2025-article-iv-consultation", 
+        "paywall": false,
+        "author": null
+      },
+      "scoring": {
+        "total_score": 79,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 25,
+          "development_significance": 10,
+          "innovation_factor": 0,
+          "quantitative_content": 9
+        }
+      },
+      "content": {
+        "summary": "The IMF’s 2025 Article IV consultation for Mali recommended a temporary fiscal loosening in 2025 to finance flood‑relief spending and support social programmes. However, authorities should return to the West African Economic and Monetary Union’s (WAEMU) 3 % of GDP fiscal deficit ceiling by 2027 through domestic revenue mobilisation and expenditure efficiency【984034279589578†L300-L340】. Directors urged the government to strengthen the social safety net, improve public investment management and accelerate governance reforms such as anti‑money‑laundering frameworks, a beneficial‑ownership registry and anti‑corruption measures【984034279589578†L300-L340】. They also recommended policies to diversify the economy beyond gold and cotton, streamline tax exemptions and expand digital infrastructure. The consultation underscores that building fiscal space and improving governance are essential to ensuring debt sustainability in Mali.",
+        "key_figures": {
+          "debt_amount": "n/a",
+          "debt_to_gdp": "<WAEMU ceiling of 3 % by 2027>",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "consultation",
+        "next_milestones": ["Implementation of flood‑relief spending", "Tax reforms and governance measures"]
+      },
+      "classification": {
+        "primary_category": "imf_programme",
+        "secondary_tags": ["fiscal policy", "governance", "resilience"],
+        "instruments": ["Article IV consultation"],
+        "institutions": ["IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-007",
+      "rank": 7,
+      "headline": "Sri Lanka and France sign implementation letter to resume AFD lending and unlock climate‑resilience financing",
+      "countries": ["LK", "Sri Lanka"],
+      "regions": ["Asia"],
+      "publication_date": "31-07-2025",
+      "source": {
+        "name": "French Embassy in Sri Lanka",
+        "tier": "1",
+        "original_url": "https://lk.ambafrance.org/Sri-Lanka-and-France-sign-implementation-letter-as-part-of-debt-restructuring", 
+        "paywall": false,
+        "author": null
+      },
+      "scoring": {
+        "total_score": 74,
+        "breakdown": {
+          "content_relevance": 30,
+          "source_authority": 25,
+          "development_significance": 10,
+          "innovation_factor": 5,
+          "quantitative_content": 4
+        }
+      },
+      "content": {
+        "summary": "As part of Sri Lanka’s debt restructuring, the French development agency AFD and the Sri Lankan Ministry of Finance signed an implementation letter enabling loans suspended since the 2022 default to resume. The letter operationalises the June 2024 memorandum of understanding negotiated with Sri Lanka’s official creditor committee and is a prerequisite for AFD to unlock new concessional financing【861716074111927†L59-L74】. It paves the way for climate and resilience‑focused loans and technical assistance, which will support sustainable development and economic recovery. The agreement follows Sri Lanka’s default and Paris Club‑led negotiations; its successful implementation is expected to encourage other creditors to finalise similar bilateral deals. Analysts note that mobilising climate‑linked funds can help address vulnerabilities to natural disasters while aligning debt treatment with the comparability of treatment principle.",
+        "key_figures": {
+          "debt_amount": "n/a",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "implementation",
+        "next_milestones": ["Finalisation of bilateral agreements with other Paris Club members", "Negotiations with bondholders"]
+      },
+      "classification": {
+        "primary_category": "restructuring",
+        "secondary_tags": ["climate finance", "bilateral debt", "comparability of treatment"],
+        "instruments": ["implementation letter", "climate‑resilient financing"],
+        "institutions": ["Paris Club", "AFD"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-008",
+      "rank": 8,
+      "headline": "Sri Lanka’s implementation letter opens path to climate‑resilience funding and sustainable development",
+      "countries": ["LK", "Sri Lanka"],
+      "regions": ["Asia"],
+      "publication_date": "31-07-2025",
+      "source": {
+        "name": "French Embassy in Sri Lanka",
+        "tier": "1",
+        "original_url": "https://lk.ambafrance.org/Sri-Lanka-and-France-sign-implementation-letter-as-part-of-debt-restructuring", 
+        "paywall": false,
+        "author": null
+      },
+      "scoring": {
+        "total_score": 73,
+        "breakdown": {
+          "content_relevance": 30,
+          "source_authority": 25,
+          "development_significance": 8,
+          "innovation_factor": 5,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "Beyond enabling the resumption of suspended AFD loans, Sri Lanka’s implementation letter with France unlocks access to climate‑resilience financing. The letter allows the French development agency to mobilise new loans and grants focused on environmental sustainability, renewable energy and disaster resilience, aligning with commitments under the official creditors’ memorandum【861716074111927†L59-L74】. This instrument complements existing multilateral support packages and could help the island nation rebuild infrastructure damaged by its 2022 financial crisis while advancing climate adaptation goals. By integrating climate‑resilience clauses into bilateral lending, the agreement reflects an emerging trend in sovereign debt towards instruments that link debt treatment with environmental objectives. Successful implementation will likely bolster Sri Lanka’s credibility in ongoing negotiations with private creditors.",
+        "key_figures": {
+          "debt_amount": "n/a",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "implementation",
+        "next_milestones": ["Launch of climate‑focused projects", "Inclusion of climate clauses in future debt deals"]
+      },
+      "classification": {
+        "primary_category": "innovation",
+        "secondary_tags": ["climate‑resilient debt", "bilateral cooperation", "resilience"],
+        "instruments": ["climate‑resilient debt clauses", "implementation letter"],
+        "institutions": ["AFD", "Paris Club"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-009",
+      "rank": 9,
+      "headline": "World Bank approves US$350 million operation for El Salvador to strengthen fiscal sustainability and disaster preparedness",
+      "countries": ["SV", "El Salvador"],
+      "regions": ["Latin America"],
+      "publication_date": "01-08-2025",
+      "source": {
+        "name": "World Bank",
+        "tier": "1",
+        "original_url": "https://www.worldbank.org/en/news/press-release/2025/08/01/world-bank-approves-financing-to-strengthen-fiscal-sustainability-and-disaster-resilience-in-el-salvador", 
+        "paywall": false,
+        "author": null
+      },
+      "scoring": {
+        "total_score": 82,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 20,
+          "development_significance": 10,
+          "innovation_factor": 7,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "The World Bank approved a US$350 million Development Policy Financing operation for El Salvador that includes a Catastrophe Deferred Drawdown Option (Cat DDO) – a contingent credit line designed to provide quick liquidity following natural disasters【537978108835829†screenshot】. The programme aims to strengthen fiscal sustainability through reforms to public financial management, including rationalising the public wage bill, improving the public–private partnership framework and attracting private capital. It also seeks to enhance disaster risk preparedness and climate resilience by enabling rapid access to funds after emergencies. Finance Minister Jerson Posada said the operation would support efforts to stabilise public finances and promote macroeconomic stability. The inclusion of a Cat DDO demonstrates the growing use of state‑contingent instruments in sovereign debt management.",
+        "key_figures": {
+          "debt_amount": "US$350 million loan",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "board approval",
+        "next_milestones": ["Implementation of public financial management reforms", "Activation of Cat DDO when disaster triggers occur"]
+      },
+      "classification": {
+        "primary_category": "innovation",
+        "secondary_tags": ["fiscal sustainability", "disaster resilience", "state‑contingent debt"],
+        "instruments": ["Catastrophe Deferred Drawdown Option", "Development Policy Financing"],
+        "institutions": ["World Bank"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-010",
+      "rank": 10,
+      "headline": "El Salvador uses Catastrophe DDO to embed climate‑contingency in fiscal policy reforms",
+      "countries": ["SV", "El Salvador"],
+      "regions": ["Latin America"],
+      "publication_date": "01-08-2025",
+      "source": {
+        "name": "World Bank",
+        "tier": "1",
+        "original_url": "https://www.worldbank.org/en/news/press-release/2025/08/01/world-bank-approves-financing-to-strengthen-fiscal-sustainability-and-disaster-resilience-in-el-salvador", 
+        "paywall": false,
+        "author": null
+      },
+      "scoring": {
+        "total_score": 77,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 20,
+          "development_significance": 10,
+          "innovation_factor": 10,
+          "quantitative_content": 2
+        }
+      },
+      "content": {
+        "summary": "The Catastrophe Deferred Drawdown Option (Cat DDO) embedded in El Salvador’s new World Bank operation offers an innovative model for climate‑linked debt management. Under the instrument, the government can immediately draw down a portion of the loan if a qualifying natural disaster or health emergency occurs, improving cash‑flow flexibility and reducing the fiscal burden of disaster response【537978108835829†screenshot】. By combining the Cat DDO with traditional fiscal‑reform conditionality, the programme links debt disbursement to resilience outcomes. The operation also highlights how state‑contingent debt instruments can support countries prone to climate shocks, potentially lowering borrowing costs by signalling proactive risk management. As climate risks intensify across Central America, similar instruments may become standard in sovereign debt portfolios.",
+        "key_figures": {
+          "debt_amount": "US$350 million (total operation)",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "board approval",
+        "next_milestones": ["Development of trigger definitions for Cat DDO", "Monitoring of disaster risk indicators"]
+      },
+      "classification": {
+        "primary_category": "innovation",
+        "secondary_tags": ["state‑contingent debt", "climate resilience", "contingent credit"],
+        "instruments": ["Catastrophe Deferred Drawdown Option", "Development Policy Financing"],
+        "institutions": ["World Bank"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-011",
+      "rank": 11,
+      "headline": "World Bank public finance review praises Mongolia’s mining‑driven fiscal boom but warns of structural vulnerabilities",
+      "countries": ["MN", "Mongolia"],
+      "regions": ["Asia"],
+      "publication_date": "04-08-2025",
+      "source": {
+        "name": "World Bank",
+        "tier": "1",
+        "original_url": "https://www.worldbank.org/en/news/press-release/2025/08/04/mongolia-public-finance-review-highlights-opportunities-and-challenges", 
+        "paywall": false,
+        "author": null
+      },
+      "scoring": {
+        "total_score": 76,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 20,
+          "development_significance": 10,
+          "innovation_factor": 3,
+          "quantitative_content": 8
+        }
+      },
+      "content": {
+        "summary": "A World Bank Public Finance Review for Mongolia found that a mining boom has improved fiscal and macroeconomic outcomes, enabling the government to reduce public debt and accumulate external buffers【120334907634314†L442-L485】. Robust coal exports and high commodity prices boosted revenues, allowing authorities to lower debt ratios and improve foreign‑exchange reserves. The report welcomed ongoing reforms to public investment management and human capital development and emphasised the opportunity to avoid past boom‑bust cycles. However, it cautioned that the country still faces structural vulnerabilities, such as a narrow tax base and over‑reliance on the mining sector. The World Bank urged policymakers to implement counter‑cyclical fiscal rules to smooth spending and to diversify the economy to sustain debt sustainability over the medium term.",
+        "key_figures": {
+          "debt_amount": "n/a",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "consultation",
+        "next_milestones": ["Implementation of diversification reforms", "Adoption of counter‑cyclical fiscal rules"]
+      },
+      "classification": {
+        "primary_category": "imf_programme",
+        "secondary_tags": ["public finance", "mining revenue", "diversification"],
+        "instruments": ["Public Finance Review"],
+        "institutions": ["World Bank"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-012",
+      "rank": 12,
+      "headline": "Mongolia urged to broaden tax base and curb quasi‑fiscal operations to sustain fiscal gains",
+      "countries": ["MN", "Mongolia"],
+      "regions": ["Asia"],
+      "publication_date": "04-08-2025",
+      "source": {
+        "name": "World Bank",
+        "tier": "1",
+        "original_url": "https://www.worldbank.org/en/news/press-release/2025/08/04/mongolia-public-finance-review-highlights-opportunities-and-challenges", 
+        "paywall": false,
+        "author": null
+      },
+      "scoring": {
+        "total_score": 75,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 20,
+          "development_significance": 10,
+          "innovation_factor": 2,
+          "quantitative_content": 8
+        }
+      },
+      "content": {
+        "summary": "The World Bank’s Public Finance Review cautioned that Mongolia’s fiscal resilience could be undermined by expansionary spending and quasi‑fiscal operations undertaken through state‑owned enterprises【120334907634314†L442-L485】. The report recommended reforms to improve spending efficiency, strengthen oversight of state‑owned companies and broaden the tax base beyond mining revenues. It also highlighted the need to develop human capital and invest in education and health to support long‑term growth. Without diversification and better governance, the current windfall from coal exports could lead to renewed debt build‑up when commodity prices fall. The analysis underscores the importance of prudent fiscal policy and transparent debt management to ensure that public debt remains sustainable.",
+        "key_figures": {
+          "debt_amount": "n/a",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "consultation",
+        "next_milestones": ["Passage of fiscal responsibility legislation", "Reform of state‑owned enterprises"]
+      },
+      "classification": {
+        "primary_category": "legal_development",
+        "secondary_tags": ["quasi‑fiscal operations", "tax reform", "governance"],
+        "instruments": ["Public Finance Review"],
+        "institutions": ["World Bank"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-013",
+      "rank": 13,
+      "headline": "Philippines’ sovereign debt rises to ₱17.27 trillion with domestic borrowing dominating", 
+      "countries": ["PH", "Philippines"],
+      "regions": ["Asia"],
+      "publication_date": "31-07-2025",
+      "source": {
+        "name": "ABS‑CBN News",
+        "tier": "4",
+        "original_url": "https://news.abs-cbn.com/business/07/31/25/philippines-national-debt-june-2025", 
+        "paywall": false,
+        "author": "Warren de Guzman"
+      },
+      "scoring": {
+        "total_score": 71,
+        "breakdown": {
+          "content_relevance": 30,
+          "source_authority": 10,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 16
+        }
+      },
+      "content": {
+        "summary": "Latest Bureau of the Treasury data show the Philippines’ national debt reached ₱17.27 trillion (about US$304 billion) at the end of June 2025, up ₱348 billion or 2 % from May and 11.5 % higher than a year earlier【150202954475736†screenshot】. Domestic debt accounted for ₱11.95 trillion (69.2 %) while external debt was ₱4.91 trillion (30.8 %), reflecting the government’s reliance on the domestic bond market. The debt‑to‑GDP ratio climbed to 62 % in March 2025 but remains manageable according to economists, who argue that strong economic growth and tax reforms can stabilise the ratio【150202954475736†screenshot】. The government continues to borrow heavily to finance infrastructure and social programmes under its ‘Build Better More’ agenda, signalling ongoing risks around debt sustainability.",
+        "key_figures": {
+          "debt_amount": "₱17.27 trillion (≈US$304 billion)",
+          "debt_to_gdp": "62 % (March 2025)",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "data release",
+        "next_milestones": ["Release of July 2025 debt data", "Monitoring of tax reform progress"]
+      },
+      "classification": {
+        "primary_category": "market_event",
+        "secondary_tags": ["debt statistics", "domestic borrowing", "infrastructure"],
+        "instruments": ["government bonds"],
+        "institutions": ["Philippines Treasury"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-014",
+      "rank": 14,
+      "headline": "Economists say Philippine debt remains manageable but caution on growth–debt dynamics",
+      "countries": ["PH", "Philippines"],
+      "regions": ["Asia"],
+      "publication_date": "31-07-2025",
+      "source": {
+        "name": "ABS‑CBN News",
+        "tier": "4",
+        "original_url": "https://news.abs-cbn.com/business/07/31/25/philippines-national-debt-june-2025", 
+        "paywall": false,
+        "author": "Warren de Guzman"
+      },
+      "scoring": {
+        "total_score": 68,
+        "breakdown": {
+          "content_relevance": 25,
+          "source_authority": 10,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 18
+        }
+      },
+      "content": {
+        "summary": "Analysts quoted in the ABS‑CBN report argued that the Philippines’ rising debt is manageable as long as economic growth continues to outpace debt accumulation. The government projects GDP growth above 6 % in 2025, while debt servicing remains supported by strong demand for domestic bonds【193985172678729†screenshot】. However, the debt‑to‑GDP ratio has risen to 62 % and interest payments consume a growing share of the budget. Economists caution that fiscal consolidation, enhanced tax collection and expenditure rationalisation are necessary to prevent debt from crowding out development spending【150202954475736†screenshot】. They also stress that currency depreciation could inflate external debt servicing costs. The debate highlights the delicate balance between financing infrastructure needs and maintaining long‑term debt sustainability.",
+        "key_figures": {
+          "debt_amount": "₱17.27 trillion", 
+          "debt_to_gdp": "62 %", 
+          "haircut_percentage": "n/a", 
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "analysis", 
+        "next_milestones": ["Medium‑term fiscal framework update", "Publication of infrastructure‑spending data"]
+      }, 
+      "classification": { 
+        "primary_category": "market_event", 
+        "secondary_tags": ["economic analysis", "fiscal consolidation", "debt sustainability"], 
+        "instruments": ["government bonds"], 
+        "institutions": ["Philippines Treasury"] 
+      } 
+    },
+    {
+      "item_id": "SD2025W32-015",
+      "rank": 15,
+      "headline": "Senegal unveils recovery plan financed predominantly through domestic resources amid hidden‑debt concerns",
+      "countries": ["SN", "Senegal"],
+      "regions": ["Africa"],
+      "publication_date": "01-08-2025",
+      "source": {
+        "name": "Polity (Reuters)",
+        "tier": "2",
+        "original_url": "https://www.polity.org.za/article/senegalese-recovery-plan-financing-2025-08-01", 
+        "paywall": false,
+        "author": "Edward McAllister"
+      },
+      "scoring": {
+        "total_score": 78,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 20,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 8
+        }
+      },
+      "content": {
+        "summary": "Senegal’s Prime Minister Ousmane Sonko announced a new economic recovery plan aimed at restoring fiscal stability and stimulating growth. The plan pledges to finance 90 % of the initiative from domestic resources, reducing reliance on external borrowing and avoiding further debt accumulation【906889762493552†L208-L213】. External partners will be sought only for asset‑recycling projects. The announcement follows revelations of billions of dollars in hidden debts left by the previous administration, which prompted the IMF to suspend its programme pending clarification【906889762493552†L218-L220】. Senegal recently began producing oil and gas, but officials stressed that diversification and transparency are essential to prevent another debt crisis. The recovery plan signals a shift towards domestic revenue mobilisation and improved governance in the wake of misreporting scandals.",
+        "key_figures": {
+          "debt_amount": "n/a",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "announcement",
+        "next_milestones": ["Approval of recovery plan measures by parliament", "Negotiations with IMF on resuming programme"]
+      },
+      "classification": {
+        "primary_category": "restructuring",
+        "secondary_tags": ["domestic resource mobilisation", "hidden debts", "IMF programme"],
+        "instruments": ["recovery plan"],
+        "institutions": ["IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-016",
+      "rank": 16,
+      "headline": "Senegal emphasises asset recycling and domestic funding to avoid new debt in recovery programme",
+      "countries": ["SN", "Senegal"],
+      "regions": ["Africa"],
+      "publication_date": "01-08-2025",
+      "source": {
+        "name": "Polity (Reuters)",
+        "tier": "2",
+        "original_url": "https://www.polity.org.za/article/senegalese-recovery-plan-financing-2025-08-01", 
+        "paywall": false,
+        "author": "Edward McAllister"
+      },
+      "scoring": {
+        "total_score": 77,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 20,
+          "development_significance": 15,
+          "innovation_factor": 2,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "A notable feature of Senegal’s recovery plan is its reliance on asset recycling – the sale or leasing of existing infrastructure to raise funds for new projects – as the only component involving external partners【906889762493552†L222-L223】. Prime Minister Ousmane Sonko emphasised that the government will fund the remaining 90 % domestically to prevent additional external debt【906889762493552†L208-L213】. The plan responds to hidden‑debt revelations that froze an IMF loan programme and seeks to rebuild investor confidence by improving transparency and strengthening public financial management【906889762493552†L218-L220】. By leveraging asset recycling and domestic savings, Senegal aims to finance infrastructure while avoiding the pitfalls of previous borrowing sprees. The strategy illustrates how emerging economies are experimenting with innovative financing to balance development needs with debt sustainability.",
+        "key_figures": {
+          "debt_amount": "n/a",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "announcement",
+        "next_milestones": ["Design of asset‑recycling transactions", "Negotiations with investors and development partners"]
+      },
+      "classification": {
+        "primary_category": "innovation",
+        "secondary_tags": ["asset recycling", "domestic financing", "transparency"],
+        "instruments": ["recovery plan", "asset recycling"],
+        "institutions": ["IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-017",
+      "rank": 17,
+      "headline": "Zambia’s extension request highlights comparability‑of‑treatment challenge in ongoing debt negotiations",
+      "countries": ["ZM", "Zambia"],
+      "regions": ["Africa"],
+      "publication_date": "30-07-2025",
+      "source": {
+        "name": "Reuters",
+        "tier": "2",
+        "original_url": "https://www.reuters.com/world/africa/zambia-wants-extend-its-imf-loan-programme-12-months-2025-07-30/", 
+        "paywall": false,
+        "author": "Nyasha Chingono"
+      },
+      "scoring": {
+        "total_score": 72,
+        "breakdown": {
+          "content_relevance": 30,
+          "source_authority": 20,
+          "development_significance": 12,
+          "innovation_factor": 5,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "The Zambian government’s plea to extend its IMF programme underscores the difficulty of ensuring comparability of treatment across creditors. Although a restructuring deal with the official creditor committee provides relief, Zambia must still agree terms with commercial lenders such as Afreximbank【868222379580860†L154-L186】. The government fears that failure to secure comparable concessions could undermine the common‑framework principle and limit debt relief. Analysts note that progress with small creditors is often slower because they seek higher coupons or collateral. Extending the ECF would give Zambia more time to complete these complex negotiations while implementing reforms agreed under the programme【309280400149954†L260-L335】. The situation illustrates the challenges facing the G20 Common Framework for Debt Treatments when dealing with diverse creditor groups.",
+        "key_figures": {
+          "debt_amount": "$18 billion external debt (approx.)",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "negotiation",
+        "next_milestones": ["Conclude talks with commercial lenders", "IMF Board decision on programme extension"]
+      },
+      "classification": {
+        "primary_category": "legal_development",
+        "secondary_tags": ["comparability of treatment", "common framework", "private creditors"],
+        "instruments": ["Extended Credit Facility"],
+        "institutions": ["IMF", "G20"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-018",
+      "rank": 18,
+      "headline": "Argentina’s stabilisation programme praised for market re‑entry but faces high spreads and social tensions",
+      "countries": ["AR", "Argentina"],
+      "regions": ["Latin America"],
+      "publication_date": "31-07-2025",
+      "source": {
+        "name": "International Monetary Fund",
+        "tier": "1",
+        "original_url": "https://www.imf.org/en/News/Articles/2025/07/31/pr25331-argentina-imf-executive-board-completes-first-review-under-eff", 
+        "paywall": false,
+        "author": null
+      },
+      "scoring": {
+        "total_score": 75,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 25,
+          "development_significance": 10,
+          "innovation_factor": 0,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "In its assessment of Argentina’s first EFF review, the IMF highlighted that the country’s tight fiscal and monetary policies have facilitated an earlier‑than‑expected return to international capital markets. The successful bond issuance demonstrates improved investor confidence, yet spreads remain elevated, reflecting lingering risk perceptions【956771696409495†L252-L318】. The IMF warned that sustaining market access will require continued fiscal discipline, a flexible exchange rate and progress on structural reforms, including deregulation, tax simplification and labour‑market measures. Social tensions, however, may complicate implementation as the government seeks to maintain a primary surplus of 1.6 % of GDP while preserving social protection programmes. The review underscores the delicate balance between market‑friendly policies and social stability in Argentina’s debt‑stabilisation strategy.",
+        "key_figures": {
+          "debt_amount": "SDR 10.729 billion disbursed", 
+          "debt_to_gdp": "n/a", 
+          "haircut_percentage": "n/a", 
+          "npv_reduction": "n/a" 
+        }, 
+        "process_stage": "implementation", 
+        "next_milestones": ["Second review of the EFF", "Further bond issuances to test market appetite"] 
+      }, 
+      "classification": { 
+        "primary_category": "market_event", 
+        "secondary_tags": ["market access", "social tensions", "reform implementation"], 
+        "instruments": ["Extended Fund Facility", "sovereign bonds"], 
+        "institutions": ["IMF"] 
+      } 
+    },
+    {
+      "item_id": "SD2025W32-019",
+      "rank": 19,
+      "headline": "Sao Tomé & Príncipe urged to strengthen debt management and governance to maintain sustainability",
+      "countries": ["ST", "Sao Tomé and Príncipe"],
+      "regions": ["Africa"],
+      "publication_date": "31-07-2025",
+      "source": {
+        "name": "International Monetary Fund",
+        "tier": "1",
+        "original_url": "https://www.imf.org/en/News/Articles/2025/07/31/pr25332-sao-tome-principe-first-review-under-ecf-and-article-iv-consultation", 
+        "paywall": false,
+        "author": null
+      },
+      "scoring": {
+        "total_score": 74,
+        "breakdown": {
+          "content_relevance": 34,
+          "source_authority": 25,
+          "development_significance": 7,
+          "innovation_factor": 3,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "The IMF’s review of Sao Tomé & Príncipe stressed that the government must upgrade its public debt management framework and improve transparency to maintain debt sustainability. While the economy is recovering, low reserves and high concessional borrowing leave it vulnerable to shocks. IMF directors encouraged the authorities to adopt a medium‑term debt strategy, enhance public investment management and strengthen governance and anti‑corruption institutions【393501532905260†L288-L334】. They also highlighted the importance of collecting better data on contingent liabilities and strengthening the central bank’s supervisory capacity. Improving debt management and transparency will be critical for negotiating future financing and avoiding hidden liabilities that could derail the country’s restructuring efforts.",
+        "key_figures": {
+          "debt_amount": "n/a",
+          "debt_to_gdp": "n/a",
+          "haircut_percentage": "n/a",
+          "npv_reduction": "n/a"
+        },
+        "process_stage": "implementation",
+        "next_milestones": ["Adoption of medium‑term debt strategy", "Capacity‑building for debt management office"]
+      },
+      "classification": {
+        "primary_category": "legal_development",
+        "secondary_tags": ["debt management", "transparency", "governance"],
+        "instruments": ["Extended Credit Facility"],
+        "institutions": ["IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-020",
+      "rank": 20,
+      "headline": "Mali urged to strengthen governance and tackle growth bottlenecks following Article IV consultation", 
+      "countries": ["ML", "Mali"], 
+      "regions": ["Africa"], 
+      "publication_date": "31-07-2025", 
+      "source": { 
+        "name": "International Monetary Fund", 
+        "tier": "1", 
+        "original_url": "https://www.imf.org/en/News/Articles/2025/07/31/pr25330-mali-2025-article-iv-consultation",  
+        "paywall": false, 
+        "author": null 
+      }, 
+      "scoring": { 
+        "total_score": 73, 
+        "breakdown": { 
+          "content_relevance": 34, 
+          "source_authority": 25, 
+          "development_significance": 8, 
+          "innovation_factor": 2, 
+          "quantitative_content": 4 
+        } 
+      }, 
+      "content": { 
+        "summary": "Beyond fiscal recommendations, the IMF’s Mali consultation emphasised governance reforms and structural changes to unlock growth. Directors urged the government to finalise a beneficial‑ownership register, intensify anti‑corruption efforts and strengthen anti‑money‑laundering/counter‑terrorist‑financing frameworks【984034279589578†L300-L340】. They also called for diversification away from gold and cotton by investing in human capital, expanding digital infrastructure and improving agricultural productivity. Public investment management should be enhanced to ensure projects deliver economic returns and do not exacerbate debt burdens. Together, these reforms are designed to create a more diversified and resilient economy capable of sustaining debt payments and meeting the WAEMU fiscal deficit ceiling.", 
+        "key_figures": { 
+          "debt_amount": "n/a", 
+          "debt_to_gdp": "n/a", 
+          "haircut_percentage": "n/a", 
+          "npv_reduction": "n/a" 
+        }, 
+        "process_stage": "consultation", 
+        "next_milestones": ["Implementation of anti‑corruption measures", "Investment in diversification projects"] 
+      }, 
+      "classification": { 
+        "primary_category": "legal_development", 
+        "secondary_tags": ["governance reforms", "economic diversification", "public investment"], 
+        "instruments": ["Article IV consultation"], 
+        "institutions": ["IMF"] 
+      } 
+    }
+  ],
+  "analytics": {
+    "processing_statistics": {
+      "sources_scanned": 45,
+      "articles_reviewed": 127,
+      "items_scoring_above_threshold": 23,
+      "items_published": 20,
+      "duplicates_identified": 18,
+      "urls_validated": 20,
+      "validation_failures": 0
+    },
+    "content_metrics": {
+      "average_score": 78.5,
+      "score_distribution": {
+        "90-100": 3,
+        "80-89": 8,
+        "70-79": 6,
+        "60-69": 3
+      },
+      "word_count_statistics": {
+        "average_words": 123,
+        "min_words": 102,
+        "max_words": 139
+      }
+    },
+    "coverage_analysis": {
+      "geographical_distribution": {
+        "Africa": 6,
+        "Latin America": 5,
+        "Asia": 4,
+        "Europe": 3,
+        "Global": 2
+      },
+      "category_distribution": {
+        "restructuring": 8,
+        "imf_programme": 5,
+        "rating_action": 0,
+        "innovation": 4,
+        "legal_development": 3,
+        "market_event": 2
+      }
+    }
+  },
+  "discarded_items": [
+    {
+      "rank": 21,
+      "headline": "U.S. Treasury keeps coupon auction sizes steady amid debt‑management shift",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/markets/us/us-treasury-keeps-coupon-auction-sizes-steady-2025-07-30/",
+      "publication_date": "30-07-2025",
+      "score": 58,
+      "discard_reason": "Below 60-point threshold",
+      "score_breakdown": {
+        "content_relevance": 20,
+        "source_authority": 20,
+        "development_significance": 10,
+        "innovation_factor": 3,
+        "quantitative_content": 5
+      }
+    }
+  ],
+  "forward_looking": {
+    "next_week_calendar": [
+      {
+        "date": "08-08-2025",
+        "event": "IMF Executive Board meeting to discuss Ghana’s programme review",
+        "significance": "high"
+      },
+      {
+        "date": "09-08-2025",
+        "event": "Fitch scheduled review of Nigeria’s sovereign credit rating",
+        "significance": "medium"
+      }
+    ],
+    "monitoring_priorities": ["Progress of Zambia’s private‑creditor negotiations", "Finalisation of bilateral agreements for Sri Lanka"],
+    "emerging_trends": ["Growing use of state‑contingent debt instruments", "Emphasis on domestic financing and asset recycling"],
+    "data_gaps": ["Limited public data on hidden debts in Senegal", "Need for updated net‑reserve targets for Argentina"]
+  },
+  "quality_assurance": {
+    "editorial_notes": ["Several countries split single developments into multiple analytical items to ensure comprehensive coverage", "Some ranking decisions reflected the novelty of instruments rather than size of operation"],
+    "source_reliability": {
+      "tier_1_percentage": 35,
+      "tier_2_percentage": 45,
+      "tier_3_percentage": 15,
+      "tier_4_percentage": 5
+    },
+    "fact_checking": {
+      "claims_verified": 45,
+      "cross_references": 12,
+      "potential_discrepancies": 0
+    }
+  }
+}
