@@ -244,6 +244,27 @@ def create_google_lucky_url(headline, original_url):
     
     return f"https://www.google.com/search?q={encoded_search}&btnI"
 
+def format_date_for_display(date_str):
+    """Convert date from DD-MM-YYYY format to DD Month YYYY format"""
+    if not date_str or date_str == 'DD-MM-YYYY':
+        return 'DD Month YYYY'
+    
+    try:
+        # Parse the date string (DD-MM-YYYY)
+        day, month, year = date_str.split('-')
+        
+        # Month names in English
+        months = {
+            '01': 'January', '02': 'February', '03': 'March', '04': 'April',
+            '05': 'May', '06': 'June', '07': 'July', '08': 'August',
+            '09': 'September', '10': 'October', '11': 'November', '12': 'December'
+        }
+        
+        month_name = months.get(month, month)
+        return f"{day} {month_name} {year}"
+    except:
+        return date_str
+
 def get_smart_url(headline, original_url):
     """Get original URL, Google search URL, and Google Lucky URL"""
     if not original_url or original_url == '#':
@@ -322,7 +343,6 @@ def generate_html(data):
         .header {{
             background-color: white;
             padding: 1rem 2rem;
-            border-bottom: 2px solid var(--e-global-color-primary);
         }}
         
         .header-content {{
@@ -368,8 +388,22 @@ def generate_html(data):
         }}
         
         .hero .subtitle {{
-            font-size: 1.2rem;
+            font-size: 0.8rem;
             opacity: 0.9;
+        }}
+        
+        .date-range {{
+            background-color: white;
+            text-align: center;
+            padding: 1rem 2rem;
+        }}
+        
+        .date-range h2 {{
+            font-family: Georgia, serif;
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: var(--e-global-color-primary);
+            margin: 0;
         }}
         
         .container {{
@@ -620,6 +654,10 @@ def generate_html(data):
             <img src="Headers/SovereignDebtWeeklyHeaderV1.jpeg" alt="Sovereign Debt Weekly Header" class="header-image">
         </div>
     </header>
+
+    <section class="date-range">
+        <h2>{format_date_for_display(metadata.get('period', {}).get('start_date', 'DD-MM-YYYY'))} - {format_date_for_display(metadata.get('period', {}).get('end_date', 'DD-MM-YYYY'))}</h2>
+    </section>
 
     <main class="container">
         <section class="tldr">
