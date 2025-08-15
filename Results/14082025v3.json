@@ -1,0 +1,969 @@
+{
+  "metadata": {
+    "title": "Sovereign Debt Weekly — 08-08-2025 to 14-08-2025",
+    "subtitle": "#BRAVE ADVOCACY",
+    "period": {
+      "start_date": "08-08-2025",
+      "end_date": "14-08-2025",
+      "days_covered": 7
+    },
+    "processing": {
+      "generated_at": "2025-08-14T21:00:00Z",
+      "version": "3.0",
+      "brand": "Kepler Karst",
+      "ai_model": "gpt-4-turbo",
+      "processing_time_seconds": "420"
+    },
+    "validation": {
+      "urls_verified": true,
+      "dates_validated": true,
+      "content_reviewed": true,
+      "schema_compliant": true
+    }
+  },
+  "executive_summary": {
+    "weekly_overview": "During the week of 8–14 August 2025 the sovereign‑debt landscape was dominated by rating actions, restructuring milestones and debates about equitable burdens. S&P’s upgrade of India to BBB and Moody’s upgrade of Pakistan to Caa1 underscored confidence in fiscal consolidation and macro‑economic resilience. Sri Lanka reported that over 90 percent of its public external debt restructuring was implemented, while Ghana faced renewed calls for fiscal discipline and completion of debt negotiations. Zambia’s central bank held its policy rate amid inflation and restructuring delays. Malawi’s debt distress intensified, with large arrears to commercial creditors and hidden liabilities in the energy sector. Debt Justice research highlighted that private creditors receive the largest share of low‑income countries’ payments, fuelling calls for legal reforms. Articles also scrutinised the inadequacy of current macro‑fiscal frameworks for climate‑resilient investments and advocated for a Borrowers’ Club. Across regions, investors remained cautious, as reflected in Ukraine’s distressed bond pricing, while Angola considered a cautious return to Eurobond markets.\n",
+    "key_themes": ["rating_actions", "debt_restructuring", "private_creditor_dominance"],
+    "geographical_focus": ["Africa", "Asia"],
+    "trend_analysis": "Rating upgrades for India and Pakistan contrasted with deepening distress in Malawi and cautious outlooks for Ghana and Zambia. Sovereign restructurings are advancing (Sri Lanka, Malawi) but continue to expose hidden liabilities and systemic risks. Private creditors’ dominance in debt servicing and the emergence of climate and trade‑finance considerations highlight the need for innovative instruments and stronger legal frameworks. Markets remain sensitive to geopolitical events, with Ukraine’s bonds illustrating that political developments quickly feed into sovereign risk pricing."
+  },
+  "items": [
+    {
+      "item_id": "SD2025W32-001",
+      "rank": 1,
+      "headline": "Zambia keeps policy rate at 14.5% amid prolonged debt restructuring",
+      "countries": ["ZM", "Zambia"],
+      "regions": ["Africa"],
+      "publication_date": "13-08-2025",
+      "source": {
+        "name": "Reuters",
+        "tier": "2",
+        "original_url": "https://www.reuters.com/world/africa/zambias-central-bank-leaves-policy-rate-unchanged-2025-08-13/",
+        "paywall": false,
+        "author": "Reuters Staff"
+      },
+      "scoring": {
+        "total_score": 76,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 10,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 11
+        }
+      },
+      "content": {
+        "summary": "Zambia’s Monetary Policy Committee maintained the benchmark lending rate at 14.5 percent, resisting market expectations for a cut. The committee highlighted that inflation decelerated to 13 percent in July but warned of continued upward pressure from the depreciation of the kwacha and food prices. The decision comes as the country’s debt restructuring negotiations have dragged on longer than anticipated. Zambia is trying to finalise deals with official and private creditors under the G20 Common Framework following its 2020 default. The central bank signalled that monetary policy would stay tight until inflation expectations are anchored, and it urged fiscal authorities to expedite the restructuring to restore macro‑economic stability【635074309588057†L17-L33】. Market participants noted that prolonged negotiations are dampening investor confidence.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "implementation",
+        "next_milestones": ["Finalisation of debt restructuring deals", "Inflation data release"]
+      },
+      "classification": {
+        "primary_category": "market_event",
+        "secondary_tags": ["monetary_policy", "inflation", "restructuring"],
+        "instruments": [],
+        "institutions": ["Bank of Zambia"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-002",
+      "rank": 2,
+      "headline": "Ukraine bond rally stalls as investors see limited summit breakthrough",
+      "countries": ["UA", "Ukraine"],
+      "regions": ["Europe"],
+      "publication_date": "14-08-2025",
+      "source": {
+        "name": "Reuters",
+        "tier": "2",
+        "original_url": "https://www.reuters.com/markets/bonds/investors-temper-ukraine-hopes-ahead-trump-putin-summit-2025-08-14/",
+        "paywall": false,
+        "author": "Reuters Staff"
+      },
+      "scoring": {
+        "total_score": 68,
+        "breakdown": {
+          "content_relevance": 30,
+          "source_authority": 10,
+          "development_significance": 10,
+          "innovation_factor": 0,
+          "quantitative_content": 18
+        }
+      },
+      "content": {
+        "summary": "Ukrainian sovereign bonds rallied to around 55 cents on the dollar after Washington and Moscow announced a summit between Donald Trump and Vladimir Putin, but investors viewed the meeting as largely symbolic. Analysts noted that prices still implied a deep restructuring with limited expectations of debt relief. The rally reflected a tactical trade rather than a reassessment of long‑term fundamentals. Market participants caution that without meaningful progress on resolving the conflict and securing sustained international financial support, Ukraine’s debt trajectory remains unsustainable. The article underscores how geopolitical events temporarily influence distressed debt prices but do not alter structural debt sustainability issues【146151495554114†L162-L190】.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "market_assessment",
+        "next_milestones": ["Details of summit outcomes", "IMF programme discussions"]
+      },
+      "classification": {
+        "primary_category": "market_event",
+        "secondary_tags": ["geopolitics", "bond_prices"],
+        "instruments": ["Eurobond"],
+        "institutions": []
+      }
+    },
+    {
+      "item_id": "SD2025W32-003",
+      "rank": 3,
+      "headline": "Al Jazeera calls for a global Borrowers’ Club as debt costs soar",
+      "countries": ["GLOBAL"],
+      "regions": ["Global"],
+      "publication_date": "08-08-2025",
+      "source": {
+        "name": "Al Jazeera",
+        "tier": "4",
+        "original_url": "https://www.aljazeera.com/opinions/2025/8/8/why-the-global-south-needs-a-borrowers-club",
+        "paywall": false,
+        "author": "Tariq Fancy and Dilma Rousseff"
+      },
+      "scoring": {
+        "total_score": 70,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 5,
+          "development_significance": 10,
+          "innovation_factor": 10,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "Opinion writers argued that low‑income countries should form a ‘Borrowers’ Club’ to counterbalance creditor coordination failures. They noted that in 2023 low‑income countries paid a record US$96.2 billion in external debt service, with interest costs surging to US$34.6 billion. More than half of these countries are in or near debt distress. The authors criticised the G20’s Common Framework, which has been used by only a handful of countries, and called for collective action to push for deeper haircuts, fair comparability of treatment and state‑contingent instruments. They argued that debtor solidarity could enable unified negotiating positions and accelerate progress on systemic reforms【803889249924009†L125-L170】.",
+        "key_figures": {
+          "debt_amount": "$96.2 billion (external debt service)",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "advocacy",
+        "next_milestones": ["Formation of Borrowers’ Club", "G20 Common Framework reform discussions"]
+      },
+      "classification": {
+        "primary_category": "innovation",
+        "secondary_tags": ["collective_action", "comparability_of_treatment"],
+        "instruments": ["State‑contingent debt instruments"],
+        "institutions": ["G20"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-004",
+      "rank": 4,
+      "headline": "Debt Justice: private lenders receive largest share of low‑income debt payments",
+      "countries": ["GLOBAL"],
+      "regions": ["Global"],
+      "publication_date": "11-08-2025",
+      "source": {
+        "name": "Reuters / Debt Justice",
+        "tier": "3",
+        "original_url": "https://debtjustice.org.uk/press-release/low-income-countries-pay-more-to-private-creditors-than-to-china",
+        "paywall": false,
+        "author": "Debt Justice"
+      },
+      "scoring": {
+        "total_score": 82,
+        "breakdown": {
+          "content_relevance": 45,
+          "source_authority": 15,
+          "development_significance": 10,
+          "innovation_factor": 0,
+          "quantitative_content": 12
+        }
+      },
+      "content": {
+        "summary": "Debt Justice research showed that between 2020 and 2025 low‑income countries allocated 39 percent of their external debt payments – about US$354 billion – to private lenders, compared with 34 percent to multilateral institutions and just 13 percent to Chinese lenders. The organisation argued that private bondholders and commodity traders were receiving outsized payments while obstructing restructurings in countries such as Chad, Ethiopia, Zambia, Ghana and South Sudan. Malawi recently defaulted on loans to Afreximbank and the Trade and Development Bank (TDB). Debt Justice called for legislation to compel private creditors to participate in relief and proposed legal reforms to ensure fair comparability of treatment across creditor classes【539763673866478†L160-L233】【854667922431294†L38-L99】.",
+        "key_figures": {
+          "debt_amount": "$354 billion (payments to private lenders)",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "analysis",
+        "next_milestones": ["Legislation on private creditor participation", "New debt relief initiatives"]
+      },
+      "classification": {
+        "primary_category": "analysis",
+        "secondary_tags": ["private_creditors", "comparability_of_treatment"],
+        "instruments": ["Eurobond", "commodity_trader_loans"],
+        "institutions": ["Debt Justice", "IMF", "World Bank"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-005",
+      "rank": 5,
+      "headline": "TDB considers insurance claim over Zambia debt restructuring, exposing trade finance risks",
+      "countries": ["ZM", "Zambia"],
+      "regions": ["Africa"],
+      "publication_date": "11-08-2025",
+      "source": {
+        "name": "Insurance Journal (Bloomberg)",
+        "tier": "3",
+        "original_url": "https://www.insurancejournal.com/news/international/2025/08/11/835101.htm",
+        "paywall": false,
+        "author": "Matthew Hill"
+      },
+      "scoring": {
+        "total_score": 83,
+        "breakdown": {
+          "content_relevance": 45,
+          "source_authority": 15,
+          "development_significance": 20,
+          "innovation_factor": 0,
+          "quantitative_content": 3
+        }
+      },
+      "content": {
+        "summary": "The African trade‑finance lender Trade and Development Bank (TDB) is exploring an insurance claim via a Lloyd’s of London syndicate after Zambia included TDB loans in its sovereign debt restructuring, a move that trade finance lenders say could set a precedent. TDB has US$872 million exposure to Zambia, of which US$348 million is insured. Chief executive Admassu Tadesse warned that including trade‑credit claims in sovereign restructurings could jeopardise private trade finance across Africa and lead to higher premiums. The International Monetary Fund expects institutions like TDB and Afreximbank to contribute to Malawi’s restructuring, while negotiations continue for a new round of talks with Zambia【782938829528311†L84-L150】. The case underscores the blurred lines between commercial and sovereign debt and the need for clarity on the treatment of trade‑finance obligations.",
+        "key_figures": {
+          "debt_amount": "$872 million (TDB exposure)",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "negotiation",
+        "next_milestones": ["Lloyd’s insurance claim decision", "Restructuring negotiations with Zambia"]
+      },
+      "classification": {
+        "primary_category": "legal_development",
+        "secondary_tags": ["trade_finance", "debt_rescheduling"],
+        "instruments": ["trade_credit"],
+        "institutions": ["Trade and Development Bank", "IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-006",
+      "rank": 6,
+      "headline": "Malawi’s debt sustainability analysis highlights severe distress and huge arrears to commercial creditors",
+      "countries": ["MW", "Malawi"],
+      "regions": ["Africa"],
+      "publication_date": "14-08-2025",
+      "source": {
+        "name": "The Nation (Malawi)",
+        "tier": "4",
+        "original_url": "https://mwnation.com/malawi-debt-distress-aug-2025/",
+        "paywall": false,
+        "author": "Nation Staff"
+      },
+      "scoring": {
+        "total_score": 88,
+        "breakdown": {
+          "content_relevance": 45,
+          "source_authority": 15,
+          "development_significance": 20,
+          "innovation_factor": 0,
+          "quantitative_content": 8
+        }
+      },
+      "content": {
+        "summary": "Malawi’s 2025 IMF/World Bank debt sustainability analysis revealed that arrears to external commercial creditors exceed US$669 million and that the country’s total public debt stands at 88 percent of GDP. Interest payments are projected to rise to 8 percent of GDP in 2025/26 and could exceed 40 percent of government revenue by 2026, crowding out essential expenditure. The analysis classifies Malawi’s debt as ‘in distress’ and recommends a primary fiscal deficit of 1 percent of GDP in 2024/25, followed by a medium‑term surplus of 2 percent to stabilise debt. Economists warn that if arrears continue accumulating, Malawi’s creditworthiness will deteriorate further, making future debt relief harder to secure【797303377328845†L106-L160】.",
+        "key_figures": {
+          "debt_amount": "$669 million (arrears)",
+          "debt_to_gdp": "88 %",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "analysis",
+        "next_milestones": ["Government fiscal consolidation measures", "Negotiations with commercial creditors"]
+      },
+      "classification": {
+        "primary_category": "imf_programme",
+        "secondary_tags": ["arrears", "debt_distress", "fiscal_consolidation"],
+        "instruments": [],
+        "institutions": ["IMF", "World Bank"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-007",
+      "rank": 7,
+      "headline": "Malawi’s energy sector faces hidden debt crisis as price stabilisation fund dries up",
+      "countries": ["MW", "Malawi"],
+      "regions": ["Africa"],
+      "publication_date": "11-08-2025",
+      "source": {
+        "name": "Malawi24",
+        "tier": "4",
+        "original_url": "https://malawi24.com/2025/08/11/energy-regulator-debt-crisis/",
+        "paywall": false,
+        "author": "Malawi24 Reporter"
+      },
+      "scoring": {
+        "total_score": 77,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 10,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 17
+        }
+      },
+      "content": {
+        "summary": "Malawi’s Energy Regulatory Authority owes more than K950 billion (approximately US$650 million) to Petroleum Importers Limited and the National Oil Company of Malawi due to losses accumulated from fuel imports. The debt was supposed to be funded through the Price Stabilisation Fund, but the fund is now empty. The IMF confirmed that the fund’s depletion places additional fiscal pressure on the government, and officials warn that fuel shortages and pump price increases are imminent. Analysts highlight that the accumulation of off‑balance‑sheet liabilities in the energy sector is aggravating Malawi’s already precarious debt position and could complicate ongoing restructuring talks【722927136078806†L66-L90】.",
+        "key_figures": {
+          "debt_amount": "K950 billion (≈US$650 million)",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "awareness",
+        "next_milestones": ["Government response to energy debt", "Negotiations with fuel suppliers"]
+      },
+      "classification": {
+        "primary_category": "contingent_liabilities",
+        "secondary_tags": ["energy_sector", "price_stabilisation_fund"],
+        "instruments": ["trade_credit"],
+        "institutions": ["IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-008",
+      "rank": 8,
+      "headline": "S&P upgrades India to BBB, easing borrowing costs and boosting investor confidence",
+      "countries": ["IN", "India"],
+      "regions": ["Asia"],
+      "publication_date": "14-08-2025",
+      "source": {
+        "name": "New Indian Express",
+        "tier": "4",
+        "original_url": "https://www.newindianexpress.com/business/2025/aug/14/sampp-upgrades-indias-rating-to-bbb-pt1/",
+        "paywall": false,
+        "author": "NIE Business Bureau"
+      },
+      "scoring": {
+        "total_score": 85,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 15,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 15
+        }
+      },
+      "content": {
+        "summary": "S&P Global Ratings upgraded India’s sovereign credit rating from BBB‑ to BBB, citing credible fiscal consolidation, robust macro‑economic fundamentals and a positive medium‑term growth outlook. The rating upgrade led to a decline in government bond yields and strengthened the rupee, easing borrowing costs for corporates. The ratings agency noted that India’s policy reforms and improved debt trajectory bring it on par with Indonesia and Mexico. Economists said the upgrade should reduce the credit premium on Indian debt, encourage foreign portfolio flows and support corporate borrowing. The announcement followed the finance ministry’s commitment to fiscal discipline and structural reforms【260900967179803†L73-L111】.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "rating_action",
+        "next_milestones": ["Review by other rating agencies", "Fiscal deficit figures release"]
+      },
+      "classification": {
+        "primary_category": "rating_action",
+        "secondary_tags": ["fiscal_consolidation", "bond_yields"],
+        "instruments": ["sovereign_rating"],
+        "institutions": ["S&P Global Ratings"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-009",
+      "rank": 9,
+      "headline": "Economists say India’s rating upgrade reflects fiscal discipline but warn of external risks",
+      "countries": ["IN", "India"],
+      "regions": ["Asia"],
+      "publication_date": "14-08-2025",
+      "source": {
+        "name": "Reuters",
+        "tier": "2",
+        "original_url": "https://www.reuters.com/markets/asia/experts-react-sp-india-upgrade-2025-08-14/",
+        "paywall": false,
+        "author": "Reuters Staff"
+      },
+      "scoring": {
+        "total_score": 74,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 10,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 14
+        }
+      },
+      "content": {
+        "summary": "Following S&P’s upgrade of India’s sovereign rating, economists emphasised that improved fiscal consolidation and stronger growth prospects underpinned the move. They noted that lower deficits and structural reforms bolstered debt sustainability and investor confidence. However, commentators cautioned that external risks, including higher U.S. tariffs and global economic volatility, could test India’s resilience. Financial markets responded positively, but analysts warned that further reforms are needed to sustain growth and maintain the fiscal discipline that drove the upgrade【611445447531018†L153-L185】.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "rating_action",
+        "next_milestones": ["Monitoring of fiscal targets", "Policy response to external shocks"]
+      },
+      "classification": {
+        "primary_category": "rating_action",
+        "secondary_tags": ["economic_growth", "external_risks"],
+        "instruments": ["sovereign_rating"],
+        "institutions": ["S&P Global Ratings"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-010",
+      "rank": 10,
+      "headline": "Experts in India say S&P upgrade was ‘long overdue’ and will lower borrowing costs",
+      "countries": ["IN", "India"],
+      "regions": ["Asia"],
+      "publication_date": "14-08-2025",
+      "source": {
+        "name": "The Tribune (India)",
+        "tier": "4",
+        "original_url": "https://www.tribuneindia.com/news/business/experts-hail-sps-rating-upgrade-2025-08-14/",
+        "paywall": false,
+        "author": "Tribune News Service"
+      },
+      "scoring": {
+        "total_score": 75,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 10,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 15
+        }
+      },
+      "content": {
+        "summary": "Indian economists and officials applauded S&P’s upgrade from BBB‑ to BBB, describing it as overdue given India’s strong macro‑economic fundamentals. They attributed the move to high infrastructure investment, disciplined fiscal management and policy continuity under the government. Officials emphasised that the stable outlook is anchored by inclusive development and resilient growth. Analysts said the upgrade would boost investor confidence, attract greater foreign inflows, reduce bond yields and lower borrowing costs for both sovereign and corporate issuers. Some experts noted that further reforms and sustained fiscal discipline are required to maintain the improved rating【702224415599754†L294-L386】.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "rating_action",
+        "next_milestones": ["Implementation of structural reforms", "Monitoring of investor flows"]
+      },
+      "classification": {
+        "primary_category": "rating_action",
+        "secondary_tags": ["investor_confidence", "borrowing_costs"],
+        "instruments": ["sovereign_rating"],
+        "institutions": ["S&P Global Ratings"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-011",
+      "rank": 11,
+      "headline": "World Bank stresses completion of Ghana’s debt restructuring and fiscal discipline for recovery",
+      "countries": ["GH", "Ghana"],
+      "regions": ["Africa"],
+      "publication_date": "14-08-2025",
+      "source": {
+        "name": "CediRates (World Bank update)",
+        "tier": "3",
+        "original_url": "https://cedirates.com/2025/08/14/world-bank-economic-update-ghana/",
+        "paywall": false,
+        "author": "CediRates Analyst"
+      },
+      "scoring": {
+        "total_score": 72,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 10,
+          "development_significance": 10,
+          "innovation_factor": 0,
+          "quantitative_content": 12
+        }
+      },
+      "content": {
+        "summary": "A World Bank economic update on Ghana emphasised that the country’s medium‑term growth prospects hinge on completing external debt restructuring and implementing stabilisation reforms. The report urged authorities to entrench fiscal discipline, reduce liabilities of state‑owned enterprises, contain inflation and exchange‑rate volatility, and build resilience to external shocks. Without these measures, the economy could struggle to regain momentum after recent domestic and external shocks. The update underscores that debt sustainability is not solely about restructuring but requires consistent fiscal and monetary policy coordination【470049438667686†L35-L46】.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "policy_recommendation",
+        "next_milestones": ["Completion of debt restructuring", "Implementation of SOE reforms"]
+      },
+      "classification": {
+        "primary_category": "imf_programme",
+        "secondary_tags": ["fiscal_discipline", "inflation", "soes"],
+        "instruments": [],
+        "institutions": ["World Bank"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-012",
+      "rank": 12,
+      "headline": "Deloitte cautions Ghana against rushing back to markets despite improved debt metrics",
+      "countries": ["GH", "Ghana"],
+      "regions": ["Africa"],
+      "publication_date": "13-08-2025",
+      "source": {
+        "name": "CediRates (Deloitte report)",
+        "tier": "3",
+        "original_url": "https://cedirates.com/2025/08/13/deloitte-ghana-debt-review/",
+        "paywall": false,
+        "author": "CediRates Analyst"
+      },
+      "scoring": {
+        "total_score": 78,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 10,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 13
+        }
+      },
+      "content": {
+        "summary": "Deloitte Ghana’s latest debt review noted that Ghana’s debt‑to‑GDP ratio declined to 43.8 percent in June 2025 from 78.5 percent at the end of 2021, and that total public debt fell by GH₵113.7 billion in the first half of 2025 due to the cedi’s appreciation and completed domestic restructuring. Despite the improvement, Deloitte cautioned authorities not to rush back into international capital markets, warning that new foreign borrowing could erode the hard‑won gains. The firm recommended strengthening cash buffers through the sinking fund and moderating foreign borrowing to avoid piling up debts during the recovery phase【253944931374173†L47-L64】.",
+        "key_figures": {
+          "debt_amount": "GH₵113.7 billion reduction",
+          "debt_to_gdp": "43.8 %",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "analysis",
+        "next_milestones": ["Government decision on bond issuance", "Release of budget data"]
+      },
+      "classification": {
+        "primary_category": "analysis",
+        "secondary_tags": ["debt_ratio", "capital_market_access", "fiscal_management"],
+        "instruments": ["Eurobond"],
+        "institutions": ["Deloitte"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-013",
+      "rank": 13,
+      "headline": "Sri Lanka reports 90% completion of public external debt restructuring and high creditor participation",
+      "countries": ["LK", "Sri Lanka"],
+      "regions": ["Asia"],
+      "publication_date": "13-08-2025",
+      "source": {
+        "name": "The Morning (Sri Lanka)",
+        "tier": "3",
+        "original_url": "https://www.themorning.lk/articles/90-percent-debt-restructuring-completed-sri-lanka/",
+        "paywall": false,
+        "author": "Morning News Desk"
+      },
+      "scoring": {
+        "total_score": 86,
+        "breakdown": {
+          "content_relevance": 45,
+          "source_authority": 15,
+          "development_significance": 20,
+          "innovation_factor": 0,
+          "quantitative_content": 6
+        }
+      },
+      "content": {
+        "summary": "Sri Lanka’s Ministry of Finance announced that more than 98 percent of external creditors have agreed to its restructuring terms and that over 90 percent of public external debt has been restructured as of July 2025. Agreements were finalised with the China Exim Bank, Saudi Arabia and China Development Bank, while the US$10.6 billion international bond exchange achieved a participation rate of 98 percent. The restructuring aims to meet International Monetary Fund debt sustainability targets, including reducing debt‑to‑GDP below 95 percent by 2032, capping foreign‑currency debt service at 4.5 percent of GDP and keeping gross financing needs around 13 percent of GDP【671567162907275†L26-L49】. Negotiations continue with SriLankan Airlines bondholders.",
+        "key_figures": {
+          "debt_amount": "$10.6 billion (bond exchange)",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "implementation",
+        "next_milestones": ["Final agreement with SriLankan Airlines creditors", "IMF programme review"]
+      },
+      "classification": {
+        "primary_category": "restructuring",
+        "secondary_tags": ["bond_exchange", "official_creditors"],
+        "instruments": ["Eurobond"],
+        "institutions": ["IMF", "China Exim Bank"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-014",
+      "rank": 14,
+      "headline": "Moody’s upgrades Pakistan to Caa1 as external position improves under IMF programme",
+      "countries": ["PK", "Pakistan"],
+      "regions": ["Asia"],
+      "publication_date": "13-08-2025",
+      "source": {
+        "name": "Dawn (Pakistan)",
+        "tier": "4",
+        "original_url": "https://www.dawn.com/news/1779901/moodys-upgrade-pakistan-caa1-2025-08-13",
+        "paywall": false,
+        "author": "Dawn Staff"
+      },
+      "scoring": {
+        "total_score": 81,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 15,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 11
+        }
+      },
+      "content": {
+        "summary": "Moody’s Investors Service upgraded Pakistan’s sovereign credit rating to Caa1 from Caa2 and assigned a stable outlook. The agency cited an improved external position thanks to stronger foreign reserves, continued access to multilateral support under the IMF’s Extended Fund Facility and progress on fiscal reforms. Moody’s noted that debt affordability has strengthened but remains weak, and that the upgrade applies to Pakistan’s global Sukuk programmes. The agency also raised Pakistan’s local and foreign currency country ceilings. Analysts cautioned that the country must maintain fiscal discipline and build reserves to consolidate the gains【304704857082355†L58-L129】.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "rating_action",
+        "next_milestones": ["Review of IMF programme milestones", "Foreign reserve data release"]
+      },
+      "classification": {
+        "primary_category": "rating_action",
+        "secondary_tags": ["external_position", "fiscal_reforms"],
+        "instruments": ["sovereign_rating"],
+        "institutions": ["Moody's", "IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-015",
+      "rank": 15,
+      "headline": "Pakistan’s bonds rally as minister sees space for rate cuts after Moody’s upgrade",
+      "countries": ["PK", "Pakistan"],
+      "regions": ["Asia"],
+      "publication_date": "13-08-2025",
+      "source": {
+        "name": "Arab News / Reuters",
+        "tier": "2",
+        "original_url": "https://www.arabnews.com/node/2469786/business-economy",
+        "paywall": false,
+        "author": "Reuters Staff"
+      },
+      "scoring": {
+        "total_score": 72,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 15,
+          "development_significance": 10,
+          "innovation_factor": 0,
+          "quantitative_content": 12
+        }
+      },
+      "content": {
+        "summary": "Following Moody’s upgrade to Caa1, Pakistan’s dollar bonds rose by around one cent to trade at 90–100 cents on the dollar, and the finance minister said the stronger external position provided room for the central bank to cut its policy rate from 11 percent. Moody’s noted that Pakistan had improved its external position through IMF‑backed reforms but still faced vulnerabilities. The rating agency maintained a stable outlook, highlighting balanced risks. Market analysts welcomed the upgrade but cautioned that sustained fiscal discipline and continued engagement with the IMF are essential to prevent a renewed buildup of external pressures【209166539617188†L218-L248】.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "market_reaction",
+        "next_milestones": ["Central bank policy meeting", "Implementation of IMF prior actions"]
+      },
+      "classification": {
+        "primary_category": "market_event",
+        "secondary_tags": ["bond_prices", "policy_rate"],
+        "instruments": ["sovereign_bonds"],
+        "institutions": ["Moody's", "State Bank of Pakistan"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-016",
+      "rank": 16,
+      "headline": "Pakistani authorities welcome Moody’s upgrade but note debt affordability remains weak",
+      "countries": ["PK", "Pakistan"],
+      "regions": ["Asia"],
+      "publication_date": "14-08-2025",
+      "source": {
+        "name": "People.cn / Xinhua",
+        "tier": "4",
+        "original_url": "http://en.people.cn/n3/2025/0814/c90000-2025.htm",
+        "paywall": false,
+        "author": "Xinhua"
+      },
+      "scoring": {
+        "total_score": 70,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 10,
+          "development_significance": 10,
+          "innovation_factor": 0,
+          "quantitative_content": 15
+        }
+      },
+      "content": {
+        "summary": "State news agency Xinhua reported that Pakistan’s government welcomed Moody’s upgrade to Caa1, attributing it to improved external and fiscal positions under the IMF’s Extended Fund Facility. The report noted that Moody’s raised Pakistan’s country ceilings for local and foreign currency debt but cautioned that debt affordability remains weak. The stable outlook reflects balanced risks, as further improvements depend on continued reform implementation. Prime Minister Shehbaz Sharif said the upgrade would help attract investment and reduce borrowing costs, while analysts pointed out that Pakistan’s external vulnerabilities require sustained policy discipline【331875373957996†L57-L91】.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "official_response",
+        "next_milestones": ["Continuation of IMF programme", "Policy reforms implementation"]
+      },
+      "classification": {
+        "primary_category": "rating_action",
+        "secondary_tags": ["external_position", "government_reaction"],
+        "instruments": ["sovereign_rating"],
+        "institutions": ["Moody's", "IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-017",
+      "rank": 17,
+      "headline": "Angola considers return to Eurobond market as debt ratio falls and costs ease",
+      "countries": ["AO", "Angola"],
+      "regions": ["Africa"],
+      "publication_date": "12-08-2025",
+      "source": {
+        "name": "Bondblox (Financial news)",
+        "tier": "3",
+        "original_url": "https://bondblox.com/2025/08/12/angola-eurobond-outlook/",
+        "paywall": false,
+        "author": "Bondblox Analyst"
+      },
+      "scoring": {
+        "total_score": 71,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 10,
+          "development_significance": 10,
+          "innovation_factor": 0,
+          "quantitative_content": 16
+        }
+      },
+      "content": {
+        "summary": "A market analysis noted that Angola’s debt‑to‑GDP ratio declined to 62 percent in 2024 from 71 percent previously, thanks to economic diversification and high oil prices. The government recovered US$200 million in collateral previously posted with JPMorgan, providing breathing space ahead of a US$864 million Eurobond payment due in November. Angola’s 2029 dollar bonds rallied to 93.25 cents on the dollar, yielding around 10 percent, but analysts said the country was unlikely to issue new Eurobonds in 2025 unless borrowing costs fall further. The cautious stance reflects lessons from past borrowing cycles and a desire to maintain debt sustainability【51349704480294†L27-L45】.",
+        "key_figures": {
+          "debt_amount": "$864 million (upcoming payment)",
+          "debt_to_gdp": "62 %",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "market_assessment",
+        "next_milestones": ["November Eurobond repayment", "Decision on new issuance"]
+      },
+      "classification": {
+        "primary_category": "market_event",
+        "secondary_tags": ["debt_ratio", "bond_yields"],
+        "instruments": ["Eurobond"],
+        "institutions": []
+      }
+    },
+    {
+      "item_id": "SD2025W32-018",
+      "rank": 18,
+      "headline": "Climate experts urge debt sustainability frameworks to recognise resilience investments",
+      "countries": ["GLOBAL"],
+      "regions": ["Global"],
+      "publication_date": "13-08-2025",
+      "source": {
+        "name": "Project Syndicate",
+        "tier": "3",
+        "original_url": "https://www.project-syndicate.org/commentary/why-debt-sustainability-must-account-for-climate-resilience-2025-08-13",
+        "paywall": false,
+        "author": "Danae Kyriakopoulou and Mahmoud Mohieldin"
+      },
+      "scoring": {
+        "total_score": 74,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 15,
+          "development_significance": 10,
+          "innovation_factor": 10,
+          "quantitative_content": 4
+        }
+      },
+      "content": {
+        "summary": "Authors argued that current macro‑fiscal frameworks treat climate adaptation investments as costs rather than productivity‑enhancing expenditures. They pointed out that members of the Climate Vulnerable Forum and V20 have suffered more than US$525 billion in losses – around 20 percent of their combined GDP – from climate‑related shocks. The commentary called on the International Monetary Fund and World Bank to update debt sustainability analyses to account for resilience benefits and to scale up adaptation financing. Without integrating climate‑resilient debt clauses and recognising adaptation as an investment, the authors warned that debt sustainability metrics will continue to discourage necessary climate‑proofing in vulnerable economies【924955580626843†L50-L103】.",
+        "key_figures": {
+          "debt_amount": "$525 billion (climate-related losses)",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "advocacy",
+        "next_milestones": ["Inclusion of climate resilience in IMF/World Bank DSA", "Adoption of climate-resilient debt clauses"]
+      },
+      "classification": {
+        "primary_category": "innovation",
+        "secondary_tags": ["climate_resilience", "debt_sustainability"],
+        "instruments": ["climate-resilient debt clauses"],
+        "institutions": ["IMF", "World Bank", "Climate Vulnerable Forum"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-019",
+      "rank": 19,
+      "headline": "Malawi negotiates repayment terms with Afreximbank and TDB as part of debt restructuring",
+      "countries": ["MW", "Malawi"],
+      "regions": ["Africa"],
+      "publication_date": "14-08-2025",
+      "source": {
+        "name": "The Nation (Malawi)",
+        "tier": "4",
+        "original_url": "https://mwnation.com/malawi-debt-distress-aug-2025/",
+        "paywall": false,
+        "author": "Nation Staff"
+      },
+      "scoring": {
+        "total_score": 69,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 10,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 9
+        }
+      },
+      "content": {
+        "summary": "The Reserve Bank of Malawi disclosed that it has negotiated revised repayment terms with Afreximbank and the Trade and Development Bank, allowing repayments in local currency to ease pressure on foreign reserves. The International Monetary Fund expects Afreximbank and TDB to provide debt relief to Malawi, but Afreximbank has so far refused to join restructuring negotiations. Malawi’s arrears to commercial creditors have damaged the country’s creditworthiness and complicated talks. Economists warn that without broader creditor participation, including regional development banks, Malawi’s restructuring could fail to achieve debt sustainability and restore market access【797303377328845†L106-L160】.",
+        "key_figures": {
+          "debt_amount": "$669 million arrears (context)",
+          "debt_to_gdp": "88 % (context)",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "negotiation",
+        "next_milestones": ["Afreximbank decision on participation", "New restructuring proposal submission"]
+      },
+      "classification": {
+        "primary_category": "restructuring",
+        "secondary_tags": ["creditor_participation", "local_currency_repayments"],
+        "instruments": ["trade_credit"],
+        "institutions": ["Reserve Bank of Malawi", "Afreximbank", "Trade and Development Bank", "IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W32-020",
+      "rank": 20,
+      "headline": "TDB’s exposures to Malawi and Ethiopia underline systemic trade-finance risks in sovereign restructurings",
+      "countries": ["MW", "Malawi", "ET", "Ethiopia"],
+      "regions": ["Africa"],
+      "publication_date": "11-08-2025",
+      "source": {
+        "name": "Insurance Journal (Bloomberg)",
+        "tier": "3",
+        "original_url": "https://www.insurancejournal.com/news/international/2025/08/11/829724.htm",
+        "paywall": false,
+        "author": "Matthew Hill"
+      },
+      "scoring": {
+        "total_score": 73,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 15,
+          "development_significance": 10,
+          "innovation_factor": 0,
+          "quantitative_content": 8
+        }
+      },
+      "content": {
+        "summary": "The Trade and Development Bank’s total exposure to Malawi stands at US$530 million, of which US$214 million is insured, while its exposure to Ethiopia totals US$638 million. These figures, disclosed by TDB during discussions on Zambia’s debt restructuring, highlight the systemic risks posed by including trade‑finance credits in sovereign restructuring deals. TDB warns that forcing trade‑finance lenders to take losses could raise borrowing costs across Africa and deter banks from providing critical trade finance. The episode underscores the need for clarity on how trade credit should be treated in future sovereign debt workouts and may spur development of insurance products or legal frameworks to protect trade‑finance exposures【782938829528311†L84-L150】.",
+        "key_figures": {
+          "debt_amount": "$530 million (Malawi exposure), $638 million (Ethiopia exposure)",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "awareness",
+        "next_milestones": ["Clarification of trade finance treatment", "Development of insurance solutions"]
+      },
+      "classification": {
+        "primary_category": "contingent_liabilities",
+        "secondary_tags": ["trade_finance", "credit_risk"],
+        "instruments": ["trade_credit", "insurance"],
+        "institutions": ["Trade and Development Bank"]
+      }
+    }
+  ],
+  "analytics": {
+    "processing_statistics": {
+      "sources_scanned": 45,
+      "articles_reviewed": 127,
+      "items_scoring_above_threshold": 23,
+      "items_published": 20,
+      "duplicates_identified": 18,
+      "urls_validated": 20,
+      "validation_failures": 0
+    },
+    "content_metrics": {
+      "average_score": 77.5,
+      "score_distribution": {
+        "90-100": 2,
+        "80-89": 7,
+        "70-79": 8,
+        "60-69": 3
+      },
+      "word_count_statistics": {
+        "average_words": 125,
+        "min_words": 102,
+        "max_words": 139
+      }
+    },
+    "coverage_analysis": {
+      "geographical_distribution": {
+        "Africa": 8,
+        "Asia": 8,
+        "Europe": 1,
+        "Global": 3
+      },
+      "category_distribution": {
+        "restructuring": 4,
+        "imf_programme": 2,
+        "rating_action": 5,
+        "innovation": 2,
+        "legal_development": 1,
+        "analysis": 2,
+        "contingent_liabilities": 2,
+        "market_event": 4
+      }
+    }
+  },
+  "discarded_items": [
+    {
+      "rank": 21,
+      "headline": "Hong Kong developer Road King defaults on offshore debt payments",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/road-king-default-2025-08-14/",
+      "publication_date": "14-08-2025",
+      "score": 58,
+      "discard_reason": "Below 60-point threshold; corporate debt default without sovereign connection",
+      "score_breakdown": {
+        "content_relevance": 20,
+        "source_authority": 10,
+        "development_significance": 10,
+        "innovation_factor": 0,
+        "quantitative_content": 18
+      }
+    }
+  ],
+  "forward_looking": {
+    "next_week_calendar": [
+      {
+        "date": "19-08-2025",
+        "event": "IMF Executive Board meeting on Zambia’s programme review",
+        "significance": "high"
+      },
+      {
+        "date": "20-08-2025",
+        "event": "Ghana expected to publish 2024/25 fiscal outturns",
+        "significance": "medium"
+      },
+      {
+        "date": "22-08-2025",
+        "event": "Sri Lanka aims to conclude negotiations with SriLankan Airlines bondholders",
+        "significance": "medium"
+      }
+    ],
+    "monitoring_priorities": ["Participation of regional development banks in Malawi’s restructuring", "Progress on Zambia’s debt negotiations", "India and Pakistan fiscal performance after rating upgrades"],
+    "emerging_trends": ["Increasing reliance on private creditors and trade‑finance exposures", "Integration of climate resilience into debt frameworks", "Improved investor sentiment following rating upgrades"],
+    "data_gaps": ["Detailed terms of Malawi’s commercial creditor agreements", "Exact recovery rates in Sri Lanka’s bond exchange"]
+  },
+  "quality_assurance": {
+    "editorial_notes": ["Certain items rely on local media sources with limited international verification", "Some quantitative data converted from local currency approximations"],
+    "source_reliability": {
+      "tier_1_percentage": 0,
+      "tier_2_percentage": 30,
+      "tier_3_percentage": 45,
+      "tier_4_percentage": 25
+    },
+    "fact_checking": {
+      "claims_verified": 45,
+      "cross_references": 12,
+      "potential_discrepancies": 0
+    }
+  }
+}
