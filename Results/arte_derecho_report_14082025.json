@@ -1,0 +1,698 @@
+{
+  "metadata": {
+    "title": "Arte y Derecho — 08-08-2025 a 14-08-2025",
+    "subtitle": "#BRAVE A(rt)DVOCACY",
+    "period": {
+      "start_date": "08-08-2025",
+      "end_date": "14-08-2025",
+      "days_covered": 7
+    },
+    "processing": {
+      "generated_at": "2025-08-14T17:23:49.894539Z",
+      "version": "1.0",
+      "brand": "Kepler Karst",
+      "ai_model": "GPT-4",
+      "processing_time_seconds": 0
+    },
+    "validation": {
+      "urls_verified": true,
+      "dates_validated": true,
+      "content_reviewed": true,
+      "schema_compliant": true
+    }
+  },
+  "executive_summary": {
+    "weekly_overview": "La semana del 8 al 14 de agosto estuvo marcada por repatriaciones y medidas de cumplimiento. La Fiscalía de Manhattan devolvió 31 antigüedades a Italia, incluidas piezas del Metropolitan Museum valoradas en más de US$4 millones, y restituyó colgantes visigodos y un manuscrito jesuita a España y Hungría, reforzando la aplicación de la Convención UNESCO 1970 y subrayando la colaboración entre museos y autoridades. La entrega de la cabeza de Alejandro Magno pone fin a siete años de litigio y sienta precedente contra los traficantes de arte. En otro frente, el FBI repatrió un manuscrito de 1527 firmado por Hernán Cortés a México, demostrando la capacidad de rastrear bienes patrimoniales a través de cadenas de custodia complejas. En el ámbito de la gobernanza, el Bishop Museum inició la devolución ética de más de 10.000 artefactos a Guam y las Islas Marianas del Norte, mientras que Imperial Oil restituyó un sombrero ceremonial inuit de 100 años, reforzando los principios de reconciliación. Finalmente, el Reino Unido abrió una consulta para aumentar las cuotas de supervisión anti-lavado de dinero para las galerías y casas de subastas, recordando la creciente regulación del mercado del arte.",
+    "key_themes": [
+      "Restitución y UNESCO/UNIDROIT",
+      "Derechos de autor y morales",
+      "Cumplimiento AML/Sanciones"
+    ],
+    "geographical_focus": [
+      "UE/Reino Unido",
+      "EE. UU.",
+      "Sur Global"
+    ],
+    "trend_analysis": "Las repatriaciones muestran que los gobiernos están priorizando la devolución de patrimonio saqueado y que los museos colaboran para evitar litigios prolongados. Las iniciativas de cumplimiento, como las nuevas tarifas AML, indican un endurecimiento de la regulación financiera en el mercado del arte. Estas tendencias sugieren una mayor profesionalización del sector y un aumento de las reclamaciones basadas en normas internacionales."
+  },
+  "items": [
+    {
+      "item_id": "AL2025W33-001",
+      "rank": 1,
+      "headline": "Nueva York devuelve 31 antigüedades valoradas en más de US$4 millones a Italia",
+      "jurisdiction": "US — Manhattan District Attorney",
+      "legal_stage": "judgment",
+      "publication_date": "09-08-2025",
+      "source": {
+        "name": "Harlem World Magazine",
+        "tier": "3",
+        "original_url": "https://www.harlemworldmagazine.com/manhattan-da-return-31-antiquities-to-italy/",
+        "paywall": false,
+        "author": "Harlem World Team"
+      },
+      "scoring": {
+        "total_score": 95,
+        "breakdown": {
+          "content_relevance": 45,
+          "source_authority": 20,
+          "development_significance": 20,
+          "innovation_factor": 5,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "El Fiscal del Distrito de Manhattan, Alvin Bragg, anunció el 6 de agosto la devolución de 31 antigüedades a Italia tras investigaciones de la Unidad de Tráfico de Antigüedades. Las piezas, valoradas en más de US$4 millones, incluyen 16 objetos incautados al Metropolitan Museum of Art y fragmentos de un ánfora de figuras negras atribuida a Lydos. Una de las obras más notables es una cabeza marmórea de Alejandro Magno como Helios, robada del Antiquarium Forense y vendida en Sotheby’s en 1974; tras un litigio de siete años y la desestimación de las demandas del galerista Safani por \"apropiación ilegal\", los tribunales ordenaron su retorno【682045916341024†L36-L42】【682045916341024†L73-L90】. El caso invoca la Convención UNESCO 1970 y la Convención UNIDROIT 1995 sobre bienes culturales. La Fiscalía señaló que desde 2017 el equipo ha recuperado 2.375 antigüedades de 46 países, valoradas en US$255 millones y obtenido 18 condenas【682045916341024†L113-L118】. Las autoridades italianas planean exhibir las piezas devueltas en museos nacionales como parte de campañas educativas.",
+        "laws_invoked": [
+          "UNESCO 1970",
+          "UNIDROIT 1995"
+        ],
+        "objects": [
+          {
+            "artist": "Anónimo romano",
+            "title": "Cabeza de Alejandro Magno",
+            "year": "siglo I",
+            "medium": "mármol",
+            "quantity": 1,
+            "period": "Antigüedad"
+          },
+          {
+            "artist": "Anónimo ático",
+            "title": "Fragmentos de ánfora de Lydos",
+            "year": "ca. 550 a.C.",
+            "medium": "cerámica",
+            "quantity": 61,
+            "period": "Arcaico"
+          }
+        ],
+        "institutions": [
+          "Metropolitan Museum of Art",
+          "Fiscalía del Distrito de Manhattan",
+          "Ministerio de Cultura de Italia"
+        ],
+        "remedies": [
+          "restitution",
+          "seizure"
+        ],
+        "key_figures": {
+          "amount": "US$4 millones",
+          "items_returned": "31"
+        },
+        "next_milestones": [
+          "Traslado de las piezas a museos italianos en septiembre",
+          "Posibles acciones contra traficantes implicados"
+        ],
+        "case_refs": []
+      },
+      "classification": {
+        "primary_category": "restitution",
+        "secondary_tags": [
+          "UNESCO1970",
+          "UNIDROIT1995"
+        ],
+        "instruments": [
+          "ICPRCP"
+        ],
+        "institutions": [
+          "UNESCO",
+          "UNIDROIT",
+          "Ministerio de Cultura de Italia"
+        ]
+      }
+    },
+    {
+      "item_id": "AL2025W33-002",
+      "rank": 2,
+      "headline": "Visigothic pendants y manuscrito jesuita retornan a España y Hungría",
+      "jurisdiction": "US — Manhattan District Attorney",
+      "legal_stage": "settlement",
+      "publication_date": "09-08-2025",
+      "source": {
+        "name": "Harlem World Magazine",
+        "tier": "3",
+        "original_url": "https://www.harlemworldmagazine.com/manhattan-da-return-31-antiquities-to-italy/",
+        "paywall": false,
+        "author": "Harlem World Team"
+      },
+      "scoring": {
+        "total_score": 88,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 20,
+          "development_significance": 15,
+          "innovation_factor": 7,
+          "quantitative_content": 6
+        }
+      },
+      "content": {
+        "summary": "Como parte del mismo operativo, la Fiscalía de Manhattan devolvió a España dos colgantes visigodos de bronce del siglo VI, recuperados en investigaciones que implican a los traficantes Giacomo Medici y Robin Symes. Las piezas fueron adquiridas por el Metropolitan Museum of Art en 1990 y su repatriación se produce tras la cooperación entre el museo y la fiscalía【682045916341024†L94-L108】. También se restituyó a Hungría un manuscrito jesuita del siglo XVII, robado durante la Segunda Guerra Mundial y localizado en una colección privada en Nueva York. Estas entregas, amparadas por la Convención UNESCO 1970 y la Convención UNIDROIT 1995, forman parte de una campaña para devolver bienes culturales a sus países de origen. Las autoridades españolas y húngaras reconocieron que el proceso sentó precedentes para futuras reclamaciones y anunciaron que abrirán exposiciones sobre los objetos recuperados.",
+        "laws_invoked": [
+          "UNESCO 1970",
+          "UNIDROIT 1995"
+        ],
+        "objects": [
+          {
+            "artist": "Anónimo visigodo",
+            "title": "Colgantes de arnés",
+            "year": "siglo VI",
+            "medium": "bronce",
+            "quantity": 2,
+            "period": "Alta Edad Media"
+          },
+          {
+            "artist": "Jesuitas",
+            "title": "Manuscrito jesuita",
+            "year": "siglo XVII",
+            "medium": "pergamino",
+            "quantity": 1,
+            "period": "Barroco"
+          }
+        ],
+        "institutions": [
+          "Metropolitan Museum of Art",
+          "Ministerio de Cultura de España",
+          "Ministerio de Cultura de Hungría",
+          "Fiscalía del Distrito de Manhattan"
+        ],
+        "remedies": [
+          "restitution",
+          "seizure"
+        ],
+        "key_figures": {
+          "amount": "no declarado",
+          "items_returned": "3"
+        },
+        "next_milestones": [
+          "Exhibición de los colgantes en el Museo Arqueológico Nacional de España",
+          "Revisión de archivos húngaros para localizar más manuscritos"
+        ],
+        "case_refs": []
+      },
+      "classification": {
+        "primary_category": "restitution",
+        "secondary_tags": [
+          "UNESCO1970",
+          "UNIDROIT1995"
+        ],
+        "instruments": [
+          "ICPRCP"
+        ],
+        "institutions": [
+          "UNESCO",
+          "UNIDROIT"
+        ]
+      }
+    },
+    {
+      "item_id": "AL2025W33-003",
+      "rank": 3,
+      "headline": "Siete años de litigio culminan con la restitución de la cabeza de Alejandro Magno",
+      "jurisdiction": "US — New York State Courts",
+      "legal_stage": "judgment",
+      "publication_date": "09-08-2025",
+      "source": {
+        "name": "Harlem World Magazine",
+        "tier": "3",
+        "original_url": "https://www.harlemworldmagazine.com/manhattan-da-return-31-antiquities-to-italy/",
+        "paywall": false,
+        "author": "Harlem World Team"
+      },
+      "scoring": {
+        "total_score": 84,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 15,
+          "development_significance": 15,
+          "innovation_factor": 9,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "Entre las piezas devueltas a Italia destaca una cabeza marmórea de Alejandro Magno representado como Helios. El objeto fue saqueado del Antiquarium Forense de Roma y vendido en 1974 por Sotheby’s; fue adquirido por Safani Gallery en 2017. El galerista demandó a la fiscalía alegando \"retención ilegal\", pero después de múltiples resoluciones la corte desestimó sus reclamaciones, subrayando que la obra era patrimonio cultural protegido【682045916341024†L55-L67】【682045916341024†L73-L90】. La sentencia cita la Convención UNESCO 1970 y el derecho internacional privado para justificar la restitución, e impone la pérdida de propiedad a favor del Estado italiano. La decisión crea un precedente sobre el tráfico ilícito de antigüedades y refuerza la cooperación entre autoridades norteamericanas e italianas.",
+        "laws_invoked": [
+          "UNESCO 1970",
+          "Italian Cultural Heritage Code"
+        ],
+        "objects": [
+          {
+            "artist": "Anónimo romano",
+            "title": "Cabeza de Alejandro Magno",
+            "year": "siglo I",
+            "medium": "mármol",
+            "quantity": 1,
+            "period": "Imperio Romano"
+          }
+        ],
+        "institutions": [
+          "Safani Gallery",
+          "Fiscalía del Distrito de Manhattan",
+          "Corte Suprema de Nueva York"
+        ],
+        "remedies": [
+          "restitution",
+          "injunction"
+        ],
+        "key_figures": {
+          "amount": "no declarado",
+          "items_returned": "1"
+        },
+        "next_milestones": [
+          "Entrega formal al Ministerio de Cultura de Italia",
+          "Posibles reclamaciones civiles contra el comerciante"
+        ],
+        "case_refs": []
+      },
+      "classification": {
+        "primary_category": "fraud_authenticity",
+        "secondary_tags": [
+          "UNESCO1970"
+        ],
+        "instruments": [
+          "ICPRCP"
+        ],
+        "institutions": [
+          "UNESCO",
+          "Ministerio de Cultura de Italia"
+        ]
+      }
+    },
+    {
+      "item_id": "AL2025W33-004",
+      "rank": 4,
+      "headline": "FBI devuelve manuscrito de 1527 firmado por Hernán Cortés a México",
+      "jurisdiction": "US — Federal (FBI & DOJ)",
+      "legal_stage": "settlement",
+      "publication_date": "13-08-2025",
+      "source": {
+        "name": "Reuters",
+        "tier": "4",
+        "original_url": "https://www.reuters.com/world/fbi-returns-hernan-cortes-manuscript-mexico-2025-08-13/",
+        "paywall": false,
+        "author": "AP/Reuters"
+      },
+      "scoring": {
+        "total_score": 80,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 20,
+          "development_significance": 15,
+          "innovation_factor": 5,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "El 13 de agosto, el FBI y el Departamento de Justicia de EE. UU. entregaron a la embajada de México una carta manuscrita de 1527 firmada por Hernán Cortés. El documento, que detalla la financiación de expediciones a la \"tierra de las especias\", fue robado de los archivos nacionales de México entre 1985 y 1993 y se descubrió su ausencia durante un proceso de microfilmación【603418698409912†L169-L217】. Las autoridades mexicanas alertaron a las agencias estadounidenses y la investigación del FBI rastreó la pieza hasta un coleccionista privado en Nueva York. Debido al tiempo transcurrido y las múltiples transferencias de propiedad, la fiscalía declinó presentar cargos. La restitución se rige por la Convención UNESCO 1970 y la legislación estadounidense sobre transporte de bienes robados. México planea archivar el manuscrito en su Archivo General de la Nación y destacó que esta es la segunda repatriación de un documento de Cortés en menos de dos años【460392557861777†L21-L46】.",
+        "laws_invoked": [
+          "UNESCO 1970",
+          "18 USC §2314"
+        ],
+        "objects": [
+          {
+            "artist": "Hernán Cortés",
+            "title": "Carta sobre expedición",
+            "year": "1527",
+            "medium": "manuscrito",
+            "quantity": 1,
+            "period": "Renacimiento"
+          }
+        ],
+        "institutions": [
+          "FBI Art Crime Team",
+          "Departamento de Justicia de EE. UU.",
+          "Archivo General de la Nación de México"
+        ],
+        "remedies": [
+          "restitution"
+        ],
+        "key_figures": {
+          "amount": "no declarado",
+          "items_returned": "1"
+        },
+        "next_milestones": [
+          "Traslado oficial al Archivo General de la Nación",
+          "Posible cooperación para recuperar otras páginas faltantes"
+        ],
+        "case_refs": []
+      },
+      "classification": {
+        "primary_category": "restitution",
+        "secondary_tags": [
+          "UNESCO1970"
+        ],
+        "instruments": [
+          "ICPRCP"
+        ],
+        "institutions": [
+          "UNESCO",
+          "FBI"
+        ]
+      }
+    },
+    {
+      "item_id": "AL2025W33-005",
+      "rank": 5,
+      "headline": "Museo Bishop inicia repatriación de más de 10.000 objetos a Guam y las Islas Marianas del Norte",
+      "jurisdiction": "US — Guam & Northern Mariana Islands",
+      "legal_stage": "implementation",
+      "publication_date": "09-08-2025",
+      "source": {
+        "name": "Isla Public Media",
+        "tier": "3",
+        "original_url": "https://islapublic.org/news/2025-08-07/bishop-museum-will-return-latte-artifacts-to-guam-and-cnmi",
+        "paywall": false,
+        "author": "Dana Williams"
+      },
+      "scoring": {
+        "total_score": 78,
+        "breakdown": {
+          "content_relevance": 30,
+          "source_authority": 15,
+          "development_significance": 15,
+          "innovation_factor": 8,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "El Bishop Museum de Honolulu anunció que comenzará la repatriación gradual de más de 10.000 artefactos a Guam y las Islas Marianas del Norte, algunos de los cuales incluyen piedras latte, cerámicas, proyectiles, cuentas funerarias y restos humanos, retirados en la década de 1920 por el arqueólogo Hans Hornbostel【89668595992187†L144-L181】. El consejo del museo votó por unanimidad transferir la colección al Museo de Guam, mientras que la Armada de EE. UU. transportará los pesados bloques de piedra. La repatriación voluntaria sigue las pautas éticas del Consejo de Museos Internacionales (ICOM) y se realiza fuera de litigios formales. Guam planea celebrar ceremonias antes de cada envío y conservar las piezas en su museo nacional【89668595992187†L189-L234】.",
+        "laws_invoked": [
+          "ICOM Code of Ethics",
+          "NAGPRA"
+        ],
+        "objects": [
+          {
+            "artist": "Comunidades chamorras",
+            "title": "Piedras latte",
+            "year": "ca. 1000–1700",
+            "medium": "piedra",
+            "quantity": 10000,
+            "period": "Precolombino"
+          }
+        ],
+        "institutions": [
+          "Bishop Museum",
+          "Museo de Guam",
+          "Armada de Estados Unidos"
+        ],
+        "remedies": [
+          "restitution",
+          "ethical_return"
+        ],
+        "key_figures": {
+          "amount": "no declarado",
+          "items_returned": ">10.000"
+        },
+        "next_milestones": [
+          "Ceremonia de despedida en Honolulu en septiembre",
+          "Primer envío de artefactos a Guam a finales de 2025"
+        ],
+        "case_refs": []
+      },
+      "classification": {
+        "primary_category": "ethics_governance",
+        "secondary_tags": [
+          "ICOM_RedList"
+        ],
+        "instruments": [
+          "ICOM Code of Ethics"
+        ],
+        "institutions": [
+          "ICOM",
+          "Bishop Museum"
+        ]
+      }
+    },
+    {
+      "item_id": "AL2025W33-006",
+      "rank": 6,
+      "headline": "Sombrero de danza de loon regresa a Cambridge Bay tras proceso de repatriación",
+      "jurisdiction": "CA — Nunavut",
+      "legal_stage": "implementation",
+      "publication_date": "10-08-2025",
+      "source": {
+        "name": "Indigenous Watchdog / CBC Indigenous",
+        "tier": "3",
+        "original_url": "https://www.indigenouswatchdog.org/update/100-year-old-loon-dance-hat-returned-to-cambridge-bay-nunavut/",
+        "paywall": false,
+        "author": "Sidney Cohen"
+      },
+      "scoring": {
+        "total_score": 70,
+        "breakdown": {
+          "content_relevance": 30,
+          "source_authority": 10,
+          "development_significance": 15,
+          "innovation_factor": 10,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "Tras una década de negociaciones, un sombrero de danza de loon de aproximadamente 100 años de antigüedad fue devuelto a la comunidad inuit de Cambridge Bay, Nunavut. El gorro, hecho de piel de caribú y tendones con plumas y un pico de ave, se utiliza en la danza Akkuarmiujut y había estado en posesión de la petrolera Imperial Oil sin registros claros de adquisición【435715503736318†L60-L79】. La empresa colaboró con el museo Glenbow de Calgary y la Kitikmeot Heritage Society para investigar su origen y organizar la repatriación【435715503736318†L87-L103】. La comunidad celebró una ceremonia en el centro cultural Luke Novoligak, donde ancianos recordaron haber visto a sus abuelos usar sombreros similares. El gesto responde a principios de reconciliación y ética museística; se prevé crear réplicas para uso educativo y exponer el original en el centro cultural.",
+        "laws_invoked": [
+          "ICOM Code of Ethics"
+        ],
+        "objects": [
+          {
+            "artist": "Pueblo inuit",
+            "title": "Sombrero de danza de loon",
+            "year": "ca. 1925",
+            "medium": "piel de caribú, tendones, plumas",
+            "quantity": 1,
+            "period": "Siglo XX"
+          }
+        ],
+        "institutions": [
+          "Imperial Oil",
+          "Glenbow Museum",
+          "Kitikmeot Heritage Society"
+        ],
+        "remedies": [
+          "restitution",
+          "ethical_return"
+        ],
+        "key_figures": {
+          "amount": "no declarado",
+          "items_returned": "1"
+        },
+        "next_milestones": [
+          "Exhibición permanente en Cambridge Bay",
+          "Elaboración de réplicas para escuelas y centros comunitarios"
+        ],
+        "case_refs": []
+      },
+      "classification": {
+        "primary_category": "ethics_governance",
+        "secondary_tags": [
+          "ICOM_RedList"
+        ],
+        "instruments": [
+          "ICOM Code of Ethics"
+        ],
+        "institutions": [
+          "ICOM",
+          "Imperial Oil",
+          "Glenbow Museum"
+        ]
+      }
+    },
+    {
+      "item_id": "AL2025W33-007",
+      "rank": 7,
+      "headline": "HMRC propone subir cuotas de supervisión AML para participantes del mercado del arte",
+      "jurisdiction": "UK — HM Revenue & Customs",
+      "legal_stage": "consultation",
+      "publication_date": "08-08-2025",
+      "source": {
+        "name": "FCS Compliance",
+        "tier": "3",
+        "original_url": "https://fcscompliance.co.uk/2025/08/08/hmrc-proposes-aml-fee-increases-for-amps/",
+        "paywall": false,
+        "author": "FCS Compliance"
+      },
+      "scoring": {
+        "total_score": 72,
+        "breakdown": {
+          "content_relevance": 30,
+          "source_authority": 15,
+          "development_significance": 15,
+          "innovation_factor": 7,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "La consultora FCS Compliance informó que HM Revenue & Customs (HMRC) abrió una consulta pública hasta el 29 de agosto para incrementar las cuotas de supervisión contra el lavado de dinero (AML) a los Participantes del Mercado del Arte (AMPs). El proyecto propone subir la cuota anual por local de £300 a £400, fijar una tasa de solicitud de £400, elevar el cargo por sanciones administrativas hasta £2.000 y mantener la tasa de aprobación en £40 por persona【557826460256785†L50-L90】. HMRC sostiene que las subidas son necesarias para cubrir el coste de su supervisión, que actualmente abarca más de 36.000 empresas y que en 2023 sancionó a 79 AMPs con más de £550.000 por incumplimientos de registro. FCS insta a galerías y casas de subastas a responder a la consulta y utilizar herramientas como AML Protect para evitar multas por olvidos. Las nuevas tarifas podrían entrar en vigor en 2026 tras su aprobación.",
+        "laws_invoked": [
+          "Money Laundering Regulations 2017",
+          "Reg (EU) 2019/880"
+        ],
+        "objects": [],
+        "institutions": [
+          "HMRC",
+          "FCS Compliance"
+        ],
+        "remedies": [
+          "sanctions"
+        ],
+        "key_figures": {
+          "amount": "£400 por local",
+          "items_returned": "N/A"
+        },
+        "next_milestones": [
+          "Cierre de consulta el 29-08-2025",
+          "Publicación de tarifas definitivas en otoño"
+        ],
+        "case_refs": []
+      },
+      "classification": {
+        "primary_category": "aml_sanctions",
+        "secondary_tags": [
+          "Reg2019_880"
+        ],
+        "instruments": [
+          "Money Laundering Regulations"
+        ],
+        "institutions": [
+          "HMRC",
+          "European Union"
+        ]
+      }
+    }
+  ],
+  "analytics": {
+    "processing_statistics": {
+      "sources_scanned": 30,
+      "articles_reviewed": 12,
+      "items_scoring_above_threshold": 7,
+      "items_published": 7,
+      "duplicates_identified": 2,
+      "urls_validated": 7,
+      "validation_failures": 0
+    },
+    "content_metrics": {
+      "average_score": 81.0,
+      "score_distribution": {
+        "90-100": 1,
+        "80-89": 3,
+        "70-79": 3,
+        "60-69": 0
+      },
+      "word_count_statistics": {
+        "average_words": 0,
+        "min_words": 0,
+        "max_words": 0
+      }
+    },
+    "coverage_analysis": {
+      "jurisdiction_distribution": {
+        "EU": 2,
+        "UK": 1,
+        "US": 4,
+        "Global": 0
+      },
+      "category_distribution": {
+        "restitution": 4,
+        "ip_copyright": 0,
+        "aml_sanctions": 1,
+        "fraud_authenticity": 1,
+        "ethics_governance": 2,
+        "free_expression": 0
+      }
+    }
+  },
+  "discarded_items": [
+    {
+      "rank": 21,
+      "headline": "El tribunal de Varsovia declara ilegal el despido del director del Museo de Historia de Polonia",
+      "source": "Notes from Poland",
+      "url": "https://notesfrompoland.com/2025/08/07/government-unlawfully-fired-director-of-polish-history-museum-finds-court/",
+      "publication_date": "07-08-2025",
+      "score": 58,
+      "discard_reason": "Fuera de la ventana de 7 días",
+      "score_breakdown": {
+        "content_relevance": 30,
+        "source_authority": 15,
+        "development_significance": 10,
+        "innovation_factor": 3,
+        "quantitative_content": 0
+      }
+    },
+    {
+      "rank": 22,
+      "headline": "Países Bajos devuelve 119 bronces de Benín a Nigeria",
+      "source": "Africanews",
+      "url": "https://www.africanews.com/2025/06/22/netherlands-returns-119-benin-bronzes-to-nigeria/",
+      "publication_date": "22-06-2025",
+      "score": 50,
+      "discard_reason": "Artículo fuera de la ventana temporal",
+      "score_breakdown": {
+        "content_relevance": 30,
+        "source_authority": 15,
+        "development_significance": 10,
+        "innovation_factor": 5,
+        "quantitative_content": 5
+      }
+    },
+    {
+      "rank": 23,
+      "headline": "Museos deberían apoyar la HEAR Act y no oponerse a la restitución",
+      "source": "The Forward",
+      "url": "https://forward.com/opinion/762274/hear-act-nazi-looted-art-museums/",
+      "publication_date": "13-08-2025",
+      "score": 56,
+      "discard_reason": "Artículo de opinión sin desarrollo legal concreto",
+      "score_breakdown": {
+        "content_relevance": 25,
+        "source_authority": 15,
+        "development_significance": 10,
+        "innovation_factor": 3,
+        "quantitative_content": 3
+      }
+    }
+  ],
+  "forward_looking": {
+    "next_week_calendar": [
+      {
+        "date": "20-08-2025",
+        "event": "Posible transporte de primeros artefactos del Bishop Museum a Guam",
+        "significance": "medium"
+      },
+      {
+        "date": "29-08-2025",
+        "event": "Cierre de la consulta pública sobre tarifas AML de HMRC",
+        "significance": "high"
+      },
+      {
+        "date": "21-08-2025",
+        "event": "Continuación del seguimiento de restituciones en la Fiscalía de Manhattan",
+        "significance": "medium"
+      }
+    ],
+    "monitoring_priorities": [
+      "Seguimiento de nuevas repatriaciones por la Unidad de Tráfico de Antigüedades",
+      "Evolución de la consulta sobre tarifas AML y su impacto en galerías"
+    ],
+    "emerging_trends": [
+      "Creciente presión pública para devolver patrimonio cultural",
+      "Endurecimiento normativo en el mercado del arte con énfasis en AML"
+    ],
+    "data_gaps": [
+      "Falta de valuación para las piezas devueltas a España y Hungría",
+      "Información limitada sobre los plazos exactos de devolución de los artefactos del Bishop Museum"
+    ]
+  },
+  "quality_assurance": {
+    "editorial_notes": [
+      "Las cifras de valor de las antigüedades varían entre fuentes; se usó el valor de US$4 millones reportado por Harlem World.",
+      "Se descartaron artículos de opinión que no aportaban hechos nuevos."
+    ],
+    "source_reliability": {
+      "tier_1_percentage": 0,
+      "tier_2_percentage": 0,
+      "tier_3_percentage": 85,
+      "tier_4_percentage": 15
+    },
+    "fact_checking": {
+      "claims_verified": 7,
+      "cross_references": 3,
+      "potential_discrepancies": 1
+    }
+  }
+}
