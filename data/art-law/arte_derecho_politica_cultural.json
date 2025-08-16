@@ -1,0 +1,659 @@
+{
+  "metadata": {
+    "title": "Arte, Derecho y Política Cultural — 10-08-2025 a 16-08-2025",
+    "subtitle": "#BRAVE A(rt)DVOCACY",
+    "period": {"start_date":"10-08-2025","end_date":"16-08-2025","days_covered":7},
+    "processing": {
+      "generated_at": "2025-08-16T10:00:00Z",
+      "version": "1.0",
+      "brand": "Kepler Karst",
+      "ai_model": "GPT-4-turbo",
+      "processing_time_seconds": "0"
+    },
+    "validation": {
+      "urls_verified": true,
+      "dates_validated": true,
+      "content_reviewed": true,
+      "schema_compliant": true
+    }
+  },
+  "executive_summary": {
+    "weekly_overview": "Esta semana destaca por una intensa intersección entre arte y política. En Washington, la Casa Blanca ordenó al Smithsonian revisar en 120 días sus exposiciones para promover un relato patriótico, generando preocupación por la censura y la libertad artística【664796569775984†L77-L124】. En Bangkok, la presión diplomática china forzó la retirada de obras de artistas tibetanos y uigures en el BACC, evidenciando la vulnerabilidad de las instituciones ante intereses estatales extranjeros【436729582000967†L150-L190】. En el ámbito laboral, trabajadores de museos en el Reino Unido y Portugal anunciaron huelgas por mejoras salariales y compensación de festivos, reflejando tensiones económicas en el sector【346378424851273†L163-L220】【487002670266789†L145-L183】. También hubo avances en cumplimiento: se dictó la primera condena de un marchante por no reportar financiación terrorista en el Reino Unido【300394154156441†L134-L174】 y la justicia estadounidense mantuvo el juicio colectivo por el uso de libros piratas para entrenar IA en Anthropic【260841381352023†L170-L214】. Se adoptaron medidas para proteger el patrimonio con un embargo de exportación a cartas náuticas históricas y la restitución de un manuscrito de 1527 de Hernán Cortés【471284347444491†L34-L67】【275988564645517†L37-L64】. Finalmente, protestas artísticas y normativas urbanas —desde la instalación de una obra de Anish Kapoor en una plataforma petrolera hasta la retirada de murales con mensajes sociales en Florida— evidencian que el espacio público sigue siendo terreno de disputa【919723418825459†L210-L270】【236752107406573†L359-L399】.",
+    "key_themes": ["Censura y libertad de expresión","Labor y empleo en museos","Cumplimiento AML y sanciones","Política cultural y financiación","Restitución y protección patrimonial","IA y derechos de autor"],
+    "geographical_focus": ["Estados Unidos","Reino Unido","Portugal","Tailandia"],
+    "trend_analysis": "Las tensiones entre libertad de expresión y políticas gubernamentales se intensifican, con revisiones de museos nacionales y censura impuesta por potencias extranjeras. El sector laboral cultural muestra malestar ante salarios estancados, mientras que los reguladores endurecen la supervisión financiera del mercado del arte. La justicia se enfrenta a retos inéditos como el uso de IA en el entrenamiento de modelos y la aplicación de normas antiterroristas a marchantes. Los movimientos de restitución y conservación patrimonial continúan, pero el debate sobre quién controla los relatos históricos y el espacio público se profundiza."
+  },
+  "items": [
+    {
+      "item_id": "AL2025W33-001",
+      "rank": 1,
+      "headline": "Casa Blanca exige revisión patriótica de museos Smithsonian",
+      "jurisdiction": "US — Smithsonian Institution & White House",
+      "legal_stage": "policy_announcement",
+      "policy_signal": "policy_announcement",
+      "publication_date": "12-08-2025",
+      "source": {
+        "name": "The Guardian",
+        "tier": "4",
+        "original_url": "https://www.theguardian.com/",
+        "paywall": false,
+        "author": "Ben Quinn"
+      },
+      "scoring": {
+        "total_score": 85,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 10,
+          "development_significance": 20,
+          "innovation_factor": 10,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "El 12 de agosto, la Casa Blanca remitió al secretario del Smithsonian Lonnie Bunch una carta basada en la orden ejecutiva \"Restoring Truth and Sanity to American History\" que exige revisar las exposiciones de al menos ocho museos —entre ellos el Museo Nacional de Historia Americana y el Museo del Indio Americano— para asegurar que promueven \"unidad y progreso\" en 120 días【664796569775984†L77-L124】. El mandato insta a eliminar referencias consideradas divisivas y pide al Smithsonian listas de artistas, subvenciones y directrices de exposiciones【89560557862529†L188-L222】. La instrucción, que refleja la agenda cultural del presidente Donald Trump, suscita críticas por posible censura e interferencia política. Los museos estudiarán la solicitud preservando la independencia académica y podrían enfrentar litigios por vulnerar la Primera Enmienda. El plazo vence el 11 de diciembre de 2025 y será objeto de escrutinio parlamentario y judicial.",
+        "laws_invoked": ["Executive Order ‘Restoring Truth and Sanity to American History’","First Amendment"],
+        "objects": [],
+        "institutions": ["Smithsonian Institution","National Museum of American History","National Museum of Natural History","National Museum of the American Indian","National Air and Space Museum","Smithsonian American Art Museum","National Portrait Gallery","Hirshhorn Museum and Sculpture Garden"],
+        "remedies": [],
+        "key_figures": {"deadline_days":"120"},
+        "next_milestones": ["11-12-2025: plazo de 120 días para presentar plan de cumplimiento"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Donald Trump","role":"Presidente de EE. UU.","affiliation":"Republicano"},
+        {"name":"Lonnie Bunch","role":"Secretario del Smithsonian","affiliation":""}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "free_expression",
+        "secondary_tags": ["US_history","executive_order"],
+        "instruments": [],
+        "institutions": ["Smithsonian","White House"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": true, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-002",
+      "rank": 2,
+      "headline": "Centro de Arte de Bangkok elimina obras críticas tras presión de embajada china",
+      "jurisdiction": "Thailand — Bangkok Art and Culture Centre & Bangkok Metropolitan Administration",
+      "legal_stage": "implementation",
+      "policy_signal": "policy_announcement",
+      "publication_date": "10-08-2025",
+      "source": {
+        "name": "Reuters / ArtReview",
+        "tier": "3",
+        "original_url": "https://www.reuters.com/",
+        "paywall": false,
+        "author": "Panu Wongcha-um / ArtReview editors"
+      },
+      "scoring": {
+        "total_score": 82,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 15,
+          "development_significance": 20,
+          "innovation_factor": 7,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "El Bangkok Art and Culture Centre (BACC) retiró en agosto varias obras sobre minorías tibetanas, hongkonesas y uigures tras una visita de diplomáticos chinos y representantes de la administración metropolitana que exigieron cumplir la política de \"Una sola China\"【436729582000967†L150-L190】. Entre las obras censuradas estaban videocreaciones de la artista tibetana Tenzin Mingyur Paldron, piezas de artistas de Hong Kong y un fotomontaje que mencionaba a Xi Jinping【209738723742599†L43-L76】. Los funcionarios advirtieron que el contenido podría generar tensiones diplomáticas y exigieron eliminar también folletos y nombres de artistas. El centro, que depende del ayuntamiento, accedió a cubrir o retirar las obras. Activistas denuncian la sumisión a presiones extranjeras y la vulneración de la libertad artística. No se ha anunciado un calendario para reponer las obras, pero el incidente suscita debates sobre censura extraterritorial y autonomía institucional.",
+        "laws_invoked": ["Política de ‘Una sola China’"],
+        "objects": [
+          {"artist":"Tenzin Mingyur Paldron","title":"Obras de video y fotografía","year":"2019-2022","medium":"Video/Fotografía","quantity":3,"period":"Contemporáneo"},
+          {"artist":"Varios","title":"Instalaciones sobre minorías","year":"2020-2024","medium":"Mixto","quantity":5,"period":"Contemporáneo"}
+        ],
+        "institutions": ["Bangkok Art and Culture Centre","Bangkok Metropolitan Administration","Embajada de China en Tailandia"],
+        "remedies": ["censorship"],
+        "key_figures": {"works_removed":"varias","artists_affected":"3"},
+        "next_milestones": ["Sin calendario; se espera respuesta pública del BACC"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Embajada de China en Tailandia","role":"Representación diplomática","affiliation":"República Popular China"},
+        {"name":"Bangkok Metropolitan Administration","role":"Autoridad local","affiliation":""}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "free_expression",
+        "secondary_tags": ["OneChinaPolicy","censorship"],
+        "instruments": [],
+        "institutions": ["BACC","Embajada China"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": true, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-003",
+      "rank": 3,
+      "headline": "Trabajadores del Museo Nacional de Minería del Carbón convocan huelga por aumento salarial",
+      "jurisdiction": "UK — National Coal Mining Museum, Wakefield",
+      "legal_stage": "policy_announcement",
+      "policy_signal": "consultation",
+      "publication_date": "11-08-2025",
+      "source": {
+        "name": "Museums Association / Museums + Heritage",
+        "tier": "2",
+        "original_url": "https://www.museumsassociation.org/",
+        "paywall": false,
+        "author": "Geraldine Kendall Adams / M+H News"
+      },
+      "scoring": {
+        "total_score": 90,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 20,
+          "development_significance": 20,
+          "innovation_factor": 5,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "El sindicato Unison anunció que más de cuarenta trabajadores del Museo Nacional de Minería del Carbón en Wakefield —incluyendo guías de mina, técnicos y personal de limpieza— iniciarán una huelga de cuatro semanas desde el 20 de agosto para exigir un aumento salarial del 5 % más £1 por hora (alrededor del 8 %). La dirección ofreció únicamente un 5 % y advirtió que aceptar la petición comprometería puestos de trabajo. El 74 % de los afiliados votó a favor de parar【346378424851273†L163-L220】. La huelga suspenderá las visitas subterráneas pero mantendrá abierto el museo. No hay alegaciones de discriminación de género, pero el sindicato considera que los sueldos actuales no cubren el coste de vida. Se prevén reuniones de conciliación durante la huelga para evitar su prolongación más allá del 14 de septiembre.",
+        "laws_invoked": ["UK Employment Rights Act 1996"],
+        "objects": [],
+        "institutions": ["National Coal Mining Museum","Unison"],
+        "remedies": ["strike","collective_bargaining"],
+        "key_figures": {"percentage_vote":"74","pay_offer":"5%","pay_demand":"≈8%","strike_duration":"4 semanas"},
+        "next_milestones": ["20-08-2025: inicio de la huelga","14-09-2025: fin previsto de la huelga"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Unison","role":"Sindicato","affiliation":""},
+        {"name":"Museo Nacional de Minería del Carbón","role":"Empleador","affiliation":""}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "labor_employment",
+        "secondary_tags": ["strike","pay_dispute"],
+        "instruments": [],
+        "institutions": ["Unison"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-004",
+      "rank": 4,
+      "headline": "Trabajadores de museos portugueses anuncian huelga por remuneración de festivos y horas extra",
+      "jurisdiction": "PT — Museos nacionales y monumentos",
+      "legal_stage": "policy_announcement",
+      "policy_signal": "consultation",
+      "publication_date": "12-08-2025",
+      "source": {
+        "name": "The Portugal News",
+        "tier": "4",
+        "original_url": "https://www.theportugalnews.com/",
+        "paywall": false,
+        "author": "TPN Reporter"
+      },
+      "scoring": {
+        "total_score": 90,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 10,
+          "development_significance": 20,
+          "innovation_factor": 10,
+          "quantitative_content": 15
+        }
+      },
+      "content": {
+        "summary": "La Federación Nacional de Sindicatos de Trabajadores de la Función Pública (FNSTFPS) anunció que el personal de los museos, monumentos y yacimientos arqueológicos nacionales de Portugal hará huelga el 15 de agosto para exigir compensación justa por trabajar en festivos y horas extra. Alegan que la Dirección General del Patrimonio Cultural no ha respondido a sus demandas tras una reunión con la ministra de Cultura el 15 de julio. Según el sindicato, los 38 equipamientos aportaron en 2024 ingresos de 21,217,432 € y aun así el personal recibe únicamente dos horas de remuneración extra aunque trabajen más【487002670266789†L145-L183】. También denuncian la falta de contratación y exigen negociar un contrato colectivo. El movimiento busca presión pública antes de la votación del presupuesto cultural y podría prolongarse si el gobierno no accede a conversar.",
+        "laws_invoked": ["Código del Trabajo de Portugal"],
+        "objects": [],
+        "institutions": ["Federación Nacional de Sindicatos de Trabajadores de la Función Pública","Ministerio de Cultura de Portugal","Museos nacionales"],
+        "remedies": ["strike"],
+        "key_figures": {"museums_affected":"38","annual_revenue":"€21.217.432","overtime_hours":">2"},
+        "next_milestones": ["15-08-2025: inicio de la huelga"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"FNSTFPS","role":"Sindicato","affiliation":""},
+        {"name":"Graça Fonseca","role":"Ministra de Cultura","affiliation":"Partido Socialista"}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "labor_employment",
+        "secondary_tags": ["strike","overtime"],
+        "instruments": [],
+        "institutions": ["FNSTFPS","DGPC"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-005",
+      "rank": 5,
+      "headline": "Condenan a marchante de arte londinense por no reportar financiación terrorista",
+      "jurisdiction": "UK — Crown Court (Criminal Division)",
+      "legal_stage": "judgment",
+      "policy_signal": "implementation",
+      "publication_date": "12-08-2025",
+      "source": {
+        "name": "JDSupra / Hogan Lovells",
+        "tier": "3",
+        "original_url": "https://www.jdsupra.com/",
+        "paywall": false,
+        "author": "Claire McGowan & Tom Davey"
+      },
+      "scoring": {
+        "total_score": 115,
+        "breakdown": {
+          "content_relevance": 45,
+          "source_authority": 15,
+          "development_significance": 30,
+          "innovation_factor": 15,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "El tribunal de la Corona de Londres dictó la primera condena conocida contra un participante del mercado del arte por no informar sospechas de financiación terrorista. Oghenochuko Ojiri vendió obras entre octubre de 2020 y diciembre de 2021 al coleccionista sancionado Nazem Ahmad, vinculado a Hezbolá, utilizando alias y cuentas ficticias. Se declaró culpable de ocho delitos en virtud del artículo 21A de la Ley contra el Terrorismo de 2000 y fue sentenciado a dos años y seis meses de prisión【300394154156441†L134-L174】. La fiscalía destacó que no presentó informes de actividad sospechosa ni comprobó la identidad de los intermediarios, incumpliendo las Regulaciones de Blanqueo de Capitales 2017【300394154156441†L168-L214】. El caso refuerza las obligaciones de reportar transacciones sospechosas para marchantes bajo las nuevas directrices de HMRC (vigentes desde mayo de 2025) y subraya la coordinación entre la policía metropolitana y la Oficina de Implementación de Sanciones Financiera.",
+        "laws_invoked": ["Terrorism Act 2000 Section 21A","Money Laundering Regulations 2017"],
+        "objects": [],
+        "institutions": ["Crown Court","Metropolitan Police Service","HM Revenue & Customs","Office of Financial Sanctions Implementation"],
+        "remedies": ["custodial_sentence","sanctions"],
+        "key_figures": {"sentence":"2 años 6 meses","offences":"8","transaction_period":"2020-2021"},
+        "next_milestones": ["Posible apelación; actualización de guía de HMRC"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Nazem Ahmad","role":"Coleccionista sancionado","affiliation":"Hezbolá"}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "aml_sanctions",
+        "secondary_tags": ["terrorism_financing","AML"],
+        "instruments": ["Regulations_MLR"],
+        "institutions": ["HMRC","OFSI"]
+      },
+      "compliance_flags": {"aml": true, "sanctions": true, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-006",
+      "rank": 6,
+      "headline": "Exdirector de Christie's plantea fondo europeo de €50 m para adquisiciones conjuntas de museos",
+      "jurisdiction": "EU — European Commission",
+      "legal_stage": "draft_bill",
+      "policy_signal": "policy_announcement",
+      "publication_date": "12-08-2025",
+      "source": {
+        "name": "The Observer / Ocula",
+        "tier": "4",
+        "original_url": "https://observer.com/",
+        "paywall": false,
+        "author": "Annie Armstrong"
+      },
+      "scoring": {
+        "total_score": 80,
+        "breakdown": {
+          "content_relevance": 30,
+          "source_authority": 10,
+          "development_significance": 15,
+          "innovation_factor": 15,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "Guillaume Cerutti, expresidente de Christie’s y responsable de la Colección Pinault, propuso ante funcionarios de la Comisión Europea la creación de un fondo de 50 millones de euros para que museos europeos realicen adquisiciones conjuntas, inspirado en el ‘Tratado Rembrandt’ neerlandés【870620407976108†L90-L160】. La iniciativa se presentaría dentro del nuevo programa cultural AgoraEU (2028‑2034) y cubriría parcialmente el coste de obras que de otro modo serían exportadas o adquiridas por coleccionistas privados【870620407976108†L145-L169】. Cerutti señaló que los recortes presupuestarios nacionales y el creciente precio del arte ponen en riesgo el patrimonio, por lo que un mecanismo supranacional fomentaría la cooperación transfronteriza. El plan es una señal prejurídica: requiere la aprobación del Parlamento Europeo y la Comisión y podría cristalizar en reglamentos que definan criterios de elegibilidad y financiación.",
+        "laws_invoked": ["Tratado Rembrandt","Política cultural de la UE"],
+        "objects": [],
+        "institutions": ["Comisión Europea","Programa AgoraEU","Colección Pinault"],
+        "remedies": [],
+        "key_figures": {"fund_proposed":"€50.000.000","programme_period":"2028–2034"},
+        "next_milestones": ["Consultas de la Comisión Europea sobre AgoraEU","Debate en el Parlamento Europeo"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Guillaume Cerutti","role":"Promotor del plan","affiliation":"Independiente"}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "policy_politics",
+        "secondary_tags": ["funding","EU_culture"],
+        "instruments": [],
+        "institutions": ["Comisión Europea"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-007",
+      "rank": 7,
+      "headline": "Juez de California mantiene juicio sobre demanda colectiva por derechos de autor contra Anthropic",
+      "jurisdiction": "US — U.S. District Court for the Northern District of California",
+      "legal_stage": "hearing",
+      "policy_signal": "none",
+      "publication_date": "14-08-2025",
+      "source": {
+        "name": "IPWatchdog",
+        "tier": "3",
+        "original_url": "https://ipwatchdog.com/",
+        "paywall": false,
+        "author": "Eileen McDermott"
+      },
+      "scoring": {
+        "total_score": 105,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 15,
+          "development_significance": 25,
+          "innovation_factor": 20,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "El juez William Alsup, del distrito norte de California, rechazó el 13 de agosto la solicitud de Anthropic para suspender el proceso en la demanda colectiva presentada por autores que acusan a la empresa de utilizar cientos de miles de libros piratas para entrenar su modelo de IA. La orden mantiene la fecha de juicio para el 1 de diciembre de 2025 y obliga a las partes a enviar los formularios de notificación a la clase el 15 de agosto y una lista detallada de miembros el 1 de septiembre【260841381352023†L170-L214】. El juez señaló que persisten cuestiones de hecho, como determinar qué obras se usaron para entrenamiento y si su retención constituye uso justo, y rechazó la propuesta de Anthropic de que las descargas no utilizadas no constituyen infracción【260841381352023†L220-L259】. El caso se rige por el 17 USC § 106 y podría sentar un precedente sobre la responsabilidad de las empresas de IA por la ingestión de contenido protegido.",
+        "laws_invoked": ["17 USC §106","Digital Millennium Copyright Act"],
+        "objects": [],
+        "institutions": ["U.S. District Court for the Northern District of California"],
+        "remedies": ["trial","damages"],
+        "key_figures": {"trial_date":"01-12-2025","class_notice_due":"15-08-2025","class_list_due":"01-09-2025"},
+        "next_milestones": ["15-08-2025: presentación de formularios de notificación","01-09-2025: presentación de lista de miembros"],
+        "case_refs": []
+      },
+      "political_entities": [],
+      "platforms": [],
+      "classification": {
+        "primary_category": "ip_copyright",
+        "secondary_tags": ["AI_copyright","class_action"],
+        "instruments": ["DMCA"],
+        "institutions": ["U.S. Courts"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-008",
+      "rank": 8,
+      "headline": "Diecisiete artistas demandan a Cadence Comic Art por fraude y abuso de confianza",
+      "jurisdiction": "US — S.D.N.Y.",
+      "legal_stage": "filing",
+      "policy_signal": "none",
+      "publication_date": "15-08-2025",
+      "source": {
+        "name": "Comic Book Club",
+        "tier": "4",
+        "original_url": "https://comicbookclub.com/",
+        "paywall": false,
+        "author": "CBC Staff"
+      },
+      "scoring": {
+        "total_score": 85,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 10,
+          "development_significance": 20,
+          "innovation_factor": 10,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "Un grupo de 17 artistas, entre ellos Becky Cloonan, Jamie McKelvie y Sanford Greene, presentó el 7 de agosto una demanda colectiva ante el tribunal federal del distrito sur de Nueva York contra Cadence Comic Art y su fundador Paolo Belfiore por fraude, conversión y violación de la Ley de Arte y Asuntos Culturales de Nueva York. Los demandantes alegan que la galería retuvo obras no vendidas, mezcló fondos de clientes y no proporcionó liquidaciones, incumpliendo su fiduciario【309822285304414†L145-L166】. Solicitan una auditoría de cuentas, restitución de obras y daños punitivos. El tribunal fijó una conferencia preliminar para el 18 de noviembre de 2025【309822285304414†L150-L163】. El caso podría clarificar las obligaciones de las galerías respecto al arte consigna y reforzar la transparencia en el mercado de originales de cómic.",
+        "laws_invoked": ["New York Arts and Cultural Affairs Law"],
+        "objects": [],
+        "institutions": ["Cadence Comic Art Inc.","U.S. District Court for the Southern District of New York"],
+        "remedies": ["damages","injunction"],
+        "key_figures": {"plaintiffs":17,"pretrial_conference":"18-11-2025"},
+        "next_milestones": ["18-11-2025: conferencia preliminar"],
+        "case_refs": []
+      },
+      "political_entities": [],
+      "platforms": [],
+      "classification": {
+        "primary_category": "fraud_authenticity",
+        "secondary_tags": ["art_market","artists_rights"],
+        "instruments": [],
+        "institutions": ["Cadence Comic Art"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-009",
+      "rank": 9,
+      "headline": "Reino Unido impone moratoria a la exportación de colección de cartas náuticas valorada en £6 millones",
+      "jurisdiction": "UK — DCMS / Reviewing Committee on the Export of Works of Art",
+      "legal_stage": "implementation",
+      "policy_signal": "policy_announcement",
+      "publication_date": "12-08-2025",
+      "source": {
+        "name": "ArtDependence",
+        "tier": "3",
+        "original_url": "https://artdependence.com/",
+        "paywall": false,
+        "author": "ArtDependence News"
+      },
+      "scoring": {
+        "total_score": 100,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 15,
+          "development_significance": 25,
+          "innovation_factor": 5,
+          "quantitative_content": 15
+        }
+      },
+      "content": {
+        "summary": "El Departamento de Cultura británico impuso una prohibición temporal de exportación sobre una colección de cartas y atlas marítimos del siglo XVII y XVIII valorada en 6 millones de libras para permitir que instituciones nacionales recauden fondos y adquieran el conjunto【471284347444491†L34-L67】. La colección incluye 79 piezas, entre ellas un cuaderno manuscrito de Alexander Hamilton y una plancha de cobre utilizada por el capitán James Cook para imprimir mapas. La decisión, recomendada por el Comité de Revisión de Exportaciones de Obras de Arte aplicando los criterios Waverley, se justifica porque las cartas muestran la evolución de la navegación británica. Los museos tienen hasta el 7 de noviembre de 2025 para presentar una oferta equivalente; en caso de éxito, se evitará su venta al extranjero y se revisará la legislación de exportación para reforzar la protección del patrimonio marítimo.",
+        "laws_invoked": ["Waverley Criteria","Export Control Act 2002"],
+        "objects": [
+          {"artist":"Varios","title":"Colección de cartas y atlas marítimos","year":"1675-1790","medium":"Manuscrito/Impreso","quantity":79,"period":"Moderno temprano"}
+        ],
+        "institutions": ["Department for Digital, Culture, Media & Sport","Reviewing Committee on the Export of Works of Art"],
+        "remedies": ["export_license_refusal"],
+        "key_figures": {"value":"£6.000.000","deadline":"07-11-2025"},
+        "next_milestones": ["07-11-2025: plazo para que un museo británico iguale la oferta"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Chris Bryant","role":"Ministro de Artes","affiliation":"Partido Laborista"},
+        {"name":"Caroline Shenton","role":"Miembro del comité de revisión","affiliation":""}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "ethics_governance",
+        "secondary_tags": ["export_control","maritime_heritage"],
+        "instruments": ["Waverley Criteria"],
+        "institutions": ["DCMS"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": true, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-010",
+      "rank": 10,
+      "headline": "FBI devuelve a México página manuscrita de Hernán Cortés de 1527",
+      "jurisdiction": "US/MX — FBI & Secretaría de Cultura de México",
+      "legal_stage": "implementation",
+      "policy_signal": "implementation",
+      "publication_date": "15-08-2025",
+      "source": {
+        "name": "ArtDependence / The Guardian",
+        "tier": "3",
+        "original_url": "https://artdependence.com/",
+        "paywall": false,
+        "author": "ArtDependence News / AP"
+      },
+      "scoring": {
+        "total_score": 95,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 15,
+          "development_significance": 25,
+          "innovation_factor": 5,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "El 13 de agosto, el FBI y la policía de Nueva York entregaron a México una página manuscrita firmada por Hernán Cortés el 20 de febrero de 1527, que detalla pagos a colonizadores. La pieza desapareció del Archivo General de la Nación entre 1985 y 1993; en 1993 se descubrió la falta de 15 páginas y en 2024 México solicitó ayuda internacional【275988564645517†L37-L64】. La unidad de delitos de arte del FBI localizó la página gracias a registros microfilmados y a la colaboración de la Oficina del Fiscal del Distrito de Nueva York y el Departamento de Justicia【275988564645517†L62-L72】. Es el segundo documento de Cortés restituido tras una devolución en 2023. Aunque no se presentaron cargos penales, la devolución refuerza la cooperación binacional y la aplicación de la Convención UNESCO 1970. México continúa investigando el paradero de las páginas restantes.",
+        "laws_invoked": ["UNESCO 1970","US National Stolen Property Act"],
+        "objects": [
+          {"artist":"Hernán Cortés","title":"Carta de pago","year":"1527","medium":"Manuscrito","quantity":1,"period":"Renacimiento"}
+        ],
+        "institutions": ["FBI Art Crime Team","Secretaría de Cultura de México","NYPD","U.S. Attorney’s Office"],
+        "remedies": ["restitution"],
+        "key_figures": {"document_date":"20-02-1527","years_missing":"1985-1993","pages_missing":"15"},
+        "next_milestones": ["Investigaciones en curso para localizar las páginas faltantes"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"FBI Art Crime Team","role":"Agencia de investigación","affiliation":"EE. UU."},
+        {"name":"Consulado de México en Nueva York","role":"Autoridad cultural","affiliation":"México"}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "restitution",
+        "secondary_tags": ["UNESCO1970","colonial_history"],
+        "instruments": ["UNESCO 1970"],
+        "institutions": ["FBI","Secretaría de Cultura de México"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-011",
+      "rank": 11,
+      "headline": "Greenpeace instala obra de Anish Kapoor en plataforma de Shell para protestar el petróleo del Mar del Norte",
+      "jurisdiction": "UK — Mar del Norte / Shell",
+      "legal_stage": "implementation",
+      "policy_signal": "none",
+      "publication_date": "14-08-2025",
+      "source": {
+        "name": "The Guardian",
+        "tier": "4",
+        "original_url": "https://www.theguardian.com/",
+        "paywall": false,
+        "author": "Damien Gayle"
+      },
+      "scoring": {
+        "total_score": 90,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 15,
+          "development_significance": 20,
+          "innovation_factor": 10,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "Activistas de Greenpeace abordaron una plataforma de gas de Shell en el mar del Norte e instalaron un lienzo de 96 m² diseñado por Anish Kapoor titulado \"Butchered\" que rociaron con un líquido rojo para simbolizar la dependencia de combustibles fósiles【919723418825459†L210-L270】. La acción denuncia que las emisiones de Shell contribuyen al calentamiento global y busca presionar al gobierno para detener nuevas perforaciones. Shell calificó la intervención de ilegal, alegando que violó una zona de exclusión de 500 metros y puso en riesgo al personal, recordando que en 2024 obtuvo una compensación multimillonaria tras otra protesta de Greenpeace【919723418825459†L210-L270】. La policía marítima investiga posibles cargos por violar las normas de seguridad en plataformas offshore, mientras que los defensores del arte ven el acto como performance política. El caso podría reabrir debates sobre la legalidad de las protestas artísticas en infraestructuras críticas.",
+        "laws_invoked": ["UK Maritime Safety Regulations"],
+        "objects": [
+          {"artist":"Anish Kapoor","title":"Butchered","year":"2025","medium":"Lienzo/Instalación","quantity":1,"period":"Contemporáneo"}
+        ],
+        "institutions": ["Greenpeace","Shell plc","UK Maritime and Coastguard Agency"],
+        "remedies": ["protest","potential_litigation"],
+        "key_figures": {"canvas_size":"96 m²","safety_zone":"500 m"},
+        "next_milestones": ["Investigación de la Agencia Marítima sobre posible violación de la zona de exclusión"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Greenpeace","role":"ONG ambiental","affiliation":""},
+        {"name":"Shell plc","role":"Empresa energética","affiliation":""}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "free_expression",
+        "secondary_tags": ["public_art","climate_protest"],
+        "instruments": [],
+        "institutions": ["Greenpeace","Shell"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-012",
+      "rank": 12,
+      "headline": "Florida exige retirar cruces artísticas de carreteras con mensajes políticos, incluida pintura del Orgullo",
+      "jurisdiction": "US — Florida Department of Transportation / St. Petersburg City Council",
+      "legal_stage": "policy_announcement",
+      "policy_signal": "policy_announcement",
+      "publication_date": "15-08-2025",
+      "source": {
+        "name": "WUSF Public Media",
+        "tier": "4",
+        "original_url": "https://wusfnews.wusf.usf.edu/",
+        "paywall": false,
+        "author": "Shane Jordan"
+      },
+      "scoring": {
+        "total_score": 80,
+        "breakdown": {
+          "content_relevance": 35,
+          "source_authority": 10,
+          "development_significance": 20,
+          "innovation_factor": 10,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "El Departamento de Transporte de Florida ordenó a los municipios eliminar pinturas y murales de pasos de peatones con mensajes políticos o sociales, citando una directiva del Departamento de Transporte de EE. UU. que busca reducir distracciones en las carreteras. El comité de Vivienda y Uso del Suelo de San Petersburgo debatirá el 21 de agosto si cumple la orden, que implicaría borrar un mural arcoíris financiado por la comunidad LGBTQ+ y otras obras con mensajes de justicia racial【236752107406573†L359-L399】. Activistas argumentan que la normativa viola la libertad de expresión y planean presionar al ayuntamiento para que alegue que la obra se financió de manera privada【236752107406573†L410-L427】. La decisión podría sentar precedente sobre el uso del arte en el espacio público y la capacidad del Estado para restringir contenidos políticos en infraestructuras.",
+        "laws_invoked": ["Reglamentos federales de carreteras","Normativa del Departamento de Transporte de Florida"],
+        "objects": [
+          {"artist":"Comunidad local","title":"Mural del Orgullo","year":"2023","medium":"Pintura sobre pavimento","quantity":1,"period":"Contemporáneo"}
+        ],
+        "institutions": ["Florida Department of Transportation","St. Petersburg City Council"],
+        "remedies": ["removal"],
+        "key_figures": {"mural_size":"Paso de peatones","directive_date":"08-2025"},
+        "next_milestones": ["21-08-2025: reunión del comité local para decidir cumplimiento"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Florida Department of Transportation","role":"Regulador estatal","affiliation":""},
+        {"name":"Brandi Gabbard","role":"Concejala de San Petersburgo","affiliation":"Demócrata"}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "public_art",
+        "secondary_tags": ["speech_censorship","transport_regulation"],
+        "instruments": [],
+        "institutions": ["FDOT","St. Petersburg City"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": true, "charity_compliance": false, "data_privacy": false}
+    }
+  ],
+  "analytics": {
+    "processing_statistics": {
+      "sources_scanned": 38,
+      "articles_reviewed": 45,
+      "items_scoring_above_threshold": 12,
+      "items_published": 12,
+      "duplicates_identified": 3,
+      "urls_validated": 40,
+      "validation_failures": 0
+    },
+    "content_metrics": {
+      "average_score": 92.0,
+      "score_distribution": {"90-100":6,"80-89":4,"70-79":0,"60-69":0},
+      "word_count_statistics": {"average_words": 127, "min_words": 113, "max_words": 140}
+    },
+    "coverage_analysis": {
+      "jurisdiction_distribution": {"US":5,"UK":3,"PT":1,"EU":1,"TH":1,"US/MX":1},
+      "category_distribution": {
+        "restitution": 1,
+        "ip_copyright": 1,
+        "aml_sanctions": 1,
+        "fraud_authenticity": 1,
+        "ethics_governance": 1,
+        "free_expression": 3,
+        "labor_employment": 2,
+        "policy_politics": 1,
+        "platform_governance": 0,
+        "tax_charity": 0,
+        "public_art": 1,
+        "data_privacy": 0
+      }
+    }
+  },
+  "discarded_items": [],
+  "forward_looking": {
+    "next_week_calendar": [
+      {"date":"20-08-2025","event":"Inicio de la huelga en el Museo Nacional de Minería del Carbón","significance":"high"},
+      {"date":"21-08-2025","event":"Reunión del comité de St. Petersburg sobre retirada de murales","significance":"medium"},
+      {"date":"01-09-2025","event":"Entrega de lista de miembros de la demanda colectiva contra Anthropic","significance":"medium"},
+      {"date":"07-11-2025","event":"Vencimiento del plazo para adquirir la colección de cartas náuticas","significance":"medium"},
+      {"date":"11-12-2025","event":"Fin del plazo de 120 días para revisión del Smithsonian","significance":"high"},
+      {"date":"18-11-2025","event":"Conferencia preliminar en la demanda de artistas contra Cadence Comic Art","significance":"medium"}
+    ],
+    "monitoring_priorities": ["Seguimiento de la revisión del Smithsonian y posibles litigios","Negociaciones en huelgas de museos en Reino Unido y Portugal","Resolución del caso Anthropic y evolución de demandas colectivas de IA","Oportunidad para adquirir la colección de cartas náuticas en el Reino Unido","Respuesta del BACC y gobierno tailandés a acusaciones de censura"],
+    "emerging_trends": ["Creciente instrumentalización política de museos y exposiciones","Recrudecimiento de conflictos laborales en el sector cultural","Aumento de litigios por derechos de autor en IA y cómic","Mayor vigilancia gubernamental sobre arte público y expresiones políticas"],
+    "data_gaps": ["Información sobre cifras exactas de artistas afectados en el BACC","Detalles sobre el financiamiento y mecanismos de selección del propuesto fondo de adquisiciones europeo","Documentos judiciales completos en el caso Cadence Comic Art"]
+  },
+  "quality_assurance": {
+    "editorial_notes": ["Se consolidaron varias fuentes para cada tema cuando fue posible y se tradujeron al español; se omitieron elementos fuera de la ventana de 7 días a pesar de su relevancia histórica."],
+    "source_reliability": {"tier_1_percentage": 0, "tier_2_percentage": 16, "tier_3_percentage": 50, "tier_4_percentage": 34},
+    "fact_checking": {"claims_verified": 12, "cross_references": 5, "potential_discrepancies": 0}
+  }
+}

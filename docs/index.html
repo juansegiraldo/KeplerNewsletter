@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kepler Karst Newsletters</title>
+    <style>
+        @font-face {
+            font-family: "Sharp Grotesk";
+            src: url("sovereign-debt/assets/fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        :root {
+            --e-global-color-primary: #000000;
+            --e-global-color-secondary: #F1EEA4;
+            --e-global-color-text: #000000;
+            --e-global-typography-primary-font-family: "Blacker Pro";
+            --e-global-typography-primary-font-weight: 700;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Sharp Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--e-global-color-text);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+        
+        .header {
+            background-color: var(--e-global-color-secondary);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 2px solid var(--e-global-color-primary);
+        }
+        
+        .header h1 {
+            font-family: var(--e-global-typography-primary-font-family);
+            font-weight: var(--e-global-typography-primary-font-weight);
+            font-size: 2.5rem;
+            color: var(--e-global-color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .newsletters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .newsletter-card {
+            background: white;
+            border: 2px solid var(--e-global-color-secondary);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--e-global-color-primary);
+        }
+        
+        .newsletter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: var(--e-global-color-primary);
+        }
+        
+        .newsletter-card h2 {
+            font-family: var(--e-global-typography-primary-font-family);
+            font-weight: var(--e-global-typography-primary-font-weight);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--e-global-color-primary);
+        }
+        
+        .newsletter-card .description {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .newsletter-card .cta {
+            background-color: var(--e-global-color-primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        
+        .newsletter-card .cta:hover {
+            background-color: #333;
+        }
+        
+        .footer {
+            background-color: var(--e-global-color-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .newsletters-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>KEPLER—KARST</h1>
+        <div class="subtitle">LAW FIRM</div>
+        <div class="subtitle">#BRAVE ADVOCACY</div>
+    </header>
+
+    <main class="container">
+        <div class="newsletters-grid">
+            <a href="sovereign-debt/index.html" class="newsletter-card">
+                <h2>Sovereign Debt Weekly</h2>
+                <div class="description">
+                    Weekly analysis of sovereign debt developments, restructuring negotiations, 
+                    and international financial markets. Stay informed with expert insights 
+                    on debt sustainability and economic policy.
+                </div>
+                <div class="cta">Browse Issues</div>
+            </a>
+            
+            <a href="art-law/index.html" class="newsletter-card">
+                <h2>Arte y Derecho</h2>
+                <div class="description">
+                    Boletín semanal sobre restitución de arte, cumplimiento normativo, 
+                    y novedades legales en el mercado del arte. Análisis especializado 
+                    en derecho cultural y patrimonio.
+                </div>
+                <div class="cta">Ver Boletines</div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Kepler Karst Law Firm. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Expert legal analysis and insights</p>
+    </footer>
+</body>
+</html>

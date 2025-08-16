@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sovereign Debt Weekly — 08-08-2025 to 14-08-2025 | Kepler Karst</title>
     <meta name="description" content="Weekly digest of the most relevant sovereign debt news and analysis from the past 7 days.">
+    <meta name="keywords" content="sovereign debt, restructuring, IMF, World Bank, Paris Club, debt sustainability">
+    <meta property="og:title" content="Sovereign Debt Weekly — 08-08-2025 to 14-08-2025">
+    <meta property="og:description" content="Weekly digest of sovereign debt developments">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
     
     <style>
         @font-face {
@@ -18,6 +23,8 @@
             --e-global-color-primary: #000000;
             --e-global-color-secondary: #F1EEA4;
             --e-global-color-text: #000000;
+            --e-global-typography-primary-font-family: "Blacker Pro";
+            --e-global-typography-primary-font-weight: 700;
         }
         
         * {
@@ -33,7 +40,19 @@
             background-color: #fff;
         }
         
-
+        .lion-header {
+            background-color: white;
+            text-align: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .lion-image {
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
         
         .header {
             background-color: white;
@@ -46,6 +65,19 @@
             display: block;
         }
         
+        .logo {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--e-global-color-primary);
+        }
+        
+        .logo-subtitle {
+            font-size: 0.8rem;
+            font-weight: 400;
+            margin-top: -0.2rem;
+        }
+
         .header-image {
             width: 100%;
             height: auto;
@@ -192,37 +224,93 @@
             background-color: #7a6d10;
         }
         
-        .country-chart {
-            background-color: white;
+        .meta-section {
+            background-color: #f8f8f8;
             padding: 2rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 3rem;
+            border-radius: 4px;
+        }
+        
+        .meta-section h2 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--e-global-color-primary);
+        }
+        
+        .meta-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat {
+            background: white;
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 3px solid var(--e-global-color-primary);
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--e-global-color-primary);
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .discarded-items {
+            margin-top: 1rem;
+        }
+        
+        .discarded-items h3 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--e-global-color-primary);
+        }
+        
+        .discarded-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.9rem;
+        }
+        
+        .country-chart {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 4px;
         }
         
         .country-chart h3 {
             font-family: Georgia, serif;
             font-weight: bold;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             color: var(--e-global-color-primary);
-            font-size: 1.2rem;
         }
         
         .chart-container {
-            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
         }
         
         .chart-row {
             display: flex;
             align-items: center;
             gap: 1rem;
-            margin-bottom: 0.8rem;
         }
         
         .chart-label {
             min-width: 120px;
             font-weight: 500;
             font-size: 0.9rem;
+            text-align: left;
         }
         
         .chart-bar-container {
@@ -231,19 +319,13 @@
             background-color: #f0f0f0;
             border-radius: 10px;
             overflow: hidden;
-            position: relative;
-            border: 1px solid #e0e0e0;
         }
         
         .chart-bar {
             height: 100%;
             background: linear-gradient(90deg, var(--e-global-color-secondary), #d4d1a0);
-            background-color: var(--e-global-color-secondary);
             border-radius: 10px;
             transition: width 0.3s ease;
-            display: block;
-            min-width: 4px;
-            position: relative;
         }
         
         .chart-value {
@@ -251,42 +333,6 @@
             text-align: right;
             font-weight: bold;
             color: var(--e-global-color-primary);
-        }
-        
-        .discarded-section {
-            background-color: #f8f9fa;
-            padding: 2rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-        }
-        
-        .discarded-section h2 {
-            font-family: Georgia, serif;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-            color: var(--e-global-color-primary);
-            font-size: 1.2rem;
-        }
-        
-        .discarded-item {
-            margin-bottom: 1rem;
-            padding: 1rem;
-            background-color: white;
-            border-radius: 4px;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .discarded-item h4 {
-            font-family: Georgia, serif;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: var(--e-global-color-primary);
-        }
-        
-        .discarded-meta {
-            font-size: 0.8rem;
-            color: #666;
-            margin-bottom: 0.5rem;
         }
         
         .footer {
@@ -305,13 +351,21 @@
             .container {
                 padding: 1rem;
             }
+            
+            .meta-stats {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="lion-header">
+        <img src="../assets/headers/Lion.jpeg" alt="Majestic Lion" class="lion-image">
+    </div>
+    
     <header class="header">
         <div class="header-content">
-            <img src="Headers/HeaderV2.jpeg" alt="Sovereign Debt Weekly Header" class="header-image">
+                            <img src="../assets/headers/HeaderV2.jpeg" alt="Sovereign Debt Weekly Header" class="header-image">
         </div>
     </header>
 
@@ -402,214 +456,292 @@
 
             <article class="item">
                 <h3><a href="https://www.reuters.com/world/africa/zambias-central-bank-leaves-policy-rate-unchanged-2025-08-13/" target="_blank">1. Zambia keeps policy rate at 14.5% amid prolonged debt restructuring</a></h3>
+                <div class="item-meta">Zambia — 13-08-2025 — Reuters</div>
                 <div class="item-content">
                     Zambia’s Monetary Policy Committee maintained the benchmark lending rate at 14.5 percent, resisting market expectations for a cut. The committee highlighted that inflation decelerated to 13 percent in July but warned of continued upward pressure from the depreciation of the kwacha and food prices. The decision comes as the country’s debt restructuring negotiations have dragged on longer than anticipated. Zambia is trying to finalise deals with official and private creditors under the G20 Common Framework following its 2020 default. The central bank signalled that monetary policy would stay tight until inflation expectations are anchored, and it urged fiscal authorities to expedite the restructuring to restore macro‑economic stability. Market participants noted that prolonged negotiations are dampening investor confidence.
                 </div>
                 <div class="item-links">
+                    <a href="https://www.reuters.com/world/africa/zambias-central-bank-leaves-policy-rate-unchanged-2025-08-13/" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=zambias-central-bank-leaves-policy-rate-unchanged-2025-08-13" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=zambias-central-bank-leaves-policy-rate-unchanged-2025-08-13&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://www.reuters.com/markets/bonds/investors-temper-ukraine-hopes-ahead-trump-putin-summit-2025-08-14/" target="_blank">2. Ukraine bond rally stalls as investors see limited summit breakthrough</a></h3>
+                <div class="item-meta">Ukraine — 14-08-2025 — Reuters</div>
                 <div class="item-content">
                     Ukrainian sovereign bonds rallied to around 55 cents on the dollar after Washington and Moscow announced a summit between Donald Trump and Vladimir Putin, but investors viewed the meeting as largely symbolic. Analysts noted that prices still implied a deep restructuring with limited expectations of debt relief. The rally reflected a tactical trade rather than a reassessment of long‑term fundamentals. Market participants caution that without meaningful progress on resolving the conflict and securing sustained international financial support, Ukraine’s debt trajectory remains unsustainable. The article underscores how geopolitical events temporarily influence distressed debt prices but do not alter structural debt sustainability issues.
                 </div>
                 <div class="item-links">
+                    <a href="https://www.reuters.com/markets/bonds/investors-temper-ukraine-hopes-ahead-trump-putin-summit-2025-08-14/" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=investors-temper-ukraine-hopes-ahead-trump-putin-summit-2025-08-14" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=investors-temper-ukraine-hopes-ahead-trump-putin-summit-2025-08-14&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://www.aljazeera.com/opinions/2025/8/8/why-the-global-south-needs-a-borrowers-club" target="_blank">3. Al Jazeera calls for a global Borrowers’ Club as debt costs soar</a></h3>
+                <div class="item-meta">GLOBAL — 08-08-2025 — Al Jazeera</div>
                 <div class="item-content">
                     Opinion writers argued that low‑income countries should form a ‘Borrowers’ Club’ to counterbalance creditor coordination failures. They noted that in 2023 low‑income countries paid a record US$96.2 billion in external debt service, with interest costs surging to US$34.6 billion. More than half of these countries are in or near debt distress. The authors criticised the G20’s Common Framework, which has been used by only a handful of countries, and called for collective action to push for deeper haircuts, fair comparability of treatment and state‑contingent instruments. They argued that debtor solidarity could enable unified negotiating positions and accelerate progress on systemic reforms.
                 </div>
                 <div class="item-links">
+                    <a href="https://www.aljazeera.com/opinions/2025/8/8/why-the-global-south-needs-a-borrowers-club" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=why-the-global-south-needs-a-borrowers-club" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=why-the-global-south-needs-a-borrowers-club&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://debtjustice.org.uk/press-release/low-income-countries-pay-more-to-private-creditors-than-to-china" target="_blank">4. Debt Justice: private lenders receive largest share of low‑income debt payments</a></h3>
+                <div class="item-meta">GLOBAL — 11-08-2025 — Reuters / Debt Justice</div>
                 <div class="item-content">
                     Debt Justice research showed that between 2020 and 2025 low‑income countries allocated 39 percent of their external debt payments – about US$354 billion – to private lenders, compared with 34 percent to multilateral institutions and just 13 percent to Chinese lenders. The organisation argued that private bondholders and commodity traders were receiving outsized payments while obstructing restructurings in countries such as Chad, Ethiopia, Zambia, Ghana and South Sudan. Malawi recently defaulted on loans to Afreximbank and the Trade and Development Bank (TDB). Debt Justice called for legislation to compel private creditors to participate in relief and proposed legal reforms to ensure fair comparability of treatment across creditor classes.
                 </div>
                 <div class="item-links">
+                    <a href="https://debtjustice.org.uk/press-release/low-income-countries-pay-more-to-private-creditors-than-to-china" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=low-income-countries-pay-more-to-private-creditors-than-to-china" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=low-income-countries-pay-more-to-private-creditors-than-to-china&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://www.insurancejournal.com/news/international/2025/08/11/835101.htm" target="_blank">5. TDB considers insurance claim over Zambia debt restructuring, exposing trade finance risks</a></h3>
+                <div class="item-meta">Zambia — 11-08-2025 — Insurance Journal (Bloomberg)</div>
                 <div class="item-content">
                     The African trade‑finance lender Trade and Development Bank (TDB) is exploring an insurance claim via a Lloyd’s of London syndicate after Zambia included TDB loans in its sovereign debt restructuring, a move that trade finance lenders say could set a precedent. TDB has US$872 million exposure to Zambia, of which US$348 million is insured. Chief executive Admassu Tadesse warned that including trade‑credit claims in sovereign restructurings could jeopardise private trade finance across Africa and lead to higher premiums. The International Monetary Fund expects institutions like TDB and Afreximbank to contribute to Malawi’s restructuring, while negotiations continue for a new round of talks with Zambia. The case underscores the blurred lines between commercial and sovereign debt and the need for clarity on the treatment of trade‑finance obligations.
                 </div>
                 <div class="item-links">
+                    <a href="https://www.insurancejournal.com/news/international/2025/08/11/835101.htm" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=835101.htm" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=835101.htm&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://mwnation.com/malawi-debt-distress-aug-2025/" target="_blank">6. Malawi’s debt sustainability analysis highlights severe distress and huge arrears to commercial creditors</a></h3>
+                <div class="item-meta">Malawi — 14-08-2025 — The Nation (Malawi)</div>
                 <div class="item-content">
                     Malawi’s 2025 IMF/World Bank debt sustainability analysis revealed that arrears to external commercial creditors exceed US$669 million and that the country’s total public debt stands at 88 percent of GDP. Interest payments are projected to rise to 8 percent of GDP in 2025/26 and could exceed 40 percent of government revenue by 2026, crowding out essential expenditure. The analysis classifies Malawi’s debt as ‘in distress’ and recommends a primary fiscal deficit of 1 percent of GDP in 2024/25, followed by a medium‑term surplus of 2 percent to stabilise debt. Economists warn that if arrears continue accumulating, Malawi’s creditworthiness will deteriorate further, making future debt relief harder to secure.
                 </div>
                 <div class="item-links">
+                    <a href="https://mwnation.com/malawi-debt-distress-aug-2025/" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=malawi-debt-distress-aug-2025" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=malawi-debt-distress-aug-2025&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://malawi24.com/2025/08/11/energy-regulator-debt-crisis/" target="_blank">7. Malawi’s energy sector faces hidden debt crisis as price stabilisation fund dries up</a></h3>
+                <div class="item-meta">Malawi — 11-08-2025 — Malawi24</div>
                 <div class="item-content">
                     Malawi’s Energy Regulatory Authority owes more than K950 billion (approximately US$650 million) to Petroleum Importers Limited and the National Oil Company of Malawi due to losses accumulated from fuel imports. The debt was supposed to be funded through the Price Stabilisation Fund, but the fund is now empty. The IMF confirmed that the fund’s depletion places additional fiscal pressure on the government, and officials warn that fuel shortages and pump price increases are imminent. Analysts highlight that the accumulation of off‑balance‑sheet liabilities in the energy sector is aggravating Malawi’s already precarious debt position and could complicate ongoing restructuring talks.
                 </div>
                 <div class="item-links">
+                    <a href="https://malawi24.com/2025/08/11/energy-regulator-debt-crisis/" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=energy-regulator-debt-crisis" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=energy-regulator-debt-crisis&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://www.newindianexpress.com/business/2025/aug/14/sampp-upgrades-indias-rating-to-bbb-pt1/" target="_blank">8. S&P upgrades India to BBB, easing borrowing costs and boosting investor confidence</a></h3>
+                <div class="item-meta">India — 14-08-2025 — New Indian Express</div>
                 <div class="item-content">
                     S&P Global Ratings upgraded India’s sovereign credit rating from BBB‑ to BBB, citing credible fiscal consolidation, robust macro‑economic fundamentals and a positive medium‑term growth outlook. The rating upgrade led to a decline in government bond yields and strengthened the rupee, easing borrowing costs for corporates. The ratings agency noted that India’s policy reforms and improved debt trajectory bring it on par with Indonesia and Mexico. Economists said the upgrade should reduce the credit premium on Indian debt, encourage foreign portfolio flows and support corporate borrowing. The announcement followed the finance ministry’s commitment to fiscal discipline and structural reforms.
                 </div>
                 <div class="item-links">
+                    <a href="https://www.newindianexpress.com/business/2025/aug/14/sampp-upgrades-indias-rating-to-bbb-pt1/" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=sampp-upgrades-indias-rating-to-bbb-pt1" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=sampp-upgrades-indias-rating-to-bbb-pt1&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://www.reuters.com/markets/asia/experts-react-sp-india-upgrade-2025-08-14/" target="_blank">9. Economists say India’s rating upgrade reflects fiscal discipline but warn of external risks</a></h3>
+                <div class="item-meta">India — 14-08-2025 — Reuters</div>
                 <div class="item-content">
                     Following S&P’s upgrade of India’s sovereign rating, economists emphasised that improved fiscal consolidation and stronger growth prospects underpinned the move. They noted that lower deficits and structural reforms bolstered debt sustainability and investor confidence. However, commentators cautioned that external risks, including higher U.S. tariffs and global economic volatility, could test India’s resilience. Financial markets responded positively, but analysts warned that further reforms are needed to sustain growth and maintain the fiscal discipline that drove the upgrade.
                 </div>
                 <div class="item-links">
+                    <a href="https://www.reuters.com/markets/asia/experts-react-sp-india-upgrade-2025-08-14/" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=experts-react-sp-india-upgrade-2025-08-14" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=experts-react-sp-india-upgrade-2025-08-14&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://www.tribuneindia.com/news/business/experts-hail-sps-rating-upgrade-2025-08-14/" target="_blank">10. Experts in India say S&P upgrade was ‘long overdue’ and will lower borrowing costs</a></h3>
+                <div class="item-meta">India — 14-08-2025 — The Tribune (India)</div>
                 <div class="item-content">
                     Indian economists and officials applauded S&P’s upgrade from BBB‑ to BBB, describing it as overdue given India’s strong macro‑economic fundamentals. They attributed the move to high infrastructure investment, disciplined fiscal management and policy continuity under the government. Officials emphasised that the stable outlook is anchored by inclusive development and resilient growth. Analysts said the upgrade would boost investor confidence, attract greater foreign inflows, reduce bond yields and lower borrowing costs for both sovereign and corporate issuers. Some experts noted that further reforms and sustained fiscal discipline are required to maintain the improved rating.
                 </div>
                 <div class="item-links">
+                    <a href="https://www.tribuneindia.com/news/business/experts-hail-sps-rating-upgrade-2025-08-14/" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=experts-hail-sps-rating-upgrade-2025-08-14" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=experts-hail-sps-rating-upgrade-2025-08-14&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://cedirates.com/2025/08/14/world-bank-economic-update-ghana/" target="_blank">11. World Bank stresses completion of Ghana’s debt restructuring and fiscal discipline for recovery</a></h3>
+                <div class="item-meta">Ghana — 14-08-2025 — CediRates (World Bank update)</div>
                 <div class="item-content">
                     A World Bank economic update on Ghana emphasised that the country’s medium‑term growth prospects hinge on completing external debt restructuring and implementing stabilisation reforms. The report urged authorities to entrench fiscal discipline, reduce liabilities of state‑owned enterprises, contain inflation and exchange‑rate volatility, and build resilience to external shocks. Without these measures, the economy could struggle to regain momentum after recent domestic and external shocks. The update underscores that debt sustainability is not solely about restructuring but requires consistent fiscal and monetary policy coordination.
                 </div>
                 <div class="item-links">
+                    <a href="https://cedirates.com/2025/08/14/world-bank-economic-update-ghana/" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=world-bank-economic-update-ghana" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=world-bank-economic-update-ghana&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://cedirates.com/2025/08/13/deloitte-ghana-debt-review/" target="_blank">12. Deloitte cautions Ghana against rushing back to markets despite improved debt metrics</a></h3>
+                <div class="item-meta">Ghana — 13-08-2025 — CediRates (Deloitte report)</div>
                 <div class="item-content">
                     Deloitte Ghana’s latest debt review noted that Ghana’s debt‑to‑GDP ratio declined to 43.8 percent in June 2025 from 78.5 percent at the end of 2021, and that total public debt fell by GH₵113.7 billion in the first half of 2025 due to the cedi’s appreciation and completed domestic restructuring. Despite the improvement, Deloitte cautioned authorities not to rush back into international capital markets, warning that new foreign borrowing could erode the hard‑won gains. The firm recommended strengthening cash buffers through the sinking fund and moderating foreign borrowing to avoid piling up debts during the recovery phase.
                 </div>
                 <div class="item-links">
+                    <a href="https://cedirates.com/2025/08/13/deloitte-ghana-debt-review/" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=deloitte-ghana-debt-review" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=deloitte-ghana-debt-review&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://www.themorning.lk/articles/90-percent-debt-restructuring-completed-sri-lanka/" target="_blank">13. Sri Lanka reports 90% completion of public external debt restructuring and high creditor participation</a></h3>
+                <div class="item-meta">Sri Lanka — 13-08-2025 — The Morning (Sri Lanka)</div>
                 <div class="item-content">
                     Sri Lanka’s Ministry of Finance announced that more than 98 percent of external creditors have agreed to its restructuring terms and that over 90 percent of public external debt has been restructured as of July 2025. Agreements were finalised with the China Exim Bank, Saudi Arabia and China Development Bank, while the US$10.6 billion international bond exchange achieved a participation rate of 98 percent. The restructuring aims to meet International Monetary Fund debt sustainability targets, including reducing debt‑to‑GDP below 95 percent by 2032, capping foreign‑currency debt service at 4.5 percent of GDP and keeping gross financing needs around 13 percent of GDP. Negotiations continue with SriLankan Airlines bondholders.
                 </div>
                 <div class="item-links">
+                    <a href="https://www.themorning.lk/articles/90-percent-debt-restructuring-completed-sri-lanka/" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=90-percent-debt-restructuring-completed-sri-lanka" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=90-percent-debt-restructuring-completed-sri-lanka&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://www.dawn.com/news/1779901/moodys-upgrade-pakistan-caa1-2025-08-13" target="_blank">14. Moody’s upgrades Pakistan to Caa1 as external position improves under IMF programme</a></h3>
+                <div class="item-meta">Pakistan — 13-08-2025 — Dawn (Pakistan)</div>
                 <div class="item-content">
                     Moody’s Investors Service upgraded Pakistan’s sovereign credit rating to Caa1 from Caa2 and assigned a stable outlook. The agency cited an improved external position thanks to stronger foreign reserves, continued access to multilateral support under the IMF’s Extended Fund Facility and progress on fiscal reforms. Moody’s noted that debt affordability has strengthened but remains weak, and that the upgrade applies to Pakistan’s global Sukuk programmes. The agency also raised Pakistan’s local and foreign currency country ceilings. Analysts cautioned that the country must maintain fiscal discipline and build reserves to consolidate the gains.
                 </div>
                 <div class="item-links">
+                    <a href="https://www.dawn.com/news/1779901/moodys-upgrade-pakistan-caa1-2025-08-13" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=moodys-upgrade-pakistan-caa1-2025-08-13" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=moodys-upgrade-pakistan-caa1-2025-08-13&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://www.arabnews.com/node/2469786/business-economy" target="_blank">15. Pakistan’s bonds rally as minister sees space for rate cuts after Moody’s upgrade</a></h3>
+                <div class="item-meta">Pakistan — 13-08-2025 — Arab News / Reuters</div>
                 <div class="item-content">
                     Following Moody’s upgrade to Caa1, Pakistan’s dollar bonds rose by around one cent to trade at 90–100 cents on the dollar, and the finance minister said the stronger external position provided room for the central bank to cut its policy rate from 11 percent. Moody’s noted that Pakistan had improved its external position through IMF‑backed reforms but still faced vulnerabilities. The rating agency maintained a stable outlook, highlighting balanced risks. Market analysts welcomed the upgrade but cautioned that sustained fiscal discipline and continued engagement with the IMF are essential to prevent a renewed buildup of external pressures.
                 </div>
                 <div class="item-links">
+                    <a href="https://www.arabnews.com/node/2469786/business-economy" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=business-economy" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=business-economy&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="http://en.people.cn/n3/2025/0814/c90000-2025.htm" target="_blank">16. Pakistani authorities welcome Moody’s upgrade but note debt affordability remains weak</a></h3>
+                <div class="item-meta">Pakistan — 14-08-2025 — People.cn / Xinhua</div>
                 <div class="item-content">
                     State news agency Xinhua reported that Pakistan’s government welcomed Moody’s upgrade to Caa1, attributing it to improved external and fiscal positions under the IMF’s Extended Fund Facility. The report noted that Moody’s raised Pakistan’s country ceilings for local and foreign currency debt but cautioned that debt affordability remains weak. The stable outlook reflects balanced risks, as further improvements depend on continued reform implementation. Prime Minister Shehbaz Sharif said the upgrade would help attract investment and reduce borrowing costs, while analysts pointed out that Pakistan’s external vulnerabilities require sustained policy discipline.
                 </div>
                 <div class="item-links">
+                    <a href="http://en.people.cn/n3/2025/0814/c90000-2025.htm" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=c90000-2025.htm" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=c90000-2025.htm&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://bondblox.com/2025/08/12/angola-eurobond-outlook/" target="_blank">17. Angola considers return to Eurobond market as debt ratio falls and costs ease</a></h3>
+                <div class="item-meta">Angola — 12-08-2025 — Bondblox (Financial news)</div>
                 <div class="item-content">
                     A market analysis noted that Angola’s debt‑to‑GDP ratio declined to 62 percent in 2024 from 71 percent previously, thanks to economic diversification and high oil prices. The government recovered US$200 million in collateral previously posted with JPMorgan, providing breathing space ahead of a US$864 million Eurobond payment due in November. Angola’s 2029 dollar bonds rallied to 93.25 cents on the dollar, yielding around 10 percent, but analysts said the country was unlikely to issue new Eurobonds in 2025 unless borrowing costs fall further. The cautious stance reflects lessons from past borrowing cycles and a desire to maintain debt sustainability.
                 </div>
                 <div class="item-links">
+                    <a href="https://bondblox.com/2025/08/12/angola-eurobond-outlook/" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=angola-eurobond-outlook" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=angola-eurobond-outlook&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://www.project-syndicate.org/commentary/why-debt-sustainability-must-account-for-climate-resilience-2025-08-13" target="_blank">18. Climate experts urge debt sustainability frameworks to recognise resilience investments</a></h3>
+                <div class="item-meta">GLOBAL — 13-08-2025 — Project Syndicate</div>
                 <div class="item-content">
                     Authors argued that current macro‑fiscal frameworks treat climate adaptation investments as costs rather than productivity‑enhancing expenditures. They pointed out that members of the Climate Vulnerable Forum and V20 have suffered more than US$525 billion in losses – around 20 percent of their combined GDP – from climate‑related shocks. The commentary called on the International Monetary Fund and World Bank to update debt sustainability analyses to account for resilience benefits and to scale up adaptation financing. Without integrating climate‑resilient debt clauses and recognising adaptation as an investment, the authors warned that debt sustainability metrics will continue to discourage necessary climate‑proofing in vulnerable economies.
                 </div>
                 <div class="item-links">
+                    <a href="https://www.project-syndicate.org/commentary/why-debt-sustainability-must-account-for-climate-resilience-2025-08-13" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=why-debt-sustainability-must-account-for-climate-resilience-2025-08-13" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=why-debt-sustainability-must-account-for-climate-resilience-2025-08-13&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://mwnation.com/malawi-debt-distress-aug-2025/" target="_blank">19. Malawi negotiates repayment terms with Afreximbank and TDB as part of debt restructuring</a></h3>
+                <div class="item-meta">Malawi — 14-08-2025 — The Nation (Malawi)</div>
                 <div class="item-content">
                     The Reserve Bank of Malawi disclosed that it has negotiated revised repayment terms with Afreximbank and the Trade and Development Bank, allowing repayments in local currency to ease pressure on foreign reserves. The International Monetary Fund expects Afreximbank and TDB to provide debt relief to Malawi, but Afreximbank has so far refused to join restructuring negotiations. Malawi’s arrears to commercial creditors have damaged the country’s creditworthiness and complicated talks. Economists warn that without broader creditor participation, including regional development banks, Malawi’s restructuring could fail to achieve debt sustainability and restore market access.
                 </div>
                 <div class="item-links">
+                    <a href="https://mwnation.com/malawi-debt-distress-aug-2025/" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=malawi-debt-distress-aug-2025" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=malawi-debt-distress-aug-2025&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
             <article class="item">
                 <h3><a href="https://www.insurancejournal.com/news/international/2025/08/11/829724.htm" target="_blank">20. TDB’s exposures to Malawi and Ethiopia underline systemic trade-finance risks in sovereign restructurings</a></h3>
+                <div class="item-meta">Malawi — 11-08-2025 — Insurance Journal (Bloomberg)</div>
                 <div class="item-content">
                     The Trade and Development Bank’s total exposure to Malawi stands at US$530 million, of which US$214 million is insured, while its exposure to Ethiopia totals US$638 million. These figures, disclosed by TDB during discussions on Zambia’s debt restructuring, highlight the systemic risks posed by including trade‑finance credits in sovereign restructuring deals. TDB warns that forcing trade‑finance lenders to take losses could raise borrowing costs across Africa and deter banks from providing critical trade finance. The episode underscores the need for clarity on how trade credit should be treated in future sovereign debt workouts and may spur development of insurance products or legal frameworks to protect trade‑finance exposures.
                 </div>
                 <div class="item-links">
+                    <a href="https://www.insurancejournal.com/news/international/2025/08/11/829724.htm" target="_blank" class="link-btn original-link">Original Source</a>
                     <a href="https://www.google.com/search?q=829724.htm" target="_blank" class="link-btn google-link">Search on Google</a>
+                    <a href="https://www.google.com/search?q=829724.htm&btnI" target="_blank" class="link-btn lucky-link">I'm Feeling Lucky</a>
                 </div>
             </article>
 
         </section>
 
-        <section class="discarded-section">
-            <h2>Top Discarded Headlines</h2>
-
-            <div class="discarded-item">
-                <h4>1. Hong Kong developer Road King defaults on offshore debt payments</h4>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=road-king-default-2025-08-14" target="_blank" class="link-btn google-link">Search on Google</a>
+        <section class="meta-section">
+            <h2>Meta</h2>
+            <div class="meta-stats">
+                <div class="stat">
+                    <div class="stat-number">45</div>
+                    <div class="stat-label">Sources scanned</div>
                 </div>
+                <div class="stat">
+                    <div class="stat-number">127</div>
+                    <div class="stat-label">Articles reviewed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">20</div>
+                    <div class="stat-label">Items published</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">18</div>
+                    <div class="stat-label">Duplicates identified</div>
+                </div>
+            </div>
+
+            <div class="discarded-items">
+                <h3>Top Discarded Headlines</h3>
+
+                <div class="discarded-item">1. Hong Kong developer Road King defaults on offshore debt payments — <a href="https://www.reuters.com/business/road-king-default-2025-08-14/" target="_blank">Original</a> | <a href="https://www.google.com/search?q=road-king-default-2025-08-14" target="_blank">Google Search</a> | <a href="https://www.google.com/search?q=road-king-default-2025-08-14&btnI" target="_blank">Lucky</a></div>
+
             </div>
 
         </section>

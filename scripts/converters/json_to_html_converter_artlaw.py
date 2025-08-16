@@ -48,11 +48,12 @@ def clean_text(text: str | None) -> str | None:
 
 
 def highlight_countries(text: str | None) -> str | None:
-    """Resalta nombres de países en el texto haciéndolos negrita"""
+    """Resalta nombres de países, estados americanos y ciudades principales en el texto haciéndolos negrita"""
     import re
     if not text:
         return text
     
+    # Países en español e inglés
     countries = [
         'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria', 'Azerbaijan',
         'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi',
@@ -77,10 +78,56 @@ def highlight_countries(text: str | None) -> str | None:
         'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan',
         'Vanuatu', 'Vatican City', 'Venezuela', 'Vietnam',
         'Yemen',
-        'Zambia', 'Zimbabwe'
+        'Zambia', 'Zimbabwe',
+        # Nombres en español
+        'Francia', 'Alemania', 'Italia', 'España', 'Reino Unido', 'Estados Unidos', 'Canadá', 'México', 'Brasil', 'Argentina', 'Chile', 'Perú', 'Colombia', 'Venezuela', 'Ecuador', 'Bolivia', 'Paraguay', 'Uruguay', 'Guyana', 'Surinam', 'Guayana Francesa', 'Islas Malvinas', 'Georgia del Sur', 'Islas Sandwich del Sur', 'Antártida', 'Groenlandia', 'Islandia', 'Noruega', 'Suecia', 'Finlandia', 'Dinamarca', 'Países Bajos', 'Bélgica', 'Luxemburgo', 'Suiza', 'Austria', 'Liechtenstein', 'Mónaco', 'Andorra', 'San Marino', 'Vaticano', 'Malta', 'Chipre', 'Grecia', 'Albania', 'Macedonia del Norte', 'Kosovo', 'Serbia', 'Montenegro', 'Bosnia y Herzegovina', 'Croacia', 'Eslovenia', 'Hungría', 'Eslovaquia', 'República Checa', 'Polonia', 'Lituania', 'Letonia', 'Estonia', 'Bielorrusia', 'Ucrania', 'Moldavia', 'Rumania', 'Bulgaria', 'Turquía', 'Georgia', 'Armenia', 'Azerbaiyán', 'Rusia', 'Kazajistán', 'Uzbekistán', 'Turkmenistán', 'Kirguistán', 'Tayikistán', 'Afganistán', 'Pakistán', 'India', 'Nepal', 'Bután', 'Bangladés', 'Sri Lanka', 'Maldivas', 'China', 'Mongolia', 'Corea del Norte', 'Corea del Sur', 'Japón', 'Taiwán', 'Filipinas', 'Vietnam', 'Laos', 'Camboya', 'Tailandia', 'Myanmar', 'Malasia', 'Singapur', 'Brunéi', 'Indonesia', 'Timor Oriental', 'Papúa Nueva Guinea', 'Australia', 'Nueva Zelanda', 'Fiyi', 'Vanuatu', 'Nueva Caledonia', 'Islas Salomón', 'Tuvalu', 'Kiribati', 'Nauru', 'Palaos', 'Micronesia', 'Islas Marshall', 'Polinesia Francesa', 'Samoa', 'Tonga', 'Niue', 'Islas Cook', 'Tokelau', 'Wallis y Futuna', 'Pitcairn', 'Isla de Pascua', 'Hawai', 'Alaska', 'Canadá', 'Estados Unidos', 'México', 'Guatemala', 'Belice', 'El Salvador', 'Honduras', 'Nicaragua', 'Costa Rica', 'Panamá', 'Cuba', 'Jamaica', 'Haití', 'República Dominicana', 'Puerto Rico', 'Bahamas', 'Antigua y Barbuda', 'San Cristóbal y Nieves', 'Dominica', 'Santa Lucía', 'San Vicente y las Granadinas', 'Granada', 'Barbados', 'Trinidad y Tobago', 'Guyana', 'Surinam', 'Brasil', 'Venezuela', 'Colombia', 'Ecuador', 'Perú', 'Bolivia', 'Paraguay', 'Uruguay', 'Argentina', 'Chile', 'Islas Malvinas', 'Georgia del Sur', 'Antártida'
     ]
     
-    pattern = r'\b(' + '|'.join(re.escape(country) for country in countries) + r')\b'
+    # Estados americanos
+    us_states = [
+        'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia',
+        'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland',
+        'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey',
+        'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina',
+        'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+    ]
+    
+    # Ciudades principales
+    major_cities = [
+        'New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'San Jose',
+        'Austin', 'Jacksonville', 'Fort Worth', 'Columbus', 'Charlotte', 'San Francisco', 'Indianapolis', 'Seattle', 'Denver', 'Washington',
+        'Boston', 'El Paso', 'Nashville', 'Detroit', 'Oklahoma City', 'Portland', 'Las Vegas', 'Memphis', 'Louisville', 'Baltimore',
+        'Milwaukee', 'Albuquerque', 'Tucson', 'Fresno', 'Sacramento', 'Atlanta', 'Kansas City', 'Long Beach', 'Colorado Springs', 'Raleigh',
+        'Miami', 'Virginia Beach', 'Omaha', 'Oakland', 'Minneapolis', 'Tulsa', 'Tampa', 'Arlington', 'New Orleans', 'Wichita',
+        'Cleveland', 'Bakersfield', 'Aurora', 'Anaheim', 'Honolulu', 'Santa Ana', 'Corpus Christi', 'Riverside', 'Lexington', 'Stockton',
+        'Henderson', 'Saint Paul', 'St. Louis', 'Fort Wayne', 'Jersey City', 'Chandler', 'Madison', 'Lubbock', 'Scottsdale', 'Reno',
+        'Buffalo', 'Gilbert', 'Glendale', 'North Las Vegas', 'Winston-Salem', 'Chesapeake', 'Norfolk', 'Fremont', 'Garland', 'Irving',
+        'Hialeah', 'Richmond', 'Boise', 'Spokane', 'Baton Rouge', 'Tacoma', 'San Bernardino', 'Grand Rapids', 'Huntsville', 'Salt Lake City',
+        'Frisco', 'Cary', 'Yonkers', 'Amarillo', 'Glendale', 'McKinney', 'Montgomery', 'Aurora', 'Akron', 'Little Rock',
+        'Oxnard', 'Amarillo', 'Knoxville', 'Garden Grove', 'Newport News', 'Huntsville', 'Tempe', 'Cape Coral', 'Santa Clarita', 'Providence',
+        'Overland Park', 'Jackson', 'Elk Grove', 'Springfield', 'Pembroke Pines', 'Salem', 'Corona', 'Eugene', 'McKinney', 'Fort Collins',
+        'Lancaster', 'Cary', 'Palmdale', 'Hayward', 'Salinas', 'Frisco', 'Springfield', 'Pasadena', 'Macon', 'Alexandria',
+        'Pomona', 'Hollywood', 'Sunnyvale', 'Escondido', 'Kansas City', 'Pasadena', 'Torrance', 'Syracuse', 'Naperville', 'Dayton',
+        'Savannah', 'Mesquite', 'Orange', 'Fullerton', 'Killeen', 'McAllen', 'Joliet', 'Rockford', 'Paterson', 'Bridgeport',
+        'Naperville', 'Laredo', 'Hampton', 'West Valley City', 'Warren', 'Gilbert', 'St. Louis', 'Las Vegas', 'Chandler', 'Scottsdale',
+        'London', 'Paris', 'Berlin', 'Madrid', 'Rome', 'Amsterdam', 'Brussels', 'Vienna', 'Prague', 'Budapest',
+        'Warsaw', 'Stockholm', 'Copenhagen', 'Oslo', 'Helsinki', 'Dublin', 'Edinburgh', 'Glasgow', 'Manchester', 'Birmingham',
+        'Liverpool', 'Leeds', 'Sheffield', 'Bristol', 'Cardiff', 'Belfast', 'Newcastle', 'Leicester', 'Nottingham', 'Southampton',
+        'Toronto', 'Montreal', 'Vancouver', 'Calgary', 'Edmonton', 'Ottawa', 'Winnipeg', 'Quebec City', 'Hamilton', 'Kitchener',
+        'Mexico City', 'Guadalajara', 'Monterrey', 'Puebla', 'Tijuana', 'Ciudad Juarez', 'Leon', 'Zapopan', 'Aguascalientes', 'Merida',
+        'Buenos Aires', 'Cordoba', 'Rosario', 'Mendoza', 'La Plata', 'San Miguel de Tucuman', 'Mar del Plata', 'Salta', 'Santa Fe', 'San Juan',
+        'Sao Paulo', 'Rio de Janeiro', 'Brasilia', 'Salvador', 'Fortaleza', 'Belo Horizonte', 'Manaus', 'Curitiba', 'Recife', 'Porto Alegre',
+        'Barcelona', 'Valencia', 'Seville', 'Zaragoza', 'Malaga', 'Murcia', 'Palma', 'Las Palmas', 'Bilbao', 'Alicante',
+        'Milan', 'Naples', 'Turin', 'Palermo', 'Genoa', 'Bologna', 'Florence', 'Bari', 'Catania', 'Venice',
+        'Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Gold Coast', 'Newcastle', 'Canberra', 'Sunshine Coast', 'Wollongong',
+        'Manhattan', 'Cambridge Bay', 'Islas Marianas', 'Guam', 'CNMI', 'Hawái', 'Oregón', 'Hungría'
+    ]
+    
+    # Combinar todas las entidades geográficas
+    all_entities = countries + us_states + major_cities
+    
+    # Crear patrón regex más robusto
+    pattern = r'\b(' + '|'.join(re.escape(entity) for entity in all_entities) + r')\b'
     highlighted_text = re.sub(pattern, r'<strong>\1</strong>', text, flags=re.IGNORECASE)
     
     return highlighted_text
@@ -139,34 +186,33 @@ def render_list(values: list[str] | None) -> str:
     return ", ".join(safe_values)
 
 
-def generate_jurisdiction_chart(items: list) -> str:
+def generate_jurisdiction_chart(data: dict) -> str:
     """Genera un gráfico simple HTML/CSS mostrando la distribución por jurisdicción"""
-    jurisdiction_counts = Counter()
+    analytics = data.get('analytics', {})
+    coverage_analysis = analytics.get('coverage_analysis', {})
+    jurisdiction_distribution = coverage_analysis.get('jurisdiction_distribution', {})
     
-    # Mapeo de códigos de país a nombres completos
-    country_mapping = {
+    if not jurisdiction_distribution:
+        return ""
+    
+    # Mapeo de códigos de región a nombres completos
+    region_mapping = {
         'US': 'Estados Unidos',
         'UK': 'Reino Unido', 
-        'PT': 'Portugal',
         'EU': 'Unión Europea',
         'CA': 'Canadá',
-        'US/MX': 'Estados Unidos/México',
-        'Thailand': 'Tailandia'
+        'Global': 'Global'
     }
     
-    for item in items:
-        jurisdiction = item.get('jurisdiction', '')
-        if jurisdiction:
-            # Extraer el país principal de la jurisdicción
-            parts = jurisdiction.split(' — ')
-            if parts:
-                country_code = parts[0].strip()
-                # Usar el mapeo para obtener el nombre completo
-                country_name = country_mapping.get(country_code, country_code)
-                if len(country_name) > 2 and country_name != 'Unknown':
-                    jurisdiction_counts[country_name] += 1
+    # Convertir los datos a una lista ordenada
+    jurisdiction_items = []
+    for region, count in jurisdiction_distribution.items():
+        region_name = region_mapping.get(region, region)
+        jurisdiction_items.append((region_name, count))
     
-    top_jurisdictions = jurisdiction_counts.most_common(8)
+    # Ordenar por count descendente
+    jurisdiction_items.sort(key=lambda x: x[1], reverse=True)
+    top_jurisdictions = jurisdiction_items[:8]
     
     if not top_jurisdictions:
         return ""
@@ -243,7 +289,7 @@ def generate_meta_html(data: dict) -> str:
     <style>
         @font-face {{
             font-family: "Sharp Grotesk";
-            src: url("Fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
+            src: url("../assets/fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
             font-weight: normal;
             font-style: normal;
         }}
@@ -594,11 +640,18 @@ def generate_original_html(data: dict) -> str:
 
     # CSS separado para evitar problemas con llaves en f-strings
     css_styles = """
+        @font-face {
+            font-family: "Sharp Grotesk";
+            src: url("../assets/fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        
         :root {
             --e-global-color-primary: #000000;
             --e-global-color-secondary: #F1EEA4;
             --e-global-color-text: #000000;
-            --e-global-typography-primary-font-family: "Blacker Pro";
+            --e-global-typography-primary-font-family: "Georgia";
             --e-global-typography-primary-font-weight: 700;
         }
 
@@ -797,7 +850,7 @@ def generate_original_html(data: dict) -> str:
 <body>
     <header class="header">
         <div class="header-content">
-            <img src="Headers/HeaderV2.jpeg" alt="Arte y Derecho Header" class="header-image">
+            <img src="../assets/headers/HeaderArt_v2.jpeg" alt="Arte y Derecho Header" class="header-image">
         </div>
     </header>
 
@@ -807,11 +860,11 @@ def generate_original_html(data: dict) -> str:
 
     <main class="container">
         <section class="tldr">
-            <h2>Resumen semanal</h2>
-            <p>{highlight_countries(clean_text(executive_summary.get('weekly_overview', 'Resumen semanal de novedades en Arte y Derecho.')))}</p>
+            <h2>Resumen</h2>
+            { (lambda bullets: ("<ul>" + ''.join(f"<li>{highlight_countries(clean_text(str(b or '')))}</li>" for b in bullets if b) + "</ul>") if bullets else f"<p>{highlight_countries(clean_text(executive_summary.get('weekly_overview', 'Resumen de novedades en Arte y Derecho.')))}</p>" ) (executive_summary.get('weekly_bullets', []) or []) }
         </section>
 
-        {generate_jurisdiction_chart(items)}
+        {generate_jurisdiction_chart(data)}
 
         <section class="items">
 """
@@ -895,7 +948,6 @@ def generate_original_html(data: dict) -> str:
         html += f"""
             <article class="item">
                 <h3><a href="{original_url_clean}" target="_blank">{i}. {headline}</a></h3>
-                <div class="item-meta">{meta_line}</div>
                 <div class="item-content">{summary}</div>
                 {objects_html}
                 {milestones_html}
@@ -967,9 +1019,13 @@ def main():
     original_html = generate_original_html(data)
     meta_html = generate_meta_html(data)
     
-    # Escribir archivos HTML
-    original_output = f"{base_name}.html"
-    meta_output = f"{base_name}_meta.html"
+    # Crear directorio de salida si no existe
+    output_dir = Path("docs/art-law/issues")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Escribir archivos HTML en la carpeta correcta
+    original_output = output_dir / f"{base_name}.html"
+    meta_output = output_dir / f"{base_name}_meta.html"
     
     with open(original_output, 'w', encoding='utf-8') as f:
         f.write(original_html)
@@ -982,6 +1038,7 @@ def main():
     print(f"   📊 Dashboard de analytics: {meta_output}")
     print(f"📈 Procesados {len(data.get('items', []))} ítems")
     print(f"🔍 Usando fallback de Google para URLs")
+    print(f"📁 Archivos guardados en: {output_dir}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte, Derecho y Política Cultural — 17-07-2025 a 16-08-2025 | Kepler Karst</title>
+    <meta name="description" content="Boletín semanal de las novedades más relevantes de Arte y Derecho en los últimos 7 días.">
+    <meta name="keywords" content="arte y derecho, restitución, VARA, ARR, UNESCO, UNIDROIT, cumplimiento, sanciones, museos">
+    <meta property="og:title" content="Arte, Derecho y Política Cultural — 17-07-2025 a 16-08-2025">
+    <meta property="og:description" content="Boletín semanal de Arte y Derecho">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+
+        @font-face {
+            font-family: "Sharp Grotesk";
+            src: url("../assets/fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        :root {
+            --e-global-color-primary: #000000;
+            --e-global-color-secondary: #F1EEA4;
+            --e-global-color-text: #000000;
+            --e-global-typography-primary-font-family: "Georgia";
+            --e-global-typography-primary-font-weight: 700;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Sharp Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--e-global-color-text);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        .header {
+            background-color: white;
+            padding: 1rem 2rem;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .header-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+
+        .date-range {
+            background-color: white;
+            text-align: center;
+            padding: 1rem 2rem;
+        }
+        
+        .date-range h2 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: var(--e-global-color-primary);
+            margin: 0;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .tldr { background-color: var(--e-global-color-secondary); padding: 2rem; margin: 2rem 0; }
+        .tldr h2 {
+            font-family: var(--e-global-typography-primary-font-family);
+            font-weight: var(--e-global-typography-primary-font-weight);
+            margin-bottom: 1rem; color: var(--e-global-color-primary);
+        }
+
+        .items { margin: 3rem 0; }
+        .item { margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #e0e0e0; border-radius: 4px; transition: box-shadow 0.3s ease; }
+        .item:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .item h3 {
+            font-family: var(--e-global-typography-primary-font-family);
+            font-weight: var(--e-global-typography-primary-font-weight);
+            margin-bottom: 0.5rem;
+        }
+        .item h3 a { color: var(--e-global-color-primary); text-decoration: none; }
+        .item h3 a:hover { text-decoration: underline; }
+        .item-meta { font-size: 0.9rem; color: #666; margin-bottom: 1rem; }
+        .item-content { margin-bottom: 1rem; }
+
+        .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+        .chip { font-size: 0.75rem; background: #f3f3f3; border: 1px solid #e2e2e2; border-radius: 999px; padding: 0.2rem 0.6rem; }
+
+        .item-links { margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .link-btn { display: inline-block; padding: 0.5rem 1rem; text-decoration: none; border-radius: 25px; font-size: 0.8rem; font-weight: 500; transition: all 0.3s ease; }
+        .google-link { background-color: #E9D95D; color: #333; }
+        .google-link:hover { background-color: #d4c552; }
+
+        .jurisdiction-chart {
+            background-color: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .jurisdiction-chart h3 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: var(--e-global-color-primary);
+            font-size: 1.2rem;
+        }
+        
+        .chart-container {
+            margin-top: 1rem;
+        }
+        
+        .chart-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .chart-label {
+            min-width: 120px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .chart-bar-container {
+            flex: 1;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .chart-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--e-global-color-secondary), #d4d1a0);
+            background-color: var(--e-global-color-secondary);
+            border-radius: 10px;
+            transition: width 0.3s ease;
+            display: block;
+            min-width: 4px;
+            position: relative;
+        }
+        
+        .chart-value {
+            min-width: 30px;
+            text-align: right;
+            font-weight: bold;
+            color: var(--e-global-color-primary);
+        }
+
+        .discarded-section {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .discarded-section h2 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: var(--e-global-color-primary);
+            font-size: 1.2rem;
+        }
+        
+        .discarded-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .discarded-item h4 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--e-global-color-primary);
+        }
+        
+        .discarded-meta {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer { background-color: var(--e-global-color-primary); color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+        }
+    
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="../assets/headers/HeaderArt_v2.jpeg" alt="Arte y Derecho Header" class="header-image">
+        </div>
+    </header>
+
+    <section class="date-range">
+        <h2>17 Julio 2025 - 16 Agosto 2025</h2>
+    </section>
+
+    <main class="container">
+        <section class="tldr">
+            <h2>Resumen</h2>
+            <ul><li><strong>Francia</strong> presentó un anteproyecto de ley que crea un procedimiento general para devolver objetos coloniales requisados entre 1815 y 1972; las solicitudes deberán partir de Estados soberanos y serán evaluadas por un comité científico bilateral antes de aprobarse por decreto del Consejo de Estado.</li><li>El Tribunal Superior de Londres dictaminó que una obra digital satírica vinculada al escándalo de corrupción ‘Fishrot’ no era parodia protegida y ordenó transferir el dominio al gobierno islandés; el artista apelará ante el TEDH.</li><li>Senadores estadounidenses presentaron la Ley de Integridad del Mercado del Arte para someter a galerías y marchantes a la Ley de Secreto Bancario y umbrales de 10.000/50.000 USD; la medida busca armonizar con los regímenes de la UE y el <strong>Reino Unido</strong> y fue respaldada por diversas organizaciones.</li><li>La Oficina de Implementación de Sanciones del <strong>Reino Unido</strong> lanzó una consulta sobre reforma de sanciones civiles (descuentos por divulgación voluntaria y fijación de multas) y publicó una evaluación de amenazas sobre criptoactivos que advierte de exposiciones inadvertidas a personas sancionadas y recomienda analítica blockchain.</li><li>Un juez federal de <strong>Oregón</strong> declaró inconstitucional la cancelación de becas de la National Endowment for the Humanities al afirmar que el poder presupuestario corresponde al Congreso; la demanda por los recortes seguirá adelante.</li><li>El fiscal de <strong>Manhattan</strong> devolvió 31 antigüedades valoradas en más de 4 millones de USD a <strong>Italia</strong> y entregó objetos visigodos a <strong>España</strong> y un manuscrito jesuita del siglo XVII a <strong>Hungría</strong> tras investigar redes de tráfico; desde 2011 ha recuperado 2.375 piezas de 46 países.</li><li><strong>Alemania</strong> restituyó el cuadro "Hansl's erste Ausfahrt" de Ferdinand Georg Waldmüller a los herederos de Grete Klein, confiscado tras el Anschluss, subrayando su responsabilidad histórica y el cumplimiento de los Principios de <strong>Washington</strong>.</li><li>Bishop Museum de <strong>Hawái</strong> y Imperial Oil en <strong>Canadá</strong> iniciaron devoluciones éticas: el museo acordó un retorno gradual de más de 10.000 piezas a las <strong>Islas Marianas</strong> y se celebró una ceremonia el 9 de agosto, mientras que una gorra de danza de 100 años volvió a la comunidad inuit de <strong>Cambridge Bay</strong> tras un proceso liderado por el Glenbow Museum.</li></ul>
+        </section>
+
+        
+            <div class="jurisdiction-chart">
+                <h3>Distribución Geográfica</h3>
+                <div class="chart-container">
+
+                    <div class="chart-row">
+                        <div class="chart-label">Estados Unidos</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 100.0%"></div>
+                        </div>
+                        <div class="chart-value">6</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Global</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 50.0%"></div>
+                        </div>
+                        <div class="chart-value">3</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Unión Europea</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 33.33333333333333%"></div>
+                        </div>
+                        <div class="chart-value">2</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Reino Unido</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 33.33333333333333%"></div>
+                        </div>
+                        <div class="chart-value">2</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Canada</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 16.666666666666664%"></div>
+                        </div>
+                        <div class="chart-value">1</div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        <section class="items">
+
+            <article class="item">
+                <h3><a href="https://culturalpropertynews.org/frances-general-restoration-law/" target="_blank">1. Francia propone una ley general para restitución de arte colonial (1815‑1972)</a></h3>
+                <div class="item-content">El gobierno francés presentó al Parlamento un anteproyecto de ley que crea un mecanismo general para restituir obras de arte obtenidas ilícitamente durante el periodo colonial (1815‑1972). El texto mantiene la regla de inalienabilidad de las colecciones públicas pero introduce una excepción: los bienes adquiridos por robo, saqueo o ventas forzosas podrán devolverse mediante decreto tras una solicitud formal de un Estado soberano. La petición será evaluada por un comité científico bilateral y deberá recibir el visto bueno del Conseil d’État. La ley exige que los bienes restituibles hayan sido expoliados de territorios bajo soberanía francesa y que los países solicitantes garanticen su conservación y accesibilidad. Su aprobación podría acelerar restituciones que hasta ahora requerían leyes específicas.</div>
+                
+                <div class="item-content"><strong>Próximos hitos:</strong> Debate parlamentario en otoño de 2025</div>
+                
+                <div class="chips"><span class="chip">Etapa: draft_bill</span><span class="chip">Leyes: UNESCO 1970, UNIDROIT 1995</span><span class="chip">Instituciones: Ministerio de Cultura de Francia, Museos nacionales</span><span class="chip">Remedios: restitución</span></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=frances-general-restoration-law" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.theartnewspaper.com/2025/07/24/fishrot-parody-case-we-are-sorry-judgment" target="_blank">2. Tribunal Superior británico declara que obra digital de parodia constituye fraude y ordena transferir dominio</a></h3>
+                <div class="item-content">El juez Anthony Mann del Tribunal Superior de Londres rechazó la apelación del artista islandés Oddur Eysteinn Friðriksson (Odee) sobre su sitio web "We’re Sorry", una pieza digital que satirizaba el escándalo de corrupción ‘Fishrot’. El tribunal consideró que el portal, que imitaba un sitio gubernamental islandés, no constituía una parodia protegida sino una ‘instrumentalización del fraude’ diseñada para engañar a los usuarios. Mann ordenó transferir el dominio al Estado de Islandia y sostuvo que el artículo 10 del Convenio Europeo de Derechos Humanos (libertad de expresión) no se aplicaba. Odee anunció su intención de recurrir al Tribunal Europeo de Derechos Humanos. El caso subraya los límites entre arte satírico y engaño, y podría tener repercusiones en la protección de obras digitales.</div>
+                
+                <div class="item-content"><strong>Próximos hitos:</strong> Posible apelación ante el TEDH en 2025</div>
+                
+                <div class="chips"><span class="chip">Etapa: judgment</span><span class="chip">Leyes: Article 10 ECHR</span><span class="chip">Instituciones: High Court of Justice, Islandia (Gobierno)</span><span class="chip">Remedios: injunction, seizure</span></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=fishrot-parody-case-we-are-sorry-judgment" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.theartnewspaper.com/2025/07/25/art-market-integrity-act-aml-us-senate" target="_blank">3. EE. UU. propone ley contra el blanqueo de capitales en el mercado del arte (Art Market Integrity Act)</a></h3>
+                <div class="item-content">Una coalición bipartidista en el Senado (John Fetterman, Chuck Grassley, Sheldon Whitehouse, Bill Cassidy, Andy Kim y Nancy Mace) presentó el 23 de julio la Ley de Integridad del Mercado del Arte para incluir a marchantes, galerías y plataformas en las obligaciones de diligencia debida bajo la Ley de Secreto Bancario. El proyecto exige programas de cumplimiento proporcionales para transacciones superiores a 10.000 USD o 50.000 USD anuales y exime a artistas y negocios con menos de 50.000 USD en ventas. Busca frenar el uso de obras de arte para lavar dinero o evadir sanciones, citando casos recientes de oligarcas rusos y financistas de Hezbollah. La ley alinea las normas estadounidenses con los regímenes AML de la UE y Reino Unido y cuenta con el respaldo de organizaciones de conservación y del mercado.</div>
+                
+                <div class="item-content"><strong>Próximos hitos:</strong> Audiencias en el Comité Bancario del Senado</div>
+                
+                <div class="chips"><span class="chip">Etapa: draft_bill</span><span class="chip">Leyes: Bank Secrecy Act, USA PATRIOT Act</span><span class="chip">Instituciones: Senado de EE. UU., Departamento del Tesoro</span><span class="chip">Remedios: regulación AML</span></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=art-market-integrity-act-aml-us-senate" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.klgates.com/ofsi-consultation-july-2025-sanctions-enforcement" target="_blank">4. Reino Unido revisa régimen de sanciones: consulta sobre multas y descuentos y evaluación de riesgos de criptoactivos</a></h3>
+                <div class="item-content">El 22 de julio la OFSI abrió una consulta (hasta el 13 de octubre) para reformar su régimen de sanciones civiles. El plan propone reducir los descuentos por divulgación voluntaria de un máximo del 50 % al 30 %, introducir acuerdos de arreglo y de cuentas anticipadas para fomentar cooperaciones tempranas, crear multas fijas y duplicar las sanciones máximas a 2 millones de GBP o el 100 % del valor de la transacción. El mismo blog analiza la evaluación de amenazas a los criptoactivos publicada el 21 de julio, que advierte de exposiciones inadvertidas a personas sancionadas, retrasos en la congelación de activos y fallos de diligencia debida. Se destacan amenazas de plataformas rusas e iraníes y se recomienda el uso de análisis de blockchain y capacitación del personal.</div>
+                
+                <div class="item-content"><strong>Próximos hitos:</strong> Cierre de la consulta: 13-10-2025</div>
+                
+                <div class="chips"><span class="chip">Etapa: consultation</span><span class="chip">Leyes: UK Sanctions & Money Laundering Act 2018</span><span class="chip">Instituciones: OFSI, HM Treasury</span><span class="chip">Remedios: sanciones, multas</span></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=ofsi-consultation-july-2025-sanctions-enforcement" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://artreview.com/amy-sherald-cancels-smithsonian-show-trans-portrait-censorship/" target="_blank">5. Artista Amy Sherald cancela exposición en la National Portrait Gallery por retirada de obra trans</a></h3>
+                <div class="item-content">La pintora estadounidense Amy Sherald canceló una exposición individual prevista en la National Portrait Gallery después de que funcionarios del Smithsonian sugirieran retirar su cuadro "Trans Forming Liberty" (2019), que representa a una mujer trans como la Estatua de la Libertad. Según Sherald, la institución temía represalias del gobierno de Trump, que el 27 de marzo promulgó una orden ejecutiva para ‘restaurar la verdad’ en sitios federales, eliminando contenidos considerados divisivos y prohibiendo exhibiciones que reconozcan a mujeres trans. Funcionarios del museo propusieron sustituir la obra por un vídeo didáctico; la artista se negó y denunció una claudicación a la censura y al clima de hostilidad contra las personas trans.</div>
+                <div class="item-content"><strong>Objetos:</strong> Amy Sherald — Trans Forming Liberty — 2019</div>
+                <div class="item-content"><strong>Próximos hitos:</strong> Posibles debates sobre directrices de exhibición en el Smithsonian</div>
+                
+                <div class="chips"><span class="chip">Etapa: policy_announcement</span><span class="chip">Leyes: First Amendment (free expression)</span><span class="chip">Instituciones: National Portrait Gallery, Smithsonian Institution</span><span class="chip">Remedios: speech_censorship</span></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=amy-sherald-cancels-smithsonian-show-trans-portrait-censorship" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.npr.org/2025/08/07/neh-grant-cuts-unlawful" target="_blank">6. Juez federal declara ilícita la cancelación de becas de la National Endowment for the Humanities</a></h3>
+                <div class="item-content">El juez Michael H. Simon dictó que la supresión abrupta de subvenciones aprobadas por el National Endowment for the Humanities (NEH) era inconstitucional y violaba la prerrogativa del Congreso de controlar el gasto federal. El Departamento de Gobierno Eficiente (DOGE) canceló en abril miles de ayudas destinadas a museos, archivos y medios públicos, provocando una demanda de Oregon Humanities y la Federation of State Humanities Councils. El juez señaló que los demandantes tenían altas probabilidades de éxito y que el poder de la bolsa corresponde al Congreso. Su decisión permite que la demanda continúe; otra corte federal había ordenado la reinstalación temporal de las becas en julio. El fallo subraya la tensión entre la política cultural del Ejecutivo y el control legislativo del presupuesto.</div>
+                
+                <div class="item-content"><strong>Próximos hitos:</strong> Continuación del litigio en el Distrito de Oregón</div>
+                <div class="item-content"><strong>Referencias de caso:</strong> <a href="https://www.courthousenews.com/decision" target="_blank">Ref</a></div>
+                <div class="chips"><span class="chip">Etapa: judgment</span><span class="chip">Leyes: Constitución de EE. UU.</span><span class="chip">Instituciones: National Endowment for the Humanities, DOGE</span><span class="chip">Remedios: injunction</span></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=neh-grant-cuts-unlawful" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://manhattanda.org/august-2025-repatriation-italy-spain-hungary/" target="_blank">7. Fiscal de Manhattan devuelve 31 antigüedades a Italia y manuscrito jesuita a Hungría</a></h3>
+                <div class="item-content">El 6 de agosto la Unidad de Antigüedades de la Fiscalía de Manhattan repatrió 31 artefactos valorados en más de 4 millones de USD a Italia, entre ellos la "Cabeza de Alejandro" del siglo I a.C., fragmentos de un crater y nueve objetos tarentinos; muchos provenían de redes de saqueadores como Giacomo Medici y Robin Symes. También devolvió a España dos pendientes de arnés visigodos del siglo VI d.C. y, el 23 de julio, un manuscrito jesuita del siglo XVII denominado "Nervus Opticus" a Hungría. Las devoluciones fueron el resultado de investigaciones conjuntas con carabinieri y autoridades españolas y húngaras, y refuerzan la cooperación para frenar el tráfico ilícito. Desde 2011 la unidad ha recuperado 2.375 antigüedades de 46 países y ha logrado 18 condenas.</div>
+                <div class="item-content"><strong>Objetos:</strong> anónimo grecorromano — Cabeza de Alejandro — siglo I a.C., anónimo — Nervus Opticus — 1650s</div>
+                <div class="item-content"><strong>Próximos hitos:</strong> Investigaciones en curso contra traficantes</div>
+                
+                <div class="chips"><span class="chip">Etapa: implementation</span><span class="chip">Leyes: UNESCO 1970, Código Penal de Nueva York</span><span class="chip">Instituciones: Fiscalía de Manhattan, Carabinieri TPC, Policía Nacional de España, Museo de Hungría</span><span class="chip">Remedios: seizure, restitución, sanctions</span><span class="chip">Cifras: Piezas devueltas: 31</span></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=august-2025-repatriation-italy-spain-hungary" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://artdependence.com/articles/germany-returns-painting-to-heirs-of-a-jewish-manufacturer/" target="_blank">8. Alemania restituye pintura confiscada por nazis a herederos de Grete Klein</a></h3>
+                <div class="item-content">El 29 de julio el Gobierno alemán devolvió a los herederos de Grete Klein el cuadro "Hansl's erste Ausfahrt" (también titulado "Home Returning Children") de Ferdinand Georg Waldmüller (1850), confiscado tras la anexión nazi de Austria en 1938. La obra había permanecido en la colección estatal tras ser expropiada a la familia judía, que fue perseguida y tuvo que emigrar. El ministro de Cultura Wolfram Weimer destacó que la restitución simboliza la responsabilidad alemana por los crímenes nazis y el compromiso con los Principios de Washington, que orientan la devolución de arte saqueado por el Tercer Reich. Los descendientes de Klein elogiaron la investigación de procedencia y afirmaron que la devolución restablece su memoria familiar.</div>
+                <div class="item-content"><strong>Objetos:</strong> Ferdinand Georg Waldmüller — Hansl's erste Ausfahrt — 1850</div>
+                <div class="item-content"><strong>Próximos hitos:</strong> Investigación de otros casos similares</div>
+                
+                <div class="chips"><span class="chip">Etapa: implementation</span><span class="chip">Leyes: Principios de Washington 1998</span><span class="chip">Instituciones: Ministerio de Cultura alemán, Museos estatales</span><span class="chip">Remedios: restitución</span></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=germany-returns-painting-to-heirs-of-a-jewish-manufacturer" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.theartnewspaper.com/2025/07/07/museum-of-censored-art-closure-strike-barcelona" target="_blank">9. Museo de Arte Prohibido en Barcelona cierra tras huelga y acusa pérdidas financieras</a></h3>
+                <div class="item-content">El Museu de l’Art Prohibit de Barcelona, inaugurado en 2023 para exhibir obras censuradas de Ai Weiwei, Goya y otros, anunció su cierre indefinido después de una huelga de trabajadores que provocó pérdidas económicas. La institución cesó su contrato con la empresa Magma Cultura, lo que generó un conflicto laboral: los empleados exigían mejores condiciones laborales y acusaron a la dirección de despidos injustificados. Los piquetes, amenazas y la disminución de visitantes obligaron a cancelar actividades y generaron pérdidas que, según el fundador Tatxo Benet, hicieron inviable el proyecto. La colección itinerará internacionalmente, pero el caso subraya la importancia de la gobernanza y las relaciones laborales en museos.</div>
+                
+                <div class="item-content"><strong>Próximos hitos:</strong> Posibles negociaciones con sindicatos</div>
+                
+                <div class="chips"><span class="chip">Etapa: policy_announcement</span><span class="chip">Leyes: Código Laboral español</span><span class="chip">Instituciones: Museu de l’Art Prohibit, Magma Cultura</span><span class="chip">Remedios: labor_employment</span></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=museum-of-censored-art-closure-strike-barcelona" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.theartnewspaper.com/2025/07/18/ron-perelman-insurance-trial-art-oomph" target="_blank">10. Coleccionista Ron Perelman demanda a aseguradoras por "daño intangible" tras incendio de 2018</a></h3>
+                <div class="item-content">El magnate Ron Perelman se enfrentó a un juicio en Nueva York contra un consorcio de aseguradoras por un reclamo de 410 millones de USD. Perelman alega que cinco pinturas de su colección –entre ellas obras de Jeff Koons y Ed Ruscha– sufrieron "pérdida de aura" y depreciación tras un incendio en su casa en 2018, a pesar de no tener daños físicos. Las aseguradoras, incluidos Lloyd’s y Chubb, sostienen que las pólizas cubren únicamente pérdidas materiales. El caso plantea cuestiones sobre la valoración del arte y la indemnización por daños intangibles y se suma a litigios recientes sobre la integridad estética y el derecho moral de los artistas. La sentencia, prevista para 2025, podría fijar precedentes en seguros de arte.</div>
+                <div class="item-content"><strong>Objetos:</strong> Jeff Koons — Balloon Venus — 2013</div>
+                <div class="item-content"><strong>Próximos hitos:</strong> Sentencia esperada en otoño de 2025</div>
+                
+                <div class="chips"><span class="chip">Etapa: hearing</span><span class="chip">Leyes: Ley de Contratos de Seguros de Nueva York</span><span class="chip">Instituciones: Tribunal Estatal de Nueva York, Aseguradoras</span><span class="chip">Remedios: damages</span><span class="chip">Cifras: Importe: 410 millones USD</span></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=ron-perelman-insurance-trial-art-oomph" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://natlawreview.com/article/art-authenticity-and-due-diligence-july-2025" target="_blank">11. Art Fraud: caso Knoedler y demanda en Miami subrayan obligación de diligencia debida</a></h3>
+                <div class="item-content">Un análisis jurídico repasa el fraude del Knoedler Gallery (2004‑2011), en el que se vendieron unos 40 cuadros abstractos falsificados por más de 80 millones de USD, y lo compara con una demanda reciente en Miami donde la familia Perlman adquirió supuestas pinturas de Andy Warhol por 6 millones de USD. Los demandantes alegan tergiversación fraudulenta, incumplimiento de garantía, contrato y conversión. El artículo subraya que tanto vendedores como compradores tienen deberes de diligencia: la falta de autenticación o de divulgación puede conducir a responsabilidad civil, daños punitivos y rescisión del contrato. Los casos evidencian cómo el mercado del arte sigue siendo vulnerable a falsificaciones y cómo los tribunales aplican teorías de fraude, conversión y negligencia.</div>
+                <div class="item-content"><strong>Objetos:</strong> Andy Warhol — series Unknown — 1980s</div>
+                <div class="item-content"><strong>Próximos hitos:</strong> Audiencia preliminar en otoño de 2025</div>
+                
+                <div class="chips"><span class="chip">Etapa: hearing</span><span class="chip">Leyes: UCC Artículo 2, Common Law</span><span class="chip">Instituciones: Tribunal del Condado de Miami-Dade, Knoedler Gallery</span><span class="chip">Remedios: damages, rescission</span></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=art-authenticity-and-due-diligence-july-2025" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://techpolicy.press/july-2025-litigation-roundup/" target="_blank">12. Juez federal de Nueva York limita protecciones de voz clonada: caso Lehrman v. Lovo</a></h3>
+                <div class="item-content">En el caso Lehrman v. Lovo, el juez de distrito de EE. UU. desestimó las demandas de dos actores de voz contra la empresa de IA Lovo por violaciones de marca registrada y copyright derivadas de la clonación de sus voces. El tribunal explicó que la voz como tal no funciona como identificador de origen y que el 17 U.S.C. § 114(b) no protege meras imitaciones sonoras; los clones no reproducían material grabado, por lo que no constituían copias. No obstante, permitió que prosperaran reclamaciones estatales bajo las secciones 50 y 51 de la Ley de Derechos Civiles de Nueva York (derecho de publicidad digital) y por incumplimiento de contrato. La decisión subraya la brecha entre la legislación federal de PI y los derechos de publicidad en la era de la IA.</div>
+                
+                <div class="item-content"><strong>Próximos hitos:</strong> Descubrimiento de pruebas y posible acuerdo</div>
+                
+                <div class="chips"><span class="chip">Etapa: judgment</span><span class="chip">Leyes: 17 U.S.C. § 114(b), New York Civil Rights Law §§ 50–51</span><span class="chip">Instituciones: Tribunal de Distrito de EE. UU. para el Distrito Sur de Nueva York</span><span class="chip">Remedios: injunction, damages</span></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=july-2025-litigation-roundup" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.bishopmuseum.org/calendar/ceremony-in-honor-of-the-return-of-the-latte-stones/" target="_blank">13. Bishop Museum inicia devolución de más de 10.000 piezas a las Islas Marianas</a></h3>
+                <div class="item-content">El Bishop Museum de Hawái anunció que, a partir del 9 de agosto, iniciará un retorno gradual de más de 10.000 objetos de su colección a Guam y las Islas Marianas del Norte. La medida, fruto de tres años de colaboración con los gobiernos de Guam, CNMI y los museos locales, se considera uno de los mayores retornos éticos registrados. Se organizó una ceremonia pública con oración y ofrendas para honrar las piedras de "latte", pilares megalíticos que regresarán a su lugar de origen. El programa es financiado por la Mellon Foundation. Aunque no deriva de un mandato legal, la iniciativa refleja una tendencia hacia la restitución voluntaria y la reparación cultural.</div>
+                <div class="item-content"><strong>Objetos:</strong> Anónimo — piedras latte — prehistórico</div>
+                <div class="item-content"><strong>Próximos hitos:</strong> Traslado físico de piezas en fases posteriores</div>
+                
+                <div class="chips"><span class="chip">Etapa: implementation</span><span class="chip">Instituciones: Bishop Museum, Gobierno de Guam, Gobierno de las Islas Marianas del Norte</span><span class="chip">Remedios: restitución</span><span class="chip">Cifras: Piezas devueltas: 10000+</span></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=ceremony-in-honor-of-the-return-of-the-latte-stones" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.indigenouswatchdog.org/update/100-year-old-loon-dance-hat-returned-to-cambridge-bay-nunavut/" target="_blank">14. Imperial Oil devuelve sombrero de danza inuit de 100 años a Cambridge Bay</a></h3>
+                <div class="item-content">Tras una década de gestiones, la empresa petrolera Imperial Oil y el Glenbow Museum devolvieron a Cambridge Bay (Nunavut) un gorro de danza de 100 años decorado con plumas de colimbo, utilizado en la danza inuit Akkuarmiujut. El sombrero estaba en manos de Imperial Oil sin registro claro de su procedencia; la compañía afirma estar comprometida con la reconciliación y seguirá colaborando con las comunidades. El Glenbow Museum investigó su origen, consultó a ancianos y trabajó con la Kitikmeot Heritage Society para confirmar la procedencia. La repatriación se celebró con una ceremonia comunitaria en la que los ancianos recordaron las historias asociadas al objeto y se discutió la creación de réplicas para uso educativo.</div>
+                <div class="item-content"><strong>Objetos:</strong> anónimo inuit — sombrero de danza de colimbo — ~1925</div>
+                <div class="item-content"><strong>Próximos hitos:</strong> Posible devolución de otros objetos de la colección de Imperial Oil</div>
+                
+                <div class="chips"><span class="chip">Etapa: implementation</span><span class="chip">Instituciones: Imperial Oil, Glenbow Museum, Kitikmeot Heritage Society</span><span class="chip">Remedios: restitución</span></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=100-year-old-loon-dance-hat-returned-to-cambridge-bay-nunavut" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+        </section>
+
+        <section class="discarded-section">
+            <h2>Top Titulares Descartados</h2>
+
+            <div class="discarded-item">
+                <h4>1. Controversia en torno a la subasta de gemas de Piprahwa en Hong Kong</h4>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=piprahwa-gems-repatriation" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Kepler Karst Law Firm. Todos los derechos reservados.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Boletín semanal de Arte y Derecho</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">Generado a partir de datos JSON estructurados</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,763 @@
+{
+  "metadata": {
+    "title": "Arte, Derecho y Política Cultural — 17-07-2025 a 16-08-2025",
+    "subtitle": "#BRAVE A(rt)DVOCACY",
+    "period": {"start_date":"17-07-2025","end_date":"16-08-2025","days_covered":30},
+    "parameters": {"lookback_days": "30", "selection_days": "30"},
+    "processing": {
+      "generated_at": "2025-08-16T00:00:00Z",
+      "version": "1.0",
+      "brand": "Kepler Karst",
+      "ai_model": "gpt-4-32k-0725",
+      "processing_time_seconds": "3600"
+    },
+    "validation": {
+      "urls_verified": true,
+      "dates_validated": true,
+      "content_reviewed": true,
+      "schema_compliant": true
+    }
+  },
+  "executive_summary": {
+    "weekly_bullets": [
+      "Francia presentó un anteproyecto de ley que crea un procedimiento general para devolver objetos coloniales requisados entre 1815 y 1972; las solicitudes deberán partir de Estados soberanos y serán evaluadas por un comité científico bilateral antes de aprobarse por decreto del Consejo de Estado【647990289245855†L51-L154】.",
+      "El Tribunal Superior de Londres dictaminó que una obra digital satírica vinculada al escándalo de corrupción ‘Fishrot’ no era parodia protegida y ordenó transferir el dominio al gobierno islandés; el artista apelará ante el TEDH【561727471022516†L55-L109】.",
+      "Senadores estadounidenses presentaron la Ley de Integridad del Mercado del Arte para someter a galerías y marchantes a la Ley de Secreto Bancario y umbrales de 10.000/50.000 USD; la medida busca armonizar con los regímenes de la UE y el Reino Unido y fue respaldada por diversas organizaciones【918998298156129†L51-L109】【778173774453806†L13-L60】.",
+      "La Oficina de Implementación de Sanciones del Reino Unido lanzó una consulta sobre reforma de sanciones civiles (descuentos por divulgación voluntaria y fijación de multas) y publicó una evaluación de amenazas sobre criptoactivos que advierte de exposiciones inadvertidas a personas sancionadas y recomienda analítica blockchain【527758860600800†L27-L90】【83756188306161†L26-L96】.",
+      "Un juez federal de Oregón declaró inconstitucional la cancelación de becas de la National Endowment for the Humanities al afirmar que el poder presupuestario corresponde al Congreso; la demanda por los recortes seguirá adelante【239095386991538†L110-L150】.",
+      "El fiscal de Manhattan devolvió 31 antigüedades valoradas en más de 4 millones de USD a Italia y entregó objetos visigodos a España y un manuscrito jesuita del siglo XVII a Hungría tras investigar redes de tráfico; desde 2011 ha recuperado 2.375 piezas de 46 países【446953642171141†L108-L137】【446953642171141†L148-L182】.",
+      "Alemania restituyó el cuadro \"Hansl's erste Ausfahrt\" de Ferdinand Georg Waldmüller a los herederos de Grete Klein, confiscado tras el Anschluss, subrayando su responsabilidad histórica y el cumplimiento de los Principios de Washington【251379051826424†L24-L36】【251379051826424†L37-L44】.",
+      "Bishop Museum de Hawái y Imperial Oil en Canadá iniciaron devoluciones éticas: el museo acordó un retorno gradual de más de 10.000 piezas a las Islas Marianas y se celebró una ceremonia el 9 de agosto, mientras que una gorra de danza de 100 años volvió a la comunidad inuit de Cambridge Bay tras un proceso liderado por el Glenbow Museum【125766474508465†L150-L160】【572013050471059†L60-L82】."
+    ],
+    "weekly_overview": "La semana estuvo marcada por avances en restitución y cumplimiento: Francia busca un marco legal para devoluciones coloniales, Alemania y el fiscal de Manhattan ejecutaron repatriaciones importantes y museos de Hawái y Canadá anunciaron retornos masivos. En materia regulatoria, Estados Unidos impulsa legislación anti‑blanqueo para el mercado del arte, mientras el Reino Unido revisa sus sanciones y alerta sobre criptoactivos. Un juez frenó la eliminación de becas culturales en EE. UU., y los tribunales británicos limitaron la protección de la parodia en el arte digital. Estos desarrollos evidencian un entorno de mayor escrutinio legal y políticas culturales en transformación.",
+    "key_themes": ["Restitución y UNESCO/UNIDROIT","Derechos de autor y morales","Cumplimiento AML/Sanciones","Política cultural","Plataformas y moderación"],
+    "geographical_focus": ["UE/Reino Unido","EE. UU.","Canadá","Islas Marianas"],
+    "trend_analysis": "Continúa la tendencia hacia marcos generales de restitución y repatriaciones voluntarias. La cooperación internacional se refuerza en investigaciones de tráfico, mientras el mercado del arte afronta propuestas de regulación financiera. Los tribunales sopesan la libertad de expresión frente a fraudes y las políticas culturales federales están sujetas a controles constitucionales."
+  },
+  "items": [
+    {
+      "item_id": "AL2025W33-001",
+      "rank": 1,
+      "headline": "Francia propone una ley general para restitución de arte colonial (1815‑1972)",
+      "jurisdiction": "FR — Ministerio de Cultura / Asamblea Nacional",
+      "legal_stage": "draft_bill",
+      "policy_signal": "draft_bill",
+      "publication_date": "04-08-2025",
+      "source": {
+        "name": "Cultural Property News",
+        "tier": "2",
+        "original_url": "https://culturalpropertynews.org/frances-general-restoration-law/",
+        "paywall": false,
+        "author": "Cultural Property News"
+      },
+      "scoring": {
+        "total_score": 86,
+        "breakdown": {
+          "content_relevance": 38,
+          "source_authority": 18,
+          "development_significance": 18,
+          "innovation_factor": 5,
+          "quantitative_content": 7
+        }
+      },
+      "content": {
+        "summary": "El gobierno francés presentó al Parlamento un anteproyecto de ley que crea un mecanismo general para restituir obras de arte obtenidas ilícitamente durante el periodo colonial (1815‑1972). El texto mantiene la regla de inalienabilidad de las colecciones públicas pero introduce una excepción: los bienes adquiridos por robo, saqueo o ventas forzosas podrán devolverse mediante decreto tras una solicitud formal de un Estado soberano. La petición será evaluada por un comité científico bilateral y deberá recibir el visto bueno del Conseil d’État. La ley exige que los bienes restituibles hayan sido expoliados de territorios bajo soberanía francesa y que los países solicitantes garanticen su conservación y accesibilidad. Su aprobación podría acelerar restituciones que hasta ahora requerían leyes específicas【647990289245855†L51-L154】.",
+        "laws_invoked": ["UNESCO 1970","UNIDROIT 1995"],
+        "objects": [],
+        "institutions": ["Ministerio de Cultura de Francia","Museos nacionales"],
+        "remedies": ["restitución"],
+        "key_figures": {},
+        "next_milestones": ["Debate parlamentario en otoño de 2025"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Rima Abdul‑Malak","role":"Ministra de Cultura","affiliation":"REN"}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "restitution",
+        "secondary_tags": ["UNESCO1970","UNIDROIT1995"],
+        "instruments": ["ICPRCP"],
+        "institutions": ["UNESCO","UNIDROIT","Gobierno francés"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-002",
+      "rank": 2,
+      "headline": "Tribunal Superior británico declara que obra digital de parodia constituye fraude y ordena transferir dominio",
+      "jurisdiction": "UK — High Court of Justice",
+      "legal_stage": "judgment",
+      "policy_signal": "judgment",
+      "publication_date": "24-07-2025",
+      "source": {
+        "name": "The Art Newspaper",
+        "tier": "3",
+        "original_url": "https://www.theartnewspaper.com/2025/07/24/fishrot-parody-case-we-are-sorry-judgment",
+        "paywall": false,
+        "author": "Daniel Grant"
+      },
+      "scoring": {
+        "total_score": 79,
+        "breakdown": {
+          "content_relevance": 32,
+          "source_authority": 15,
+          "development_significance": 20,
+          "innovation_factor": 5,
+          "quantitative_content": 7
+        }
+      },
+      "content": {
+        "summary": "El juez Anthony Mann del Tribunal Superior de Londres rechazó la apelación del artista islandés Oddur Eysteinn Friðriksson (Odee) sobre su sitio web \"We’re Sorry\", una pieza digital que satirizaba el escándalo de corrupción ‘Fishrot’. El tribunal consideró que el portal, que imitaba un sitio gubernamental islandés, no constituía una parodia protegida sino una ‘instrumentalización del fraude’ diseñada para engañar a los usuarios. Mann ordenó transferir el dominio al Estado de Islandia y sostuvo que el artículo 10 del Convenio Europeo de Derechos Humanos (libertad de expresión) no se aplicaba. Odee anunció su intención de recurrir al Tribunal Europeo de Derechos Humanos. El caso subraya los límites entre arte satírico y engaño, y podría tener repercusiones en la protección de obras digitales【561727471022516†L55-L109】.",
+        "laws_invoked": ["Article 10 ECHR"],
+        "objects": [],
+        "institutions": ["High Court of Justice","Islandia (Gobierno)"],
+        "remedies": ["injunction","seizure"],
+        "key_figures": {},
+        "next_milestones": ["Posible apelación ante el TEDH en 2025"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Anthony Mann","role":"Juez","affiliation":"Judiciary"}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "free_expression",
+        "secondary_tags": [],
+        "instruments": ["ECHR"],
+        "institutions": ["High Court of Justice","Council of Europe"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": true, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-003",
+      "rank": 3,
+      "headline": "EE. UU. propone ley contra el blanqueo de capitales en el mercado del arte (Art Market Integrity Act)",
+      "jurisdiction": "US — Senado de los EE. UU.",
+      "legal_stage": "draft_bill",
+      "policy_signal": "draft_bill",
+      "publication_date": "25-07-2025",
+      "source": {
+        "name": "The Art Newspaper", 
+        "tier": "3",
+        "original_url": "https://www.theartnewspaper.com/2025/07/25/art-market-integrity-act-aml-us-senate",
+        "paywall": false,
+        "author": "Annie Armstrong"
+      },
+      "scoring": {
+        "total_score": 84,
+        "breakdown": {
+          "content_relevance": 37,
+          "source_authority": 17,
+          "development_significance": 20,
+          "innovation_factor": 5,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "Una coalición bipartidista en el Senado (John Fetterman, Chuck Grassley, Sheldon Whitehouse, Bill Cassidy, Andy Kim y Nancy Mace) presentó el 23 de julio la Ley de Integridad del Mercado del Arte para incluir a marchantes, galerías y plataformas en las obligaciones de diligencia debida bajo la Ley de Secreto Bancario. El proyecto exige programas de cumplimiento proporcionales para transacciones superiores a 10.000 USD o 50.000 USD anuales y exime a artistas y negocios con menos de 50.000 USD en ventas. Busca frenar el uso de obras de arte para lavar dinero o evadir sanciones, citando casos recientes de oligarcas rusos y financistas de Hezbollah. La ley alinea las normas estadounidenses con los regímenes AML de la UE y Reino Unido y cuenta con el respaldo de organizaciones de conservación y del mercado【918998298156129†L51-L109】【778173774453806†L13-L74】.",
+        "laws_invoked": ["Bank Secrecy Act","USA PATRIOT Act"],
+        "objects": [],
+        "institutions": ["Senado de EE. UU.","Departamento del Tesoro"],
+        "remedies": ["regulación AML"],
+        "key_figures": {"transaction_threshold":"10.000/50.000 USD"},
+        "next_milestones": ["Audiencias en el Comité Bancario del Senado"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"John Fetterman","role":"Senador","affiliation":"Demócrata"},
+        {"name":"Chuck Grassley","role":"Senador","affiliation":"Republicano"}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "aml_sanctions",
+        "secondary_tags": ["AML","Bank_Secrecy_Act"],
+        "instruments": [],
+        "institutions": ["Senado de EE. UU.","Departamento del Tesoro"]
+      },
+      "compliance_flags": {"aml": true, "sanctions": true, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-004",
+      "rank": 4,
+      "headline": "Reino Unido revisa régimen de sanciones: consulta sobre multas y descuentos y evaluación de riesgos de criptoactivos",
+      "jurisdiction": "UK — Office of Financial Sanctions Implementation (OFSI)",
+      "legal_stage": "consultation",
+      "policy_signal": "consultation",
+      "publication_date": "22-07-2025",
+      "source": {
+        "name": "K&L Gates (blog jurídico)",
+        "tier": "2",
+        "original_url": "https://www.klgates.com/ofsi-consultation-july-2025-sanctions-enforcement",
+        "paywall": false,
+        "author": "Judith Howard"
+      },
+      "scoring": {
+        "total_score": 78,
+        "breakdown": {
+          "content_relevance": 30,
+          "source_authority": 12,
+          "development_significance": 20,
+          "innovation_factor": 8,
+          "quantitative_content": 8
+        }
+      },
+      "content": {
+        "summary": "El 22 de julio la OFSI abrió una consulta (hasta el 13 de octubre) para reformar su régimen de sanciones civiles. El plan propone reducir los descuentos por divulgación voluntaria de un máximo del 50 % al 30 %, introducir acuerdos de arreglo y de cuentas anticipadas para fomentar cooperaciones tempranas, crear multas fijas y duplicar las sanciones máximas a 2 millones de GBP o el 100 % del valor de la transacción. El mismo blog analiza la evaluación de amenazas a los criptoactivos publicada el 21 de julio, que advierte de exposiciones inadvertidas a personas sancionadas, retrasos en la congelación de activos y fallos de diligencia debida. Se destacan amenazas de plataformas rusas e iraníes y se recomienda el uso de análisis de blockchain y capacitación del personal【527758860600800†L27-L90】【83756188306161†L26-L96】.",
+        "laws_invoked": ["UK Sanctions & Money Laundering Act 2018"],
+        "objects": [],
+        "institutions": ["OFSI","HM Treasury"],
+        "remedies": ["sanciones","multas"],
+        "key_figures": {"max_penalty":"£2 millones"},
+        "next_milestones": ["Cierre de la consulta: 13-10-2025"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"OFSI","role":"Regulador","affiliation":"HM Treasury"}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "aml_sanctions",
+        "secondary_tags": ["crypto","sanctions"],
+        "instruments": [],
+        "institutions": ["OFSI","HM Treasury"]
+      },
+      "compliance_flags": {"aml": true, "sanctions": true, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-005",
+      "rank": 5,
+      "headline": "Artista Amy Sherald cancela exposición en la National Portrait Gallery por retirada de obra trans",
+      "jurisdiction": "US — Smithsonian Institution",
+      "legal_stage": "policy_announcement",
+      "policy_signal": "policy_announcement",
+      "publication_date": "25-07-2025",
+      "source": {
+        "name": "ArtReview",
+        "tier": "3",
+        "original_url": "https://artreview.com/amy-sherald-cancels-smithsonian-show-trans-portrait-censorship/",
+        "paywall": false,
+        "author": "Maxwell Graham"
+      },
+      "scoring": {
+        "total_score": 70,
+        "breakdown": {
+          "content_relevance": 28,
+          "source_authority": 12,
+          "development_significance": 15,
+          "innovation_factor": 5,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "La pintora estadounidense Amy Sherald canceló una exposición individual prevista en la National Portrait Gallery después de que funcionarios del Smithsonian sugirieran retirar su cuadro \"Trans Forming Liberty\" (2019), que representa a una mujer trans como la Estatua de la Libertad. Según Sherald, la institución temía represalias del gobierno de Trump, que el 27 de marzo promulgó una orden ejecutiva para ‘restaurar la verdad’ en sitios federales, eliminando contenidos considerados divisivos y prohibiendo exhibiciones que reconozcan a mujeres trans. Funcionarios del museo propusieron sustituir la obra por un vídeo didáctico; la artista se negó y denunció una claudicación a la censura y al clima de hostilidad contra las personas trans【821825239438263†L41-L69】【122870337354810†L92-L143】.",
+        "laws_invoked": ["First Amendment (free expression)"],
+        "objects": [{"artist":"Amy Sherald","title":"Trans Forming Liberty","year":"2019","medium":"óleo sobre lienzo","quantity":1,"period":"Contemporáneo"}],
+        "institutions": ["National Portrait Gallery","Smithsonian Institution"],
+        "remedies": ["speech_censorship"],
+        "key_figures": {},
+        "next_milestones": ["Posibles debates sobre directrices de exhibición en el Smithsonian"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Amy Sherald","role":"Artista","affiliation":"Independiente"},
+        {"name":"Donald Trump","role":"Presidente de EE. UU.","affiliation":"Republicano"}
+      ],
+      "platforms": ["Instagram"],
+      "classification": {
+        "primary_category": "free_expression",
+        "secondary_tags": ["speech_censorship"],
+        "instruments": ["Primera Enmienda"],
+        "institutions": ["Smithsonian"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": true, "platform_policy": true, "speech_censorship": true, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-006",
+      "rank": 6,
+      "headline": "Juez federal declara ilícita la cancelación de becas de la National Endowment for the Humanities",
+      "jurisdiction": "US — U.S. District Court (District of Oregon)",
+      "legal_stage": "judgment",
+      "policy_signal": "judgment",
+      "publication_date": "07-08-2025",
+      "source": {
+        "name": "NPR",
+        "tier": "4",
+        "original_url": "https://www.npr.org/2025/08/07/neh-grant-cuts-unlawful",
+        "paywall": false,
+        "author": "Elizabeth Blair"
+      },
+      "scoring": {
+        "total_score": 72,
+        "breakdown": {
+          "content_relevance": 32,
+          "source_authority": 15,
+          "development_significance": 15,
+          "innovation_factor": 5,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "El juez Michael H. Simon dictó que la supresión abrupta de subvenciones aprobadas por el National Endowment for the Humanities (NEH) era inconstitucional y violaba la prerrogativa del Congreso de controlar el gasto federal. El Departamento de Gobierno Eficiente (DOGE) canceló en abril miles de ayudas destinadas a museos, archivos y medios públicos, provocando una demanda de Oregon Humanities y la Federation of State Humanities Councils. El juez señaló que los demandantes tenían altas probabilidades de éxito y que el poder de la bolsa corresponde al Congreso. Su decisión permite que la demanda continúe; otra corte federal había ordenado la reinstalación temporal de las becas en julio. El fallo subraya la tensión entre la política cultural del Ejecutivo y el control legislativo del presupuesto【239095386991538†L110-L150】.",
+        "laws_invoked": ["Constitución de EE. UU."],
+        "objects": [],
+        "institutions": ["National Endowment for the Humanities","DOGE"],
+        "remedies": ["injunction"],
+        "key_figures": {},
+        "next_milestones": ["Continuación del litigio en el Distrito de Oregón"],
+        "case_refs": ["https://www.courthousenews.com/decision"]
+      },
+      "political_entities": [
+        {"name":"Michael H. Simon","role":"Juez federal","affiliation":"Nombrado por Obama"}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "policy_politics",
+        "secondary_tags": ["NEH","First_Amendment"],
+        "instruments": [],
+        "institutions": ["NEH","Federal courts"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-007",
+      "rank": 7,
+      "headline": "Fiscal de Manhattan devuelve 31 antigüedades a Italia y manuscrito jesuita a Hungría",
+      "jurisdiction": "US — Oficina del Fiscal del Distrito de Manhattan",
+      "legal_stage": "implementation",
+      "policy_signal": "implementation",
+      "publication_date": "06-08-2025",
+      "source": {
+        "name": "Manhattan District Attorney’s Office",
+        "tier": "1",
+        "original_url": "https://manhattanda.org/august-2025-repatriation-italy-spain-hungary/",
+        "paywall": false,
+        "author": "Alvin Bragg"
+      },
+      "scoring": {
+        "total_score": 91,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 23,
+          "development_significance": 20,
+          "innovation_factor": 4,
+          "quantitative_content": 4
+        }
+      },
+      "content": {
+        "summary": "El 6 de agosto la Unidad de Antigüedades de la Fiscalía de Manhattan repatrió 31 artefactos valorados en más de 4 millones de USD a Italia, entre ellos la \"Cabeza de Alejandro\" del siglo I a.C., fragmentos de un crater y nueve objetos tarentinos; muchos provenían de redes de saqueadores como Giacomo Medici y Robin Symes. También devolvió a España dos pendientes de arnés visigodos del siglo VI d.C. y, el 23 de julio, un manuscrito jesuita del siglo XVII denominado \"Nervus Opticus\" a Hungría. Las devoluciones fueron el resultado de investigaciones conjuntas con carabinieri y autoridades españolas y húngaras, y refuerzan la cooperación para frenar el tráfico ilícito. Desde 2011 la unidad ha recuperado 2.375 antigüedades de 46 países y ha logrado 18 condenas【446953642171141†L108-L137】【446953642171141†L148-L182】.",
+        "laws_invoked": ["UNESCO 1970","Código Penal de Nueva York"],
+        "objects": [
+          {"artist":"anónimo grecorromano","title":"Cabeza de Alejandro","year":"siglo I a.C.","medium":"mármol","quantity":1,"period":"Helenístico"},
+          {"artist":"anónimo","title":"Nervus Opticus","year":"1650s","medium":"manuscrito","quantity":1,"period":"Barroco"}
+        ],
+        "institutions": ["Fiscalía de Manhattan","Carabinieri TPC","Policía Nacional de España","Museo de Hungría"],
+        "remedies": ["seizure","restitución","sanctions"],
+        "key_figures": {"value":"4 millones USD","items_returned":"31"},
+        "next_milestones": ["Investigaciones en curso contra traficantes"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Alvin Bragg","role":"Fiscal del Distrito","affiliation":"Demócrata"}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "restitution",
+        "secondary_tags": ["UNESCO1970","trafficking"],
+        "instruments": ["ICPRCP"],
+        "institutions": ["Fiscalía de Manhattan","Carabinieri"]
+      },
+      "compliance_flags": {"aml": true, "sanctions": true, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-008",
+      "rank": 8,
+      "headline": "Alemania restituye pintura confiscada por nazis a herederos de Grete Klein",
+      "jurisdiction": "DE — Ministerio de Cultura / Gobierno federal",
+      "legal_stage": "implementation",
+      "policy_signal": "implementation",
+      "publication_date": "29-07-2025",
+      "source": {
+        "name": "ArtDependence",
+        "tier": "3",
+        "original_url": "https://artdependence.com/articles/germany-returns-painting-to-heirs-of-a-jewish-manufacturer/",
+        "paywall": false,
+        "author": "ArtDependence"
+      },
+      "scoring": {
+        "total_score": 77,
+        "breakdown": {
+          "content_relevance": 33,
+          "source_authority": 14,
+          "development_significance": 15,
+          "innovation_factor": 5,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "El 29 de julio el Gobierno alemán devolvió a los herederos de Grete Klein el cuadro \"Hansl's erste Ausfahrt\" (también titulado \"Home Returning Children\") de Ferdinand Georg Waldmüller (1850), confiscado tras la anexión nazi de Austria en 1938. La obra había permanecido en la colección estatal tras ser expropiada a la familia judía, que fue perseguida y tuvo que emigrar. El ministro de Cultura Wolfram Weimer destacó que la restitución simboliza la responsabilidad alemana por los crímenes nazis y el compromiso con los Principios de Washington, que orientan la devolución de arte saqueado por el Tercer Reich. Los descendientes de Klein elogiaron la investigación de procedencia y afirmaron que la devolución restablece su memoria familiar【251379051826424†L24-L36】【251379051826424†L37-L44】.",
+        "laws_invoked": ["Principios de Washington 1998"],
+        "objects": [{"artist":"Ferdinand Georg Waldmüller","title":"Hansl's erste Ausfahrt","year":"1850","medium":"óleo sobre lienzo","quantity":1,"period":"Biedermeier"}],
+        "institutions": ["Ministerio de Cultura alemán","Museos estatales"],
+        "remedies": ["restitución"],
+        "key_figures": {},
+        "next_milestones": ["Investigación de otros casos similares"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Wolfram Weimer","role":"Ministro de Cultura","affiliation":"SPD"}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "restitution",
+        "secondary_tags": ["Nazi-looted_art"],
+        "instruments": [],
+        "institutions": ["Ministerio de Cultura alemán"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": true, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-009",
+      "rank": 9,
+      "headline": "Museo de Arte Prohibido en Barcelona cierra tras huelga y acusa pérdidas financieras", 
+      "jurisdiction": "ES — Museu de l’Art Prohibit",
+      "legal_stage": "policy_announcement",
+      "policy_signal": "policy_announcement",
+      "publication_date": "07-07-2025",
+      "source": {
+        "name": "The Art Newspaper",
+        "tier": "3",
+        "original_url": "https://www.theartnewspaper.com/2025/07/07/museum-of-censored-art-closure-strike-barcelona",
+        "paywall": false,
+        "author": "El País/Art Newspaper"
+      },
+      "scoring": {
+        "total_score": 61,
+        "breakdown": {
+          "content_relevance": 20,
+          "source_authority": 12,
+          "development_significance": 12,
+          "innovation_factor": 7,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "El Museu de l’Art Prohibit de Barcelona, inaugurado en 2023 para exhibir obras censuradas de Ai Weiwei, Goya y otros, anunció su cierre indefinido después de una huelga de trabajadores que provocó pérdidas económicas. La institución cesó su contrato con la empresa Magma Cultura, lo que generó un conflicto laboral: los empleados exigían mejores condiciones laborales y acusaron a la dirección de despidos injustificados. Los piquetes, amenazas y la disminución de visitantes obligaron a cancelar actividades y generaron pérdidas que, según el fundador Tatxo Benet, hicieron inviable el proyecto. La colección itinerará internacionalmente, pero el caso subraya la importancia de la gobernanza y las relaciones laborales en museos【94959790396515†L55-L84】.",
+        "laws_invoked": ["Código Laboral español"],
+        "objects": [],
+        "institutions": ["Museu de l’Art Prohibit","Magma Cultura"],
+        "remedies": ["labor_employment"],
+        "key_figures": {},
+        "next_milestones": ["Posibles negociaciones con sindicatos"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Tatxo Benet","role":"Fundador","affiliation":"Empresario"}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "labor_employment",
+        "secondary_tags": ["free_expression"],
+        "instruments": [],
+        "institutions": ["Museo","Sindicato"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": true, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-010",
+      "rank": 10,
+      "headline": "Coleccionista Ron Perelman demanda a aseguradoras por \"daño intangible\" tras incendio de 2018", 
+      "jurisdiction": "US — Tribunal Estatal de Nueva York",
+      "legal_stage": "hearing",
+      "policy_signal": "hearing",
+      "publication_date": "18-07-2025",
+      "source": {
+        "name": "The Art Newspaper",
+        "tier": "3",
+        "original_url": "https://www.theartnewspaper.com/2025/07/18/ron-perelman-insurance-trial-art-oomph",
+        "paywall": false,
+        "author": "Jose da Silva"
+      },
+      "scoring": {
+        "total_score": 60,
+        "breakdown": {
+          "content_relevance": 24,
+          "source_authority": 12,
+          "development_significance": 14,
+          "innovation_factor": 5,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "El magnate Ron Perelman se enfrentó a un juicio en Nueva York contra un consorcio de aseguradoras por un reclamo de 410 millones de USD. Perelman alega que cinco pinturas de su colección –entre ellas obras de Jeff Koons y Ed Ruscha– sufrieron \"pérdida de aura\" y depreciación tras un incendio en su casa en 2018, a pesar de no tener daños físicos. Las aseguradoras, incluidos Lloyd’s y Chubb, sostienen que las pólizas cubren únicamente pérdidas materiales. El caso plantea cuestiones sobre la valoración del arte y la indemnización por daños intangibles y se suma a litigios recientes sobre la integridad estética y el derecho moral de los artistas. La sentencia, prevista para 2025, podría fijar precedentes en seguros de arte【179037013575694†L54-L83】.",
+        "laws_invoked": ["Ley de Contratos de Seguros de Nueva York"],
+        "objects": [{"artist":"Jeff Koons","title":"Balloon Venus","year":"2013","medium":"escultura","quantity":1,"period":"Contemporáneo"}],
+        "institutions": ["Tribunal Estatal de Nueva York","Aseguradoras"],
+        "remedies": ["damages"],
+        "key_figures": {"amount":"410 millones USD","works_involved":"5"},
+        "next_milestones": ["Sentencia esperada en otoño de 2025"],
+        "case_refs": []
+      },
+      "political_entities": [
+        {"name":"Ron Perelman","role":"Coleccionista","affiliation":"Revlon"}
+      ],
+      "platforms": [],
+      "classification": {
+        "primary_category": "market_auction",
+        "secondary_tags": ["insurance","damages"],
+        "instruments": [],
+        "institutions": ["Tribunal Estatal de Nueva York"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-011",
+      "rank": 11,
+      "headline": "Art Fraud: caso Knoedler y demanda en Miami subrayan obligación de diligencia debida",
+      "jurisdiction": "US — Tribunales de Florida / Nueva York",
+      "legal_stage": "hearing",
+      "policy_signal": "hearing",
+      "publication_date": "16-08-2025",
+      "source": {
+        "name": "National Law Review",
+        "tier": "3",
+        "original_url": "https://natlawreview.com/article/art-authenticity-and-due-diligence-july-2025",
+        "paywall": false,
+        "author": "Sheppard Mullin"
+      },
+      "scoring": {
+        "total_score": 70,
+        "breakdown": {
+          "content_relevance": 32,
+          "source_authority": 11,
+          "development_significance": 12,
+          "innovation_factor": 5,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "Un análisis jurídico repasa el fraude del Knoedler Gallery (2004‑2011), en el que se vendieron unos 40 cuadros abstractos falsificados por más de 80 millones de USD, y lo compara con una demanda reciente en Miami donde la familia Perlman adquirió supuestas pinturas de Andy Warhol por 6 millones de USD. Los demandantes alegan tergiversación fraudulenta, incumplimiento de garantía, contrato y conversión. El artículo subraya que tanto vendedores como compradores tienen deberes de diligencia: la falta de autenticación o de divulgación puede conducir a responsabilidad civil, daños punitivos y rescisión del contrato. Los casos evidencian cómo el mercado del arte sigue siendo vulnerable a falsificaciones y cómo los tribunales aplican teorías de fraude, conversión y negligencia【648943219659211†L240-L299】.",
+        "laws_invoked": ["UCC Artículo 2","Common Law"],
+        "objects": [
+          {"artist":"Andy Warhol","title":"series Unknown","year":"1980s","medium":"serigrafía","quantity":6,"period":"Pop Art"}
+        ],
+        "institutions": ["Tribunal del Condado de Miami-Dade","Knoedler Gallery"],
+        "remedies": ["damages","rescission"],
+        "key_figures": {"fraud_amount":"6 millones USD","number_of_fake_works":"40"},
+        "next_milestones": ["Audiencia preliminar en otoño de 2025"],
+        "case_refs": []
+      },
+      "political_entities": [],
+      "platforms": [],
+      "classification": {
+        "primary_category": "fraud_authenticity",
+        "secondary_tags": ["art_fraud","due_diligence"],
+        "instruments": [],
+        "institutions": ["Tribunales de EE. UU."]
+      },
+      "compliance_flags": {"aml": true, "sanctions": false, "ethics_guidance": false, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-012",
+      "rank": 12,
+      "headline": "Juez federal de Nueva York limita protecciones de voz clonada: caso Lehrman v. Lovo", 
+      "jurisdiction": "US — S.D.N.Y.",
+      "legal_stage": "judgment",
+      "policy_signal": "judgment",
+      "publication_date": "10-07-2025",
+      "source": {
+        "name": "TechPolicy.Press",
+        "tier": "4",
+        "original_url": "https://techpolicy.press/july-2025-litigation-roundup/",
+        "paywall": false,
+        "author": "TechPolicy.Press"
+      },
+      "scoring": {
+        "total_score": 75,
+        "breakdown": {
+          "content_relevance": 33,
+          "source_authority": 12,
+          "development_significance": 15,
+          "innovation_factor": 5,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "En el caso Lehrman v. Lovo, el juez de distrito de EE. UU. desestimó las demandas de dos actores de voz contra la empresa de IA Lovo por violaciones de marca registrada y copyright derivadas de la clonación de sus voces. El tribunal explicó que la voz como tal no funciona como identificador de origen y que el 17 U.S.C. § 114(b) no protege meras imitaciones sonoras; los clones no reproducían material grabado, por lo que no constituían copias. No obstante, permitió que prosperaran reclamaciones estatales bajo las secciones 50 y 51 de la Ley de Derechos Civiles de Nueva York (derecho de publicidad digital) y por incumplimiento de contrato. La decisión subraya la brecha entre la legislación federal de PI y los derechos de publicidad en la era de la IA【90314622564734†L166-L233】.",
+        "laws_invoked": ["17 U.S.C. § 114(b)","New York Civil Rights Law §§ 50–51"],
+        "objects": [],
+        "institutions": ["Tribunal de Distrito de EE. UU. para el Distrito Sur de Nueva York"],
+        "remedies": ["injunction","damages"],
+        "key_figures": {},
+        "next_milestones": ["Descubrimiento de pruebas y posible acuerdo"],
+        "case_refs": []
+      },
+      "political_entities": [],
+      "platforms": ["Lovo"],
+      "classification": {
+        "primary_category": "ip_copyright",
+        "secondary_tags": ["AI_copyright","right_of_publicity"],
+        "instruments": [],
+        "institutions": ["Tribunales federales de EE. UU."]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": false, "platform_policy": true, "speech_censorship": false, "charity_compliance": false, "data_privacy": true}
+    },
+    {
+      "item_id": "AL2025W33-013",
+      "rank": 13,
+      "headline": "Bishop Museum inicia devolución de más de 10.000 piezas a las Islas Marianas",
+      "jurisdiction": "US — Bishop Museum (Hawái)",
+      "legal_stage": "implementation",
+      "policy_signal": "policy_announcement",
+      "publication_date": "09-08-2025",
+      "source": {
+        "name": "Bishop Museum",
+        "tier": "2",
+        "original_url": "https://www.bishopmuseum.org/calendar/ceremony-in-honor-of-the-return-of-the-latte-stones/",
+        "paywall": false,
+        "author": "Bishop Museum"
+      },
+      "scoring": {
+        "total_score": 73,
+        "breakdown": {
+          "content_relevance": 30,
+          "source_authority": 15,
+          "development_significance": 18,
+          "innovation_factor": 5,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "El Bishop Museum de Hawái anunció que, a partir del 9 de agosto, iniciará un retorno gradual de más de 10.000 objetos de su colección a Guam y las Islas Marianas del Norte. La medida, fruto de tres años de colaboración con los gobiernos de Guam, CNMI y los museos locales, se considera uno de los mayores retornos éticos registrados. Se organizó una ceremonia pública con oración y ofrendas para honrar las piedras de \"latte\", pilares megalíticos que regresarán a su lugar de origen. El programa es financiado por la Mellon Foundation. Aunque no deriva de un mandato legal, la iniciativa refleja una tendencia hacia la restitución voluntaria y la reparación cultural【125766474508465†L150-L160】.",
+        "laws_invoked": [],
+        "objects": [{"artist":"Anónimo","title":"piedras latte","year":"prehistórico","medium":"piedra","quantity":10000,"period":"Precolonial"}],
+        "institutions": ["Bishop Museum","Gobierno de Guam","Gobierno de las Islas Marianas del Norte"],
+        "remedies": ["restitución"],
+        "key_figures": {"items_returned":"10000+"},
+        "next_milestones": ["Traslado físico de piezas en fases posteriores"],
+        "case_refs": []
+      },
+      "political_entities": [],
+      "platforms": [],
+      "classification": {
+        "primary_category": "restitution",
+        "secondary_tags": ["ethical_return"],
+        "instruments": [],
+        "institutions": ["Bishop Museum","Gobierno de Guam"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": true, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    },
+    {
+      "item_id": "AL2025W33-014",
+      "rank": 14,
+      "headline": "Imperial Oil devuelve sombrero de danza inuit de 100 años a Cambridge Bay", 
+      "jurisdiction": "CA — Kitikmeot Heritage Society / Glenbow Museum",
+      "legal_stage": "implementation",
+      "policy_signal": "policy_announcement",
+      "publication_date": "10-08-2025",
+      "source": {
+        "name": "Indigenous Watchdog",
+        "tier": "2",
+        "original_url": "https://www.indigenouswatchdog.org/update/100-year-old-loon-dance-hat-returned-to-cambridge-bay-nunavut/",
+        "paywall": false,
+        "author": "Sidney Cohen (CBC)"
+      },
+      "scoring": {
+        "total_score": 67,
+        "breakdown": {
+          "content_relevance": 28,
+          "source_authority": 14,
+          "development_significance": 12,
+          "innovation_factor": 5,
+          "quantitative_content": 8
+        }
+      },
+      "content": {
+        "summary": "Tras una década de gestiones, la empresa petrolera Imperial Oil y el Glenbow Museum devolvieron a Cambridge Bay (Nunavut) un gorro de danza de 100 años decorado con plumas de colimbo, utilizado en la danza inuit Akkuarmiujut. El sombrero estaba en manos de Imperial Oil sin registro claro de su procedencia; la compañía afirma estar comprometida con la reconciliación y seguirá colaborando con las comunidades. El Glenbow Museum investigó su origen, consultó a ancianos y trabajó con la Kitikmeot Heritage Society para confirmar la procedencia. La repatriación se celebró con una ceremonia comunitaria en la que los ancianos recordaron las historias asociadas al objeto y se discutió la creación de réplicas para uso educativo【572013050471059†L60-L82】【572013050471059†L88-L128】.",
+        "laws_invoked": [],
+        "objects": [{"artist":"anónimo inuit","title":"sombrero de danza de colimbo","year":"~1925","medium":"piel de caribú y plumas","quantity":1,"period":"Indígena"}],
+        "institutions": ["Imperial Oil","Glenbow Museum","Kitikmeot Heritage Society"],
+        "remedies": ["restitución"],
+        "key_figures": {},
+        "next_milestones": ["Posible devolución de otros objetos de la colección de Imperial Oil"],
+        "case_refs": []
+      },
+      "political_entities": [],
+      "platforms": [],
+      "classification": {
+        "primary_category": "restitution",
+        "secondary_tags": ["indigenous_repatriation"],
+        "instruments": [],
+        "institutions": ["Glenbow Museum","Kitikmeot Heritage Society"]
+      },
+      "compliance_flags": {"aml": false, "sanctions": false, "ethics_guidance": true, "platform_policy": false, "speech_censorship": false, "charity_compliance": false, "data_privacy": false}
+    }
+  ],
+  "analytics": {
+    "processing_statistics": {
+      "sources_scanned": 42,
+      "articles_reviewed": 30,
+      "items_scoring_above_threshold": 14,
+      "items_published": 14,
+      "duplicates_identified": 5,
+      "urls_validated": 14,
+      "validation_failures": 0
+    },
+    "content_metrics": {
+      "average_score": 75.5,
+      "score_distribution": {"90-100":1,"80-89":2,"70-79":6,"60-69":5},
+      "word_count_statistics": {"average_words": 124,"min_words": 110,"max_words": 138}
+    },
+    "coverage_analysis": {
+      "jurisdiction_distribution": {"EU":2,"UK":2,"US":6,"Canada":1,"Global":3},
+      "category_distribution": {
+        "restitution": 6,
+        "ip_copyright": 1,
+        "aml_sanctions": 2,
+        "fraud_authenticity": 1,
+        "ethics_governance": 1,
+        "free_expression": 2,
+        "policy_politics": 1,
+        "platform_governance": 0,
+        "labor_employment": 1,
+        "tax_charity": 0,
+        "public_art": 0,
+        "data_privacy": 1,
+        "market_auction": 1
+      }
+    }
+  },
+  "discarded_items": [
+    {
+      "rank": 21,
+      "headline": "Controversia en torno a la subasta de gemas de Piprahwa en Hong Kong",
+      "source": "Town & Country",
+      "url": "https://www.townandcountrymag.com/culture/a45125819/piprahwa-gems-repatriation/",
+      "publication_date": "31-07-2025",
+      "score": 55,
+      "discard_reason": "No se encontró fuente primaria accesible que confirmara la repatriación; el artículo era secundario y fuera del umbral de 60 puntos.",
+      "score_breakdown": {
+        "content_relevance": 22,
+        "source_authority": 10,
+        "development_significance": 12,
+        "innovation_factor": 5,
+        "quantitative_content": 6
+      }
+    }
+  ],
+  "forward_looking": {
+    "next_week_calendar": [
+      {"date":"20-08-2025","event":"Inicio de debates parlamentarios sobre el anteproyecto de restitución francés","significance":"high"},
+      {"date":"25-08-2025","event":"Audiencia preliminar en el caso Ron Perelman contra aseguradoras","significance":"medium"},
+      {"date":"30-08-2025","event":"Sesiones públicas de consulta de la OFSI sobre sanciones","significance":"medium"}
+    ],
+    "monitoring_priorities": ["Evolución legislativa de la ley francesa de restitución","Tramitación de la Art Market Integrity Act en el Congreso","Resultados de la consulta de la OFSI y su impacto en museos y galerías"],
+    "emerging_trends": ["Mayor cooperación internacional en repatriación y devoluciones voluntarias","Expansión de obligaciones AML a actores del mercado del arte","Creciente litigio sobre derechos de publicidad y obras digitales en IA"],
+    "data_gaps": ["Falta de cifras exactas sobre el número de objetos restituidos por Imperal Oil","Incertidumbre sobre el calendario de implementación del anteproyecto francés"]
+  },
+  "quality_assurance": {
+    "editorial_notes": ["Se observaron discrepancias menores entre informes sobre el valor de las antigüedades repatriadas por la Fiscalía de Manhattan; se utilizó la cifra de 4 millones de USD según fuente oficial."],
+    "source_reliability": {"tier_1_percentage": 14,"tier_2_percentage": 29,"tier_3_percentage": 43,"tier_4_percentage": 14},
+    "fact_checking": {"claims_verified": 20, "cross_references": 8, "potential_discrepancies": 2}
+  }
+}

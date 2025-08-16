@@ -7,7 +7,7 @@
     <style>
         @font-face {
             font-family: "Sharp Grotesk";
-            src: url("Fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
+            src: url("assets/fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
             font-weight: normal;
             font-style: normal;
         }
@@ -60,6 +60,16 @@
             margin-top: -0.2rem;
         }
         
+        .back-link {
+            color: var(--e-global-color-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
         .hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23f1eea4"/><text x="600" y="300" text-anchor="middle" font-family="Arial" font-size="48" fill="%23000">#BRAVE ADVOCACY</text></svg>');
             background-size: cover;
@@ -90,6 +100,14 @@
         
         .digests {
             margin: 3rem 0;
+        }
+        
+        .digests h2 {
+            font-family: var(--e-global-typography-primary-font-family);
+            font-weight: var(--e-global-typography-primary-font-weight);
+            margin-bottom: 2rem;
+            color: var(--e-global-color-primary);
+            font-size: 2rem;
         }
         
         .digest-item {
@@ -125,6 +143,41 @@
             margin-bottom: 1rem;
         }
         
+        .issue-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .link-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .primary-link {
+            background-color: var(--e-global-color-primary);
+            color: white;
+        }
+        
+        .primary-link:hover {
+            background-color: #333;
+        }
+        
+        .secondary-link {
+            background-color: var(--e-global-color-secondary);
+            color: var(--e-global-color-primary);
+        }
+        
+        .secondary-link:hover {
+            background-color: #e8d994;
+        }
+        
         .footer {
             background-color: var(--e-global-color-primary);
             color: white;
@@ -152,7 +205,7 @@
                 <span class="logo-subtitle">LAW FIRM</span>
             </div>
             <nav>
-                <span style="font-weight: bold; color: var(--e-global-color-primary);">Sovereign Debt Weekly</span>
+                <a href="../index.html" class="back-link">← Back to Home</a>
             </nav>
         </div>
     </header>
@@ -164,15 +217,68 @@
 
     <main class="container">
         <section class="digests">
-            <h2 style="font-family: var(--e-global-typography-primary-font-family); font-weight: var(--e-global-typography-primary-font-weight); margin-bottom: 2rem; color: var(--e-global-color-primary);">Available Digests</h2>
-
+            <h2>Available Digests</h2>
+            
             <article class="digest-item">
-                <h3><a href="05082025.html" target="_blank">Sovereign Debt Weekly — 29-07-2025 to 04-08-2025</a></h3>
-                <div class="digest-meta">Published: August 5, 2025</div>
-                <p>Weekly digest covering sovereign debt developments including Zambia's IMF extension request, Argentina's reserve targets adjustment, and climate-resilience financing in Sri Lanka.</p>
+                <h3><a href="issues/14082025.html" target="_blank">Sovereign Debt Weekly — 08-08-2025 to 14-08-2025 | Kepler Karst</a></h3>
+                <div class="digest-meta">Published: 14-08-2025</div>
+                <p>Weekly digest covering sovereign debt developments and international financial markets.</p>
+                <div class="issue-links">
+                    <a href="issues/14082025.html" class="link-btn primary-link">Read Issue</a>
+                    
+                </div>
             </article>
-
-            <!-- Add more digests here as they become available -->
+        
+            <article class="digest-item">
+                <h3><a href="issues/14082025v2.html" target="_blank">Sovereign Debt Weekly — 08-08-2025 to 14-08-2025 | Kepler Karst</a></h3>
+                <div class="digest-meta">Published: 14-08-2025</div>
+                <p>Weekly digest covering sovereign debt developments and international financial markets.</p>
+                <div class="issue-links">
+                    <a href="issues/14082025v2.html" class="link-btn primary-link">Read Issue</a>
+                    
+                </div>
+            </article>
+        
+            <article class="digest-item">
+                <h3><a href="issues/14082025v3.html" target="_blank">Sovereign Debt Weekly — 08-08-2025 to 14-08-2025 | Kepler Karst</a></h3>
+                <div class="digest-meta">Published: 14-08-2025</div>
+                <p>Weekly digest covering sovereign debt developments and international financial markets.</p>
+                <div class="issue-links">
+                    <a href="issues/14082025v3.html" class="link-btn primary-link">Read Issue</a>
+                    <a href="issues/14082025v3_meta.html" class="link-btn secondary-link">View Analytics</a>
+                </div>
+            </article>
+        
+            <article class="digest-item">
+                <h3><a href="issues/05082025.html" target="_blank">Sovereign Debt Weekly — 29-07-2025 to 04-08-2025 | Kepler Karst</a></h3>
+                <div class="digest-meta">Published: 05-08-2025</div>
+                <p>Weekly digest covering sovereign debt developments and international financial markets.</p>
+                <div class="issue-links">
+                    <a href="issues/05082025.html" class="link-btn primary-link">Read Issue</a>
+                    
+                </div>
+            </article>
+        
+            <article class="digest-item">
+                <h3><a href="issues/example_weekly_digest.html" target="_blank">Sovereign Debt Weekly — 15-01-2025 to 21-01-2025 | Kepler Karst</a></h3>
+                <div class="digest-meta">Published: Unknown</div>
+                <p>Weekly digest covering sovereign debt developments and international financial markets.</p>
+                <div class="issue-links">
+                    <a href="issues/example_weekly_digest.html" class="link-btn primary-link">Read Issue</a>
+                    
+                </div>
+            </article>
+        
+            <article class="digest-item">
+                <h3><a href="issues/weekly-digest.html" target="_blank">Sovereign Debt Weekly — 19-07-2025 to 25-07-2025 | Kepler Karst</a></h3>
+                <div class="digest-meta">Published: Unknown</div>
+                <p>Weekly digest covering sovereign debt developments and international financial markets.</p>
+                <div class="issue-links">
+                    <a href="issues/weekly-digest.html" class="link-btn primary-link">Read Issue</a>
+                    
+                </div>
+            </article>
+        
         </section>
     </main>
 
@@ -182,4 +288,4 @@
         <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">Generated in partnership by: Rodrigo Olivares, Laura Villarraga and Juan Giraldo</p>
     </footer>
 </body>
-</html> 
+</html>
