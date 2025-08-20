@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Governance Implementation Cases — 19-07-2025 a 18-08-2025 | Kepler Karst</title>
+    <meta name="description" content="Boletín semanal de las novedades más relevantes de Gobernanza de Datos en los últimos 7 días.">
+    <meta name="keywords" content="gobernanza de datos, GDPR, CCPA, LGPD, privacidad, seguridad, IA, cumplimiento">
+    <meta property="og:title" content="Data Governance Implementation Cases — 19-07-2025 a 18-08-2025">
+    <meta property="og:description" content="Boletín semanal de Gobernanza de Datos">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+
+        @font-face {
+            font-family: "Sharp Grotesk";
+            src: url("../assets/fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        :root {
+            --e-global-color-primary: #000000;
+            --e-global-color-secondary: #4A90E2;
+            --e-global-color-text: #000000;
+            --e-global-typography-primary-font-family: "Georgia";
+            --e-global-typography-primary-font-weight: 700;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Sharp Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--e-global-color-text);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        .header {
+            background-color: white;
+            padding: 1rem 2rem;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .header-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .date-range {
+            background-color: white;
+            text-align: center;
+            padding: 1rem 2rem;
+        }
+        
+        .date-range h2 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: var(--e-global-color-primary);
+            margin: 0;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .tldr { background-color: var(--e-global-color-secondary); color: white; padding: 2rem; margin: 2rem 0; }
+        .tldr h2 {
+            font-family: var(--e-global-typography-primary-font-family);
+            font-weight: var(--e-global-typography-primary-font-weight);
+            margin-bottom: 1rem; color: white;
+        }
+
+        .items { margin: 3rem 0; }
+        .item { margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #e0e0e0; border-radius: 4px; transition: box-shadow 0.3s ease; }
+        .item:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .item h3 {
+            font-family: var(--e-global-typography-primary-font-family);
+            font-weight: var(--e-global-typography-primary-font-weight);
+            margin-bottom: 0.5rem;
+        }
+        .item h3 a { color: var(--e-global-color-primary); text-decoration: none; }
+        .item h3 a:hover { text-decoration: underline; }
+        .item-meta { font-size: 0.9rem; color: #666; margin-bottom: 1rem; }
+        .item-content { margin-bottom: 1rem; }
+
+        .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+        .chip { font-size: 0.75rem; background: #f3f3f3; border: 1px solid #e2e2e2; border-radius: 999px; padding: 0.2rem 0.6rem; }
+
+        .item-links { margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .link-btn { display: inline-block; padding: 0.5rem 1rem; text-decoration: none; border-radius: 25px; font-size: 0.8rem; font-weight: 500; transition: all 0.3s ease; }
+        .google-link { background-color: var(--e-global-color-secondary); color: white; }
+        .google-link:hover { background-color: #357ABD; }
+
+        .jurisdiction-chart {
+            background-color: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .jurisdiction-chart h3 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: var(--e-global-color-primary);
+            font-size: 1.2rem;
+        }
+        
+        .chart-container {
+            margin-top: 1rem;
+        }
+        
+        .chart-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .chart-label {
+            min-width: 120px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .chart-bar-container {
+            flex: 1;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .chart-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--e-global-color-secondary), #357ABD);
+            border-radius: 10px;
+            transition: width 0.3s ease;
+            display: block;
+            min-width: 4px;
+            position: relative;
+        }
+        
+        .chart-value {
+            min-width: 30px;
+            text-align: right;
+            font-weight: bold;
+            color: var(--e-global-color-primary);
+        }
+
+        .discarded-section {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .discarded-section h2 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: var(--e-global-color-primary);
+            font-size: 1.2rem;
+        }
+        
+        .discarded-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .discarded-item h4 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--e-global-color-primary);
+        }
+        
+        .discarded-meta {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer { background-color: var(--e-global-color-primary); color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+        }
+    
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="../assets/headers/HeaderDataGovernance.jpeg" alt="Gobernanza de Datos Header" class="header-image">
+        </div>
+    </header>
+
+    <section class="date-range">
+        <h2>19 Julio 2025 - 18 Agosto 2025</h2>
+    </section>
+
+    <main class="container">
+        <section class="tldr">
+            <h2>Resumen</h2>
+            <ul><li>Varios incidentes de seguridad, como los ataques de vishing a plataformas CRM de Salesforce, expusieron datos de clientes y contactos empresariales en sectores como aviación, retail y telecomunicaciones.</li><li>Los casos de brechas masivas como las de Bouygues Telecom y Columbia University muestran el impacto de millones de registros expuestos y la necesidad de controles preventivos y respuestas rápidas.</li><li>Implementaciones deficientes de controles de datos permitieron a grupos como ShinyHunters y WarLock explotar vulnerabilidades de CRM y SharePoint, destacando la importancia de la gestión de identidades y de la seguridad de API.</li><li>Proyectos de transformación digital, como la adquisición de Deasy Labs por Collibra para gobernar datos no estructurados, evidencian la búsqueda de plataformas unificadas y de mayor observabilidad de datos.</li><li>Incidentes de datos en organizaciones públicas y sanitarias (<strong>Canadá</strong>, Países Bajos, DaVita) muestran cómo fallos de configuración y retrasos en notificación aumentan el riesgo regulatorio y reputacional.</li><li>Nuevos patrones de ataque, como la filtración de copias de seguridad internas (PBS) y la venta de documentos de identidad de hoteles italianos, recuerdan la necesidad de controles de ciclo de vida de datos y protección de información sensible.</li></ul>
+        </section>
+
+        
+
+        <section class="items">
+
+            <article class="item">
+                <h3><a href="https://firecompass.com/blog/week-august-4-2025-cyber-incidents" target="_blank">1. Air France–KLM sufre brecha en CRM de terceros por campaña de vishing</a></h3>
+                <div class="item-content">Air France y KLM notificaron el 7 de agosto que atacantes accedieron a una plataforma de atención al cliente operada por un proveedor externo. Los delincuentes, vinculados a la campaña de vishing de ShinyHunters, consiguieron tokens de OAuth mediante ingeniería social y extrajeron nombres, números de fidelización Flying Blue, datos de contacto y asuntos de correos de las solicitudes de servicio. No se expusieron contraseñas ni datos de pago, pero la aerolínea advirtió sobre posibles correos de phishing dirigidos. La intrusión forma parte de un ataque coordinado a múltiples empresas que utilizan Salesforce y revela deficiencias en la gestión de autorizaciones de aplicaciones. Tras el incidente, se revocaron credenciales, se restringió el acceso a aplicaciones conectadas y se actualizaron las directrices de autenticación multi-factor. La lección para otros CTOs es revisar la postura de seguridad de sus plataformas SaaS y aplicar controles de identidad de confianza cero.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=week-august-4-2025-cyber-incidents" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.bleepingcomputer.com/news/security/hr-giant-workday-discloses-data-breach-after-salesforce-attack/" target="_blank">2. Workday descubre filtración en su CRM por ingeniería social y revoca accesos</a></h3>
+                <div class="item-content">Workday informó el 18 de agosto que atacantes utilizaron vishing para engañar a empleados y obtener acceso a su plataforma CRM de terceros. Los intrusos consiguieron datos de contacto empresariales —nombres, correos electrónicos y números de teléfono— pero no tuvieron acceso a los entornos de clientes. El ataque forma parte de una campaña coordinada contra usuarios de Salesforce, en la que los atacantes solicitan a las víctimas instalar una aplicación maliciosa de Data Loader para obtener tokens de API. Workday revocó inmediatamente los permisos afectados, activó controles MFA adicionales y recomendó a otras empresas revisar las autorizaciones de sus integraciones de CRM. Las recomendaciones incluyen implementar monitoreo de token, limitar permisos de aplicaciones y reforzar la formación de usuarios para reconocer intentos de ingeniería social.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=hr-giant-workday-discloses-data-breach-after-salesforce-attack" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://firecompass.com/blog/week-august-4-2025-cyber-incidents" target="_blank">3. Cisco advierte de filtración de datos por ataque de vishing a su CRM</a></h3>
+                <div class="item-content">Un empleado de Cisco fue engañado mediante vishing para conceder acceso a su CRM y Data Loader; los atacantes obtuvieron datos básicos de los usuarios de Cisco.com, incluidos nombres, direcciones de correo electrónico, números de teléfono y datos de cuenta. No se comprometieron contraseñas ni información sensible; sin embargo, el incidente evidencia cómo el factor humano puede anular los controles de seguridad. Cisco revocó accesos y reforzó la formación en detección de ingeniería social. También actualizó sus políticas de autenticación y habilitó notificaciones en tiempo real cuando se soliciten permisos elevados en su CRM. La compañía recomienda a otras empresas instaurar políticas de verificación verbal y utilizar herramientas que detecten actividades anómalas en sesiones de CRM.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=week-august-4-2025-cyber-incidents" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://firecompass.com/blog/week-august-4-2025-cyber-incidents" target="_blank">4. Bouygues Telecom expone datos de 6,4 M de clientes tras ataque a su plataforma</a></h3>
+                <div class="item-content">El 4 de agosto, Bouygues Telecom detectó una intrusión que permitió a atacantes acceder a los datos de 6,4 millones de clientes. La información expuesta incluía detalles de contacto, datos de contrato y números bancarios (IBAN), aunque no se filtraron contraseñas ni tarjetas de pago. La empresa desactivó sistemas afectados, notificó a usuarios y trabaja con autoridades francesas para rastrear a los responsables. Este incidente subraya la necesidad de segmentar los sistemas de soporte y aplicar controles de acceso basados en roles. Bouygues se compromete a mejorar la supervisión de sus API y a aplicar cifrado de extremo a extremo en sus bases de datos de clientes. Para los CTOs, la lección clave es revisar la arquitectura de compartición de datos entre plataformas de facturación y CRM.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=week-august-4-2025-cyber-incidents" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://firecompass.com/blog/week-august-4-2025-cyber-incidents" target="_blank">5. Crédito Connex revela robo de datos financieros y de identidad de 172 000 socios</a></h3>
+                <div class="item-content">Connex Credit Union reveló que entre el 2 y 3 de junio hackers accedieron a sus sistemas y robaron datos de 172 000 miembros, incluyendo nombres, números de cuenta, tarjetas de débito, números de seguridad social y credenciales gubernamentales. La institución tardó más de un mes en notificar, lo que fue criticado por clientes y reguladores. Aunque la brecha se limitó a sistemas on‑premises, demuestra la vulnerabilidad de core banking legacy y la necesidad de segmentación de redes. Connex ha ofrecido monitoreo de crédito y está implementando autenticación multifactor para empleados. Se recomienda a otras entidades financieras realizar evaluaciones de riesgo periódicas y establecer procesos de respuesta rápida para incidentes de datos.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=week-august-4-2025-cyber-incidents" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.techzine.eu/news/security/107569/clinical-diagnostics-lab-cyberattack-affects-thousands/" target="_blank">6. Laboratorio clínico holandés compromete datos médicos de 485 000 mujeres en ataque de ransomware</a></h3>
+                <div class="item-content">En una brecha descubierta a mediados de agosto, el laboratorio clínico holandés responsable de un estudio de cribado de cáncer cervical confirmó que un grupo de ransomware llamado Nova robó alrededor de 300 GB de datos de 485 000 mujeres participantes. Los atacantes exigieron un rescate que la organización pagó, pero luego afirmaron que el acuerdo fue violado. Los datos expuestos incluyen nombres, direcciones, números de seguridad social y resultados médicos; las autoridades criticaron el retraso en la notificación. Esta filtración plantea riesgos significativos de privacidad y resaltó la necesidad de controles de auditoría de acceso y cifrado de datos clínicos. Para CTOs, el caso subraya la importancia de pruebas de resiliencia, segmentación de redes médicas y transparencia en la comunicación de incidentes.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=clinical-diagnostics-lab-cyberattack-affects-thousands" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.securityweek.com/columbia-university-data-breach-2025/" target="_blank">7. Hacktivistas exfiltran datos de casi 870 000 personas de la Universidad de Columbia</a></h3>
+                <div class="item-content">SecurityWeek informó que un ataque cibernético descubierto el 16 de mayo permitió a hackers robar información personal de 868 969 individuos asociados a la Universidad de Columbia. Los datos incluían nombres, direcciones, números de seguridad social, información demográfica, historiales académicos y datos de ayuda financiera y seguros. El centro médico CUIMC no fue afectado. La universidad tardó casi dos meses en detectar y contener la intrusión, ofreciendo servicios de monitoreo de crédito y trabajando con las autoridades. Este caso evidencia la vulnerabilidad de sistemas universitarios complejos y la importancia de la segmentación y modernización de infraestructuras. La coordinación entre IT y departamentos académicos es esencial para prevenir movimientos laterales.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=columbia-university-data-breach-2025" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.securityweek.com/davita-data-breach-2025/" target="_blank">8. Proveedor de diálisis DaVita notifica a más de 1 M de personas tras ataque de ransomware</a></h3>
+                <div class="item-content">DaVita, proveedor de servicios de diálisis, comunicó el 6 de agosto que un ataque de ransomware en abril comprometió los datos personales y médicos de más de un millón de personas. La información robada incluía nombres, fechas de nacimiento, números de seguridad social, números de licencia de conducir, datos financieros y detalles clínicos de pacientes y empleados. La empresa actualizó su aviso el 1 de agosto y reveló que los costos de recuperación y atención a pacientes alcanzaron los US$13,5 millones. El grupo de ransomware Interlock reivindicó el ataque. DaVita ofreció servicios de protección de identidad y está revisando su arquitectura de backup y respuesta. La lección clave para otros responsables de TI es establecer estrategias de resiliencia que incluyan backups offline y pruebas periódicas de ciberseguridad.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=davita-data-breach-2025" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.securityweek.com/google-salesforce-breach/" target="_blank">9. Google confirma acceso no autorizado a instancias de Salesforce con datos de contactos comerciales</a></h3>
+                <div class="item-content">Google reveló que un actor vinculado al grupo UNC6040 aprovechó técnicas de vishing para obtener un token de sesión y acceder a su instancia de Salesforce. Los atacantes descargaron información sobre contactos de pequeñas y medianas empresas y notas asociadas. Google destacó que se trataba de datos que ya estaban disponibles públicamente y que el acceso se produjo durante una ventana breve. No se observaron manipulaciones en cuentas de Gmail ni otros sistemas. Tras la brecha, Google revocó permisos, reforzó sus procesos de verificación de identidad y subrayó la necesidad de políticas de rotación de tokens de API y de educación de personal de ventas para reconocer ataques de vishing.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=google-salesforce-breach" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.bleepingcomputer.com/news/security/chanel-says-personal-data-stolen-in-salesforce-hack-targeting-cosmetics-brands/" target="_blank">10. Chanel denuncia robo de datos de clientes en EE. UU. debido a ataque a su proveedor de CRM</a></h3>
+                <div class="item-content">Chanel notificó a clientes de Estados Unidos que el 25 de julio un proveedor de CRM, identificado como Salesforce, fue comprometido mediante vishing. Los atacantes robaron nombres, direcciones de correo electrónico, direcciones postales y números de teléfono de clientes estadounidenses. La empresa destacó que no se expusieron contraseñas ni datos financieros, pero alertó sobre posibles intentos de extorsión y phishing. Este ataque forma parte de una campaña dirigida contra marcas de lujo y se sospecha que ShinyHunters está detrás del incidente. Chanel revocó credenciales, auditó sus flujos de datos y reforzó las políticas de autenticación multifactor. El caso remarca la importancia de la vigilancia continua de aplicaciones SaaS y de la formación del personal de atención al cliente.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=chanel-says-personal-data-stolen-in-salesforce-hack-targeting-cosmetics-brands" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://firecompass.com/blog/week-august-4-2025-cyber-incidents" target="_blank">11. Pandora expone nombres y fechas de nacimiento de clientes tras fallo en integración con Salesforce</a></h3>
+                <div class="item-content">La joyería danesa Pandora notificó una brecha el 6 de agosto en la que, debido a la explotación de su integración con Salesforce, se filtraron nombres, fechas de nacimiento y correos electrónicos de aproximadamente 30 000 clientes. La compañía señaló que la brecha no afectó contraseñas ni datos financieros, pero advirtió sobre posibles comunicaciones de phishing. El incidente se vinculó a la misma campaña de vishing que afectó a otras marcas de lujo. Pandora revisó los permisos de su API, activó notificaciones de anomalías y reforzó la formación de su personal. Este caso ilustra la importancia de supervisar las configuraciones de integraciones SaaS y de limitar la cantidad de datos sensibles almacenados en sistemas de marketing.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=week-august-4-2025-cyber-incidents" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://firecompass.com/blog/week-august-4-2025-cyber-incidents" target="_blank">12. Fuga de datos internos en PBS tras publicación de copia de seguridad en Discord</a></h3>
+                <div class="item-content">FireCompass reportó que un empleado o contratista de PBS subió accidentalmente un archivo de respaldo con nombres de empleados y contraseñas hash a un servidor de Discord, dejando expuestos datos internos. Aunque los hashes eran difíciles de descifrar, la publicación generó riesgos de ataque interno y reputacional. PBS procedió a revocar credenciales afectadas, implementar políticas de prevención de pérdida de datos (DLP) en sus plataformas de colaboración y revisar los procesos de gestión de copias de seguridad. Este incidente demuestra que la protección de datos no solo depende de amenazas externas sino también de comportamientos inadvertidos de usuarios internos.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=week-august-4-2025-cyber-incidents" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.secureworld.io/industry-news/us-federal-courts-cm-ecf-breach" target="_blank">13. Sistema judicial de EE. UU. refuerza seguridad tras hackeo de registro de expedientes electrónicos</a></h3>
+                <div class="item-content">La Oficina Administrativa de los Tribunales de EE. UU. anunció el 10 de agosto nuevas medidas de seguridad tras un ataque sofisticado que explotó un plugin de terceros en los sistemas de gestión de casos electrónicos CM/ECF y PACER. Según SecureWorld, la brecha, descubierta alrededor del 4 de julio, pudo exponer expedientes sellados y datos de informantes confidenciales, aprovechando sistemas heredados y falta de autenticación de confianza cero. Las nuevas políticas incluyen un acceso más limitado para archivos sensibles, modernización de sistemas y adopción de arquitectura Zero Trust. Este incidente demuestra que la modernización de plataformas judiciales es esencial para proteger la integridad y confidencialidad de los expedientes legales.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=us-federal-courts-cm-ecf-breach" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.bleepingcomputer.com/news/security/canadas-house-of-commons-investigating-data-breach-after-cyberattack/" target="_blank">14. Parlamento canadiense sufre filtración de datos de empleados por fallos en Microsoft SharePoint y Exchange</a></h3>
+                <div class="item-content">BleepingComputer informó que la Cámara de los Comunes de Canadá investiga una filtración que se originó el 18 de julio cuando un actor explotó vulnerabilidades de día cero en Microsoft SharePoint (CVE‑2025‑53770) y Exchange (CVE‑2025‑53786) para acceder a una base de datos de dispositivos. Los datos filtrados incluyen nombres, cargos, ubicaciones de oficina, direcciones de correo electrónico y detalles de equipos informáticos de los empleados. El Centro Canadiense de Ciberseguridad colabora para evaluar el alcance. Este caso demuestra que la gestión proactiva de parches y la segmentación de redes son esenciales para prevenir la explotación de vulnerabilidades en sistemas gubernamentales.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=canadas-house-of-commons-investigating-data-breach-after-cyberattack" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://dailydarkweb.com/news/morocco-cnss-data-breach-august-18-2025/" target="_blank">15. Organismo de seguridad social marroquí (CNSS) enfrenta filtración masiva de datos tras bypass de 2FA</a></h3>
+                <div class="item-content">Un actor de amenazas afirmó el 18 de agosto haber exfiltrado una base de datos masiva de la Caisse Nationale de Sécurité Sociale (CNSS) de Marruecos. Según Daily Dark Web, el atacante dice haber obtenido datos de 220 000 familias y 750 000 documentos individuales, incluyendo nombres, números de identificación nacional y registros de pagos, después de burlar controles débiles y un sistema 2FA fácilmente eludible. Se publicó un archivo de muestra de 10 000 personas como prueba y se amenazó con vender la base completa si el organismo no confirmaba la brecha. Este incidente subraya la necesidad de mecanismos de autenticación fuerte y auditorías regulares en plataformas gubernamentales.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=morocco-cnss-data-breach-august-18-2025" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.goodwinlaw.com/news/2025/07/07_30-collibra-acquires-deasy-labs" target="_blank">16. Collibra adquiere Deasy Labs para gobernar contenido no estructurado y ampliar su plataforma</a></h3>
+                <div class="item-content">Collibra anunció la adquisición de Deasy Labs, empresa especializada en inteligencia artificial para etiquetado y enriquecimiento de documentos no estructurados. Según el comunicado de Goodwin, la compra convierte a Collibra en la primera plataforma que ofrece gobernanza unificada para datos estructurados y no estructurados, permitiendo gestionar contratos, transcripciones, chats y otros contenidos para analítica y modelos de IA. La estrategia busca ampliar su alcance en sectores regulados y mejorar la preparación de datos para iniciativas de inteligencia artificial. Para los profesionales de datos, este movimiento implica que la gobernanza debe abarcar todo el ciclo de vida de la información, independientemente de su formato, y que las plataformas deben integrar capacidades de catalogación automática y políticas de retención.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=07_30-collibra-acquires-deasy-labs" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.malwarebytes.com/blog/news/2025/08/italian-hotels-breached-for-tens-of-thousands-of-scanned-ids" target="_blank">17. Hoteles italianos sufren robo de decenas de miles de escaneos de pasaportes e IDs</a></h3>
+                <div class="item-content">La agencia de ciberseguridad italiana AGID alertó que un grupo criminal llamado ‘mydocs’ infiltró los sistemas de reserva de al menos diez hoteles en Italia y robó escaneos en alta resolución de documentos de identidad, incluyendo pasaportes y tarjetas nacionales. Según Malwarebytes, se estima que el número de documentos afectados alcanza decenas de miles, posiblemente hasta 100 000. Los atacantes ofrecen los datos en foros de la dark web por entre 1 000 y 10 000 dólares. Los huéspedes, tanto italianos como extranjeros, podrían ser víctimas de fraude y suplantación de identidad. Las autoridades recomiendan a los afectados contactar con los hoteles y estar atentos a intentos de phishing. Este caso subraya la necesidad de cifrar los escaneos de ID y aplicar políticas estrictas de retención de documentos.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=italian-hotels-breached-for-tens-of-thousands-of-scanned-ids" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://www.bleepingcomputer.com/news/security/colt-telecom-attack-claimed-by-warlock-ransomware-data-up-for-sale/" target="_blank">18. Ransomware WarLock provoca apagón y oferta de venta de 1 M de documentos de Colt Technology</a></h3>
+                <div class="item-content">Colt Technology Services informó que un ataque de ransomware WarLock iniciado el 12 de agosto causó un apagón prolongado de sus servicios de hosting, portabilidad y API de voz. El actor ‘cnkjasdfgd’ ofreció a la venta un paquete de un millón de documentos robados por 200 000 dólares, incluyendo datos financieros, de empleados y clientes, así como correos internos y código fuente. Investigadores como Kevin Beaumont señalaron que los atacantes probablemente explotaron la vulnerabilidad de ejecución remota CVE‑2025‑53770 en Microsoft SharePoint. Colt se centró en restaurar sistemas y colaboró con expertos externos. El incidente pone de relieve la necesidad de planes de contingencia y de parches oportunos para vulnerabilidades conocidas.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=colt-telecom-attack-claimed-by-warlock-ransomware-data-up-for-sale" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+        </section>
+
+        <section class="discarded-section">
+            <h2>Top Titulares Descartados</h2>
+
+            <div class="discarded-item">
+                <h4>1. Toptal hack en GitHub</h4>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=cyber-attacks-july-2025" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Kepler Karst Law Firm. Todos los derechos reservados.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Boletín semanal de Gobernanza de Datos</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">Generado a partir de datos JSON estructurados</p>
+    </footer>
+</body>
+</html>

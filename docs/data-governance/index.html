@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gobernanza de Datos Empresarial | Kepler Karst</title>
+    <meta name="description" content="Boletines semanales de las novedades más relevantes en Gobernanza de Datos Empresarial, incluyendo GDPR, CCPA, LGPD, IA y cumplimiento regulatorio.">
+    <meta name="keywords" content="gobernanza de datos, GDPR, CCPA, LGPD, privacidad, seguridad, IA, cumplimiento, regulación">
+    
+    <style>
+        @font-face {
+            font-family: "Sharp Grotesk";
+            src: url("assets/fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        :root {
+            --e-global-color-primary: #000000;
+            --e-global-color-secondary: #4A90E2;
+            --e-global-color-text: #000000;
+            --e-global-typography-primary-font-family: "Georgia";
+            --e-global-typography-primary-font-weight: 700;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Sharp Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--e-global-color-text);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        .header {
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .header h1 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            font-size: 3rem;
+            color: var(--e-global-color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2rem;
+            color: var(--e-global-color-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .header .description {
+            font-size: 1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 2rem; 
+        }
+
+        .intro-section {
+            background-color: var(--e-global-color-secondary);
+            color: white;
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .intro-section h2 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .intro-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .topic-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .topic-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .topic-card h3 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--e-global-color-primary);
+            font-size: 1.3rem;
+        }
+        
+        .topic-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .topic-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .topic-card li:last-child {
+            border-bottom: none;
+        }
+
+        .issues-section {
+            margin: 3rem 0;
+        }
+        
+        .issues-section h2 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            color: var(--e-global-color-primary);
+            font-size: 2rem;
+        }
+        
+        .issue-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .issue-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .issue-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .issue-item h3 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .issue-item h3 a {
+            color: var(--e-global-color-primary);
+            text-decoration: none;
+        }
+        
+        .issue-item h3 a:hover {
+            color: var(--e-global-color-secondary);
+        }
+        
+        .issue-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .issue-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .link-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .primary-link {
+            background-color: var(--e-global-color-secondary);
+            color: white;
+        }
+        
+        .primary-link:hover {
+            background-color: #357ABD;
+        }
+        
+        .secondary-link {
+            background-color: #f3f3f3;
+            color: var(--e-global-color-primary);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .secondary-link:hover {
+            background-color: #e0e0e0;
+        }
+
+        .footer {
+            background-color: var(--e-global-color-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            .header h1 { font-size: 2rem; }
+            .topics-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Gobernanza de Datos Empresarial</h1>
+        <div class="subtitle">#DATA GOVERNANCE INSIGHTS</div>
+        <div class="description">
+            Boletines semanales con las novedades más relevantes en gobernanza de datos, 
+            privacidad, seguridad y regulación de IA en el entorno empresarial.
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro-section">
+            <h2>¿Qué cubrimos?</h2>
+            <p>
+                Nuestros boletines semanales analizan las últimas novedades en gobernanza de datos empresarial, 
+                incluyendo regulaciones de privacidad (GDPR, CCPA, LGPD), seguridad de datos, 
+                gobernanza de IA, transferencias internacionales y cumplimiento sectorial.
+            </p>
+            <p>
+                Cada edición incluye análisis de casos prácticos, cambios regulatorios, 
+                multas y sanciones, y tendencias emergentes en el sector.
+            </p>
+        </section>
+
+        <div class="topics-grid">
+            <div class="topic-card">
+                <h3>Privacidad y Protección de Datos</h3>
+                <ul>
+                    <li>GDPR y enforcement europeo</li>
+                    <li>CCPA y regulaciones estatales US</li>
+                    <li>LGPD y marco brasileño</li>
+                    <li>Autoridades de protección de datos</li>
+                    <li>Multas y sanciones</li>
+                </ul>
+            </div>
+            
+            <div class="topic-card">
+                <h3>Seguridad y Ciberseguridad</h3>
+                <ul>
+                    <li>Incidentes de seguridad</li>
+                    <li>Violaciones de datos</li>
+                    <li>Regulaciones NIS2, CISA</li>
+                    <li>Cumplimiento SOC2/ISO27001</li>
+                    <li>Litigios por brechas</li>
+                </ul>
+            </div>
+            
+            <div class="topic-card">
+                <h3>IA y Gobernanza de Datos</h3>
+                <ul>
+                    <li>Regulaciones de IA (AI Act)</li>
+                    <li>Sesgos algorítmicos</li>
+                    <li>Transparencia algorítmica</li>
+                    <li>Responsabilidad por decisiones automatizadas</li>
+                    <li>Ética de datos</li>
+                </ul>
+            </div>
+            
+            <div class="topic-card">
+                <h3>Transferencias Internacionales</h3>
+                <ul>
+                    <li>Cláusulas contractuales estándar</li>
+                    <li>Decisiones de adecuación</li>
+                    <li>Mecanismos de transferencia</li>
+                    <li>Restricciones geográficas</li>
+                    <li>Schrems II y consecuencias</li>
+                </ul>
+            </div>
+            
+            <div class="topic-card">
+                <h3>Cumplimiento Sectorial</h3>
+                <ul>
+                    <li>Regulaciones financieras (BCBS)</li>
+                    <li>Salud (HIPAA)</li>
+                    <li>Telecomunicaciones</li>
+                    <li>Retail y manufactura</li>
+                    <li>Frameworks de cumplimiento</li>
+                </ul>
+            </div>
+            
+            <div class="topic-card">
+                <h3>Política y Regulación</h3>
+                <ul>
+                    <li>Consultas públicas</li>
+                    <li>Estrategias nacionales</li>
+                    <li>Marcos regulatorios emergentes</li>
+                    <li>Plataformas y moderación</li>
+                    <li>Competencia y datos</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="issues-section">
+            <h2>Últimas Ediciones</h2>
+            <div class="issue-list">
+                <div class="issue-item">
+                    <h3><a href="issues/sample_datagovernance_digest.html">Gobernanza de Datos Empresarial — 10-08-2025 a 16-08-2025</a></h3>
+                    <div class="issue-meta">
+                        <strong>Resumen:</strong> Semana marcada por enforcement agresivo del GDPR en Reino Unido, con multa histórica a British Airways. 
+                        La UE avanza en regulación de IA y transferencias internacionales, mientras Brasil fortalece su marco legal de protección de datos.
+                    </div>
+                    <div class="issue-links">
+                        <a href="issues/sample_datagovernance_digest.html" class="link-btn primary-link">Leer Boletín</a>
+                        <a href="issues/sample_datagovernance_digest_meta.html" class="link-btn secondary-link">Ver Analytics</a>
+                    </div>
+                </div>
+                
+                <!-- Más ediciones se agregarán aquí automáticamente -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Kepler Karst Law Firm. Todos los derechos reservados.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Boletines de Gobernanza de Datos Empresarial</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">Generados a partir de datos JSON estructurados</p>
+    </footer>
+</body>
+</html>

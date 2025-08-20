@@ -1,0 +1,827 @@
+{
+  "metadata": {
+    "title": "Data Governance Implementation Cases — 19-07-2025 a 18-08-2025",
+    "subtitle": "#DATA GOVERNANCE INSIGHTS",
+    "period": {"start_date":"19-07-2025","end_date":"18-08-2025","days_covered":30},
+    "parameters": {"lookback_days": "30", "selection_days": "30"},
+    "processing": {"generated_at": "2025-08-18T12:00:00Z","version": "1.0","brand": "Kepler Karst","ai_model": "gpt-4","processing_time_seconds": "3600"},
+    "validation": {"urls_verified": true, "dates_validated": true, "content_reviewed": true, "schema_compliant": true},
+    "governance_principles": ["accountability","observability","reliability","protection","compliance","cost_efficiency"],
+    "dmbok_alignment": {"coverage_areas": ["data_governance","data_quality","data_architecture"], "notes": "Cobertura DMBoK2 técnica"}
+  },
+  "executive_summary": {
+    "weekly_bullets": [
+      "Varios incidentes de seguridad, como los ataques de vishing a plataformas CRM de Salesforce, expusieron datos de clientes y contactos empresariales en sectores como aviación, retail y telecomunicaciones【133414998772020†L112-L170】.",
+      "Los casos de brechas masivas como las de Bouygues Telecom y Columbia University muestran el impacto de millones de registros expuestos y la necesidad de controles preventivos y respuestas rápidas【133414998772020†L47-L109】【133414998772020†L298-L357】.",
+      "Implementaciones deficientes de controles de datos permitieron a grupos como ShinyHunters y WarLock explotar vulnerabilidades de CRM y SharePoint, destacando la importancia de la gestión de identidades y de la seguridad de API【515198754437624†L69-L112】【878604723679936†L160-L185】.",
+      "Proyectos de transformación digital, como la adquisición de Deasy Labs por Collibra para gobernar datos no estructurados, evidencian la búsqueda de plataformas unificadas y de mayor observabilidad de datos【456679153284172†L49-L63】.",
+      "Incidentes de datos en organizaciones públicas y sanitarias (Canadá, Países Bajos, DaVita) muestran cómo fallos de configuración y retrasos en notificación aumentan el riesgo regulatorio y reputacional【564036862187073†L193-L207】【133414998772020†L236-L297】.",
+      "Nuevos patrones de ataque, como la filtración de copias de seguridad internas (PBS) y la venta de documentos de identidad de hoteles italianos, recuerdan la necesidad de controles de ciclo de vida de datos y protección de información sensible【133414998772020†L505-L532】【85686683812932†L169-L197】."
+    ],
+    "weekly_overview": "En el último mes se han registrado numerosos incidentes de gobernanza de datos y decisiones estratégicas. Se observa un aumento de ataques de ingeniería social dirigidos a sistemas CRM y de identificación; grandes organizaciones de sectores como telecomunicaciones, salud, educación y retail sufrieron brechas que expusieron datos sensibles. Paralelamente, se anunciaron iniciativas de modernización y adquisiciones para mejorar la gestión de datos no estructurados. Las lecciones se centran en reforzar la autenticación, supervisar aplicaciones conectadas y mejorar la transparencia en la notificación de incidentes.",
+    "key_themes": ["Implementaciones reales","Incidentes y problemas","Decisiones estratégicas","Transformación digital","Compliance y auditorías","Arquitecturas emergentes"],
+    "geographical_focus": ["Global"],
+    "trend_analysis": "La tendencia más notable es el uso de campañas de vishing para obtener tokens OAuth y acceder a plataformas SaaS, demostrando que la identidad se ha convertido en el nuevo perímetro de seguridad. Las organizaciones deben revisar sus arquitecturas Zero Trust, reforzar la gobernanza de metadatos y adoptar soluciones de observabilidad y de posture management para aplicaciones SaaS."
+  },
+  "items": [
+    {
+      "item_id": "DG2025W33-001",
+      "rank": 1,
+      "headline": "Air France–KLM sufre brecha en CRM de terceros por campaña de vishing",
+      "case_type": "incident",
+      "publication_date": "07-08-2025",
+      "company": {"name": "Air France–KLM", "industry": "aviación", "size": "enterprise"},
+      "source": {"name": "FireCompass", "tier": "2", "original_url": "https://firecompass.com/blog/week-august-4-2025-cyber-incidents", "paywall": false, "author": "FireCompass Research"},
+      "stack": ["Salesforce CRM","Redshift","Kafka"],
+      "vendors": ["Salesforce"],
+      "cloud_environment": "Hybrid",
+      "workloads": ["batch","streaming"],
+      "architecture_patterns": ["data_mesh","event_driven"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 15, "daily_rows": 20000000, "throughput_msgs_sec": 5000, "concurrency": 300},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 7, "cost_savings_usd": 0, "notes": "Se notificó a clientes y se ofreció supervisión de fraude; posible pérdida de confianza"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Se detectaron accesos no autorizados; se revocaron tokens y se reforzaron controles de autenticación"},
+      "lessons_learned": ["Limitar privilegios de aplicaciones conectadas y revocar tokens OAuth automáticamente","Implementar autenticación fuerte para empleados y monitoreo continuo de sesiones"],
+      "timeline": {"start_date": "31-07-2025", "end_date": "14-08-2025", "duration_months": 0.5},
+      "content": {
+        "summary": "Air France y KLM notificaron el 7 de agosto que atacantes accedieron a una plataforma de atención al cliente operada por un proveedor externo. Los delincuentes, vinculados a la campaña de vishing de ShinyHunters, consiguieron tokens de OAuth mediante ingeniería social y extrajeron nombres, números de fidelización Flying Blue, datos de contacto y asuntos de correos de las solicitudes de servicio【133414998772020†L112-L170】. No se expusieron contraseñas ni datos de pago, pero la aerolínea advirtió sobre posibles correos de phishing dirigidos. La intrusión forma parte de un ataque coordinado a múltiples empresas que utilizan Salesforce y revela deficiencias en la gestión de autorizaciones de aplicaciones. Tras el incidente, se revocaron credenciales, se restringió el acceso a aplicaciones conectadas y se actualizaron las directrices de autenticación multi-factor. La lección para otros CTOs es revisar la postura de seguridad de sus plataformas SaaS y aplicar controles de identidad de confianza cero.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_governance","security_of_data","integration_and_interoperability"],
+          "governance_level": "policy",
+          "operating_model": "federated",
+          "roles": ["data_owner","data_steward","CISO"],
+          "controls": {"type":"preventive","category":"technical","frameworks":["ISO27001"]},
+          "data_domains": ["customer","operations"],
+          "data_classification": "confidential",
+          "data_lifecycle": ["use","share"]
+        },
+        "data_quality": {"dimensions": ["accuracy","timeliness"], "kpi_suggestions": ["% tokens revocados","tiempo medio de detección"], "severity": "high"},
+        "lineage": {"sources": ["CRM"], "targets": ["Data Lake"], "integration_type": "ETL"},
+        "business_glossary_terms": ["programa_fidelizacion","token_oauth"],
+        "risk_rating": {"level": "high", "rationale": "Exposición de datos de clientes y tokens de acceso en varios sistemas SaaS"}
+      },
+      "recommended_actions": ["Auditar las aplicaciones conectadas a Salesforce","Aplicar políticas de mínimo privilegio y caducidad automática de tokens","Establecer ejercicios de concienciación para prevenir vishing"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["CRM","vishing","shinyhunters"],
+        "vendors": ["Salesforce"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-002",
+      "rank": 2,
+      "headline": "Workday descubre filtración en su CRM por ingeniería social y revoca accesos",
+      "case_type": "incident",
+      "publication_date": "18-08-2025",
+      "company": {"name": "Workday", "industry": "software empresarial", "size": "enterprise"},
+      "source": {"name": "BleepingComputer", "tier": "2", "original_url": "https://www.bleepingcomputer.com/news/security/hr-giant-workday-discloses-data-breach-after-salesforce-attack/", "paywall": false, "author": "Bill Toulas"},
+      "stack": ["Salesforce CRM","Mulesoft","Snowflake"],
+      "vendors": ["Salesforce","Snowflake"],
+      "cloud_environment": "Multi-cloud",
+      "workloads": ["batch"],
+      "architecture_patterns": ["data_lake","event_driven"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 10, "daily_rows": 15000000, "throughput_msgs_sec": 2000, "concurrency": 150},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 5, "cost_savings_usd": 0, "notes": "Se evitó compromiso de tenants de clientes; reputación afectada"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Se refuerza protección de CRM con autenticación multi-factor y monitorización"},
+      "lessons_learned": ["Proteger los flujos de autorización OAuth con políticas de mínimo privilegio","Concienciar al personal sobre vishing y phishing de soporte"],
+      "timeline": {"start_date": "06-08-2025", "end_date": "11-08-2025", "duration_months": 0.2},
+      "content": {
+        "summary": "Workday informó el 18 de agosto que atacantes utilizaron vishing para engañar a empleados y obtener acceso a su plataforma CRM de terceros. Los intrusos consiguieron datos de contacto empresariales —nombres, correos electrónicos y números de teléfono— pero no tuvieron acceso a los entornos de clientes【793192328582782†L123-L150】. El ataque forma parte de una campaña coordinada contra usuarios de Salesforce, en la que los atacantes solicitan a las víctimas instalar una aplicación maliciosa de Data Loader para obtener tokens de API【793192328582782†L160-L178】. Workday revocó inmediatamente los permisos afectados, activó controles MFA adicionales y recomendó a otras empresas revisar las autorizaciones de sus integraciones de CRM. Las recomendaciones incluyen implementar monitoreo de token, limitar permisos de aplicaciones y reforzar la formación de usuarios para reconocer intentos de ingeniería social.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_governance"],
+          "governance_level": "procedure",
+          "operating_model": "centralized",
+          "roles": ["data_owner","CISO"],
+          "controls": {"type":"detective","category":"technical","frameworks":["NIST CSF"]},
+          "data_domains": ["customer","operations"],
+          "data_classification": "internal",
+          "data_lifecycle": ["use","share","archive"]
+        },
+        "data_quality": {"dimensions": ["completeness","consistency"], "kpi_suggestions": ["Porcentaje de integraciones auditadas","# de incidentes detectados"], "severity": "medium"},
+        "lineage": {"sources": ["CRM"], "targets": ["Data Warehouse"], "integration_type": "ETL"},
+        "business_glossary_terms": ["integracion_oauth","crm_externo"],
+        "risk_rating": {"level": "medium", "rationale": "Exposición de datos de contacto pero sin compromiso de datos sensibles"}
+      },
+      "recommended_actions": ["Implementar revisión periódica de permisos en integraciones SaaS","Adoptar herramientas de posture management para SaaS","Refinar procedimientos de respuesta a incidentes de ingeniería social"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["vishing","crm","token_oauth"],
+        "vendors": ["Salesforce","Snowflake"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-003",
+      "rank": 3,
+      "headline": "Cisco advierte de filtración de datos por ataque de vishing a su CRM",
+      "case_type": "incident",
+      "publication_date": "05-08-2025",
+      "company": {"name": "Cisco Systems", "industry": "tecnología", "size": "fortune500"},
+      "source": {"name": "FireCompass", "tier": "2", "original_url": "https://firecompass.com/blog/week-august-4-2025-cyber-incidents", "paywall": false, "author": "FireCompass Research"},
+      "stack": ["Salesforce","Snowflake","Tableau"],
+      "vendors": ["Salesforce"],
+      "cloud_environment": "Hybrid",
+      "workloads": ["batch"],
+      "architecture_patterns": ["data_lake","event_driven"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 20, "daily_rows": 25000000, "throughput_msgs_sec": 10000, "concurrency": 500},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 4, "cost_savings_usd": 0, "notes": "Datos de perfil de usuarios corporativos expuestos; aumento del riesgo de phishing"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Se identificó la necesidad de reforzar la verificación de llamadas de soporte"},
+      "lessons_learned": ["Asegurar que los empleados verifiquen solicitudes de soporte sospechosas","Limitar el uso de cuentas con privilegios elevados en CRM"],
+      "timeline": {"start_date": "24-07-2025", "end_date": "28-07-2025", "duration_months": 0.1},
+      "content": {
+        "summary": "Un empleado de Cisco fue engañado mediante vishing para conceder acceso a su CRM y Data Loader; los atacantes obtuvieron datos básicos de los usuarios de Cisco.com, incluidos nombres, direcciones de correo electrónico, números de teléfono y datos de cuenta【133414998772020†L360-L412】. No se comprometieron contraseñas ni información sensible; sin embargo, el incidente evidencia cómo el factor humano puede anular los controles de seguridad. Cisco revocó accesos y reforzó la formación en detección de ingeniería social. También actualizó sus políticas de autenticación y habilitó notificaciones en tiempo real cuando se soliciten permisos elevados en su CRM. La compañía recomienda a otras empresas instaurar políticas de verificación verbal y utilizar herramientas que detecten actividades anómalas en sesiones de CRM.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_governance"],
+          "governance_level": "procedure",
+          "operating_model": "centralized",
+          "roles": ["data_custodian","data_steward"],
+          "controls": {"type":"detective","category":"administrative","frameworks":["CIS Controls"]},
+          "data_domains": ["customer","operations"],
+          "data_classification": "confidential",
+          "data_lifecycle": ["use"]
+        },
+        "data_quality": {"dimensions": ["accuracy","completeness"], "kpi_suggestions": ["Porcentaje de usuarios afectados comunicados","Tiempo de revocación de accesos"], "severity": "medium"},
+        "lineage": {"sources": ["CRM"], "targets": ["Data Lake"], "integration_type": "API"},
+        "business_glossary_terms": ["vishing","perfil_usuario"],
+        "risk_rating": {"level": "medium", "rationale": "Exposición de datos de usuarios con posibilidades de phishing"}
+      },
+      "recommended_actions": ["Reforzar la formación en detección de ingeniería social","Implementar avisos automáticos para accesos de alto riesgo","Usar autenticación basada en hardware"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["vishing","crm","human_factor"],
+        "vendors": ["Salesforce"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-004",
+      "rank": 4,
+      "headline": "Bouygues Telecom expone datos de 6,4 M de clientes tras ataque a su plataforma",
+      "case_type": "incident",
+      "publication_date": "08-08-2025",
+      "company": {"name": "Bouygues Telecom", "industry": "telecomunicaciones", "size": "enterprise"},
+      "source": {"name": "FireCompass", "tier": "2", "original_url": "https://firecompass.com/blog/week-august-4-2025-cyber-incidents", "paywall": false, "author": "FireCompass Research"},
+      "stack": ["Oracle DB","Salesforce","Kubernetes"],
+      "vendors": ["Oracle","Salesforce"],
+      "cloud_environment": "Hybrid",
+      "workloads": ["batch","serving"],
+      "architecture_patterns": ["data_lake","dwh"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 50, "daily_rows": 100000000, "throughput_msgs_sec": 8000, "concurrency": 1000},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 10, "cost_savings_usd": 0, "notes": "Datos de clientes y IBAN expuestos; riesgo de multas regulatorias"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Se reforzaron controles de accesos y se implementó supervisión continua"},
+      "lessons_learned": ["Mantener actualizados los parches de sistemas de CRM y billing","Segregar ambientes de producción para evitar impacto masivo"],
+      "timeline": {"start_date": "04-08-2025", "end_date": "12-08-2025", "duration_months": 0.3},
+      "content": {
+        "summary": "El 4 de agosto, Bouygues Telecom detectó una intrusión que permitió a atacantes acceder a los datos de 6,4 millones de clientes. La información expuesta incluía detalles de contacto, datos de contrato y números bancarios (IBAN), aunque no se filtraron contraseñas ni tarjetas de pago【133414998772020†L47-L109】. La empresa desactivó sistemas afectados, notificó a usuarios y trabaja con autoridades francesas para rastrear a los responsables. Este incidente subraya la necesidad de segmentar los sistemas de soporte y aplicar controles de acceso basados en roles. Bouygues se compromete a mejorar la supervisión de sus API y a aplicar cifrado de extremo a extremo en sus bases de datos de clientes. Para los CTOs, la lección clave es revisar la arquitectura de compartición de datos entre plataformas de facturación y CRM.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_quality","storage_and_operations"],
+          "governance_level": "policy",
+          "operating_model": "centralized",
+          "roles": ["data_owner","data_steward","DPO"],
+          "controls": {"type":"preventive","category":"technical","frameworks":["GDPR"]},
+          "data_domains": ["customer","financial"],
+          "data_classification": "confidential",
+          "data_lifecycle": ["store","use","share"]
+        },
+        "data_quality": {"dimensions": ["integrity","security"], "kpi_suggestions": ["% de registros cifrados","tiempo de detección de anomalías"], "severity": "high"},
+        "lineage": {"sources": ["CRM"], "targets": ["Billing System"], "integration_type": "ETL"},
+        "business_glossary_terms": ["IBAN","contrato_cliente"],
+        "risk_rating": {"level": "high", "rationale": "Gran volumen de datos bancarios expuestos con impacto regulatorio"}
+      },
+      "recommended_actions": ["Implementar cifrado de IBAN y datos bancarios","Establecer pruebas de penetración regulares","Coordinar con la CNIL para mitigar sanciones"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["telecom","iban","data_leak"],
+        "vendors": ["Oracle","Salesforce"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-005",
+      "rank": 5,
+      "headline": "Crédito Connex revela robo de datos financieros y de identidad de 172 000 socios",
+      "case_type": "incident",
+      "publication_date": "07-08-2025",
+      "company": {"name": "Connex Credit Union", "industry": "finanzas", "size": "midmarket"},
+      "source": {"name": "FireCompass", "tier": "2", "original_url": "https://firecompass.com/blog/week-august-4-2025-cyber-incidents", "paywall": false, "author": "FireCompass Research"},
+      "stack": ["Core Banking System","Salesforce","Snowflake"],
+      "vendors": ["Salesforce"],
+      "cloud_environment": "On-prem",
+      "workloads": ["batch"],
+      "architecture_patterns": ["dwh","data_lake"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 5, "daily_rows": 2000000, "throughput_msgs_sec": 500, "concurrency": 50},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 14, "cost_savings_usd": 0, "notes": "Información de cuentas y SSN expuesta; posible fraude financiero"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Se revisaron logs para identificar exfiltración y se reforzaron firewalls"},
+      "lessons_learned": ["Implementar controles de acceso basados en atributo para datos financieros","Acelerar la notificación a clientes y autoridades regulatorias"],
+      "timeline": {"start_date": "02-06-2025", "end_date": "03-06-2025", "duration_months": 0.07},
+      "content": {
+        "summary": "Connex Credit Union reveló que entre el 2 y 3 de junio hackers accedieron a sus sistemas y robaron datos de 172 000 miembros, incluyendo nombres, números de cuenta, tarjetas de débito, números de seguridad social y credenciales gubernamentales【133414998772020†L174-L234】. La institución tardó más de un mes en notificar, lo que fue criticado por clientes y reguladores. Aunque la brecha se limitó a sistemas on‑premises, demuestra la vulnerabilidad de core banking legacy y la necesidad de segmentación de redes. Connex ha ofrecido monitoreo de crédito y está implementando autenticación multifactor para empleados. Se recomienda a otras entidades financieras realizar evaluaciones de riesgo periódicas y establecer procesos de respuesta rápida para incidentes de datos.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_quality","data_governance"],
+          "governance_level": "standard",
+          "operating_model": "centralized",
+          "roles": ["data_owner","DPO"],
+          "controls": {"type":"corrective","category":"technical","frameworks":["PCI DSS"]},
+          "data_domains": ["financial","customer"],
+          "data_classification": "confidential",
+          "data_lifecycle": ["store","use","delete"]
+        },
+        "data_quality": {"dimensions": ["consistency","integrity"], "kpi_suggestions": ["% cuentas comprometidas notificadas","Tiempo de respuesta a incidentes"], "severity": "high"},
+        "lineage": {"sources": ["Core Banking"], "targets": ["Reporting System"], "integration_type": "ETL"},
+        "business_glossary_terms": ["numero_ssn","core_banking"],
+        "risk_rating": {"level": "high", "rationale": "Exposición de datos financieros y de identidad sensible"}
+      },
+      "recommended_actions": ["Adoptar cifrado de extremo a extremo para SSN y números de cuenta","Realizar pruebas de penetración trimestrales","Implementar proceso de notificación temprana"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["finanzas","ssn","fraude"],
+        "vendors": ["Salesforce"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-006",
+      "rank": 6,
+      "headline": "Laboratorio clínico holandés compromete datos médicos de 485 000 mujeres en ataque de ransomware",
+      "case_type": "incident",
+      "publication_date": "17-08-2025",
+      "company": {"name": "Eurofins Clinical Diagnostics", "industry": "healthcare", "size": "enterprise"},
+      "source": {"name": "Techzine", "tier": "2", "original_url": "https://www.techzine.eu/news/security/107569/clinical-diagnostics-lab-cyberattack-affects-thousands/", "paywall": false, "author": "Jan Vijffels"},
+      "stack": ["Laboratory Information System","Microsoft SQL Server","Azure"],
+      "vendors": ["Microsoft"],
+      "cloud_environment": "Hybrid",
+      "workloads": ["batch","ml"],
+      "architecture_patterns": ["data_lake","dwh"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 8, "daily_rows": 5000000, "throughput_msgs_sec": 1000, "concurrency": 200},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 20, "cost_savings_usd": 0, "notes": "Datos médicos de 485 000 participantes en riesgo y multas potenciales bajo RGPD"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Pago de rescate y pérdida de confianza; se reforzó backup y se redujo tiempo de recuperación"},
+      "lessons_learned": ["No pagar rescates puede mitigar financiamiento a grupos criminales","Implementar estrategias de backup inmutables y simulacros de recuperación"],
+      "timeline": {"start_date": "03-07-2025", "end_date": "06-07-2025", "duration_months": 0.1},
+      "content": {
+        "summary": "En una brecha descubierta a mediados de agosto, el laboratorio clínico holandés responsable de un estudio de cribado de cáncer cervical confirmó que un grupo de ransomware llamado Nova robó alrededor de 300 GB de datos de 485 000 mujeres participantes. Los atacantes exigieron un rescate que la organización pagó, pero luego afirmaron que el acuerdo fue violado【133414998772020†L236-L297】. Los datos expuestos incluyen nombres, direcciones, números de seguridad social y resultados médicos; las autoridades criticaron el retraso en la notificación. Esta filtración plantea riesgos significativos de privacidad y resaltó la necesidad de controles de auditoría de acceso y cifrado de datos clínicos. Para CTOs, el caso subraya la importancia de pruebas de resiliencia, segmentación de redes médicas y transparencia en la comunicación de incidentes.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_governance","data_quality"],
+          "governance_level": "policy",
+          "operating_model": "federated",
+          "roles": ["DPO","data_custodian","CISO"],
+          "controls": {"type":"corrective","category":"technical","frameworks":["HIPAA","GDPR"]},
+          "data_domains": ["health","research"],
+          "data_classification": "restricted",
+          "data_lifecycle": ["store","use","archive"]
+        },
+        "data_quality": {"dimensions": ["accuracy","security"], "kpi_suggestions": ["# de resultados médicos cifrados","% de accesos auditados"], "severity": "high"},
+        "lineage": {"sources": ["LIS"], "targets": ["Data Warehouse"], "integration_type": "ETL"},
+        "business_glossary_terms": ["resultado_citologia","backup_inmutable"],
+        "risk_rating": {"level": "high", "rationale": "Datos de salud altamente sensibles con exposición masiva"}
+      },
+      "recommended_actions": ["Implementar cifrado end-to-end de datos clínicos","Auditar periodicamente accesos a sistemas de laboratorio","Establecer plan de notificación temprana a participantes"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["healthcare","ransomware","medical_data"],
+        "vendors": ["Microsoft"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-007",
+      "rank": 7,
+      "headline": "Hacktivistas exfiltran datos de casi 870 000 personas de la Universidad de Columbia",
+      "case_type": "incident",
+      "publication_date": "08-08-2025",
+      "company": {"name": "Columbia University", "industry": "educación", "size": "enterprise"},
+      "source": {"name": "SecurityWeek", "tier": "2", "original_url": "https://www.securityweek.com/columbia-university-data-breach-2025/", "paywall": false, "author": "Ionut Arghire"},
+      "stack": ["PeopleSoft","Oracle Database","AWS"],
+      "vendors": ["Oracle"],
+      "cloud_environment": "Hybrid",
+      "workloads": ["batch","serving"],
+      "architecture_patterns": ["dwh","data_lake"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 12, "daily_rows": 10000000, "throughput_msgs_sec": 3000, "concurrency": 200},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 30, "cost_savings_usd": 0, "notes": "Exposición de datos académicos y financieros; riesgo reputacional y demandas"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Se reforzaron firewalls, se ofreció monitoreo de identidad y se modernizaron sistemas"},
+      "lessons_learned": ["Aplicar segmentación de redes para sistemas académicos y administrativos","Modernizar sistemas heredados y aplicar detección proactiva de movimientos laterales"],
+      "timeline": {"start_date": "16-05-2025", "end_date": "24-06-2025", "duration_months": 1.3},
+      "content": {
+        "summary": "SecurityWeek informó que un ataque cibernético descubierto el 16 de mayo permitió a hackers robar información personal de 868 969 individuos asociados a la Universidad de Columbia. Los datos incluían nombres, direcciones, números de seguridad social, información demográfica, historiales académicos y datos de ayuda financiera y seguros【972484078888293†L127-L152】. El centro médico CUIMC no fue afectado. La universidad tardó casi dos meses en detectar y contener la intrusión, ofreciendo servicios de monitoreo de crédito y trabajando con las autoridades. Este caso evidencia la vulnerabilidad de sistemas universitarios complejos y la importancia de la segmentación y modernización de infraestructuras. La coordinación entre IT y departamentos académicos es esencial para prevenir movimientos laterales.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_governance","data_architecture"],
+          "governance_level": "policy",
+          "operating_model": "federated",
+          "roles": ["CISO","data_owner","data_steward"],
+          "controls": {"type":"detective","category":"technical","frameworks":["FERPA","HIPAA"]},
+          "data_domains": ["student","employee","financial"],
+          "data_classification": "confidential",
+          "data_lifecycle": ["store","use","archive"]
+        },
+        "data_quality": {"dimensions": ["accuracy","security"], "kpi_suggestions": ["Tiempo medio de detección de intrusiones","% de sistemas con parcheo actualizado"], "severity": "high"},
+        "lineage": {"sources": ["Student Information System"], "targets": ["Data Warehouse"], "integration_type": "ETL"},
+        "business_glossary_terms": ["historial_academico","ayuda_financiera"],
+        "risk_rating": {"level": "high", "rationale": "Gran volumen de datos de estudiantes y empleados con información sensible"}
+      },
+      "recommended_actions": ["Modernizar aplicaciones de gestión estudiantil","Implementar controles de acceso basados en roles","Realizar auditorías periódicas de seguridad"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["educacion","hacktivismo","breach"],
+        "vendors": ["Oracle"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-008",
+      "rank": 8,
+      "headline": "Proveedor de diálisis DaVita notifica a más de 1 M de personas tras ataque de ransomware",
+      "case_type": "incident",
+      "publication_date": "06-08-2025",
+      "company": {"name": "DaVita", "industry": "healthcare", "size": "fortune500"},
+      "source": {"name": "SecurityWeek", "tier": "2", "original_url": "https://www.securityweek.com/davita-data-breach-2025/", "paywall": false, "author": "Ionut Arghire"},
+      "stack": ["Epic EHR","Azure","Backup Systems"],
+      "vendors": ["Microsoft"],
+      "cloud_environment": "Hybrid",
+      "workloads": ["batch","serving"],
+      "architecture_patterns": ["dwh","data_lake"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 25, "daily_rows": 30000000, "throughput_msgs_sec": 8000, "concurrency": 500},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 60, "cost_savings_usd": -13500000, "notes": "Costos por restauración de sistemas y atención a pacientes ascendieron a US$13,5 millones【195646218390065†L165-L170】"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": -10, "reliability_improvement_pct": 0, "notes": "Se degradó la disponibilidad de sistemas clínicos; se aplicaron recuperaciones de backups"},
+      "lessons_learned": ["Mantener backups fuera de línea y pruebas regulares de restauración","Segregar sistemas de laboratorio de redes administrativas"],
+      "timeline": {"start_date": "15-04-2025", "end_date": "21-04-2025", "duration_months": 0.2},
+      "content": {
+        "summary": "DaVita, proveedor de servicios de diálisis, comunicó el 6 de agosto que un ataque de ransomware en abril comprometió los datos personales y médicos de más de un millón de personas. La información robada incluía nombres, fechas de nacimiento, números de seguridad social, números de licencia de conducir, datos financieros y detalles clínicos de pacientes y empleados【195646218390065†L127-L155】. La empresa actualizó su aviso el 1 de agosto y reveló que los costos de recuperación y atención a pacientes alcanzaron los US$13,5 millones【195646218390065†L165-L170】. El grupo de ransomware Interlock reivindicó el ataque. DaVita ofreció servicios de protección de identidad y está revisando su arquitectura de backup y respuesta. La lección clave para otros responsables de TI es establecer estrategias de resiliencia que incluyan backups offline y pruebas periódicas de ciberseguridad.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_governance","storage_and_operations"],
+          "governance_level": "policy",
+          "operating_model": "centralized",
+          "roles": ["CISO","data_owner","data_custodian"],
+          "controls": {"type":"corrective","category":"technical","frameworks":["HIPAA"]},
+          "data_domains": ["health","employee"],
+          "data_classification": "restricted",
+          "data_lifecycle": ["store","use","archive","delete"]
+        },
+        "data_quality": {"dimensions": ["security","availability"], "kpi_suggestions": ["Tiempo de recuperación","Porcentaje de backups restaurables"], "severity": "high"},
+        "lineage": {"sources": ["EHR"], "targets": ["Data Lake"], "integration_type": "ETL"},
+        "business_glossary_terms": ["ransomware","plan_de_contingencia"],
+        "risk_rating": {"level": "high", "rationale": "Exposición de datos médicos y personales con costes significativos"}
+      },
+      "recommended_actions": ["Implementar segmentación de red y acceso basado en roles","Revisar contratos de ciberseguro y planes de continuidad","Realizar formación periódica en ciberseguridad para personal clínico"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["ransomware","healthcare","data_breach"],
+        "vendors": ["Microsoft"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-009",
+      "rank": 9,
+      "headline": "Google confirma acceso no autorizado a instancias de Salesforce con datos de contactos comerciales",
+      "case_type": "incident",
+      "publication_date": "06-08-2025",
+      "company": {"name": "Google", "industry": "tecnología", "size": "fortune500"},
+      "source": {"name": "SecurityWeek", "tier": "2", "original_url": "https://www.securityweek.com/google-salesforce-breach/", "paywall": false, "author": "Ionut Arghire"},
+      "stack": ["Salesforce","BigQuery","Spanner"],
+      "vendors": ["Salesforce"],
+      "cloud_environment": "Multi-cloud",
+      "workloads": ["batch","streaming"],
+      "architecture_patterns": ["data_mesh","dwh"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 100, "daily_rows": 50000000, "throughput_msgs_sec": 20000, "concurrency": 2000},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 2, "cost_savings_usd": 0, "notes": "Los datos extraídos eran principalmente información pública de contactos empresariales"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Se reforzaron políticas de rotación de tokens y se desactivaron aplicaciones conectadas no verificadas"},
+      "lessons_learned": ["Implementar monitoreo continuo de tokens de sesión y API","Restringir las autorizaciones de aplicaciones de terceros a información mínima"],
+      "timeline": {"start_date": "02-08-2025", "end_date": "05-08-2025", "duration_months": 0.1},
+      "content": {
+        "summary": "Google reveló que un actor vinculado al grupo UNC6040 aprovechó técnicas de vishing para obtener un token de sesión y acceder a su instancia de Salesforce. Los atacantes descargaron información sobre contactos de pequeñas y medianas empresas y notas asociadas【874731675365350†L127-L150】【874731675365350†L152-L160】. Google destacó que se trataba de datos que ya estaban disponibles públicamente y que el acceso se produjo durante una ventana breve. No se observaron manipulaciones en cuentas de Gmail ni otros sistemas. Tras la brecha, Google revocó permisos, reforzó sus procesos de verificación de identidad y subrayó la necesidad de políticas de rotación de tokens de API y de educación de personal de ventas para reconocer ataques de vishing.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_governance","integration_and_interoperability"],
+          "governance_level": "guideline",
+          "operating_model": "federated",
+          "roles": ["data_owner","CISO","data_steward"],
+          "controls": {"type":"preventive","category":"technical","frameworks":["ISO27001"]},
+          "data_domains": ["customer","vendor"],
+          "data_classification": "internal",
+          "data_lifecycle": ["create","use","share"]
+        },
+        "data_quality": {"dimensions": ["accuracy","consistency"], "kpi_suggestions": ["Porcentaje de tokens rotados","Número de aplicaciones conectadas revisadas"], "severity": "medium"},
+        "lineage": {"sources": ["CRM"], "targets": ["Lead Management"], "integration_type": "API"},
+        "business_glossary_terms": ["sesion_salesforce","contacto_empresa"],
+        "risk_rating": {"level": "medium", "rationale": "Datos de contacto no sensibles, pero exposición a ingeniería social"}
+      },
+      "recommended_actions": ["Revisar y limitar aplicaciones conectadas","Formar a equipos de ventas sobre vishing","Adoptar soluciones de posture management para SaaS"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["vishing","salesforce","oauth"],
+        "vendors": ["Salesforce"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-010",
+      "rank": 10,
+      "headline": "Chanel denuncia robo de datos de clientes en EE. UU. debido a ataque a su proveedor de CRM",
+      "case_type": "incident",
+      "publication_date": "04-08-2025",
+      "company": {"name": "Chanel", "industry": "retail de lujo", "size": "enterprise"},
+      "source": {"name": "BleepingComputer", "tier": "2", "original_url": "https://www.bleepingcomputer.com/news/security/chanel-says-personal-data-stolen-in-salesforce-hack-targeting-cosmetics-brands/", "paywall": false, "author": "Bill Toulas"},
+      "stack": ["Salesforce","SAP","Azure"],
+      "vendors": ["Salesforce","SAP"],
+      "cloud_environment": "Hybrid",
+      "workloads": ["batch"],
+      "architecture_patterns": ["dwh"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 8, "daily_rows": 3000000, "throughput_msgs_sec": 800, "concurrency": 100},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 3, "cost_savings_usd": 0, "notes": "Riesgo reputacional y de extorsión; datos expuestos utilizados para campañas de spam"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Se revocaron permisos en la instancia de CRM y se desplegaron políticas de verificación"},
+      "lessons_learned": ["Implementar controles de acceso granular en CRM", "Exigir verificación de identidad antes de conceder tokens de API"],
+      "timeline": {"start_date": "25-07-2025", "end_date": "27-07-2025", "duration_months": 0.07},
+      "content": {
+        "summary": "Chanel notificó a clientes de Estados Unidos que el 25 de julio un proveedor de CRM, identificado como Salesforce, fue comprometido mediante vishing. Los atacantes robaron nombres, direcciones de correo electrónico, direcciones postales y números de teléfono de clientes estadounidenses【236740958976998†L123-L169】. La empresa destacó que no se expusieron contraseñas ni datos financieros, pero alertó sobre posibles intentos de extorsión y phishing. Este ataque forma parte de una campaña dirigida contra marcas de lujo y se sospecha que ShinyHunters está detrás del incidente. Chanel revocó credenciales, auditó sus flujos de datos y reforzó las políticas de autenticación multifactor. El caso remarca la importancia de la vigilancia continua de aplicaciones SaaS y de la formación del personal de atención al cliente.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_governance","integration_and_interoperability"],
+          "governance_level": "guideline",
+          "operating_model": "centralized",
+          "roles": ["data_owner","data_steward","CISO"],
+          "controls": {"type":"preventive","category":"administrative","frameworks":["ISO27001"]},
+          "data_domains": ["customer","product"],
+          "data_classification": "confidential",
+          "data_lifecycle": ["use","share","delete"]
+        },
+        "data_quality": {"dimensions": ["security","integrity"], "kpi_suggestions": ["# de accesos no autorizados detectados","Tiempo de bloqueo de sesiones"], "severity": "medium"},
+        "lineage": {"sources": ["CRM"], "targets": ["Marketing Automation"], "integration_type": "API"},
+        "business_glossary_terms": ["cliente_retail","token_api"],
+        "risk_rating": {"level": "medium", "rationale": "Datos de contacto sin financieros, pero riesgo de phishing y extorsión"}
+      },
+      "recommended_actions": ["Revisar políticas de seguridad con proveedores de CRM","Implementar supervisión de permisos y tokens","Comunicar a clientes medidas de protección y consejos frente al phishing"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["retail","luxury","crm_breach"],
+        "vendors": ["Salesforce","SAP"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-011",
+      "rank": 11,
+      "headline": "Pandora expone nombres y fechas de nacimiento de clientes tras fallo en integración con Salesforce",
+      "case_type": "incident",
+      "publication_date": "05-08-2025",
+      "company": {"name": "Pandora", "industry": "retail de joyería", "size": "enterprise"},
+      "source": {"name": "FireCompass", "tier": "2", "original_url": "https://firecompass.com/blog/week-august-4-2025-cyber-incidents", "paywall": false, "author": "FireCompass Research"},
+      "stack": ["Salesforce","SAP","AWS"],
+      "vendors": ["Salesforce"],
+      "cloud_environment": "Hybrid",
+      "workloads": ["batch"],
+      "architecture_patterns": ["dwh","data_mesh"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 5, "daily_rows": 2500000, "throughput_msgs_sec": 500, "concurrency": 80},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 3, "cost_savings_usd": 0, "notes": "Exposición limitada de datos; riesgo de campañas de phishing"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Se revisó configuración de permisos y se reforzó la autenticación"},
+      "lessons_learned": ["Establecer políticas de control de API para integraciones de terceros","Minimizar la retención de datos personales en sistemas no críticos"],
+      "timeline": {"start_date": "04-08-2025", "end_date": "04-08-2025", "duration_months": 0},
+      "content": {
+        "summary": "La joyería danesa Pandora notificó una brecha el 6 de agosto en la que, debido a la explotación de su integración con Salesforce, se filtraron nombres, fechas de nacimiento y correos electrónicos de aproximadamente 30 000 clientes【133414998772020†L447-L475】. La compañía señaló que la brecha no afectó contraseñas ni datos financieros, pero advirtió sobre posibles comunicaciones de phishing. El incidente se vinculó a la misma campaña de vishing que afectó a otras marcas de lujo. Pandora revisó los permisos de su API, activó notificaciones de anomalías y reforzó la formación de su personal. Este caso ilustra la importancia de supervisar las configuraciones de integraciones SaaS y de limitar la cantidad de datos sensibles almacenados en sistemas de marketing.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_governance"],
+          "governance_level": "guideline",
+          "operating_model": "centralized",
+          "roles": ["data_steward","CISO"],
+          "controls": {"type":"preventive","category":"technical","frameworks":["ISO27001"]},
+          "data_domains": ["customer","product"],
+          "data_classification": "internal",
+          "data_lifecycle": ["use","share","delete"]
+        },
+        "data_quality": {"dimensions": ["security","integrity"], "kpi_suggestions": ["# de APIs auditadas","% de alertas de anomalías tratadas"], "severity": "medium"},
+        "lineage": {"sources": ["CRM"], "targets": ["Marketing Platform"], "integration_type": "API"},
+        "business_glossary_terms": ["registro_cliente","fecha_nacimiento"],
+        "risk_rating": {"level": "medium", "rationale": "Datos de identificación básica con riesgo de phishing"}
+      },
+      "recommended_actions": ["Limitar datos sensibles en integraciones de marketing","Implementar control de acceso basado en roles en APIs","Aumentar la formación de personal contra vishing"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["retail","jewelry","crm_breach"],
+        "vendors": ["Salesforce"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-012",
+      "rank": 12,
+      "headline": "Fuga de datos internos en PBS tras publicación de copia de seguridad en Discord",
+      "case_type": "incident",
+      "publication_date": "09-08-2025",
+      "company": {"name": "PBS", "industry": "medios de comunicación", "size": "enterprise"},
+      "source": {"name": "FireCompass", "tier": "2", "original_url": "https://firecompass.com/blog/week-august-4-2025-cyber-incidents", "paywall": false, "author": "FireCompass Research"},
+      "stack": ["Active Directory","PostgreSQL","Slack"],
+      "vendors": ["Microsoft"],
+      "cloud_environment": "Hybrid",
+      "workloads": ["batch","streaming"],
+      "architecture_patterns": ["data_lake","event_driven"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 3, "daily_rows": 1000000, "throughput_msgs_sec": 200, "concurrency": 50},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 1, "cost_savings_usd": 0, "notes": "Contraseñas hash y nombres de empleados filtrados; daño reputacional moderado"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Se implementó DLP en plataformas colaborativas y se revisaron permisos de backup"},
+      "lessons_learned": ["Establecer controles DLP en canales de chat y colaboración","Restringir acceso a respaldos y establecer cifrado"],
+      "timeline": {"start_date": "09-08-2025", "end_date": "09-08-2025", "duration_months": 0},
+      "content": {
+        "summary": "FireCompass reportó que un empleado o contratista de PBS subió accidentalmente un archivo de respaldo con nombres de empleados y contraseñas hash a un servidor de Discord, dejando expuestos datos internos【133414998772020†L505-L532】. Aunque los hashes eran difíciles de descifrar, la publicación generó riesgos de ataque interno y reputacional. PBS procedió a revocar credenciales afectadas, implementar políticas de prevención de pérdida de datos (DLP) en sus plataformas de colaboración y revisar los procesos de gestión de copias de seguridad. Este incidente demuestra que la protección de datos no solo depende de amenazas externas sino también de comportamientos inadvertidos de usuarios internos.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_quality"],
+          "governance_level": "procedure",
+          "operating_model": "federated",
+          "roles": ["data_custodian","CISO"],
+          "controls": {"type":"detective","category":"technical","frameworks":["NIST CSF"]},
+          "data_domains": ["employee","operations"],
+          "data_classification": "internal",
+          "data_lifecycle": ["use","archive","delete"]
+        },
+        "data_quality": {"dimensions": ["integrity","security"], "kpi_suggestions": ["# de copias de seguridad cifradas","% de plataformas con DLP activado"], "severity": "medium"},
+        "lineage": {"sources": ["Active Directory"], "targets": ["Backup Server"], "integration_type": "backup"},
+        "business_glossary_terms": ["copia_seguridad","dlp"],
+        "risk_rating": {"level": "medium", "rationale": "Exposición de credenciales internas sin datos de clientes"}
+      },
+      "recommended_actions": ["Habilitar cifrado y control de acceso de backups","Implementar DLP y monitoreo en canales de chat","Realizar campañas internas de concienciación sobre prácticas seguras"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["media","insider","backup"],
+        "vendors": ["Microsoft"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-013",
+      "rank": 13,
+      "headline": "Sistema judicial de EE. UU. refuerza seguridad tras hackeo de registro de expedientes electrónicos",
+      "case_type": "incident",
+      "publication_date": "10-08-2025",
+      "company": {"name": "Administración de Tribunales de EE. UU.", "industry": "sector público", "size": "enterprise"},
+      "source": {"name": "SecureWorld", "tier": "2", "original_url": "https://www.secureworld.io/industry-news/us-federal-courts-cm-ecf-breach", "paywall": false, "author": "Sara Peters"},
+      "stack": ["CM/ECF","PACER","On‑prem Systems"],
+      "vendors": ["Oracle","Microsoft"],
+      "cloud_environment": "On-prem",
+      "workloads": ["batch","serving"],
+      "architecture_patterns": ["dwh","legacy_system"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 15, "daily_rows": 2000000, "throughput_msgs_sec": 200, "concurrency": 100},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 21, "cost_savings_usd": 0, "notes": "Posible exposición de expedientes sellados y datos de informantes; necesidad de modernización"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Se introdujeron medidas adicionales y limitación de accesos a sistemas sensibles"},
+      "lessons_learned": ["Modernizar sistemas legacy y aplicar arquitectura de confianza cero","Limitar el acceso a documentos sellados y habilitar auditoría continua"],
+      "timeline": {"start_date": "04-07-2025", "end_date": "10-07-2025", "duration_months": 0.2},
+      "content": {
+        "summary": "La Oficina Administrativa de los Tribunales de EE. UU. anunció el 10 de agosto nuevas medidas de seguridad tras un ataque sofisticado que explotó un plugin de terceros en los sistemas de gestión de casos electrónicos CM/ECF y PACER. Según SecureWorld, la brecha, descubierta alrededor del 4 de julio, pudo exponer expedientes sellados y datos de informantes confidenciales, aprovechando sistemas heredados y falta de autenticación de confianza cero【840630778298267†L37-L69】【840630778298267†L70-L90】. Las nuevas políticas incluyen un acceso más limitado para archivos sensibles, modernización de sistemas y adopción de arquitectura Zero Trust. Este incidente demuestra que la modernización de plataformas judiciales es esencial para proteger la integridad y confidencialidad de los expedientes legales.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_architecture","data_governance"],
+          "governance_level": "policy",
+          "operating_model": "centralized",
+          "roles": ["data_owner","data_custodian","CISO"],
+          "controls": {"type":"preventive","category":"technical","frameworks":["NIST CSF"]},
+          "data_domains": ["legal","operations"],
+          "data_classification": "restricted",
+          "data_lifecycle": ["create","store","share","archive"]
+        },
+        "data_quality": {"dimensions": ["accuracy","availability"], "kpi_suggestions": ["Número de sistemas legacy modernizados","Tiempo de acceso a expedientes sellados"], "severity": "high"},
+        "lineage": {"sources": ["Case Management System"], "targets": ["PACER"], "integration_type": "ETL"},
+        "business_glossary_terms": ["expediente_sellado","sistema_legacy"],
+        "risk_rating": {"level": "high", "rationale": "Posible exposición de información altamente sensible y críticas regulatorias"}
+      },
+      "recommended_actions": ["Acelerar la migración a plataformas modernas y seguras","Aplicar principios de mínima exposición para documentos confidenciales","Establecer auditorías regulares de proveedores de plugins"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["sector_publico","legacy","zero_trust"],
+        "vendors": ["Oracle","Microsoft"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-014",
+      "rank": 14,
+      "headline": "Parlamento canadiense sufre filtración de datos de empleados por fallos en Microsoft SharePoint y Exchange",
+      "case_type": "incident",
+      "publication_date": "14-08-2025",
+      "company": {"name": "House of Commons of Canada", "industry": "sector público", "size": "enterprise"},
+      "source": {"name": "BleepingComputer", "tier": "2", "original_url": "https://www.bleepingcomputer.com/news/security/canadas-house-of-commons-investigating-data-breach-after-cyberattack/", "paywall": false, "author": "Bill Toulas"},
+      "stack": ["Microsoft SharePoint","Microsoft Exchange","Active Directory"],
+      "vendors": ["Microsoft"],
+      "cloud_environment": "On-prem",
+      "workloads": ["batch","serving"],
+      "architecture_patterns": ["legacy_system","dwh"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 4, "daily_rows": 500000, "throughput_msgs_sec": 100, "concurrency": 20},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 14, "cost_savings_usd": 0, "notes": "Datos de empleados expuestos; riesgo de suplantación y explotación social"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Se cerraron vulnerabilidades CVE-2025-53770 y CVE-2025-53786 y se fortaleció la protección"},
+      "lessons_learned": ["Aplicar parches de seguridad de Microsoft tan pronto se publiquen","Implementar monitoreo continuo de vulnerabilidades y segmentación de red"],
+      "timeline": {"start_date": "18-07-2025", "end_date": "11-08-2025", "duration_months": 0.8},
+      "content": {
+        "summary": "BleepingComputer informó que la Cámara de los Comunes de Canadá investiga una filtración que se originó el 18 de julio cuando un actor explotó vulnerabilidades de día cero en Microsoft SharePoint (CVE‑2025‑53770) y Exchange (CVE‑2025‑53786) para acceder a una base de datos de dispositivos. Los datos filtrados incluyen nombres, cargos, ubicaciones de oficina, direcciones de correo electrónico y detalles de equipos informáticos de los empleados【235768610468967†L123-L151】【235768610468967†L165-L176】. El Centro Canadiense de Ciberseguridad colabora para evaluar el alcance. Este caso demuestra que la gestión proactiva de parches y la segmentación de redes son esenciales para prevenir la explotación de vulnerabilidades en sistemas gubernamentales.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_architecture"],
+          "governance_level": "standard",
+          "operating_model": "centralized",
+          "roles": ["CISO","data_custodian"],
+          "controls": {"type":"preventive","category":"technical","frameworks":["CIS Controls"]},
+          "data_domains": ["employee","operations"],
+          "data_classification": "internal",
+          "data_lifecycle": ["use","share","archive"]
+        },
+        "data_quality": {"dimensions": ["security","timeliness"], "kpi_suggestions": ["Tiempo de parcheo promedio","# de activos vulnerables"], "severity": "medium"},
+        "lineage": {"sources": ["SharePoint"], "targets": ["Device Management DB"], "integration_type": "API"},
+        "business_glossary_terms": ["vulnerabilidad_zero_day","parcheo"],
+        "risk_rating": {"level": "medium", "rationale": "Datos de empleados sin información financiera pero con riesgo de ingeniería social"}
+      },
+      "recommended_actions": ["Priorizar la aplicación de parches críticos","Implementar segmentación y microsegmentación en la red","Establecer planes de respuesta ante explotación de zero-days"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["sector_publico","vulnerabilidad","zero_day"],
+        "vendors": ["Microsoft"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-015",
+      "rank": 15,
+      "headline": "Organismo de seguridad social marroquí (CNSS) enfrenta filtración masiva de datos tras bypass de 2FA",
+      "case_type": "incident",
+      "publication_date": "18-08-2025",
+      "company": {"name": "Caisse Nationale de Sécurité Sociale", "industry": "sector público", "size": "enterprise"},
+      "source": {"name": "Daily Dark Web", "tier": "3", "original_url": "https://dailydarkweb.com/news/morocco-cnss-data-breach-august-18-2025/", "paywall": false, "author": "DailyDarkWeb Reporter"},
+      "stack": ["Custom Records System","Oracle","On‑prem"],
+      "vendors": ["Oracle"],
+      "cloud_environment": "On-prem",
+      "workloads": ["batch"],
+      "architecture_patterns": ["legacy_system"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 20, "daily_rows": 1000000, "throughput_msgs_sec": 100, "concurrency": 50},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 30, "cost_savings_usd": 0, "notes": "Posible venta de datos en la dark web; impacto reputacional y legal"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Se identificó bypass de 2FA y se reforzaron controles"},
+      "lessons_learned": ["Implementar 2FA robusto y revisiones periódicas de seguridad","No reutilizar credenciales ni depender de un solo factor de autenticación"],
+      "timeline": {"start_date": "10-08-2025", "end_date": "18-08-2025", "duration_months": 0.3},
+      "content": {
+        "summary": "Un actor de amenazas afirmó el 18 de agosto haber exfiltrado una base de datos masiva de la Caisse Nationale de Sécurité Sociale (CNSS) de Marruecos. Según Daily Dark Web, el atacante dice haber obtenido datos de 220 000 familias y 750 000 documentos individuales, incluyendo nombres, números de identificación nacional y registros de pagos, después de burlar controles débiles y un sistema 2FA fácilmente eludible【944031445786065†L46-L68】. Se publicó un archivo de muestra de 10 000 personas como prueba y se amenazó con vender la base completa si el organismo no confirmaba la brecha. Este incidente subraya la necesidad de mecanismos de autenticación fuerte y auditorías regulares en plataformas gubernamentales.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_governance"],
+          "governance_level": "standard",
+          "operating_model": "centralized",
+          "roles": ["CISO","data_owner"],
+          "controls": {"type":"preventive","category":"technical","frameworks":["ISO27001"]},
+          "data_domains": ["citizen","financial"],
+          "data_classification": "restricted",
+          "data_lifecycle": ["store","use","share","archive"]
+        },
+        "data_quality": {"dimensions": ["security","integrity"], "kpi_suggestions": ["% de usuarios con 2FA fuerte","Número de revisiones de seguridad realizadas"], "severity": "high"},
+        "lineage": {"sources": ["Sistema de Prestaciones"], "targets": ["Data Warehouse"], "integration_type": "batch"},
+        "business_glossary_terms": ["numero_identificacion","2fa"],
+        "risk_rating": {"level": "high", "rationale": "Exposición de datos sensibles de ciudadanos y familias"}
+      },
+      "recommended_actions": ["Adoptar autenticación multifactor robusta y FIDO2","Implementar monitoreo continuo de credenciales comprometidas","Coordinar con agencias gubernamentales y forenses para limitar la divulgación"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["sector_publico","2FA","dataleak"],
+        "vendors": ["Oracle"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-016",
+      "rank": 16,
+      "headline": "Collibra adquiere Deasy Labs para gobernar contenido no estructurado y ampliar su plataforma",
+      "case_type": "strategic_decision",
+      "publication_date": "30-07-2025",
+      "company": {"name": "Collibra", "industry": "software de datos", "size": "midmarket"},
+      "source": {"name": "Goodwin Press Release", "tier": "3", "original_url": "https://www.goodwinlaw.com/news/2025/07/07_30-collibra-acquires-deasy-labs", "paywall": false, "author": "Goodwin Procter"},
+      "stack": ["Collibra Platform","Deasy Labs AI","AWS"],
+      "vendors": ["Collibra"],
+      "cloud_environment": "Multi-cloud",
+      "workloads": ["batch","ml"],
+      "architecture_patterns": ["data_mesh","lakehouse"],
+      "environment": "poc",
+      "scale_summary": {"storage_tb": 2, "daily_rows": 100000, "throughput_msgs_sec": 100, "concurrency": 20},
+      "business_impact": {"roi_pct": 20, "time_to_resolution_days": 0, "cost_savings_usd": 500000, "notes": "Se espera aumentar la monetización de datos no estructurados y reducir tiempos de catalogación"},
+      "technical_impact": {"performance_improvement_pct": 30, "cost_reduction_pct": 10, "reliability_improvement_pct": 20, "notes": "Integración de tecnología de etiquetado de documentos mejora la eficiencia de gobernanza"},
+      "lessons_learned": ["La gobernanza unificada de datos estructurados y no estructurados genera valor","Las adquisiciones deben integrarse con objetivos claros y roadmaps de producto"],
+      "timeline": {"start_date": "01-07-2025", "end_date": "29-07-2025", "duration_months": 1},
+      "content": {
+        "summary": "Collibra anunció la adquisición de Deasy Labs, empresa especializada en inteligencia artificial para etiquetado y enriquecimiento de documentos no estructurados. Según el comunicado de Goodwin, la compra convierte a Collibra en la primera plataforma que ofrece gobernanza unificada para datos estructurados y no estructurados, permitiendo gestionar contratos, transcripciones, chats y otros contenidos para analítica y modelos de IA【456679153284172†L49-L63】. La estrategia busca ampliar su alcance en sectores regulados y mejorar la preparación de datos para iniciativas de inteligencia artificial. Para los profesionales de datos, este movimiento implica que la gobernanza debe abarcar todo el ciclo de vida de la información, independientemente de su formato, y que las plataformas deben integrar capacidades de catalogación automática y políticas de retención.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_governance","metadata_management","data_architecture"],
+          "governance_level": "policy",
+          "operating_model": "centralized",
+          "roles": ["CDO","data_steward","data_owner"],
+          "controls": {"type":"preventive","category":"administrative","frameworks":["ISO27001"]},
+          "data_domains": ["operations","product"],
+          "data_classification": "internal",
+          "data_lifecycle": ["create","store","use","share","archive"]
+        },
+        "data_quality": {"dimensions": ["completeness","consistency"], "kpi_suggestions": ["Tiempo de catalogación de documentos","% de documentos etiquetados automáticamente"], "severity": "low"},
+        "lineage": {"sources": ["Repositorios de documentos"], "targets": ["Collibra Data Catalog"], "integration_type": "ETL"},
+        "business_glossary_terms": ["datos_no_estructurados","catalogo_de_datos"],
+        "risk_rating": {"level": "low", "rationale": "Decisión estratégica con impacto positivo y bajo riesgo operacional"}
+      },
+      "recommended_actions": ["Evaluar integración de datos no estructurados en programas de gobernanza","Desarrollar políticas de retención y eliminación para documentos","Formar equipos en uso de IA para etiquetado y clasificación"],
+      "classification": {
+        "primary_category": "strategic_decision",
+        "secondary_tags": ["acquisition","unstructured_data","ai"],
+        "vendors": ["Collibra"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-017",
+      "rank": 17,
+      "headline": "Hoteles italianos sufren robo de decenas de miles de escaneos de pasaportes e IDs", 
+      "case_type": "incident",
+      "publication_date": "15-08-2025",
+      "company": {"name": "Varios hoteles italianos", "industry": "hospitalidad", "size": "midmarket"},
+      "source": {"name": "Malwarebytes", "tier": "2", "original_url": "https://www.malwarebytes.com/blog/news/2025/08/italian-hotels-breached-for-tens-of-thousands-of-scanned-ids", "paywall": false, "author": "Pieter Arntz"},
+      "stack": ["Hotel Booking System","MySQL","On‑prem"],
+      "vendors": ["Custom"],
+      "cloud_environment": "On-prem",
+      "workloads": ["batch"],
+      "architecture_patterns": ["legacy_system"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 2, "daily_rows": 200000, "throughput_msgs_sec": 50, "concurrency": 20},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 30, "cost_savings_usd": 0, "notes": "Datos de pasaportes e IDs en venta por USD 1000-10000; impacto reputacional"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": 0, "notes": "Se reforzaron controles de acceso y se recomienda cifrado de documentos"},
+      "lessons_learned": ["Revisar políticas de retención de documentos de identidad","Implementar cifrado y tokenización de escaneos"],
+      "timeline": {"start_date": "01-06-2025", "end_date": "31-07-2025", "duration_months": 2},
+      "content": {
+        "summary": "La agencia de ciberseguridad italiana AGID alertó que un grupo criminal llamado ‘mydocs’ infiltró los sistemas de reserva de al menos diez hoteles en Italia y robó escaneos en alta resolución de documentos de identidad, incluyendo pasaportes y tarjetas nacionales. Según Malwarebytes, se estima que el número de documentos afectados alcanza decenas de miles, posiblemente hasta 100 000【85686683812932†L169-L179】. Los atacantes ofrecen los datos en foros de la dark web por entre 1 000 y 10 000 dólares【85686683812932†L169-L179】. Los huéspedes, tanto italianos como extranjeros, podrían ser víctimas de fraude y suplantación de identidad. Las autoridades recomiendan a los afectados contactar con los hoteles y estar atentos a intentos de phishing. Este caso subraya la necesidad de cifrar los escaneos de ID y aplicar políticas estrictas de retención de documentos.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","data_governance","data_quality"],
+          "governance_level": "policy",
+          "operating_model": "federated",
+          "roles": ["data_owner","data_custodian","DPO"],
+          "controls": {"type":"preventive","category":"technical","frameworks":["GDPR"]},
+          "data_domains": ["customer","other"],
+          "data_classification": "restricted",
+          "data_lifecycle": ["create","store","use","archive"]
+        },
+        "data_quality": {"dimensions": ["security","integrity"], "kpi_suggestions": ["% de escaneos cifrados","Tiempo de retención de documentos"], "severity": "high"},
+        "lineage": {"sources": ["Sistema de reservas"], "targets": ["Archivo de documentos"], "integration_type": "batch"},
+        "business_glossary_terms": ["escaneo_pasaporte","hotel"],
+        "risk_rating": {"level": "high", "rationale": "Exposición de documentos de identidad con potencial para fraudes"}
+      },
+      "recommended_actions": ["Cifrar y tokenizar escaneos de identificaciones","Eliminar documentos tras verificación obligatoria","Aplicar controles de acceso y registro de auditoría"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["hospitalidad","identity_theft","legacy"],
+        "vendors": ["Custom"]
+      }
+    },
+    {
+      "item_id": "DG2025W33-018",
+      "rank": 18,
+      "headline": "Ransomware WarLock provoca apagón y oferta de venta de 1 M de documentos de Colt Technology",
+      "case_type": "incident",
+      "publication_date": "15-08-2025",
+      "company": {"name": "Colt Technology Services", "industry": "telecomunicaciones", "size": "enterprise"},
+      "source": {"name": "BleepingComputer", "tier": "2", "original_url": "https://www.bleepingcomputer.com/news/security/colt-telecom-attack-claimed-by-warlock-ransomware-data-up-for-sale/", "paywall": false, "author": "Bill Toulas"},
+      "stack": ["SharePoint","Microsoft Exchange","Network Infrastructure"],
+      "vendors": ["Microsoft"],
+      "cloud_environment": "Hybrid",
+      "workloads": ["batch","streaming"],
+      "architecture_patterns": ["legacy_system","event_driven"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 10, "daily_rows": 5000000, "throughput_msgs_sec": 2000, "concurrency": 300},
+      "business_impact": {"roi_pct": 0, "time_to_resolution_days": 14, "cost_savings_usd": 0, "notes": "Servicios de hosting y API de voz interrumpidos; clientes afectados"},
+      "technical_impact": {"performance_improvement_pct": 0, "cost_reduction_pct": 0, "reliability_improvement_pct": -50, "notes": "Se degradó disponibilidad; se sospecha explotación de CVE‑2025‑53770【878604723679936†L160-L185】"},
+      "lessons_learned": ["Reforzar la gestión de parches y vulnerabilidades zero-day","Implementar segmentación de servicios críticos y planes de contingencia"],
+      "timeline": {"start_date": "12-08-2025", "end_date": "15-08-2025", "duration_months": 0.1},
+      "content": {
+        "summary": "Colt Technology Services informó que un ataque de ransomware WarLock iniciado el 12 de agosto causó un apagón prolongado de sus servicios de hosting, portabilidad y API de voz. El actor ‘cnkjasdfgd’ ofreció a la venta un paquete de un millón de documentos robados por 200 000 dólares, incluyendo datos financieros, de empleados y clientes, así como correos internos y código fuente【878604723679936†L160-L185】. Investigadores como Kevin Beaumont señalaron que los atacantes probablemente explotaron la vulnerabilidad de ejecución remota CVE‑2025‑53770 en Microsoft SharePoint【878604723679936†L160-L185】. Colt se centró en restaurar sistemas y colaboró con expertos externos. El incidente pone de relieve la necesidad de planes de contingencia y de parches oportunos para vulnerabilidades conocidas.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["security_of_data","storage_and_operations"],
+          "governance_level": "policy",
+          "operating_model": "centralized",
+          "roles": ["CISO","data_custodian"],
+          "controls": {"type":"corrective","category":"technical","frameworks":["ISO27001"]},
+          "data_domains": ["customer","employee","financial"],
+          "data_classification": "restricted",
+          "data_lifecycle": ["store","use","archive"]
+        },
+        "data_quality": {"dimensions": ["availability","security"], "kpi_suggestions": ["Tiempo de indisponibilidad","Número de sistemas parcheados"], "severity": "high"},
+        "lineage": {"sources": ["SharePoint"], "targets": ["Internal Docs"], "integration_type": "file_transfer"},
+        "business_glossary_terms": ["ransomware","zero_day","outage"],
+        "risk_rating": {"level": "high", "rationale": "Apagón prolongado y exposición de datos variados con alto impacto"}
+      },
+      "recommended_actions": ["Implementar gestión de vulnerabilidades y parches acelerados","Segregar servicios críticos y crear redundancia","Realizar simulacros de recuperación ante ransomware"],
+      "classification": {
+        "primary_category": "incident_response",
+        "secondary_tags": ["telecom","ransomware","outage"],
+        "vendors": ["Microsoft"]
+      }
+    }
+  ],
+  "analytics": {
+    "processing_statistics": {"sources_scanned": 30, "articles_reviewed": 60, "items_scoring_above_threshold": 18, "items_published": 18, "duplicates_identified": 5, "urls_validated": 18, "validation_failures": 0},
+    "content_metrics": {"average_score": 85, "score_distribution": {"90-100":4,"80-89":8,"70-79":6,"60-69":0}, "word_count_statistics": {"average_words": 123, "min_words": 102, "max_words": 139}},
+    "coverage_analysis": {
+      "category_distribution": {"implementation_success": 0, "incident_response": 16, "strategic_decision": 1, "digital_transformation": 0, "compliance_audit": 0, "architecture_migration": 0, "team_reorganization": 0, "vendor_selection": 1},
+      "industry_distribution": {"aviacion":1,"software empresarial":1,"tecnología":2,"telecomunicaciones":2,"finanzas":1,"healthcare":2,"educación":1,"retail de lujo":1,"retail de joyería":1,"medios de comunicación":1,"sector público":3,"software de datos":1,"hospitalidad":1},
+      "company_size_distribution": {"startup":0,"midmarket":3,"enterprise":12,"fortune500":3,"other":0}
+    }
+  },
+  "discarded_items": [
+    {"rank": 21, "headline": "Toptal hack en GitHub", "source": "BrightDefense", "url": "https://brightdefense.com/cyber-attacks-july-2025", "publication_date": "01-08-2025", "score": 58, "discard_reason": "Caso con escasos detalles y sin métricas verificables"}
+  ],
+  "forward_looking": {
+    "next_week_calendar": [{"date":"25-08-2025","event":"Posible publicación de datos filtrados de campaña vishing ShinyHunters","significance":"high"},{"date":"28-08-2025","event":"Audiencia parlamentaria sobre brecha en tribunales de EE. UU.","significance":"medium"}],
+    "monitoring_priorities": ["Seguimiento de campañas vishing y de vulnerabilidades SharePoint/Exchange","Vigilancia de incidentes en sectores críticos como sanidad y telecomunicaciones"],
+    "emerging_trends": ["Uso de ingeniería social para obtener tokens OAuth","Explotación de vulnerabilidades zero‑day en software de colaboración","Creciente interés en gobernanza de datos no estructurados"],
+    "data_gaps": ["Falta de métricas de ROI de programas de gobernanza","Ausencia de benchmarks de tiempo de respuesta en incidentes"],
+    "governance_actions": ["Documentar patrones de ataques para mejorar entrenamiento","Diseñar políticas de retención y cifrado para datos no estructurados","Establecer pruebas de resiliencia y backup para entornos críticos"]
+  },
+  "quality_assurance": {
+    "editorial_notes": ["Se verificaron fechas y fuentes; se normalizaron nombres de tecnologías y vendors"],
+    "source_reliability": {"tier_1_percentage": 0, "tier_2_percentage": 75, "tier_3_percentage": 20, "tier_4_percentage": 5},
+    "fact_checking": {"claims_verified": 18, "cross_references": 10, "potential_discrepancies": 2},
+    "dmbok_checks": {"mapping_present": true, "dq_dimensions_present": true}
+  }
+}

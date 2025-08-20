@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-JSON a HTML (Arte y Derecho) v2
-Convierte datos JSON estructurados (según el prompt de Arte y Derecho) a HTML con marca Kepler Karst.
+JSON a HTML (Gobernanza de Datos) v1
+Convierte datos JSON estructurados (según el prompt de Gobernanza de Datos) a HTML con marca Kepler Karst.
 Genera dos archivos: digest original y dashboard de analytics.
 
 Uso:
-  python json_to_html_converter_artlaw.py <archivo.json>
+  python json_to_html_converter_datagovernance.py <archivo.json>
 """
 
 import json
@@ -34,117 +34,45 @@ def clean_text(text: str | None) -> str | None:
     import re
     if not text:
         return text
-
-    # Eliminar referencias tipo 【...】
     text = re.sub(r'【[^】]*】', '', text)
-
-    # Eliminar otros artefactos comunes
     text = re.sub(r'†[A-Z]\d+-\d+', '', text)
     text = re.sub(r'【[^】]*†[^】]*】', '', text)
-
-    # Normalizar espacios
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 
 
 def highlight_countries(text: str | None) -> str | None:
-    """Resalta nombres de países, estados americanos y ciudades principales en el texto haciéndolos negrita"""
+    """Resalta nombres de países, estados americanos y ciudades principales en el texto"""
     import re
     if not text:
         return text
     
-    # Países en español e inglés
+    # Países principales para data governance
     countries = [
-        'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria', 'Azerbaijan',
-        'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi',
-        'Cambodia', 'Cameroon', 'Canada', 'Cape Verde', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo', 'Costa Rica', 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic',
-        'Democratic Republic of the Congo', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic',
-        'East Timor', 'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia',
-        'Fiji', 'Finland', 'France',
-        'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana',
-        'Haiti', 'Honduras', 'Hungary',
-        'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy', 'Ivory Coast',
-        'Jamaica', 'Japan', 'Jordan',
-        'Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan',
-        'Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg',
-        'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Mauritania', 'Mauritius', 'Mexico', 'Micronesia', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar',
-        'Namibia', 'Nauru', 'Nepal', 'Netherlands', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'North Macedonia', 'Norway',
-        'Oman',
-        'Pakistan', 'Palau', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal',
-        'Qatar',
-        'Romania', 'Russia', 'Rwanda',
-        'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa', 'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'South Korea', 'South Sudan', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria',
-        'Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Tuvalu',
-        'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan',
-        'Vanuatu', 'Vatican City', 'Venezuela', 'Vietnam',
-        'Yemen',
-        'Zambia', 'Zimbabwe',
-        # Nombres en español
-        'Francia', 'Alemania', 'Italia', 'España', 'Reino Unido', 'Estados Unidos', 'Canadá', 'México', 'Brasil', 'Argentina', 'Chile', 'Perú', 'Colombia', 'Venezuela', 'Ecuador', 'Bolivia', 'Paraguay', 'Uruguay', 'Guyana', 'Surinam', 'Guayana Francesa', 'Islas Malvinas', 'Georgia del Sur', 'Islas Sandwich del Sur', 'Antártida', 'Groenlandia', 'Islandia', 'Noruega', 'Suecia', 'Finlandia', 'Dinamarca', 'Países Bajos', 'Bélgica', 'Luxemburgo', 'Suiza', 'Austria', 'Liechtenstein', 'Mónaco', 'Andorra', 'San Marino', 'Vaticano', 'Malta', 'Chipre', 'Grecia', 'Albania', 'Macedonia del Norte', 'Kosovo', 'Serbia', 'Montenegro', 'Bosnia y Herzegovina', 'Croacia', 'Eslovenia', 'Hungría', 'Eslovaquia', 'República Checa', 'Polonia', 'Lituania', 'Letonia', 'Estonia', 'Bielorrusia', 'Ucrania', 'Moldavia', 'Rumania', 'Bulgaria', 'Turquía', 'Georgia', 'Armenia', 'Azerbaiyán', 'Rusia', 'Kazajistán', 'Uzbekistán', 'Turkmenistán', 'Kirguistán', 'Tayikistán', 'Afganistán', 'Pakistán', 'India', 'Nepal', 'Bután', 'Bangladés', 'Sri Lanka', 'Maldivas', 'China', 'Mongolia', 'Corea del Norte', 'Corea del Sur', 'Japón', 'Taiwán', 'Filipinas', 'Vietnam', 'Laos', 'Camboya', 'Tailandia', 'Myanmar', 'Malasia', 'Singapur', 'Brunéi', 'Indonesia', 'Timor Oriental', 'Papúa Nueva Guinea', 'Australia', 'Nueva Zelanda', 'Fiyi', 'Vanuatu', 'Nueva Caledonia', 'Islas Salomón', 'Tuvalu', 'Kiribati', 'Nauru', 'Palaos', 'Micronesia', 'Islas Marshall', 'Polinesia Francesa', 'Samoa', 'Tonga', 'Niue', 'Islas Cook', 'Tokelau', 'Wallis y Futuna', 'Pitcairn', 'Isla de Pascua', 'Hawai', 'Alaska', 'Canadá', 'Estados Unidos', 'México', 'Guatemala', 'Belice', 'El Salvador', 'Honduras', 'Nicaragua', 'Costa Rica', 'Panamá', 'Cuba', 'Jamaica', 'Haití', 'República Dominicana', 'Puerto Rico', 'Bahamas', 'Antigua y Barbuda', 'San Cristóbal y Nieves', 'Dominica', 'Santa Lucía', 'San Vicente y las Granadinas', 'Granada', 'Barbados', 'Trinidad y Tobago', 'Guyana', 'Surinam', 'Brasil', 'Venezuela', 'Colombia', 'Ecuador', 'Perú', 'Bolivia', 'Paraguay', 'Uruguay', 'Argentina', 'Chile', 'Islas Malvinas', 'Georgia del Sur', 'Antártida',
-        # Abreviaciones comunes
-        'EE.UU.', 'EE. UU.', 'EEUU', 'UE', 'EE UU'
+        'United States', 'United Kingdom', 'European Union', 'Canada', 'Brazil', 'Australia', 'Japan', 'South Korea',
+        'India', 'China', 'Singapore', 'Switzerland', 'Norway', 'Iceland', 'Liechtenstein', 'New Zealand',
+        'Estados Unidos', 'Reino Unido', 'Unión Europea', 'Canadá', 'Brasil', 'Australia', 'Japón', 'Corea del Sur',
+        'India', 'China', 'Singapur', 'Suiza', 'Noruega', 'Islandia', 'Liechtenstein', 'Nueva Zelanda'
     ]
     
-    # Estados americanos
+    # Estados americanos principales
     us_states = [
-        'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia',
-        'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland',
-        'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey',
-        'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina',
-        'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+        'California', 'New York', 'Texas', 'Florida', 'Illinois', 'Pennsylvania', 'Ohio', 'Georgia',
+        'North Carolina', 'Michigan', 'New Jersey', 'Virginia', 'Washington', 'Arizona', 'Massachusetts'
     ]
     
-    # Ciudades principales
+    # Ciudades principales de tech
     major_cities = [
-        'New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'San Jose',
-        'Austin', 'Jacksonville', 'Fort Worth', 'Columbus', 'Charlotte', 'San Francisco', 'Indianapolis', 'Seattle', 'Denver', 'Washington',
-        'Boston', 'El Paso', 'Nashville', 'Detroit', 'Oklahoma City', 'Portland', 'Las Vegas', 'Memphis', 'Louisville', 'Baltimore',
-        'Milwaukee', 'Albuquerque', 'Tucson', 'Fresno', 'Sacramento', 'Atlanta', 'Kansas City', 'Long Beach', 'Colorado Springs', 'Raleigh',
-        'Miami', 'Virginia Beach', 'Omaha', 'Oakland', 'Minneapolis', 'Tulsa', 'Tampa', 'Arlington', 'New Orleans', 'Wichita',
-        'Cleveland', 'Bakersfield', 'Aurora', 'Anaheim', 'Honolulu', 'Santa Ana', 'Corpus Christi', 'Riverside', 'Lexington', 'Stockton',
-        'Henderson', 'Saint Paul', 'St. Louis', 'Fort Wayne', 'Jersey City', 'Chandler', 'Madison', 'Lubbock', 'Scottsdale', 'Reno',
-        'Buffalo', 'Gilbert', 'Glendale', 'North Las Vegas', 'Winston-Salem', 'Chesapeake', 'Norfolk', 'Fremont', 'Garland', 'Irving',
-        'Hialeah', 'Richmond', 'Boise', 'Spokane', 'Baton Rouge', 'Tacoma', 'San Bernardino', 'Grand Rapids', 'Huntsville', 'Salt Lake City',
-        'Frisco', 'Cary', 'Yonkers', 'Amarillo', 'Glendale', 'McKinney', 'Montgomery', 'Aurora', 'Akron', 'Little Rock',
-        'Oxnard', 'Amarillo', 'Knoxville', 'Garden Grove', 'Newport News', 'Huntsville', 'Tempe', 'Cape Coral', 'Santa Clarita', 'Providence',
-        'Overland Park', 'Jackson', 'Elk Grove', 'Springfield', 'Pembroke Pines', 'Salem', 'Corona', 'Eugene', 'McKinney', 'Fort Collins',
-        'Lancaster', 'Cary', 'Palmdale', 'Hayward', 'Salinas', 'Frisco', 'Springfield', 'Pasadena', 'Macon', 'Alexandria',
-        'Pomona', 'Hollywood', 'Sunnyvale', 'Escondido', 'Kansas City', 'Pasadena', 'Torrance', 'Syracuse', 'Naperville', 'Dayton',
-        'Savannah', 'Mesquite', 'Orange', 'Fullerton', 'Killeen', 'McAllen', 'Joliet', 'Rockford', 'Paterson', 'Bridgeport',
-        'Naperville', 'Laredo', 'Hampton', 'West Valley City', 'Warren', 'Gilbert', 'St. Louis', 'Las Vegas', 'Chandler', 'Scottsdale',
-        'London', 'Londres', 'Paris', 'Berlin', 'Madrid', 'Rome', 'Amsterdam', 'Brussels', 'Vienna', 'Prague', 'Budapest',
-        'Warsaw', 'Stockholm', 'Copenhagen', 'Oslo', 'Helsinki', 'Dublin', 'Edinburgh', 'Glasgow', 'Manchester', 'Birmingham',
-        'Liverpool', 'Leeds', 'Sheffield', 'Bristol', 'Cardiff', 'Belfast', 'Newcastle', 'Leicester', 'Nottingham', 'Southampton',
-        'Toronto', 'Montreal', 'Vancouver', 'Calgary', 'Edmonton', 'Ottawa', 'Winnipeg', 'Quebec City', 'Hamilton', 'Kitchener',
-        'Mexico City', 'Guadalajara', 'Monterrey', 'Puebla', 'Tijuana', 'Ciudad Juarez', 'Leon', 'Zapopan', 'Aguascalientes', 'Merida',
-        'Buenos Aires', 'Cordoba', 'Rosario', 'Mendoza', 'La Plata', 'San Miguel de Tucuman', 'Mar del Plata', 'Salta', 'Santa Fe', 'San Juan',
-        'Sao Paulo', 'Rio de Janeiro', 'Brasilia', 'Salvador', 'Fortaleza', 'Belo Horizonte', 'Manaus', 'Curitiba', 'Recife', 'Porto Alegre',
-        'Barcelona', 'Valencia', 'Seville', 'Zaragoza', 'Malaga', 'Murcia', 'Palma', 'Las Palmas', 'Bilbao', 'Alicante',
-        'Milan', 'Naples', 'Turin', 'Palermo', 'Genoa', 'Bologna', 'Florence', 'Bari', 'Catania', 'Venice',
-        'Sydney', 'Melbourne', 'Brisbane', 'Perth', 'Adelaide', 'Gold Coast', 'Newcastle', 'Canberra', 'Sunshine Coast', 'Wollongong',
-        'Manhattan', 'Cambridge Bay', 'Islas Marianas', 'Guam', 'CNMI', 'Hawái', 'Oregón', 'Hungría'
+        'San Francisco', 'Silicon Valley', 'Seattle', 'Austin', 'New York', 'Boston', 'Los Angeles',
+        'Chicago', 'Washington DC', 'Atlanta', 'Denver', 'Portland', 'Miami', 'Dallas', 'Houston',
+        'London', 'Paris', 'Berlin', 'Amsterdam', 'Brussels', 'Dublin', 'Stockholm', 'Copenhagen',
+        'Toronto', 'Vancouver', 'Montreal', 'São Paulo', 'Rio de Janeiro', 'Sydney', 'Melbourne',
+        'Tokyo', 'Seoul', 'Singapore', 'Hong Kong', 'Mumbai', 'Bangalore', 'New Delhi'
     ]
     
-    # Combinar todas las entidades geográficas
     all_entities = countries + us_states + major_cities
-    
-    # Crear patrón regex más robusto
-    # Manejar casos especiales como EE.UU. por separado
-    special_cases = ['EE.UU.', 'EE. UU.', 'EEUU', 'EE UU']
-    regular_entities = [entity for entity in all_entities if entity not in special_cases]
-    
-    # Aplicar primero los casos especiales
-    for special in special_cases:
-        if special in all_entities:
-            special_pattern = r'(?<!\w)' + re.escape(special) + r'(?!\w)'
-            text = re.sub(special_pattern, r'<strong>' + special + r'</strong>', text, flags=re.IGNORECASE)
-    
-    # Luego aplicar el patrón normal para el resto
-    if regular_entities:
-        pattern = r'\b(' + '|'.join(re.escape(entity) for entity in regular_entities) + r')\b'
-        text = re.sub(pattern, r'<strong>\1</strong>', text, flags=re.IGNORECASE)
-    
-    highlighted_text = text
+    pattern = r'\b(' + '|'.join(re.escape(entity) for entity in all_entities) + r')\b'
+    highlighted_text = re.sub(pattern, r'<strong>\1</strong>', text, flags=re.IGNORECASE)
     
     return highlighted_text
 
@@ -163,17 +91,11 @@ def create_google_search_url(headline: str, original_url: str) -> str:
     return f"https://www.google.com/search?q={quote(search_terms)}"
 
 
-def create_google_lucky_url(headline: str, original_url: str) -> str:
-    """Crea URL de 'Voy a tener suerte' en Google"""
-    base = create_google_search_url(headline, original_url)
-    return f"{base}&btnI"
-
-
 def get_smart_url(headline: str, original_url: str):
     """Devuelve (original|#, url búsqueda, url suerte)"""
     if not original_url or original_url == '#':
-        return "#", create_google_search_url(headline, ''), create_google_lucky_url(headline, '')
-    return original_url, create_google_search_url(headline, original_url), create_google_lucky_url(headline, original_url)
+        return "#", create_google_search_url(headline, ''), f"{create_google_search_url(headline, '')}&btnI"
+    return original_url, create_google_search_url(headline, original_url), f"{create_google_search_url(headline, original_url)}&btnI"
 
 
 def format_date_for_display(date_str: str) -> str:
@@ -211,22 +133,20 @@ def generate_jurisdiction_chart(data: dict) -> str:
     if not jurisdiction_distribution:
         return ""
     
-    # Mapeo de códigos de región a nombres completos
     region_mapping = {
         'US': 'Estados Unidos',
         'UK': 'Reino Unido', 
         'EU': 'Unión Europea',
         'CA': 'Canadá',
+        'BR': 'Brasil',
         'Global': 'Global'
     }
     
-    # Convertir los datos a una lista ordenada
     jurisdiction_items = []
     for region, count in jurisdiction_distribution.items():
         region_name = region_mapping.get(region, region)
         jurisdiction_items.append((region_name, count))
     
-    # Ordenar por count descendente
     jurisdiction_items.sort(key=lambda x: x[1], reverse=True)
     top_jurisdictions = jurisdiction_items[:8]
     
@@ -271,12 +191,10 @@ def generate_meta_html(data: dict) -> str:
     content_metrics = analytics.get('content_metrics', {})
     processing_statistics = analytics.get('processing_statistics', {})
     
-    # Extraer datos para gráficos
     category_distribution = coverage_analysis.get('category_distribution', {})
     jurisdiction_distribution = coverage_analysis.get('jurisdiction_distribution', {})
     score_distribution = content_metrics.get('score_distribution', {})
     
-    # Recolectar tags secundarios
     all_secondary_tags = []
     for item in items:
         secondary_tags = item.get('classification', {}).get('secondary_tags', [])
@@ -285,7 +203,6 @@ def generate_meta_html(data: dict) -> str:
     tag_counts = Counter(all_secondary_tags)
     top_tags = tag_counts.most_common(10)
     
-    # Recolectar instrumentos
     all_instruments = []
     for item in items:
         instruments = item.get('classification', {}).get('instruments', [])
@@ -299,8 +216,8 @@ def generate_meta_html(data: dict) -> str:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Analytics - {metadata.get('title', 'Arte y Derecho')} | Kepler Karst</title>
-    <meta name="description" content="Dashboard de analytics y métricas para el boletín de Arte y Derecho">
+    <title>Dashboard de Analytics - {metadata.get('title', 'Gobernanza de Datos')} | Kepler Karst</title>
+    <meta name="description" content="Dashboard de analytics y métricas para el boletín de Gobernanza de Datos">
     
     <style>
         @font-face {{
@@ -312,7 +229,7 @@ def generate_meta_html(data: dict) -> str:
         
         :root {{
             --e-global-color-primary: #000000;
-            --e-global-color-secondary: #F1EEA4;
+            --e-global-color-secondary: #4A90E2;
             --e-global-color-text: #000000;
         }}
         
@@ -406,8 +323,7 @@ def generate_meta_html(data: dict) -> str:
         
         .chart-bar {{
             height: 100%;
-            background: linear-gradient(90deg, var(--e-global-color-secondary), #d4d1a0);
-            background-color: var(--e-global-color-secondary);
+            background: linear-gradient(90deg, var(--e-global-color-secondary), #357ABD);
             border-radius: 10px;
             transition: width 0.3s ease;
             display: block;
@@ -458,6 +374,7 @@ def generate_meta_html(data: dict) -> str:
         
         .tag {{
             background: var(--e-global-color-secondary);
+            color: white;
             padding: 0.3rem 0.8rem;
             border-radius: 15px;
             font-size: 0.8rem;
@@ -492,7 +409,7 @@ def generate_meta_html(data: dict) -> str:
 <body>
     <header class="header">
         <h1>Dashboard de Analytics</h1>
-        <div class="subtitle">{metadata.get('title', 'Arte y Derecho')}</div>
+        <div class="subtitle">{metadata.get('title', 'Gobernanza de Datos')}</div>
         <div class="subtitle">{format_date_for_display(metadata.get('period', {}).get('start_date', ''))} - {format_date_for_display(metadata.get('period', {}).get('end_date', ''))}</div>
     </header>
 
@@ -522,7 +439,6 @@ def generate_meta_html(data: dict) -> str:
                 <div class="chart-container">
 """
     
-    # Gráfico de distribución por categorías
     if category_distribution:
         max_count = max(category_distribution.values())
         for category, count in sorted(category_distribution.items(), key=lambda x: x[1], reverse=True):
@@ -547,7 +463,6 @@ def generate_meta_html(data: dict) -> str:
                 <div class="chart-container">
 """
     
-    # Gráfico de distribución geográfica
     if jurisdiction_distribution:
         max_count = max(jurisdiction_distribution.values())
         for region, count in sorted(jurisdiction_distribution.items(), key=lambda x: x[1], reverse=True):
@@ -571,7 +486,6 @@ def generate_meta_html(data: dict) -> str:
                 <div class="chart-container">
 """
     
-    # Gráfico de distribución de puntuaciones
     if score_distribution:
         max_count = max(score_distribution.values())
         for score_range, count in sorted(score_distribution.items(), key=lambda x: int(x[0].split('-')[0])):
@@ -595,7 +509,6 @@ def generate_meta_html(data: dict) -> str:
                 <div class="chart-container">
 """
     
-    # Gráfico de instrumentos
     if top_instruments:
         max_count = max(count for _, count in top_instruments)
         for instrument, count in top_instruments:
@@ -620,7 +533,6 @@ def generate_meta_html(data: dict) -> str:
             <div class="tag-cloud">
 """
     
-    # Nube de tags
     if top_tags:
         max_count = max(count for _, count in top_tags)
         for tag, count in top_tags:
@@ -634,8 +546,7 @@ def generate_meta_html(data: dict) -> str:
 
     <footer class="footer">
         <p>&copy; 2025 Kepler Karst Law Firm. Todos los derechos reservados.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Dashboard de Analytics para Arte y Derecho</p>
-        <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">Hecho por Laura Villarraga</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Dashboard de Analytics para Gobernanza de Datos</p>
     </footer>
 </body>
 </html>"""
@@ -652,10 +563,9 @@ def generate_original_html(data: dict) -> str:
     processing_statistics = analytics.get('processing_statistics', {}) or {}
     discarded_items = data.get('discarded_items', []) or []
 
-    title = metadata.get('title', 'Arte y Derecho — Boletín semanal')
-    subtitle = metadata.get('subtitle', '#BRAVE ADVOCACY')
+    title = metadata.get('title', 'Gobernanza de Datos — Boletín semanal')
+    subtitle = metadata.get('subtitle', '#DATA GOVERNANCE INSIGHTS')
 
-    # CSS separado para evitar problemas con llaves en f-strings
     css_styles = """
         @font-face {
             font-family: "Sharp Grotesk";
@@ -666,7 +576,7 @@ def generate_original_html(data: dict) -> str:
         
         :root {
             --e-global-color-primary: #000000;
-            --e-global-color-secondary: #F1EEA4;
+            --e-global-color-secondary: #4A90E2;
             --e-global-color-text: #000000;
             --e-global-typography-primary-font-family: "Georgia";
             --e-global-typography-primary-font-weight: 700;
@@ -698,8 +608,6 @@ def generate_original_html(data: dict) -> str:
             display: block;
         }
 
-
-
         .date-range {
             background-color: white;
             text-align: center;
@@ -715,11 +623,11 @@ def generate_original_html(data: dict) -> str:
         }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        .tldr { background-color: var(--e-global-color-secondary); padding: 2rem; margin: 2rem 0; }
+        .tldr { background-color: var(--e-global-color-secondary); color: white; padding: 2rem; margin: 2rem 0; }
         .tldr h2 {
             font-family: var(--e-global-typography-primary-font-family);
             font-weight: var(--e-global-typography-primary-font-weight);
-            margin-bottom: 1rem; color: var(--e-global-color-primary);
+            margin-bottom: 1rem; color: white;
         }
 
         .items { margin: 3rem 0; }
@@ -740,8 +648,8 @@ def generate_original_html(data: dict) -> str:
 
         .item-links { margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
         .link-btn { display: inline-block; padding: 0.5rem 1rem; text-decoration: none; border-radius: 25px; font-size: 0.8rem; font-weight: 500; transition: all 0.3s ease; }
-        .google-link { background-color: #E9D95D; color: #333; }
-        .google-link:hover { background-color: #d4c552; }
+        .google-link { background-color: var(--e-global-color-secondary); color: white; }
+        .google-link:hover { background-color: #357ABD; }
 
         .jurisdiction-chart {
             background-color: white;
@@ -788,8 +696,7 @@ def generate_original_html(data: dict) -> str:
         
         .chart-bar {
             height: 100%;
-            background: linear-gradient(90deg, var(--e-global-color-secondary), #d4d1a0);
-            background-color: var(--e-global-color-secondary);
+            background: linear-gradient(90deg, var(--e-global-color-secondary), #357ABD);
             border-radius: 10px;
             transition: width 0.3s ease;
             display: block;
@@ -853,10 +760,10 @@ def generate_original_html(data: dict) -> str:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title} | Kepler Karst</title>
-    <meta name="description" content="Boletín semanal de las novedades más relevantes de Arte y Derecho en los últimos 7 días.">
-    <meta name="keywords" content="arte y derecho, restitución, VARA, ARR, UNESCO, UNIDROIT, cumplimiento, sanciones, museos">
+    <meta name="description" content="Boletín semanal de las novedades más relevantes de Gobernanza de Datos en los últimos 7 días.">
+    <meta name="keywords" content="gobernanza de datos, GDPR, CCPA, LGPD, privacidad, seguridad, IA, cumplimiento">
     <meta property="og:title" content="{title}">
-    <meta property="og:description" content="Boletín semanal de Arte y Derecho">
+    <meta property="og:description" content="Boletín semanal de Gobernanza de Datos">
     <meta property="og:type" content="article">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -867,19 +774,18 @@ def generate_original_html(data: dict) -> str:
 <body>
     <header class="header">
         <div class="header-content">
-            <img src="../assets/headers/HeaderArt_v2.jpeg" alt="Arte y Derecho Header" class="header-image">
+            <img src="../assets/headers/HeaderDataGovernance.jpeg" alt="Gobernanza de Datos Header" class="header-image">
         </div>
     </header>
 
     <section class="date-range">
-        <h2>{format_date_for_display(metadata.get('period', {}).get('start_date', 'DD-MM-YYYY'))} - {format_date_for_display(datetime.now().strftime('%d-%m-%Y'))}</h2>
+        <h2>{format_date_for_display(metadata.get('period', {}).get('start_date', 'DD-MM-YYYY'))} - {format_date_for_display(metadata.get('period', {}).get('end_date', 'DD-MM-YYYY'))}</h2>
     </section>
 
     <main class="container">
         <section class="tldr">
             <h2>Resumen</h2>
-            {f"<p>{highlight_countries(clean_text(executive_summary.get('annual_overview', 'Resumen de novedades en Arte y Derecho.')))}</p>" if executive_summary.get('annual_overview') else ''}
-            { (lambda bullets: ("<ul>" + ''.join(f"<li>{highlight_countries(clean_text(str(b or '')))}</li>" for b in bullets if b) + "</ul>") if bullets else "" ) (executive_summary.get('annual_bullets', []) or []) }
+            { (lambda bullets: ("<ul>" + ''.join(f"<li>{highlight_countries(clean_text(str(b or '')))}</li>" for b in bullets if b) + "</ul>") if bullets else f"<p>{highlight_countries(clean_text(executive_summary.get('weekly_overview', 'Resumen de novedades en Gobernanza de Datos.')))}</p>" ) (executive_summary.get('weekly_bullets', []) or []) }
         </section>
 
         {generate_jurisdiction_chart(data)}
@@ -907,7 +813,7 @@ def generate_original_html(data: dict) -> str:
         key_figures = content.get('key_figures', {}) or {}
         next_milestones = content.get('next_milestones', []) or []
         case_refs = content.get('case_refs', []) or []
-        objects = content.get('objects', []) or []
+        entities = content.get('entities', []) or []
 
         # Componer metadatos
         meta_parts = []
@@ -931,26 +837,26 @@ def generate_original_html(data: dict) -> str:
             chips_html += f'<span class="chip">Remedios: {render_list(remedies)}</span>'
         if key_figures:
             amount = key_figures.get('amount')
-            items_returned = key_figures.get('items_returned')
+            records_affected = key_figures.get('records_affected')
             kf_parts = []
             if amount:
                 kf_parts.append(f"Importe: {amount}")
-            if items_returned is not None:
-                kf_parts.append(f"Piezas devueltas: {items_returned}")
+            if records_affected is not None:
+                kf_parts.append(f"Registros afectados: {records_affected}")
             if kf_parts:
                 chips_html += f'<span class="chip">Cifras: {"; ".join(kf_parts)}</span>'
 
-        # Objetos (mostramos hasta 2)
-        objects_html = ''
-        if objects:
+        # Entidades (mostramos hasta 2)
+        entities_html = ''
+        if entities:
             preview = []
-            for o in objects[:2]:
-                artist = o.get('artist') or ''
-                title_o = o.get('title') or ''
-                year = o.get('year') or ''
-                preview.append(' — '.join([v for v in [artist, title_o, year] if v]))
+            for e in entities[:2]:
+                name = e.get('name') or ''
+                entity_type = e.get('type') or ''
+                sector = e.get('sector') or ''
+                preview.append(' — '.join([v for v in [name, entity_type, sector] if v]))
             if preview:
-                objects_html = f"<div class=\"item-content\"><strong>Objetos:</strong> {', '.join(preview)}</div>"
+                entities_html = f"<div class=\"item-content\"><strong>Entidades:</strong> {', '.join(preview)}</div>"
 
         # Próximos hitos
         milestones_html = ''
@@ -967,7 +873,7 @@ def generate_original_html(data: dict) -> str:
             <article class="item">
                 <h3><a href="{original_url_clean}" target="_blank">{i}. {headline}</a></h3>
                 <div class="item-content">{summary}</div>
-                {objects_html}
+                {entities_html}
                 {milestones_html}
                 {case_refs_html}
                 <div class="chips">{chips_html}</div>
@@ -990,15 +896,13 @@ def generate_original_html(data: dict) -> str:
             title_d = clean_text(d.get('headline') or d.get('title') or 'Sin título') or 'Sin título'
             original_url = d.get('url', '#')
             original_url_clean, google_url, lucky_url = get_smart_url(title_d, original_url)
-            # Solo mostrar si no es el ejemplo genérico
-            if title_d.lower() not in ['sin título', 'titular descartado']:
-                html += f"""
-                <div class="discarded-item">
-                    <h4>{i}. {title_d}</h4>
-                    <div class="item-links">
-                        <a href="{google_url}" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                    </div>
+            html += f"""
+            <div class="discarded-item">
+                <h4>{i}. {title_d}</h4>
+                <div class="item-links">
+                    <a href="{google_url}" target="_blank" class="link-btn google-link">Buscar en Google</a>
                 </div>
+            </div>
 """
         
         html += """
@@ -1014,8 +918,8 @@ def generate_original_html(data: dict) -> str:
 
     <footer class="footer">
         <p>&copy; 2025 Kepler Karst Law Firm. Todos los derechos reservados.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Boletín semanal de Arte y Derecho</p>
-        <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">Hecho por Laura Villarraga</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Boletín semanal de Gobernanza de Datos</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">Generado a partir de datos JSON estructurados</p>
     </footer>
 </body>
 </html>"""
@@ -1025,8 +929,8 @@ def generate_original_html(data: dict) -> str:
 
 def main():
     if len(sys.argv) != 2:
-        print("Uso: python json_to_html_converter_artlaw.py <archivo_json>")
-        print("Ejemplo: python json_to_html_converter_artlaw.py artlaw_digest.json")
+        print("Uso: python json_to_html_converter_datagovernance.py <archivo_json>")
+        print("Ejemplo: python json_to_html_converter_datagovernance.py datagovernance_digest.json")
         sys.exit(1)
 
     json_file = sys.argv[1]
@@ -1040,7 +944,7 @@ def main():
     meta_html = generate_meta_html(data)
     
     # Crear directorio de salida si no existe
-    output_dir = Path("docs/art-law/issues")
+    output_dir = Path("docs/data-governance/issues")
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # Escribir archivos HTML en la carpeta correcta
@@ -1063,5 +967,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-

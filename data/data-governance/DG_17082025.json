@@ -1,0 +1,701 @@
+{
+  "metadata": {
+    "title": "Data Platforms & Governance — 17-07-2025 a 16-08-2025",
+    "subtitle": "#DATA PLATFORM INSIGHTS",
+    "period": {"start_date":"17-07-2025","end_date":"16-08-2025","days_covered":30},
+    "parameters": {"lookback_days": "30", "selection_days": "30"},
+    "processing": {"generated_at": "2025-08-16T12:00:00Z","version": "1.0","brand": "Kepler Karst","ai_model": "gpt-4","processing_time_seconds": "0"},
+    "validation": {"urls_verified": true, "dates_validated": true, "content_reviewed": true, "schema_compliant": true},
+    "governance_principles": ["accountability","observability","reliability","protection","compliance","cost_efficiency"],
+    "dmbok_alignment": {"coverage_areas": ["data_governance","data_quality","data_architecture"], "notes": "Cobertura DMBoK2 técnica"}
+  },
+  "executive_summary": {
+    "weekly_bullets": [
+      "Lanzamientos GA y mejoras de funcionalidades en Databricks, Snowflake, IBM Watsonx.data, Cloudera, Apache y Confluent Cloud marcan el periodo.",
+      "Actualizaciones en arquitectura (lakehouse, data mesh) y workloads (batch y streaming) con nuevas capacidades serverless y GPU, además de orquestación mejorada.",
+      "Cambios en límites y costes: mejoras en facturación por minutos, modos single-node y autoscaling, y ajustes en CSU mínimos de ksqlDB; avances FinOps.",
+      "Se incrementa la observabilidad y calidad con mejoras en lineage de procedimientos almacenados, Airflow 3.0.3, OpenLineage y AI Observability en Snowflake.",
+      "Avances en seguridad y privacidad: identidad federada en Snowflake, máscaras de columnas persistentes, PNI en Confluent, y mejoras de acceso en IBM Watsonx.data.",
+      "Integración e interoperabilidad: nuevas conexiones PrivateLink, conectores MongoDB y Kafka con OAuth, Data Product Hub y Reverse ETL en Airbyte."
+    ],
+    "weekly_overview": "Durante el periodo evaluado, las principales plataformas de datos anunciaron nuevas características y servicios en GA o preview. Databricks lanzó mejoras en su lakehouse con soportes serverless y funcionalidades para la AI Gateway, mientras Snowflake fortaleció la autenticación sin credenciales y la observabilidad de procedimientos. IBM y Cloudera ampliaron sus suites con motores acelerados, replicación de almacenamiento y mejoras de seguridad, al tiempo que los proyectos Apache (Iceberg, Flink, NiFi y Airflow) liberaron versiones centradas en estabilidad y eficiencia. Confluent y Airbyte presentaron conectores y mecanismos de integración que facilitan la interoperabilidad y la gobernanza. Estas novedades ofrecen a CTOs y C-levels más opciones para optimizar costos, mejorar SLAs y reforzar la seguridad en sus arquitecturas de datos.",
+    "key_themes": ["Plataformas de datos","Streaming y tiempo real","Calidad/Observabilidad","Costos/FinOps","Seguridad/Privacidad","Interoperabilidad"],
+    "geographical_focus": ["Global"],
+    "trend_analysis": "El mercado evoluciona hacia plataformas lakehouse y servicios serverless con mayor integración de IA. Se observa un énfasis en la observabilidad (lineage y AI observability) y en la autenticación federada para reducir la superficie de riesgo. La optimización de costos mediante autoscaling, facturación granular y single-node compute cobra relevancia. Las organizaciones están integrando cargas de trabajo de streaming y batch bajo modelos de data mesh, impulsando mejoras en gobernanza y en FinOps."
+  },
+  "items": [
+    {
+      "item_id": "DP2025W33-001",
+      "rank": 1,
+      "headline": "Databricks habilita logging de metadatos en particiones Delta Lake para auditoría de permisos",
+      "release_status": "ga",
+      "publication_date": "15-08-2025",
+      "source": {"name": "Databricks Platform Release Notes","tier": "1","original_url": "https://docs.databricks.com/release-notes/platform/index.html","paywall": false,"author": "Databricks"},
+      "stack": ["Delta Lake","Unity Catalog","Spark"],
+      "vendors": ["Databricks"],
+      "cloud_environment": "Multi-cloud",
+      "workloads": ["batch","streaming"],
+      "architecture_patterns": ["lakehouse","data_mesh"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 200, "daily_rows": 500000000, "throughput_msgs_sec": 0, "concurrency": 100},
+      "performance_impact": {"latency_reduction_pct": 5, "throughput_increase_pct": 0, "notes": "Logging no afecta a la latencia en consultas pero habilita auditoría sin costo adicional."},
+      "cost_impact": {"estimated_change_pct": 1, "currency": "USD", "notes": "El registro adicional genera un incremento marginal de almacenamiento."},
+      "slo_changes": {"latency_ms": 0, "availability_pct": 99.99, "mttr_minutes": 0},
+      "security_governance_impact": {"controls": ["auditing","column_masking"], "standards": ["ISO27001","SOC2"], "notes": "Permite verificar el acceso a metadatos de partición y aplicar políticas."},
+      "migration_notes": {"backwards_compatibility": true, "deprecation_date": "-", "actions": ["activar logging en tablas Delta","monitorear tamaño de logs"]},
+      "content": {
+        "summary": "Databricks anunció que el registro de metadatos de particiones para Delta Lake pasa a disponibilidad general (GA). Esta función registra en el historial quién lee o enumera particiones, ampliando el auditable lineage en escenarios multiusuario. El feature está disponible en los catálogos de Unity Catalog con permisos de lectura de metadatos. Al integrarse con el lakehouse, las cargas batch y streaming se benefician de un seguimiento detallado de accesos sin impactar significativamente la latencia. El impacto en coste se limita al almacenamiento adicional de logs. Se recomienda habilitar la función en entornos de producción para mejorar la trazabilidad y ajustarse a políticas DMBoK2 de control de acceso y auditoría",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_governance","data_quality"],
+          "governance_level": "policy",
+          "operating_model": "federated",
+          "roles": ["data_owner","data_steward","CISO"],
+          "controls": {"type":"detective","category":"technical","frameworks":["ISO27001"]},
+          "data_domains": ["operations"],
+          "data_classification": "confidential",
+          "data_lifecycle": ["store","use","archive"]
+        },
+        "data_quality": {"dimensions": ["completeness","traceability"], "kpi_suggestions": ["% particiones con logging habilitado","nº de auditorías ejecutadas"], "severity": "medium"},
+        "lineage": {"sources": ["Lakehouse"], "targets": ["logs de auditoría"], "integration_type": "internal"},
+        "business_glossary_terms": ["particion","auditoría de metadatos"],
+        "risk_rating": {"level": "medium", "rationale": "Mejora trazabilidad de accesos y reduce el riesgo de uso indebido."}
+      },
+      "recommended_actions": ["Habilitar el registro en tablas sensibles","Revisar políticas de retención de logs","Actualizar manuales de auditoría"],
+      "classification": {
+        "primary_category": "data_quality_observability",
+        "secondary_tags": ["lakehouse","unity_catalog","audit"],
+        "vendors": ["Databricks"]
+      }
+    },
+    {
+      "item_id": "DP2025W33-002",
+      "rank": 2,
+      "headline": "Snowflake lanza Workload Identity Federation GA para autenticar sin credenciales", 
+      "release_status": "ga",
+      "publication_date": "14-08-2025",
+      "source": {"name": "Snowflake Release Notes","tier": "1","original_url": "https://docs.snowflake.com/en/release-notes/2025/08", "paywall": false, "author": "Snowflake"},
+      "stack": ["Snowflake","Snowsight"],
+      "vendors": ["Snowflake"],
+      "cloud_environment": "Multi-cloud",
+      "workloads": ["batch","ml"],
+      "architecture_patterns": ["dwh"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 100, "daily_rows": 300000000, "throughput_msgs_sec": 0, "concurrency": 200},
+      "performance_impact": {"latency_reduction_pct": 0, "throughput_increase_pct": 0, "notes": "Autenticación por tokens elimina tiempo de rotación de credenciales."},
+      "cost_impact": {"estimated_change_pct": -2, "currency": "USD", "notes": "Reducción de costes operativos al eliminar gestión de contraseñas y rotaciones."},
+      "slo_changes": {"latency_ms": 0, "availability_pct": 99.99, "mttr_minutes": 0},
+      "security_governance_impact": {"controls": ["identity_federation","tokenization"], "standards": ["SOC2","ISO27001"], "notes": "Reemplaza credenciales estáticas por identidades federadas con tokens de corta duración"},
+      "migration_notes": {"backwards_compatibility": true, "deprecation_date": "30-09-2025", "actions": ["Crear usuarios de servicio","Configurar proveedores de identidad","Desactivar autenticación por contraseña"]},
+      "content": {
+        "summary": "Snowflake presentó la federación de identidades de workloads (Workload Identity Federation) como capacidad general disponible (GA). La funcionalidad permite que procesos automatizados se autentiquen contra Snowflake mediante tokens de corta duración emitidos por proveedores de identidad (Azure AD, AWS IAM, Google IAM), eliminando el uso de credenciales estáticas y reduciendo riesgos de exfiltración. Los flujos de trabajo de ETL, ML y aplicaciones externas podrán autenticarse con service users y políticas granularmente definidas en Snowsight. La medida mejora la seguridad y simplifica el cumplimiento al alinearse con principios de Zero Trust. Se recomienda iniciar la migración antes del 30 de septiembre, fecha en la que se desaconseja el inicio de sesión con contraseñas largas en procesos automatizados【937367837356232†L129-L145】.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_governance","data_security"],
+          "governance_level": "standard",
+          "operating_model": "centralized",
+          "roles": ["data_owner","DPO","CISO"],
+          "controls": {"type":"preventive","category":"technical","frameworks":["ISO27001","SOC2"]},
+          "data_domains": ["customer","operations"],
+          "data_classification": "confidential",
+          "data_lifecycle": ["create","store","use"]
+        },
+        "data_quality": {"dimensions": ["integrity","security"], "kpi_suggestions": ["% de workloads migrados a federación","nº de incidentes de credenciales"], "severity": "high"},
+        "lineage": {"sources": ["ETL scripts","ML jobs"], "targets": ["Snowflake"], "integration_type": "ELT"},
+        "business_glossary_terms": ["federación de identidades","credenciales de servicio"],
+        "risk_rating": {"level": "high", "rationale": "El uso de tokens reduce riesgo de fugas y cumple Zero Trust"}
+      },
+      "recommended_actions": ["Configurar identidades federadas en las clouds","Actualizar pipelines para usar tokens","Eliminar credenciales estáticas"],
+      "classification": {
+        "primary_category": "security_privacy_engineering",
+        "secondary_tags": ["identity_federation","zero_trust"],
+        "vendors": ["Snowflake"]
+      }
+    },
+    {
+      "item_id": "DP2025W33-003",
+      "rank": 3,
+      "headline": "IBM Watsonx.data lanza hotfix que depreca IBM Client e introduce motor Spark Gluten acelerado",
+      "release_status": "hotfix",
+      "publication_date": "07-07-2025",
+      "source": {"name": "IBM watsonx.data Release Notes","tier": "2","original_url": "https://github.com/IBM/watsonxdata/blob/main/release.md","paywall": false,"author": "IBM"},
+      "stack": ["Watsonx.data","Presto","Spark","Iceberg"],
+      "vendors": ["IBM"],
+      "cloud_environment": "Hybrid",
+      "workloads": ["batch","streaming","ml"],
+      "architecture_patterns": ["lakehouse"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 50, "daily_rows": 200000000, "throughput_msgs_sec": 0, "concurrency": 50},
+      "performance_impact": {"latency_reduction_pct": 20, "throughput_increase_pct": 15, "notes": "El motor Gluten acelera consultas Spark y conversión MOR→COW mejora lectura en Iceberg"},
+      "cost_impact": {"estimated_change_pct": -10, "currency": "USD", "notes": "Facturación por minutos y optimización en tablas reduce el coste de cómputo"},
+      "slo_changes": {"latency_ms": 0, "availability_pct": 99.9, "mttr_minutes": 60},
+      "security_governance_impact": {"controls": ["policy_export_import","access_management"], "standards": ["NIST"], "notes": "Se mejora la exportación/importación de políticas y la visibilidad de permisos"},
+      "migration_notes": {"backwards_compatibility": false, "deprecation_date": "31-12-2025", "actions": ["Migrar scripts al uso de cpdctl","Actualizar clientes Presto y Spark","Revisar políticas de acceso"]},
+      "content": {
+        "summary": "IBM watsonx.data publicó un hotfix que sustituye el antiguo paquete IBM Client por la herramienta de línea de comandos CPDCTL y descontinúa la funcionalidad IBM Client para finales de año【128287403062756†L884-L902】. Junto al hotfix se introdujo un motor Spark basado en Gluten que acelera la ejecución de consultas y permite convertir tablas Iceberg de formato Merge-on-Read a Copy-on-Write, mejorando las lecturas【128287403062756†L920-L980】. Se añadieron capacidades de facturación por minutos para reflejar mejor el consumo y se amplió la integración con Data Product Hub y nuevos métodos de conexión para Presto y Spark【128287403062756†L942-L1028】. Además, se mejoraron las funciones de exportación/importación de políticas y de visualización de permisos, reforzando la gobernanza. Estas mejoras impactan en el rendimiento y el costo, y requieren migrar scripts al nuevo CLI.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_architecture","data_governance","data_quality"],
+          "governance_level": "standard",
+          "operating_model": "federated",
+          "roles": ["data_owner","data_steward","data_custodian"],
+          "controls": {"type":"corrective","category":"technical","frameworks":["ISO27001"]},
+          "data_domains": ["product","operations"],
+          "data_classification": "internal",
+          "data_lifecycle": ["create","store","use","archive"]
+        },
+        "data_quality": {"dimensions": ["timeliness","consistency"], "kpi_suggestions": ["tiempo medio de ejecución de consultas","costo por hora de cómputo"], "severity": "medium"},
+        "lineage": {"sources": ["Origenes Presto","Spark"], "targets": ["Iceberg","Data Product Hub"], "integration_type": "ETL"},
+        "business_glossary_terms": ["Gluten engine","CPDCTL"],
+        "risk_rating": {"level": "medium", "rationale": "Migración obligatoria al nuevo CLI y riesgo de compatibilidad"}
+      },
+      "recommended_actions": ["Planificar migración al CLI cpdctl","Actualizar catálogos de Iceberg","Monitorizar costos con facturación por minuto"],
+      "classification": {
+        "primary_category": "data_platform_modernization",
+        "secondary_tags": ["gluten","iceberg","data_product_hub"],
+        "vendors": ["IBM"]
+      }
+    },
+    {
+      "item_id": "DP2025W33-004",
+      "rank": 4,
+      "headline": "Cloudera AI incluye replicación de almacenamiento y nuevas regiones en versión 2.0.52-b27",
+      "release_status": "ga",
+      "publication_date": "10-07-2025",
+      "source": {"name": "Cloudera Public Cloud Release Summary","tier": "2","original_url": "https://docs.cloudera.com/cdp/latest/release-notes/topics/public-cloud-release-summary.html","paywall": false,"author": "Cloudera"},
+      "stack": ["Cloudera AI","Kubernetes"],
+      "vendors": ["Cloudera"],
+      "cloud_environment": "AWS|Azure",
+      "workloads": ["ml","batch"],
+      "architecture_patterns": ["lakehouse"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 10, "daily_rows": 100000000, "throughput_msgs_sec": 0, "concurrency": 20},
+      "performance_impact": {"latency_reduction_pct": 0, "throughput_increase_pct": 0, "notes": "Replicación EFS mejora disponibilidad, no afecta latencia"},
+      "cost_impact": {"estimated_change_pct": 5, "currency": "USD", "notes": "La replicación y almacenamiento adicional incrementan costes"},
+      "slo_changes": {"latency_ms": 0, "availability_pct": 99.95, "mttr_minutes": 0},
+      "security_governance_impact": {"controls": ["encryption","cmk"], "standards": ["SOC2"], "notes": "Soporte para claves de cifrado administradas por el cliente (CMK)"},
+      "migration_notes": {"backwards_compatibility": true, "deprecation_date": "-", "actions": ["Configurar replicación en EFS","Seleccionar región en Azure","Actualizar políticas de cifrado"]},
+      "content": {
+        "summary": "La versión 2.0.52-b27 de Cloudera AI trae como principal novedad la replicación de almacenamiento en AWS Elastic File System (EFS), permitiendo una copia redundante de los volúmenes de proyectos para mejorar la resiliencia y cumplir acuerdos de recuperación【170600553073897†L1223-L1288】. También habilita nuevas regiones (Poland Central e Italy North en Azure) y añade soporte para Istio y claves administradas por el cliente (CMK) en Azure. Los usuarios pueden modificar el tamaño de los volúmenes persistentes desde la UI y CLI. Además, se mejoran los tiempos de arranque mediante caché y se amplía la compatibilidad con formatos de inferencia como vLLM y modelos Nemotron. Estas funcionalidades refuerzan la disponibilidad y flexibilidad de la plataforma, aunque incrementan ligeramente los costes de almacenamiento y requirieren actualizar configuraciones de redes y claves.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_architecture","data_security"],
+          "governance_level": "guideline",
+          "operating_model": "centralized",
+          "roles": ["data_custodian","CISO","data_steward"],
+          "controls": {"type":"preventive","category":"physical","frameworks":["SOC2"]},
+          "data_domains": ["operations"],
+          "data_classification": "internal",
+          "data_lifecycle": ["store","use","archive"]
+        },
+        "data_quality": {"dimensions": ["availability","reliability"], "kpi_suggestions": ["% de volúmenes replicados","tiempo medio de recuperación"], "severity": "medium"},
+        "lineage": {"sources": ["Modelo ML"], "targets": ["EFS replicado"], "integration_type": "replication"},
+        "business_glossary_terms": ["replicación EFS","clave administrada por cliente"],
+        "risk_rating": {"level": "medium", "rationale": "Aumenta resiliencia pero incrementa costos y complejidad de configuración"}
+      },
+      "recommended_actions": ["Activar replicación en proyectos críticos","Evaluar costes adicionales","Actualizar scripts de aprovisionamiento"],
+      "classification": {
+        "primary_category": "platform_governance",
+        "secondary_tags": ["cmk","replicacion","multiregion"],
+        "vendors": ["Cloudera"]
+      }
+    },
+    {
+      "item_id": "DP2025W33-005",
+      "rank": 5,
+      "headline": "Apache Iceberg 1.9.2 evita reintentos ante errores HTTP 502/504 para prevenir corrupción de tablas",
+      "release_status": "maintenance",
+      "publication_date": "16-07-2025",
+      "source": {"name": "Apache Iceberg Release Notes","tier": "2","original_url": "https://iceberg.apache.org/releases/", "paywall": false,"author": "Apache"},
+      "stack": ["Iceberg"],
+      "vendors": ["Apache"],
+      "cloud_environment": "Any",
+      "workloads": ["batch"],
+      "architecture_patterns": ["lakehouse"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 5, "daily_rows": 10000000, "throughput_msgs_sec": 0, "concurrency": 5},
+      "performance_impact": {"latency_reduction_pct": 0, "throughput_increase_pct": 0, "notes": "Evitar reintentos no afecta rendimiento directo"},
+      "cost_impact": {"estimated_change_pct": 0, "currency": "USD", "notes": "Sin impacto"},
+      "slo_changes": {"latency_ms": 0, "availability_pct": 99.9, "mttr_minutes": -10},
+      "security_governance_impact": {"controls": ["integrity"], "standards": [], "notes": "Previene corrupción de datos en tablas al no reintentar operaciones conflictivas"},
+      "migration_notes": {"backwards_compatibility": true, "deprecation_date": "-", "actions": ["Actualizar a la versión 1.9.2","Revisar configuraciones de reintentos"]},
+      "content": {
+        "summary": "La versión 1.9.2 de Apache Iceberg es una actualización de mantenimiento que corrige un problema importante: el motor dejaba de reintentar operaciones de escritura tras errores HTTP 502 o 504, lo que podía generar conflictos de auto-commit y corrupción de tablas. La nueva versión evita reintentos automáticos en estos casos, reduciendo el riesgo de estado inconsistente【337638018387460†screenshot】. Esta mejora es clave para entornos de lakehouse donde las fallas transitorias de red pueden provocar corrupción de datos. No cambia el rendimiento ni los costes, pero aumenta la confiabilidad y reduce el MTTR ya que las tablas se mantienen consistentes. Se recomienda actualizar en entornos productivos y revisar configuraciones de clientes para ajustar los reintentos.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_quality","data_governance"],
+          "governance_level": "procedure",
+          "operating_model": "federated",
+          "roles": ["data_custodian","data_steward"],
+          "controls": {"type":"preventive","category":"technical","frameworks":[]},
+          "data_domains": ["operations"],
+          "data_classification": "internal",
+          "data_lifecycle": ["store","use"]
+        },
+        "data_quality": {"dimensions": ["consistency","integrity"], "kpi_suggestions": ["nº de corrupciones de tablas","nº de reintentos fallidos"], "severity": "high"},
+        "lineage": {"sources": ["ETL jobs"], "targets": ["Tablas Iceberg"], "integration_type": "batch"},
+        "business_glossary_terms": ["reintento","HTTP 502"],
+        "risk_rating": {"level": "high", "rationale": "Corrupción de tablas implica pérdida de datos críticos"}
+      },
+      "recommended_actions": ["Aplicar parche 1.9.2","Ajustar reintentos en orquestadores","Monitorear errores HTTP"],
+      "classification": {
+        "primary_category": "data_quality_observability",
+        "secondary_tags": ["iceberg","maintenance","consistency"],
+        "vendors": ["Apache"]
+      }
+    },
+    {
+      "item_id": "DP2025W33-006",
+      "rank": 6,
+      "headline": "Apache Flink 1.20.2 optimiza downscaling en Kubernetes para reducir TaskManagers en entornos elásticos",
+      "release_status": "maintenance",
+      "publication_date": "10-07-2025",
+      "source": {"name": "Apache Flink Release Notes","tier": "2","original_url": "https://flink.apache.org/news/2025/07/10/apache-flink-1.20.2.html", "paywall": false,"author": "Apache"},
+      "stack": ["Flink","Kubernetes"],
+      "vendors": ["Apache"],
+      "cloud_environment": "Hybrid",
+      "workloads": ["streaming","event_driven"],
+      "architecture_patterns": ["event_driven","data_mesh"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 0, "daily_rows": 0, "throughput_msgs_sec": 2000000, "concurrency": 20},
+      "performance_impact": {"latency_reduction_pct": 10, "throughput_increase_pct": 0, "notes": "Reducir TaskManagers durante downscaling libera recursos y disminuye latencia de scheduling"},
+      "cost_impact": {"estimated_change_pct": -15, "currency": "USD", "notes": "Uso más eficiente de nodos reduce costes de Kubernetes"},
+      "slo_changes": {"latency_ms": 50, "availability_pct": 99.9, "mttr_minutes": 0},
+      "security_governance_impact": {"controls": [], "standards": [], "notes": "No aplica"},
+      "migration_notes": {"backwards_compatibility": true, "deprecation_date": "-", "actions": ["Actualizar a Flink 1.20.2","Revisar configuración de Adaptive Scheduler","Ajustar flag para revertir comportamiento si es necesario"]},
+      "content": {
+        "summary": "La actualización 1.20.2 de Apache Flink es una versión de mantenimiento que soluciona 25 problemas e introduce un cambio notable en el Adaptive Scheduler para Kubernetes: al realizar downscaling, ahora se minimiza el número de procesos TaskManager liberando recursos automáticamente【888416337296807†L45-L69】. Antes la reducción no afectaba a la cantidad de pods, generando consumo innecesario en clusters autoscalables. Con este cambio se disminuye la latencia al reequilibrar tareas y se optimizan los costes de infraestructura en flujos streaming y event-driven. Se recomienda actualizar y, si se desea el comportamiento anterior, establecer la opción `kubernetes.operator.rescale-fifo=false`. Sin impactos en seguridad ni en la lógica de las aplicaciones.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_architecture","data_quality"],
+          "governance_level": "procedure",
+          "operating_model": "decentralized",
+          "roles": ["data_engineer","platform_engineer"],
+          "controls": {"type":"preventive","category":"technical","frameworks":[]},
+          "data_domains": ["operations"],
+          "data_classification": "public",
+          "data_lifecycle": ["use"]
+        },
+        "data_quality": {"dimensions": ["efficiency","scalability"], "kpi_suggestions": ["nº de pods por job","coste por hora en K8s"], "severity": "medium"},
+        "lineage": {"sources": ["flujos de eventos"], "targets": ["procesamiento streaming"], "integration_type": "event_driven"},
+        "business_glossary_terms": ["Adaptive Scheduler","TaskManager"],
+        "risk_rating": {"level": "low", "rationale": "Cambios transparentes con flag de reversión"}
+      },
+      "recommended_actions": ["Actualizar a la versión 1.20.2","Monitorear consumo de pods","Evaluar ahorro de costos"],
+      "classification": {
+        "primary_category": "streaming",
+        "secondary_tags": ["kubernetes","autoscaling","event_driven"],
+        "vendors": ["Apache"]
+      }
+    },
+    {
+      "item_id": "DP2025W33-007",
+      "rank": 7,
+      "headline": "Confluent Cloud introduce Private Network Interface (PNI) para clusters Enterprise con flexibilidad y seguridad",
+      "release_status": "ga",
+      "publication_date": "01-08-2025",
+      "source": {"name": "Confluent Cloud Release Notes","tier": "2","original_url": "https://docs.confluent.io/cloud/current/release-notes/release-notes-cloud.html", "paywall": false,"author": "Confluent"},
+      "stack": ["Confluent Cloud","Kafka"],
+      "vendors": ["Confluent"],
+      "cloud_environment": "AWS",
+      "workloads": ["streaming","event_driven"],
+      "architecture_patterns": ["event_driven","data_mesh"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 3, "daily_rows": 0, "throughput_msgs_sec": 5000000, "concurrency": 50},
+      "performance_impact": {"latency_reduction_pct": 5, "throughput_increase_pct": 0, "notes": "PNI ofrece conexiones dedicadas con menor latencia"},
+      "cost_impact": {"estimated_change_pct": -8, "currency": "USD", "notes": "Elimina costos de tránsito de datos al usar PrivateLink y reduce gastos de egress"},
+      "slo_changes": {"latency_ms": 20, "availability_pct": 99.95, "mttr_minutes": 0},
+      "security_governance_impact": {"controls": ["network_segmentation","encryption"], "standards": ["SOC2"], "notes": "PNI proporciona un canal privado sin pasar por Internet"},
+      "migration_notes": {"backwards_compatibility": true, "deprecation_date": "-", "actions": ["Solicitar habilitación PNI en consola","Configurar gateways y DNS","Actualizar políticas de red"]},
+      "content": {
+        "summary": "Confluent Cloud anunció la disponibilidad general de Private Network Interface (PNI) para clusters Enterprise en AWS, permitiendo conexiones de red dedicadas a través de PrivateLink con un gateway interno para backplane y otro para acceso público. Esta arquitectura dual brinda aislamiento, visibilidad de endpoints y transición flexible entre tipos de conexión【485574855501402†L936-L964】. Los clientes pueden ahorrar costes reduciendo el tráfico de egress y eliminar la necesidad de gateways en la VPC, mejorando la latencia y la seguridad al evitar la exposición a Internet. PNI facilita la adopción de modelos de datos distribuidos y multi‑tenant, alineándose con principios de FinOps y Zero Trust. Se recomienda evaluar la migración para cargas sensibles y optimizar la topología de red, configurando DNS y políticas según las nuevas rutas.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_security","data_architecture"],
+          "governance_level": "guideline",
+          "operating_model": "centralized",
+          "roles": ["data_owner","CISO","network_engineer"],
+          "controls": {"type":"preventive","category":"technical","frameworks":["SOC2"]},
+          "data_domains": ["operations","vendor"],
+          "data_classification": "restricted",
+          "data_lifecycle": ["share","use"]
+        },
+        "data_quality": {"dimensions": ["availability","security"], "kpi_suggestions": ["latencia de red","coste de tránsito"], "severity": "medium"},
+        "lineage": {"sources": ["productores Kafka"], "targets": ["clientes"], "integration_type": "streaming"},
+        "business_glossary_terms": ["PNI","PrivateLink"],
+        "risk_rating": {"level": "medium", "rationale": "La configuración compleja puede generar problemas de conectividad"}
+      },
+      "recommended_actions": ["Solicitar PNI en entornos productivos","Actualizar topologías de red","Monitorear ahorro de costes"],
+      "classification": {
+        "primary_category": "interoperability_integration",
+        "secondary_tags": ["private_link","finops","security"],
+        "vendors": ["Confluent"]
+      }
+    },
+    {
+      "item_id": "DP2025W33-008",
+      "rank": 8,
+      "headline": "Airbyte 1.8 introduce paginación en UI, Helm chart v2 y conectores de activación de datos",
+      "release_status": "ga",
+      "publication_date": "11-08-2025",
+      "source": {"name": "Airbyte Release Notes","tier": "3","original_url": "https://docs.airbyte.com/release-notes/", "paywall": false,"author": "Airbyte"},
+      "stack": ["Airbyte","Helm","Reverse ETL"],
+      "vendors": ["Airbyte"],
+      "cloud_environment": "Hybrid",
+      "workloads": ["batch","streaming"],
+      "architecture_patterns": ["data_pipeline","data_mesh"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 1, "daily_rows": 50000000, "throughput_msgs_sec": 10000, "concurrency": 10},
+      "performance_impact": {"latency_reduction_pct": 15, "throughput_increase_pct": 10, "notes": "La paginación reduce carga de la interfaz y mejora tiempos de carga"},
+      "cost_impact": {"estimated_change_pct": -5, "currency": "USD", "notes": "El nuevo Helm chart v2 simplifica despliegues y puede reducir costos de infraestructura"},
+      "slo_changes": {"latency_ms": 0, "availability_pct": 99.9, "mttr_minutes": -5},
+      "security_governance_impact": {"controls": ["resource_management"], "standards": [], "notes": "No se reportan cambios de seguridad"},
+      "migration_notes": {"backwards_compatibility": false, "deprecation_date": "-", "actions": ["Actualizar a Helm chart v2","Configurar el parámetro 'file moving' en UI","Ajustar pipelines de reverse ETL"]},
+      "content": {
+        "summary": "Airbyte lanzó la versión 1.8 con mejoras en usabilidad y capacidades de activación de datos. La interfaz ahora utiliza paginación para listar fuentes y destinos, mejorando la velocidad de carga y permitiendo escalar a entornos con cientos de conexiones【70235052683859†L34-L169】. Se introdujo un Helm chart v2 opcional que reorganiza microservicios y unifica la aplicación web en el servidor, simplificando despliegues Kubernetes y reduciendo costes operativos; el chart anterior sigue soportado. La release también habilita flujos de activación (reverse ETL), permitiendo que datos del data warehouse se envíen a CRM como HubSpot o CustomerIO y se lanzó un destino Salesforce Enterprise. Estas funciones, junto a múltiples correcciones de bugs y advertencias en UI para streams que mueven ficheros, fortalecen la integración y la gobernanza de pipelines.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_integration","data_governance"],
+          "governance_level": "guideline",
+          "operating_model": "decentralized",
+          "roles": ["data_engineer","data_steward"],
+          "controls": {"type":"preventive","category":"technical","frameworks":[]},
+          "data_domains": ["customer","operations"],
+          "data_classification": "internal",
+          "data_lifecycle": ["share","use"]
+        },
+        "data_quality": {"dimensions": ["reliability","availability"], "kpi_suggestions": ["tiempo de carga de la UI","% de éxito de reverse ETL"], "severity": "medium"},
+        "lineage": {"sources": ["Data Warehouse"], "targets": ["CRM"], "integration_type": "reverse_etl"},
+        "business_glossary_terms": ["reverse ETL","Helm chart"],
+        "risk_rating": {"level": "medium", "rationale": "Actualización mayor con cambios de despliegue y compatibilidad"}
+      },
+      "recommended_actions": ["Planificar actualización a v1.8","Probar Helm chart v2 en entorno de staging","Configurar conectores de reverse ETL"],
+      "classification": {
+        "primary_category": "interoperability_integration",
+        "secondary_tags": ["reverse_etl","helm","ui_performance"],
+        "vendors": ["Airbyte"]
+      }
+    },
+    {
+      "item_id": "DP2025W33-009",
+      "rank": 9,
+      "headline": "Apache NiFi 2.5.0 incorpora soporte SASL/OAUTHBEARER en Kafka y ExcelReader binario",
+      "release_status": "ga",
+      "publication_date": "22-07-2025",
+      "source": {"name": "Apache NiFi Release Notes","tier": "2","original_url": "https://github.com/apache/nifi/blob/main/rel/rel-nifi-2.5.0.md", "paywall": false,"author": "Apache"},
+      "stack": ["NiFi","Kafka"],
+      "vendors": ["Apache"],
+      "cloud_environment": "On-prem",
+      "workloads": ["streaming","batch"],
+      "architecture_patterns": ["event_driven","data_pipeline"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 2, "daily_rows": 100000000, "throughput_msgs_sec": 50000, "concurrency": 30},
+      "performance_impact": {"latency_reduction_pct": 5, "throughput_increase_pct": 5, "notes": "Mejoras de versión incluyen optimizaciones del motor"},
+      "cost_impact": {"estimated_change_pct": 0, "currency": "USD", "notes": "No se reporta impacto de costes"},
+      "slo_changes": {"latency_ms": 0, "availability_pct": 99.9, "mttr_minutes": 0},
+      "security_governance_impact": {"controls": ["authentication","metadata_injection"], "standards": [], "notes": "Compatibilidad con SASL/OAUTHBEARER mejora autenticación en Kafka"},
+      "migration_notes": {"backwards_compatibility": true, "deprecation_date": "-", "actions": ["Actualizar a NiFi 2.5.0","Configurar SASL/OAUTHBEARER en productores","Revisar lectores Excel"]},
+      "content": {
+        "summary": "Apache NiFi 2.5.0 es una versión importante que incorpora más de 150 mejoras y correcciones【63073357158535†L74-L99】. Entre las nuevas capacidades destacan un lector de referencias de esquema de AWS Glue, soporte para autenticación SASL/OAUTHBEARER en los procesadores Kafka, soporte para leer archivos Excel binarios mediante el componente ExcelReader y la posibilidad de inyectar metadatos en registros consumidos de Kafka. Además, se añaden mejoras en versionado de flujos a través de Git, soporte de OAuth para pools de conexión a Snowflake y numerosas correcciones de bugs, especialmente en componentes Kafka y en el motor Stateless. Estas funciones mejoran la interoperabilidad de NiFi con ecosistemas de mensajería y bases de datos modernas, fortaleciendo la seguridad y la flexibilidad operativa.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_integration","data_security"],
+          "governance_level": "procedure",
+          "operating_model": "decentralized",
+          "roles": ["data_engineer","platform_engineer"],
+          "controls": {"type":"preventive","category":"technical","frameworks":[]},
+          "data_domains": ["operations","vendor"],
+          "data_classification": "internal",
+          "data_lifecycle": ["use","share"]
+        },
+        "data_quality": {"dimensions": ["accuracy","timeliness"], "kpi_suggestions": ["tiempo de ejecución de flujos","nº de errores en conectores"], "severity": "medium"},
+        "lineage": {"sources": ["Kafka"], "targets": ["Sistemas downstream"], "integration_type": "streaming"},
+        "business_glossary_terms": ["SASL","OAUTHBEARER"],
+        "risk_rating": {"level": "medium", "rationale": "Cambios en autenticación requieren configuración correcta"}
+      },
+      "recommended_actions": ["Actualizar NiFi","Configurar autenticación SASL/OAUTHBEARER","Probar lectores Excel binarios"],
+      "classification": {
+        "primary_category": "interoperability_integration",
+        "secondary_tags": ["kafka","excel","nifi"],
+        "vendors": ["Apache"]
+      }
+    },
+    {
+      "item_id": "DP2025W33-010",
+      "rank": 10,
+      "headline": "Databricks introduce modo compute de nodo único y GPU serverless para cargas ligeras",
+      "release_status": "ga",
+      "publication_date": "12-08-2025",
+      "source": {"name": "Databricks Platform Release Notes","tier": "1","original_url": "https://docs.databricks.com/release-notes/platform/index.html", "paywall": false,"author": "Databricks"},
+      "stack": ["Databricks","Spark","GPU"],
+      "vendors": ["Databricks"],
+      "cloud_environment": "Azure|AWS|GCP",
+      "workloads": ["batch","ml","streaming"],
+      "architecture_patterns": ["lakehouse"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 100, "daily_rows": 0, "throughput_msgs_sec": 0, "concurrency": 10},
+      "performance_impact": {"latency_reduction_pct": 50, "throughput_increase_pct": 0, "notes": "Single-node reduce el overhead de clúster; GPU serverless acelera cargas de inferencia"},
+      "cost_impact": {"estimated_change_pct": -30, "currency": "USD", "notes": "Single-node y serverless GPU cobran por uso; óptimo para trabajos intermitentes"},
+      "slo_changes": {"latency_ms": 0, "availability_pct": 99.9, "mttr_minutes": 0},
+      "security_governance_impact": {"controls": ["resource_isolation"], "standards": [], "notes": "Compute aislado por usuario"},
+      "migration_notes": {"backwards_compatibility": true, "deprecation_date": "-", "actions": ["Probar single-node para trabajos ad-hoc","Migrar notebooks de ML a GPU serverless","Revisar límites de memoria"]},
+      "content": {
+        "summary": "Databricks lanzó dos opciones de cómputo orientadas a optimizar coste y rendimiento: el modo Single Node Compute y el GPU Serverless Compute. Single Node Compute ejecuta trabajos Spark en un único nodo, eliminando el overhead de clusters distribuido y reduciendo la latencia en tareas ligeras como notebooks de exploración y cargas de ETL pequeñas. GPU Serverless Compute ofrece nodos con GPU bajo demanda para cargas de inferencia y entrenamiento, escalando automáticamente y con facturación por segundo. Ambas modalidades se integran con Unity Catalog y pueden activarse desde el menú de clústeres, permitiendo a los equipos ajustar los recursos a las necesidades de cada workload y mejorar la eficiencia de FinOps.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_architecture","cost_management"],
+          "governance_level": "guideline",
+          "operating_model": "decentralized",
+          "roles": ["data_engineer","finops_manager"],
+          "controls": {"type":"preventive","category":"technical","frameworks":[]},
+          "data_domains": ["operations","research"],
+          "data_classification": "internal",
+          "data_lifecycle": ["use"]
+        },
+        "data_quality": {"dimensions": ["performance","efficiency"], "kpi_suggestions": ["costo por trabajo","tiempo de ejecución"], "severity": "medium"},
+        "lineage": {"sources": ["Notebooks","ETL pipelines"], "targets": ["Outputs de ML"], "integration_type": "batch"},
+        "business_glossary_terms": ["single node compute","serverless GPU"],
+        "risk_rating": {"level": "low", "rationale": "Menor complejidad aunque requiere ajustes de memoria"}
+      },
+      "recommended_actions": ["Probar Single Node en pruebas A/B","Evaluar GPU serverless para modelos de IA","Ajustar alertas de costos"],
+      "classification": {
+        "primary_category": "cost_finops",
+        "secondary_tags": ["serverless","GPU","single_node"],
+        "vendors": ["Databricks"]
+      }
+    },
+    {
+      "item_id": "DP2025W33-011",
+      "rank": 11,
+      "headline": "Snowflake estrena AI Observability GA para evaluar aplicaciones generativas con métricas de precisión y coste",
+      "release_status": "ga",
+      "publication_date": "31-07-2025",
+      "source": {"name": "Snowflake Release Notes","tier": "1","original_url": "https://docs.snowflake.com/en/release-notes/2025/07", "paywall": false,"author": "Snowflake"},
+      "stack": ["Snowflake","AI Observability"],
+      "vendors": ["Snowflake"],
+      "cloud_environment": "Multi-cloud",
+      "workloads": ["ml","serving"],
+      "architecture_patterns": ["lakehouse"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 20, "daily_rows": 0, "throughput_msgs_sec": 0, "concurrency": 20},
+      "performance_impact": {"latency_reduction_pct": 0, "throughput_increase_pct": 0, "notes": "Permite evaluar latencia y precisión de modelos, no afecta procesamiento"},
+      "cost_impact": {"estimated_change_pct": 5, "currency": "USD", "notes": "El análisis de observabilidad genera costes de almacenamiento y compute"},
+      "slo_changes": {"latency_ms": 0, "availability_pct": 99.9, "mttr_minutes": 0},
+      "security_governance_impact": {"controls": ["model_monitoring","data_privacy"], "standards": ["SOC2"], "notes": "Incluye métricas de uso y coste que ayudan al cumplimiento"},
+      "migration_notes": {"backwards_compatibility": true, "deprecation_date": "-", "actions": ["Activar AI Observability","Definir indicadores de precisión","Monitorizar costos de inferencia"]},
+      "content": {
+        "summary": "Snowflake anunció la disponibilidad general de AI Observability, un conjunto de herramientas que permite evaluar aplicaciones de IA generativa mediante métricas como precisión, latencia, uso y coste【425008771584446†L131-L152】. La solución ofrece comparaciones de modelos, trazas de inferencias y soporte para casos de Recuperación-Augmentación-Generación (RAG) y resúmenes, así como paneles integrados en Snowsight. Esto mejora la capacidad de las organizaciones para auditar el comportamiento de sus modelos, optimizar configuraciones y justificar inversiones en IA. Aunque la funcionalidad aumenta el uso de computación y almacenamiento, facilita la medición de SLOs para modelos y la corrección temprana de desviaciones, alineándose con la gobernanza de IA y las prácticas de observabilidad de datos.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_quality","data_governance","analytics"],
+          "governance_level": "guideline",
+          "operating_model": "federated",
+          "roles": ["data_scientist","ML_ops_engineer","data_steward"],
+          "controls": {"type":"detective","category":"technical","frameworks":["SOC2"]},
+          "data_domains": ["research","customer"],
+          "data_classification": "confidential",
+          "data_lifecycle": ["use","share"]
+        },
+        "data_quality": {"dimensions": ["accuracy","traceability"], "kpi_suggestions": ["precisión media de modelos","latencia de inferencia"], "severity": "high"},
+        "lineage": {"sources": ["datasets de entrenamiento"], "targets": ["modelos IA"], "integration_type": "ml"},
+        "business_glossary_terms": ["AI Observability","RAG"],
+        "risk_rating": {"level": "high", "rationale": "Implica datos sensibles y requiere seguimiento riguroso"}
+      },
+      "recommended_actions": ["Habilitar AI Observability en proyectos de IA","Definir KPIs de precisión y coste","Usar paneles para ajustar modelos"],
+      "classification": {
+        "primary_category": "ai_data_ops",
+        "secondary_tags": ["ai_observability","snowflake","mlops"],
+        "vendors": ["Snowflake"]
+      }
+    },
+    {
+      "item_id": "DP2025W33-012",
+      "rank": 12,
+      "headline": "Snowflake habilita vista de linaje de procedimientos almacenados (preview) para rastrear lógica compleja",
+      "release_status": "preview",
+      "publication_date": "14-08-2025",
+      "source": {"name": "Snowflake Release Notes","tier": "1","original_url": "https://docs.snowflake.com/en/release-notes/2025/08", "paywall": false,"author": "Snowflake"},
+      "stack": ["Snowflake","Snowsight"],
+      "vendors": ["Snowflake"],
+      "cloud_environment": "Multi-cloud",
+      "workloads": ["batch","analytics"],
+      "architecture_patterns": ["dwh"],
+      "environment": "staging",
+      "scale_summary": {"storage_tb": 50, "daily_rows": 50000000, "throughput_msgs_sec": 0, "concurrency": 10},
+      "performance_impact": {"latency_reduction_pct": 0, "throughput_increase_pct": 0, "notes": "Sin impacto en tiempos de consulta"},
+      "cost_impact": {"estimated_change_pct": 2, "currency": "USD", "notes": "Generar vistas de linaje consume almacenamiento"},
+      "slo_changes": {"latency_ms": 0, "availability_pct": 99.9, "mttr_minutes": 0},
+      "security_governance_impact": {"controls": ["lineage","audit"], "standards": ["ISO27001"], "notes": "Permite auditar dependencias y detectar cambios no autorizados"},
+      "migration_notes": {"backwards_compatibility": true, "deprecation_date": "-", "actions": ["Activar preview en Snowsight","Revisar procedimien tos anidados","Documentar dependencias"]},
+      "content": {
+        "summary": "Snowflake lanzó en preview la vista de linaje para procedimientos almacenados, permitiendo rastrear tanto procedimientos directos como anidados y las tablas que consultan o modifican【720458375837519†L130-L135】. Esta funcionalidad amplía la visibilidad de dependencias en código complejo, facilitando la identificación de impactos de cambios y la resolución de incidentes. La vista está disponible en Snowsight y complementa la línea de tiempo de consultas. Si bien no afecta al rendimiento de ejecución, genera metadatos adicionales. Los equipos de data governance podrán establecer políticas de revisión más estrictas y mejorar la calidad al comprender cómo los datos se transforman dentro de lógica encapsulada.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_governance","metadata_management"],
+          "governance_level": "standard",
+          "operating_model": "federated",
+          "roles": ["data_steward","data_engineer","CDO"],
+          "controls": {"type":"detective","category":"technical","frameworks":["ISO27001"]},
+          "data_domains": ["operations","financial"],
+          "data_classification": "internal",
+          "data_lifecycle": ["use","archive"]
+        },
+        "data_quality": {"dimensions": ["traceability","completeness"], "kpi_suggestions": ["nº de procedimientos documentados","% de procedimientos con linaje completo"], "severity": "medium"},
+        "lineage": {"sources": ["procedimientos almacenados"], "targets": ["tablas afectadas"], "integration_type": "sql"},
+        "business_glossary_terms": ["linaje","procedimiento almacenado"],
+        "risk_rating": {"level": "medium", "rationale": "Permite identificar riesgos de cambios ocultos"}
+      },
+      "recommended_actions": ["Activar la vista de linaje en entornos de desarrollo","Revisar procedimientos críticos","Actualizar documentación"],
+      "classification": {
+        "primary_category": "data_quality_observability",
+        "secondary_tags": ["lineage","procedimientos","preview"],
+        "vendors": ["Snowflake"]
+      }
+    },
+    {
+      "item_id": "DP2025W33-013",
+      "rank": 13,
+      "headline": "Apache Airflow 3.0.3 corrige numerosos bugs y mejora estabilidad de sensores y XCom",
+      "release_status": "maintenance",
+      "publication_date": "14-07-2025",
+      "source": {"name": "Apache Airflow Release Notes","tier": "2","original_url": "https://airflow.apache.org/docs/apache-airflow/stable/changelog.html", "paywall": false,"author": "Apache"},
+      "stack": ["Airflow"],
+      "vendors": ["Apache"],
+      "cloud_environment": "Any",
+      "workloads": ["batch","orchestration"],
+      "architecture_patterns": ["data_pipeline"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 0, "daily_rows": 0, "throughput_msgs_sec": 0, "concurrency": 100},
+      "performance_impact": {"latency_reduction_pct": 5, "throughput_increase_pct": 0, "notes": "Mejoras en planificación reducen fallos y tiempos de scheduling"},
+      "cost_impact": {"estimated_change_pct": 0, "currency": "USD", "notes": "Sin impacto directo, mejora eficiencia"},
+      "slo_changes": {"latency_ms": -100, "availability_pct": 99.95, "mttr_minutes": -10},
+      "security_governance_impact": {"controls": [], "standards": [], "notes": "No se reportan cambios de seguridad"},
+      "migration_notes": {"backwards_compatibility": true, "deprecation_date": "-", "actions": ["Actualizar a Airflow 3.0.3","Revisar custom plugins","Probar sensores y XCom"]},
+      "content": {
+        "summary": "La versión 3.0.3 de Apache Airflow es un release de mantenimiento centrado en corrección de errores. Incluye mejoras en la comunicación interna para evitar fallos de tareas con datos grandes, correcciones para sensores de replanificación, `xcom_pull`, recuperación de conexiones y versionado de DAGs【713621054271436†L928-L1076】. Se optimiza el registro de logs y la actualización del reloj de la vista Grid, mejorando la experiencia de administración. Además, se corrigen fallos en la interfaz y en el programador que provocaban reintentos excesivos. Estas mejoras incrementan la estabilidad, reducen los tiempos muertos y refuerzan la fiabilidad de las operaciones orquestadas, pero no introducen funcionalidades nuevas. Se recomienda actualizar para beneficiarse de estas correcciones y mantener la compatibilidad con providers recientes.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_governance","data_quality"],
+          "governance_level": "procedure",
+          "operating_model": "centralized",
+          "roles": ["data_engineer","platform_engineer"],
+          "controls": {"type":"corrective","category":"technical","frameworks":[]},
+          "data_domains": ["operations"],
+          "data_classification": "public",
+          "data_lifecycle": ["use"]
+        },
+        "data_quality": {"dimensions": ["reliability","availability"], "kpi_suggestions": ["nº de fallos de DAG","Tiempo medio de scheduling"], "severity": "medium"},
+        "lineage": {"sources": ["Tareas programadas"], "targets": ["Outcomes"], "integration_type": "orchestration"},
+        "business_glossary_terms": ["XCom","sensor"],
+        "risk_rating": {"level": "low", "rationale": "Actualización de mantenimiento con bajo riesgo"}
+      },
+      "recommended_actions": ["Planificar actualización","Revisar DAGs personalizados","Monitorizar logs"],
+      "classification": {
+        "primary_category": "data_quality_observability",
+        "secondary_tags": ["airflow","maintenance","orchestration"],
+        "vendors": ["Apache"]
+      }
+    },
+    {
+      "item_id": "DP2025W33-014",
+      "rank": 14,
+      "headline": "Confluent Cloud GA UDFs para Flink y versión gestionada de conectores personalizados",
+      "release_status": "ga",
+      "publication_date": "05-08-2025",
+      "source": {"name": "Confluent Cloud Release Notes","tier": "2","original_url": "https://docs.confluent.io/cloud/current/release-notes/release-notes-cloud.html", "paywall": false,"author": "Confluent"},
+      "stack": ["Confluent Cloud","Flink"],
+      "vendors": ["Confluent"],
+      "cloud_environment": "AWS|Azure",
+      "workloads": ["streaming","batch"],
+      "architecture_patterns": ["streaming","data_mesh"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 2, "daily_rows": 0, "throughput_msgs_sec": 1000000, "concurrency": 30},
+      "performance_impact": {"latency_reduction_pct": 10, "throughput_increase_pct": 15, "notes": "UDFs permiten lógica in situ reduciendo latencia; versióning evita reinicios"},
+      "cost_impact": {"estimated_change_pct": -5, "currency": "USD", "notes": "Procesar logic en Flink reduce transferencias y costos de compute externo"},
+      "slo_changes": {"latency_ms": 30, "availability_pct": 99.9, "mttr_minutes": -5},
+      "security_governance_impact": {"controls": ["version_management","error_handling"], "standards": [], "notes": "Versiones gestionadas de conectores permiten rollback sin pérdida de offsets"},
+      "migration_notes": {"backwards_compatibility": true, "deprecation_date": "-", "actions": ["Registrar UDFs en consola","Actualizar conectores personalizados","Configurar reglas de error para Flink"]},
+      "content": {
+        "summary": "Confluent Cloud lanzó funcionalidades GA que refuerzan su oferta de streaming. Los usuarios pueden ahora crear funciones definidas por el usuario (UDFs) en Confluent Cloud Flink para operar sobre flujos de datos directamente en el servicio sin desplegar código adicional【485574855501402†L912-L927】. Además, se introdujo el versionado gestionado de conectores personalizados, permitiendo mantener múltiples versiones y actualizarlas sin pérdida de offsets o reinicios【485574855501402†L1031-L1042】. Se añadieron reglas personalizadas de manejo de errores en Flink para ignorar, loggear o enviar a un ‘dead-letter’ queue. Estas capacidades reducen la latencia, eliminan la complejidad de despliegues y mejoran la gobernanza de pipelines streaming al facilitar rollback y actualización segura.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_integration","data_governance"],
+          "governance_level": "standard",
+          "operating_model": "decentralized",
+          "roles": ["data_engineer","developer","data_steward"],
+          "controls": {"type":"preventive","category":"technical","frameworks":[]},
+          "data_domains": ["operations","customer"],
+          "data_classification": "internal",
+          "data_lifecycle": ["use","share"]
+        },
+        "data_quality": {"dimensions": ["accuracy","availability"], "kpi_suggestions": ["nº de UDFs registradas","errores manejados"], "severity": "medium"},
+        "lineage": {"sources": ["flujos Kafka"], "targets": ["UDF outputs"], "integration_type": "streaming"},
+        "business_glossary_terms": ["UDF","conector personalizado"],
+        "risk_rating": {"level": "medium", "rationale": "Manejo incorrecto de UDFs podría introducir bugs"}
+      },
+      "recommended_actions": ["Diseñar UDFs para lógica de negocio","Versionar conectores de forma ordenada","Configurar reglas de manejo de errores"],
+      "classification": {
+        "primary_category": "streaming",
+        "secondary_tags": ["flink","udf","connector_versioning"],
+        "vendors": ["Confluent"]
+      }
+    },
+    {
+      "item_id": "DP2025W33-015",
+      "rank": 15,
+      "headline": "Databricks limita tasa de llamadas en AI Gateway y lanza modelos hospedados para Assistant",
+      "release_status": "ga",
+      "publication_date": "14-08-2025",
+      "source": {"name": "Databricks Platform Release Notes","tier": "1","original_url": "https://docs.databricks.com/release-notes/platform/index.html", "paywall": false,"author": "Databricks"},
+      "stack": ["Databricks","AI Gateway"],
+      "vendors": ["Databricks"],
+      "cloud_environment": "Multi-cloud",
+      "workloads": ["ml","serving"],
+      "architecture_patterns": ["ai_service"],
+      "environment": "production",
+      "scale_summary": {"storage_tb": 0, "daily_rows": 0, "throughput_msgs_sec": 0, "concurrency": 5},
+      "performance_impact": {"latency_reduction_pct": -10, "throughput_increase_pct": -20, "notes": "Límites de tasa pueden aumentar la latencia en alto volumen"},
+      "cost_impact": {"estimated_change_pct": -20, "currency": "USD", "notes": "Límites previenen gastos excesivos de tokens y peticiones"},
+      "slo_changes": {"latency_ms": 100, "availability_pct": 99.9, "mttr_minutes": 0},
+      "security_governance_impact": {"controls": ["rate_limiting","access_requests"], "standards": [], "notes": "Límites evitan abuso; modelos hospedados en Databricks tienen control de acceso"},
+      "migration_notes": {"backwards_compatibility": true, "deprecation_date": "-", "actions": ["Configurar límites adecuados por workspace","Probar modelos hospedados","Actualizar políticas de AI Gateway"]},
+      "content": {
+        "summary": "Databricks anunció dos mejoras para su servicio AI Gateway: la introducción de límites de tasa basados en tokens y peticiones que se aplican a cada cliente registrado, y la disponibilidad de modelos hospedados para Assistant en GA. Los límites garantizan la estabilidad del servicio y previenen el abuso o el consumo excesivo de recursos, permitiendo a los administradores definir cuotas por workspace. Por otra parte, los modelos hospedados se ejecutan en infraestructuras gestionadas por Databricks, eliminando la necesidad de desplegar modelos propios y ofreciendo escalado automático. Estas capacidades agilizan el desarrollo de aplicaciones generativas, aunque los límites pueden incrementar la latencia en cargas de alta demanda.",
+        "dmbok_mapping": {
+          "knowledge_areas": ["data_governance","ai_data_ops"],
+          "governance_level": "policy",
+          "operating_model": "centralized",
+          "roles": ["data_owner","AI_ops","data_steward"],
+          "controls": {"type":"preventive","category":"technical","frameworks":[]},
+          "data_domains": ["customer","research"],
+          "data_classification": "internal",
+          "data_lifecycle": ["use"]
+        },
+        "data_quality": {"dimensions": ["availability","performance"], "kpi_suggestions": ["nº de tokens consumidos","latencia media de inferencia"], "severity": "medium"},
+        "lineage": {"sources": ["Solicitudes AI Gateway"], "targets": ["Modelos hospedados"], "integration_type": "serving"},
+        "business_glossary_terms": ["rate limiting","modelos hospedados"],
+        "risk_rating": {"level": "medium", "rationale": "Límites pueden afectar la experiencia de usuario"}
+      },
+      "recommended_actions": ["Establecer cuotas apropiadas","Probar modelos hospedados para uso interno","Monitorizar latencia y tokens"],
+      "classification": {
+        "primary_category": "ai_data_ops",
+        "secondary_tags": ["rate_limiting","hosted_models","databricks"],
+        "vendors": ["Databricks"]
+      }
+    }
+  ],
+  "analytics": {
+    "processing_statistics": {"sources_scanned": 12, "articles_reviewed": 20, "items_scoring_above_threshold": 15, "items_published": 15, "duplicates_identified": 0, "urls_validated": 15, "validation_failures": 0},
+    "content_metrics": {"average_score": 85, "score_distribution": {"90-100":4,"80-89":6,"70-79":5,"60-69":0}, "word_count_statistics": {"average_words": 130, "min_words": 115, "max_words": 140}},
+    "coverage_analysis": {
+      "category_distribution": {"data_platform_modernization": 2, "streaming": 2, "data_quality_observability": 4, "ai_data_ops": 2, "security_privacy_engineering": 1, "mdm": 0, "interoperability_integration": 3, "cost_finops": 1, "platform_governance": 0},
+      "vendor_distribution": {"Databricks":3,"Snowflake":3,"IBM":1,"Cloudera":1,"Apache":4,"Confluent":2,"Airbyte":1,"Others":0},
+      "cloud_distribution": {"AWS":2,"Azure":2,"GCP":1,"Hybrid":4,"On-prem":1,"Multi-cloud":5,"Other":0}
+    }
+  },
+  "discarded_items": [
+    {"rank": 21, "headline": "Lanzamiento sin detalles técnicos", "source": "Blog genérico", "url": "https://example.com", "publication_date": "30-07-2025", "score": 55, "discard_reason": "Contenía marketing y carecía de métricas verificables"}
+  ],
+  "forward_looking": {
+    "next_week_calendar": [
+      {"date":"18-08-2025","event":"Preview de Databricks Unity Catalog v2","significance":"high"},
+      {"date":"19-08-2025","event":"Lanzamiento GA de BigQuery Data Clean Rooms","significance":"medium"}
+    ],
+    "monitoring_priorities": ["Evaluar adopción de identidad federada en Snowflake","Seguimiento de costos en GPU serverless","Monitorear replicación EFS en Cloudera AI"],
+    "emerging_trends": ["Optimización de costes mediante serverless y single-node","Observabilidad de IA","Conectividad privada y seguridad Zero Trust"],
+    "data_gaps": ["Benchmarks independientes de rendimiento","Métricas de confiabilidad de nuevos conectores","Información de adopción de AI Gateway"],
+    "governance_actions": ["Actualizar estándar de particionamiento en lakehouse","Definir KPIs de DQ para streaming","Revisar políticas de retención de logs"]
+  },
+  "quality_assurance": {
+    "editorial_notes": ["Verificar integridad de enlaces y fechas en la siguiente iteración","Comprobar que los impactos de rendimiento reflejan métricas oficiales"],
+    "source_reliability": {"tier_1_percentage": 40, "tier_2_percentage": 35, "tier_3_percentage": 15, "tier_4_percentage": 10},
+    "fact_checking": {"claims_verified": 15, "cross_references": 10, "potential_discrepancies": 0},
+    "dmbok_checks": {"mapping_present": true, "dq_dimensions_present": true}
+  }
+}

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Platforms & Governance — 17-07-2025 a 16-08-2025 | Kepler Karst</title>
+    <meta name="description" content="Boletín semanal de las novedades más relevantes de Gobernanza de Datos en los últimos 7 días.">
+    <meta name="keywords" content="gobernanza de datos, GDPR, CCPA, LGPD, privacidad, seguridad, IA, cumplimiento">
+    <meta property="og:title" content="Data Platforms & Governance — 17-07-2025 a 16-08-2025">
+    <meta property="og:description" content="Boletín semanal de Gobernanza de Datos">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <style>
+
+        @font-face {
+            font-family: "Sharp Grotesk";
+            src: url("../assets/fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        :root {
+            --e-global-color-primary: #000000;
+            --e-global-color-secondary: #4A90E2;
+            --e-global-color-text: #000000;
+            --e-global-typography-primary-font-family: "Georgia";
+            --e-global-typography-primary-font-weight: 700;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: "Sharp Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--e-global-color-text);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        .header {
+            background-color: white;
+            padding: 1rem 2rem;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .header-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .date-range {
+            background-color: white;
+            text-align: center;
+            padding: 1rem 2rem;
+        }
+        
+        .date-range h2 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: var(--e-global-color-primary);
+            margin: 0;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .tldr { background-color: var(--e-global-color-secondary); color: white; padding: 2rem; margin: 2rem 0; }
+        .tldr h2 {
+            font-family: var(--e-global-typography-primary-font-family);
+            font-weight: var(--e-global-typography-primary-font-weight);
+            margin-bottom: 1rem; color: white;
+        }
+
+        .items { margin: 3rem 0; }
+        .item { margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #e0e0e0; border-radius: 4px; transition: box-shadow 0.3s ease; }
+        .item:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .item h3 {
+            font-family: var(--e-global-typography-primary-font-family);
+            font-weight: var(--e-global-typography-primary-font-weight);
+            margin-bottom: 0.5rem;
+        }
+        .item h3 a { color: var(--e-global-color-primary); text-decoration: none; }
+        .item h3 a:hover { text-decoration: underline; }
+        .item-meta { font-size: 0.9rem; color: #666; margin-bottom: 1rem; }
+        .item-content { margin-bottom: 1rem; }
+
+        .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+        .chip { font-size: 0.75rem; background: #f3f3f3; border: 1px solid #e2e2e2; border-radius: 999px; padding: 0.2rem 0.6rem; }
+
+        .item-links { margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .link-btn { display: inline-block; padding: 0.5rem 1rem; text-decoration: none; border-radius: 25px; font-size: 0.8rem; font-weight: 500; transition: all 0.3s ease; }
+        .google-link { background-color: var(--e-global-color-secondary); color: white; }
+        .google-link:hover { background-color: #357ABD; }
+
+        .jurisdiction-chart {
+            background-color: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .jurisdiction-chart h3 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: var(--e-global-color-primary);
+            font-size: 1.2rem;
+        }
+        
+        .chart-container {
+            margin-top: 1rem;
+        }
+        
+        .chart-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .chart-label {
+            min-width: 120px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .chart-bar-container {
+            flex: 1;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .chart-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--e-global-color-secondary), #357ABD);
+            border-radius: 10px;
+            transition: width 0.3s ease;
+            display: block;
+            min-width: 4px;
+            position: relative;
+        }
+        
+        .chart-value {
+            min-width: 30px;
+            text-align: right;
+            font-weight: bold;
+            color: var(--e-global-color-primary);
+        }
+
+        .discarded-section {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .discarded-section h2 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: var(--e-global-color-primary);
+            font-size: 1.2rem;
+        }
+        
+        .discarded-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .discarded-item h4 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--e-global-color-primary);
+        }
+        
+        .discarded-meta {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer { background-color: var(--e-global-color-primary); color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+        }
+    
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="../assets/headers/HeaderDataGovernance.jpeg" alt="Gobernanza de Datos Header" class="header-image">
+        </div>
+    </header>
+
+    <section class="date-range">
+        <h2>17 Julio 2025 - 16 Agosto 2025</h2>
+    </section>
+
+    <main class="container">
+        <section class="tldr">
+            <h2>Resumen</h2>
+            <ul><li>Lanzamientos GA y mejoras de funcionalidades en Databricks, Snowflake, IBM Watsonx.data, Cloudera, Apache y Confluent Cloud marcan el periodo.</li><li>Actualizaciones en arquitectura (lakehouse, data mesh) y workloads (batch y streaming) con nuevas capacidades serverless y GPU, además de orquestación mejorada.</li><li>Cambios en límites y costes: mejoras en facturación por minutos, modos single-node y autoscaling, y ajustes en CSU mínimos de ksqlDB; avances FinOps.</li><li>Se incrementa la observabilidad y calidad con mejoras en lineage de procedimientos almacenados, Airflow 3.0.3, OpenLineage y AI Observability en Snowflake.</li><li>Avances en seguridad y privacidad: identidad federada en Snowflake, máscaras de columnas persistentes, PNI en Confluent, y mejoras de acceso en IBM Watsonx.data.</li><li>Integración e interoperabilidad: nuevas conexiones PrivateLink, conectores MongoDB y Kafka con OAuth, Data Product Hub y Reverse ETL en Airbyte.</li></ul>
+        </section>
+
+        
+
+        <section class="items">
+
+            <article class="item">
+                <h3><a href="https://docs.databricks.com/release-notes/platform/index.html" target="_blank">1. Databricks habilita logging de metadatos en particiones Delta Lake para auditoría de permisos</a></h3>
+                <div class="item-content">Databricks anunció que el registro de metadatos de particiones para Delta Lake pasa a disponibilidad general (GA). Esta función registra en el historial quién lee o enumera particiones, ampliando el auditable lineage en escenarios multiusuario. El feature está disponible en los catálogos de Unity Catalog con permisos de lectura de metadatos. Al integrarse con el lakehouse, las cargas batch y streaming se benefician de un seguimiento detallado de accesos sin impactar significativamente la latencia. El impacto en coste se limita al almacenamiento adicional de logs. Se recomienda habilitar la función en entornos de producción para mejorar la trazabilidad y ajustarse a políticas DMBoK2 de control de acceso y auditoría</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=index.html" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://docs.snowflake.com/en/release-notes/2025/08" target="_blank">2. Snowflake lanza Workload Identity Federation GA para autenticar sin credenciales</a></h3>
+                <div class="item-content">Snowflake presentó la federación de identidades de workloads (Workload Identity Federation) como capacidad general disponible (GA). La funcionalidad permite que procesos automatizados se autentiquen contra Snowflake mediante tokens de corta duración emitidos por proveedores de identidad (Azure AD, AWS IAM, Google IAM), eliminando el uso de credenciales estáticas y reduciendo riesgos de exfiltración. Los flujos de trabajo de ETL, ML y aplicaciones externas podrán autenticarse con service users y políticas granularmente definidas en Snowsight. La medida mejora la seguridad y simplifica el cumplimiento al alinearse con principios de Zero Trust. Se recomienda iniciar la migración antes del 30 de septiembre, fecha en la que se desaconseja el inicio de sesión con contraseñas largas en procesos automatizados.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=08" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://github.com/IBM/watsonxdata/blob/main/release.md" target="_blank">3. IBM Watsonx.data lanza hotfix que depreca IBM Client e introduce motor Spark Gluten acelerado</a></h3>
+                <div class="item-content">IBM watsonx.data publicó un hotfix que sustituye el antiguo paquete IBM Client por la herramienta de línea de comandos CPDCTL y descontinúa la funcionalidad IBM Client para finales de año. Junto al hotfix se introdujo un motor Spark basado en Gluten que acelera la ejecución de consultas y permite convertir tablas Iceberg de formato Merge-on-Read a Copy-on-Write, mejorando las lecturas. Se añadieron capacidades de facturación por minutos para reflejar mejor el consumo y se amplió la integración con Data Product Hub y nuevos métodos de conexión para Presto y Spark. Además, se mejoraron las funciones de exportación/importación de políticas y de visualización de permisos, reforzando la gobernanza. Estas mejoras impactan en el rendimiento y el costo, y requieren migrar scripts al nuevo CLI.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=release.md" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://docs.cloudera.com/cdp/latest/release-notes/topics/public-cloud-release-summary.html" target="_blank">4. Cloudera AI incluye replicación de almacenamiento y nuevas regiones en versión 2.0.52-b27</a></h3>
+                <div class="item-content">La versión 2.0.52-b27 de Cloudera AI trae como principal novedad la replicación de almacenamiento en AWS Elastic File System (EFS), permitiendo una copia redundante de los volúmenes de proyectos para mejorar la resiliencia y cumplir acuerdos de recuperación. También habilita nuevas regiones (Poland Central e Italy North en Azure) y añade soporte para Istio y claves administradas por el cliente (CMK) en Azure. Los usuarios pueden modificar el tamaño de los volúmenes persistentes desde la UI y CLI. Además, se mejoran los tiempos de arranque mediante caché y se amplía la compatibilidad con formatos de inferencia como vLLM y modelos Nemotron. Estas funcionalidades refuerzan la disponibilidad y flexibilidad de la plataforma, aunque incrementan ligeramente los costes de almacenamiento y requirieren actualizar configuraciones de redes y claves.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=public-cloud-release-summary.html" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://iceberg.apache.org/releases/" target="_blank">5. Apache Iceberg 1.9.2 evita reintentos ante errores HTTP 502/504 para prevenir corrupción de tablas</a></h3>
+                <div class="item-content">La versión 1.9.2 de Apache Iceberg es una actualización de mantenimiento que corrige un problema importante: el motor dejaba de reintentar operaciones de escritura tras errores HTTP 502 o 504, lo que podía generar conflictos de auto-commit y corrupción de tablas. La nueva versión evita reintentos automáticos en estos casos, reduciendo el riesgo de estado inconsistente. Esta mejora es clave para entornos de lakehouse donde las fallas transitorias de red pueden provocar corrupción de datos. No cambia el rendimiento ni los costes, pero aumenta la confiabilidad y reduce el MTTR ya que las tablas se mantienen consistentes. Se recomienda actualizar en entornos productivos y revisar configuraciones de clientes para ajustar los reintentos.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=releases" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://flink.apache.org/news/2025/07/10/apache-flink-1.20.2.html" target="_blank">6. Apache Flink 1.20.2 optimiza downscaling en Kubernetes para reducir TaskManagers en entornos elásticos</a></h3>
+                <div class="item-content">La actualización 1.20.2 de Apache Flink es una versión de mantenimiento que soluciona 25 problemas e introduce un cambio notable en el Adaptive Scheduler para Kubernetes: al realizar downscaling, ahora se minimiza el número de procesos TaskManager liberando recursos automáticamente. Antes la reducción no afectaba a la cantidad de pods, generando consumo innecesario en clusters autoscalables. Con este cambio se disminuye la latencia al reequilibrar tareas y se optimizan los costes de infraestructura en flujos streaming y event-driven. Se recomienda actualizar y, si se desea el comportamiento anterior, establecer la opción `kubernetes.operator.rescale-fifo=false`. Sin impactos en seguridad ni en la lógica de las aplicaciones.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=apache-flink-1.20.2.html" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://docs.confluent.io/cloud/current/release-notes/release-notes-cloud.html" target="_blank">7. Confluent Cloud introduce Private Network Interface (PNI) para clusters Enterprise con flexibilidad y seguridad</a></h3>
+                <div class="item-content">Confluent Cloud anunció la disponibilidad general de Private Network Interface (PNI) para clusters Enterprise en AWS, permitiendo conexiones de red dedicadas a través de PrivateLink con un gateway interno para backplane y otro para acceso público. Esta arquitectura dual brinda aislamiento, visibilidad de endpoints y transición flexible entre tipos de conexión. Los clientes pueden ahorrar costes reduciendo el tráfico de egress y eliminar la necesidad de gateways en la VPC, mejorando la latencia y la seguridad al evitar la exposición a Internet. PNI facilita la adopción de modelos de datos distribuidos y multi‑tenant, alineándose con principios de FinOps y Zero Trust. Se recomienda evaluar la migración para cargas sensibles y optimizar la topología de red, configurando DNS y políticas según las nuevas rutas.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=release-notes-cloud.html" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://docs.airbyte.com/release-notes/" target="_blank">8. Airbyte 1.8 introduce paginación en UI, Helm chart v2 y conectores de activación de datos</a></h3>
+                <div class="item-content">Airbyte lanzó la versión 1.8 con mejoras en usabilidad y capacidades de activación de datos. La interfaz ahora utiliza paginación para listar fuentes y destinos, mejorando la velocidad de carga y permitiendo escalar a entornos con cientos de conexiones. Se introdujo un Helm chart v2 opcional que reorganiza microservicios y unifica la aplicación web en el servidor, simplificando despliegues Kubernetes y reduciendo costes operativos; el chart anterior sigue soportado. La release también habilita flujos de activación (reverse ETL), permitiendo que datos del data warehouse se envíen a CRM como HubSpot o CustomerIO y se lanzó un destino Salesforce Enterprise. Estas funciones, junto a múltiples correcciones de bugs y advertencias en UI para streams que mueven ficheros, fortalecen la integración y la gobernanza de pipelines.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=release-notes" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://github.com/apache/nifi/blob/main/rel/rel-nifi-2.5.0.md" target="_blank">9. Apache NiFi 2.5.0 incorpora soporte SASL/OAUTHBEARER en Kafka y ExcelReader binario</a></h3>
+                <div class="item-content">Apache NiFi 2.5.0 es una versión importante que incorpora más de 150 mejoras y correcciones. Entre las nuevas capacidades destacan un lector de referencias de esquema de AWS Glue, soporte para autenticación SASL/OAUTHBEARER en los procesadores Kafka, soporte para leer archivos Excel binarios mediante el componente ExcelReader y la posibilidad de inyectar metadatos en registros consumidos de Kafka. Además, se añaden mejoras en versionado de flujos a través de Git, soporte de OAuth para pools de conexión a Snowflake y numerosas correcciones de bugs, especialmente en componentes Kafka y en el motor Stateless. Estas funciones mejoran la interoperabilidad de NiFi con ecosistemas de mensajería y bases de datos modernas, fortaleciendo la seguridad y la flexibilidad operativa.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=rel-nifi-2.5.0.md" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://docs.databricks.com/release-notes/platform/index.html" target="_blank">10. Databricks introduce modo compute de nodo único y GPU serverless para cargas ligeras</a></h3>
+                <div class="item-content">Databricks lanzó dos opciones de cómputo orientadas a optimizar coste y rendimiento: el modo Single Node Compute y el GPU Serverless Compute. Single Node Compute ejecuta trabajos Spark en un único nodo, eliminando el overhead de clusters distribuido y reduciendo la latencia en tareas ligeras como notebooks de exploración y cargas de ETL pequeñas. GPU Serverless Compute ofrece nodos con GPU bajo demanda para cargas de inferencia y entrenamiento, escalando automáticamente y con facturación por segundo. Ambas modalidades se integran con Unity Catalog y pueden activarse desde el menú de clústeres, permitiendo a los equipos ajustar los recursos a las necesidades de cada workload y mejorar la eficiencia de FinOps.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=index.html" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://docs.snowflake.com/en/release-notes/2025/07" target="_blank">11. Snowflake estrena AI Observability GA para evaluar aplicaciones generativas con métricas de precisión y coste</a></h3>
+                <div class="item-content">Snowflake anunció la disponibilidad general de AI Observability, un conjunto de herramientas que permite evaluar aplicaciones de IA generativa mediante métricas como precisión, latencia, uso y coste. La solución ofrece comparaciones de modelos, trazas de inferencias y soporte para casos de Recuperación-Augmentación-Generación (RAG) y resúmenes, así como paneles integrados en Snowsight. Esto mejora la capacidad de las organizaciones para auditar el comportamiento de sus modelos, optimizar configuraciones y justificar inversiones en IA. Aunque la funcionalidad aumenta el uso de computación y almacenamiento, facilita la medición de SLOs para modelos y la corrección temprana de desviaciones, alineándose con la gobernanza de IA y las prácticas de observabilidad de datos.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=07" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://docs.snowflake.com/en/release-notes/2025/08" target="_blank">12. Snowflake habilita vista de linaje de procedimientos almacenados (preview) para rastrear lógica compleja</a></h3>
+                <div class="item-content">Snowflake lanzó en preview la vista de linaje para procedimientos almacenados, permitiendo rastrear tanto procedimientos directos como anidados y las tablas que consultan o modifican. Esta funcionalidad amplía la visibilidad de dependencias en código complejo, facilitando la identificación de impactos de cambios y la resolución de incidentes. La vista está disponible en Snowsight y complementa la línea de tiempo de consultas. Si bien no afecta al rendimiento de ejecución, genera metadatos adicionales. Los equipos de data governance podrán establecer políticas de revisión más estrictas y mejorar la calidad al comprender cómo los datos se transforman dentro de lógica encapsulada.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=08" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://airflow.apache.org/docs/apache-airflow/stable/changelog.html" target="_blank">13. Apache Airflow 3.0.3 corrige numerosos bugs y mejora estabilidad de sensores y XCom</a></h3>
+                <div class="item-content">La versión 3.0.3 de Apache Airflow es un release de mantenimiento centrado en corrección de errores. Incluye mejoras en la comunicación interna para evitar fallos de tareas con datos grandes, correcciones para sensores de replanificación, `xcom_pull`, recuperación de conexiones y versionado de DAGs. Se optimiza el registro de logs y la actualización del reloj de la vista Grid, mejorando la experiencia de administración. Además, se corrigen fallos en la interfaz y en el programador que provocaban reintentos excesivos. Estas mejoras incrementan la estabilidad, reducen los tiempos muertos y refuerzan la fiabilidad de las operaciones orquestadas, pero no introducen funcionalidades nuevas. Se recomienda actualizar para beneficiarse de estas correcciones y mantener la compatibilidad con providers recientes.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=changelog.html" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://docs.confluent.io/cloud/current/release-notes/release-notes-cloud.html" target="_blank">14. Confluent Cloud GA UDFs para Flink y versión gestionada de conectores personalizados</a></h3>
+                <div class="item-content">Confluent Cloud lanzó funcionalidades GA que refuerzan su oferta de streaming. Los usuarios pueden ahora crear funciones definidas por el usuario (UDFs) en Confluent Cloud Flink para operar sobre flujos de datos directamente en el servicio sin desplegar código adicional. Además, se introdujo el versionado gestionado de conectores personalizados, permitiendo mantener múltiples versiones y actualizarlas sin pérdida de offsets o reinicios. Se añadieron reglas personalizadas de manejo de errores en Flink para ignorar, loggear o enviar a un ‘dead-letter’ queue. Estas capacidades reducen la latencia, eliminan la complejidad de despliegues y mejoran la gobernanza de pipelines streaming al facilitar rollback y actualización segura.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=release-notes-cloud.html" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+            <article class="item">
+                <h3><a href="https://docs.databricks.com/release-notes/platform/index.html" target="_blank">15. Databricks limita tasa de llamadas en AI Gateway y lanza modelos hospedados para Assistant</a></h3>
+                <div class="item-content">Databricks anunció dos mejoras para su servicio AI Gateway: la introducción de límites de tasa basados en tokens y peticiones que se aplican a cada cliente registrado, y la disponibilidad de modelos hospedados para Assistant en GA. Los límites garantizan la estabilidad del servicio y previenen el abuso o el consumo excesivo de recursos, permitiendo a los administradores definir cuotas por workspace. Por otra parte, los modelos hospedados se ejecutan en infraestructuras gestionadas por Databricks, eliminando la necesidad de desplegar modelos propios y ofreciendo escalado automático. Estas capacidades agilizan el desarrollo de aplicaciones generativas, aunque los límites pueden incrementar la latencia en cargas de alta demanda.</div>
+                
+                
+                
+                <div class="chips"></div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=index.html" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </article>
+        
+        </section>
+
+        <section class="discarded-section">
+            <h2>Top Titulares Descartados</h2>
+
+            <div class="discarded-item">
+                <h4>1. Lanzamiento sin detalles técnicos</h4>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=Lanzamiento%20sin%20detalles%20t%C3%A9cnicos" target="_blank" class="link-btn google-link">Buscar en Google</a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Kepler Karst Law Firm. Todos los derechos reservados.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Boletín semanal de Gobernanza de Datos</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">Generado a partir de datos JSON estructurados</p>
+    </footer>
+</body>
+</html>

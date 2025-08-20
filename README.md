@@ -1,6 +1,6 @@
 # Kepler Karst Newsletters
 
-A GitHub Pages repository for publishing two separate newsletters: **Sovereign Debt Weekly** and **Arte y Derecho**.
+A GitHub Pages repository for publishing three separate newsletters: **Sovereign Debt Weekly**, **Arte y Derecho**, and **Gobernanza de Datos Empresarial**.
 
 ## 📁 Repository Structure
 
@@ -13,8 +13,14 @@ docs/                          # GitHub Pages static site
 │   └── assets/
 │       ├── headers/          # Header images
 │       └── fonts/            # Font files
-└── art-law/
-    ├── index.html            # Art Law landing page
+├── art-law/
+│   ├── index.html            # Art Law landing page
+│   ├── issues/               # HTML newsletter files
+│   └── assets/
+│       ├── headers/          # Header images
+│       └── fonts/            # Font files
+└── data-governance/
+    ├── index.html            # Data Governance landing page
     ├── issues/               # HTML newsletter files
     └── assets/
         ├── headers/          # Header images
@@ -22,7 +28,8 @@ docs/                          # GitHub Pages static site
 
 data/                         # JSON source files (not public)
 ├── sovereign-debt/           # Sovereign debt JSON files
-└── art-law/                  # Art law JSON files
+├── art-law/                  # Art law JSON files
+└── data-governance/          # Data governance JSON files
 
 scripts/
 ├── converters/               # JSON to HTML converters
@@ -30,7 +37,8 @@ scripts/
 
 prompts/                      # Newsletter prompts (not public)
 ├── sovereign-debt/           # Sovereign debt prompts
-└── art-law/                  # Art law prompts
+├── art-law/                  # Art law prompts
+└── data-governance/          # Data governance prompts
 ```
 
 ## 🚀 Quick Start
@@ -45,6 +53,9 @@ prompts/                      # Newsletter prompts (not public)
    
    # For Art Law
    python scripts/converters/json_to_html_converter_artlaw.py data/art-law/your_file.json
+   
+   # For Data Governance
+   python scripts/converters/json_to_html_converter_datagovernance.py data/data-governance/your_file.json
    ```
 3. **Move HTML files** to the appropriate `docs/[newsletter]/issues/` folder
 4. **Rebuild indexes** to update the landing pages:
@@ -88,6 +99,7 @@ The `build.ps1` script automatically:
 
 - **Sovereign Debt**: `DDMMYYYY.html` (e.g., `05082025.html`)
 - **Art Law**: Descriptive names (e.g., `arte_derecho_politica_cultural.html`)
+- **Data Governance**: Descriptive names (e.g., `datagovernance_digest_week33.html`)
 - **Analytics**: Add `_meta.html` suffix (e.g., `05082025_meta.html`)
 
 ## 🔧 Scripts
@@ -108,17 +120,20 @@ Python script that:
 ### Converters
 - `scripts/converters/json_to_html_converter_v2.py` - Sovereign Debt
 - `scripts/converters/json_to_html_converter_artlaw.py` - Art Law
+- `scripts/converters/json_to_html_converter_datagovernance.py` - Data Governance
 
 ## 🌐 Website Structure
 
 - **Main Site**: `https://[username].github.io/[repo-name]/`
 - **Sovereign Debt**: `https://[username].github.io/[repo-name]/sovereign-debt/`
 - **Art Law**: `https://[username].github.io/[repo-name]/art-law/`
+- **Data Governance**: `https://[username].github.io/[repo-name]/data-governance/`
 
 ## 📊 Current Statistics
 
 - **Sovereign Debt**: 6 issues published
 - **Art Law**: 2 issues published
+- **Data Governance**: 1 issue published
 
 ## 🎯 Benefits of This Structure
 
