@@ -652,8 +652,20 @@ def generate_original_html(data: dict) -> str:
     processing_statistics = analytics.get('processing_statistics', {}) or {}
     discarded_items = data.get('discarded_items', []) or []
 
-    title = metadata.get('title', 'Arte y Derecho — Boletín semanal')
-    subtitle = metadata.get('subtitle', '#BRAVE ADVOCACY')
+    title = metadata.get('report_title', 'Arte y Derecho — Boletín semanal')
+    subtitle = '#BRAVE ADVOCACY'
+    
+    # Preparar el resumen ejecutivo
+    key_findings = executive_summary.get('key_findings', ['Resumen de novedades en Arte y Derecho.'])
+    summary_text = key_findings[0] if key_findings else 'Resumen de novedades en Arte y Derecho.'
+    summary_html = f"<p>{highlight_countries(clean_text(summary_text))}</p>"
+    
+    # Preparar las viñetas anuales
+    annual_bullets = executive_summary.get('annual_bullets', []) or []
+    bullets_html = ""
+    if annual_bullets:
+        bullets_items = ''.join(f"<li>{highlight_countries(clean_text(str(b or '')))}</li>" for b in annual_bullets if b)
+        bullets_html = f"<ul>{bullets_items}</ul>"
 
     # CSS separado para evitar problemas con llaves en f-strings
     css_styles = """
@@ -872,14 +884,14 @@ def generate_original_html(data: dict) -> str:
     </header>
 
     <section class="date-range">
-        <h2>{format_date_for_display(metadata.get('period', {}).get('start_date', 'DD-MM-YYYY'))} - {format_date_for_display(datetime.now().strftime('%d-%m-%Y'))}</h2>
+        <h2>{format_date_for_display(metadata.get('period', {}).get('start_date', 'DD-MM-YYYY'))} - {format_date_for_display(metadata.get('period', {}).get('end_date', 'DD-MM-YYYY'))}</h2>
     </section>
 
     <main class="container">
         <section class="tldr">
             <h2>Resumen</h2>
-            {f"<p>{highlight_countries(clean_text(executive_summary.get('annual_overview', 'Resumen de novedades en Arte y Derecho.')))}</p>" if executive_summary.get('annual_overview') else ''}
-            { (lambda bullets: ("<ul>" + ''.join(f"<li>{highlight_countries(clean_text(str(b or '')))}</li>" for b in bullets if b) + "</ul>") if bullets else "" ) (executive_summary.get('annual_bullets', []) or []) }
+            {summary_html}
+            {bullets_html}
         </section>
 
         {generate_jurisdiction_chart(data)}
@@ -899,15 +911,25 @@ def generate_original_html(data: dict) -> str:
         source_name = source.get('name', 'Fuente desconocida')
         legal_stage = item.get('legal_stage') or ''
 
-        content = item.get('content', {}) or {}
-        summary = clean_text(content.get('summary', 'Contenido no disponible.')) or 'Contenido no disponible.'
-        laws_invoked = content.get('laws_invoked', []) or []
-        institutions = content.get('institutions', []) or []
-        remedies = content.get('remedies', []) or []
-        key_figures = content.get('key_figures', {}) or {}
-        next_milestones = content.get('next_milestones', []) or []
-        case_refs = content.get('case_refs', []) or []
-        objects = content.get('objects', []) or []
+        content = item.get('content', {})
+        if isinstance(content, dict):
+            summary = clean_text(content.get('summary', 'Contenido no disponible.')) or 'Contenido no disponible.'
+        else:
+            summary = clean_text(content) if isinstance(content, str) else 'Contenido no disponible.'
+        laws_invoked = item.get('classification', {}).get('legal_instruments', []) or []
+        if isinstance(content, dict):
+            institutions = content.get('institutions', []) or []
+            remedies = content.get('remedies', []) or []
+            key_figures = content.get('key_figures', {}) or {}
+            case_refs = content.get('case_refs', []) or []
+            objects = content.get('objects', []) or []
+        else:
+            institutions = []
+            remedies = []
+            key_figures = {}
+            case_refs = []
+            objects = []
+        next_milestones = []
 
         # Componer metadatos
         meta_parts = []
@@ -978,7 +1000,15 @@ def generate_original_html(data: dict) -> str:
         """
 
     # Sección de ítems descartados
+    real_discarded_items = []
     if discarded_items:
+        for d in discarded_items:
+            title_d = clean_text(d.get('headline') or d.get('title') or 'Sin título') or 'Sin título'
+            # Solo incluir si no es el ejemplo genérico
+            if title_d.lower() not in ['sin título', 'titular descartado'] and title_d != 'Sin título':
+                real_discarded_items.append(d)
+    
+    if real_discarded_items:
         html += """
         </section>
 
@@ -986,13 +1016,11 @@ def generate_original_html(data: dict) -> str:
             <h2>Top Titulares Descartados</h2>
 """
         
-        for i, d in enumerate(discarded_items[:5], 1):
+        for i, d in enumerate(real_discarded_items[:5], 1):
             title_d = clean_text(d.get('headline') or d.get('title') or 'Sin título') or 'Sin título'
             original_url = d.get('url', '#')
             original_url_clean, google_url, lucky_url = get_smart_url(title_d, original_url)
-            # Solo mostrar si no es el ejemplo genérico
-            if title_d.lower() not in ['sin título', 'titular descartado']:
-                html += f"""
+            html += f"""
                 <div class="discarded-item">
                     <h4>{i}. {title_d}</h4>
                     <div class="item-links">
