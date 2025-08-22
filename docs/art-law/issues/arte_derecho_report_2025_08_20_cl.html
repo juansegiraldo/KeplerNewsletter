@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias Arte, Derecho y Política Cultural 2025 | Kepler Karst</title>
-    <meta name="description" content="Boletín semanal de las novedades más relevantes de Arte y Derecho.">
-    
+    <title>Arte y Derecho — Reporte Consolidado | Kepler Karst</title>
+    <meta name="description" content="Reporte consolidado de las novedades más relevantes de Arte y Derecho en 2025.">
+    <meta name="keywords" content="arte y derecho, restitución, VARA, ARR, UNESCO, UNIDROIT, cumplimiento, sanciones, museos">
+    <meta property="og:title" content="Arte y Derecho — Reporte Consolidado">
+    <meta property="og:description" content="Reporte consolidado de Arte y Derecho">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
     <style>
         @font-face {
             font-family: "Sharp Grotesk";
@@ -18,6 +23,8 @@
             --e-global-color-primary: #000000;
             --e-global-color-secondary: #F1EEA4;
             --e-global-color-text: #000000;
+            --e-global-typography-primary-font-family: "Georgia";
+            --e-global-typography-primary-font-weight: 700;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -61,19 +68,41 @@
         }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        
         .tldr { background-color: var(--e-global-color-secondary); padding: 2rem; margin: 2rem 0; }
         .tldr h2 {
+            font-family: var(--e-global-typography-primary-font-family);
+            font-weight: var(--e-global-typography-primary-font-weight);
+            margin-bottom: 1rem; color: var(--e-global-color-primary);
+        }
+
+        .cluster-section {
+            margin: 3rem 0;
+            border: 2px solid var(--e-global-color-secondary);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .cluster-title {
+            background-color: var(--e-global-color-secondary);
+            padding: 1rem 2rem;
             font-family: Georgia, serif;
             font-weight: bold;
-            margin-bottom: 1rem; color: var(--e-global-color-primary);
+            font-size: 1.3rem;
+            color: var(--e-global-color-primary);
+            margin: 0;
+        }
+        
+        .cluster-items {
+            padding: 2rem;
         }
 
         .items { margin: 3rem 0; }
         .item { margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #e0e0e0; border-radius: 4px; transition: box-shadow 0.3s ease; }
         .item:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .item h3 {
-            font-family: Georgia, serif;
-            font-weight: bold;
+            font-family: var(--e-global-typography-primary-font-family);
+            font-weight: var(--e-global-typography-primary-font-weight);
             margin-bottom: 0.5rem;
         }
         .item h3 a { color: var(--e-global-color-primary); text-decoration: none; }
@@ -88,6 +117,42 @@
         .link-btn { display: inline-block; padding: 0.5rem 1rem; text-decoration: none; border-radius: 25px; font-size: 0.8rem; font-weight: 500; transition: all 0.3s ease; }
         .google-link { background-color: #E9D95D; color: #333; }
         .google-link:hover { background-color: #d4c552; }
+
+        .stats-summary {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--e-global-color-secondary);
+        }
+        
+        .stats-summary h3 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--e-global-color-primary);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--e-global-color-primary);
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: #666;
+        }
 
         .footer { background-color: var(--e-global-color-primary); color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
 
@@ -104,224 +169,49 @@
     </header>
 
     <section class="date-range">
-        <h2>01 Enero 2025 - 31 Diciembre 2025</h2>
+        <h2>01 Enero 2025 - a la fecha</h2>
     </section>
 
     <main class="container">
+        <section class="stats-summary">
+            <h3>Resumen Estadístico</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Fuentes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Artículos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Únicos</div>
+                </div>
+            </div>
+        </section>
+
         <section class="tldr">
-            <h2>Resumen</h2>
-            <p>2025 marca un año definitorio en la intersección Derecho-Arte con precedentes jurisprudenciales importantes sobre IA y copyright, estableciendo que la autoría humana sigue siendo fundamental para la protección</p>
-            <ul><li>• Regulación UE 2019/880 establece control fronterizo unificado para bienes culturales con sistema ICG operacional desde junio</li><li>• HEAR Act elimina defensas legales clave contra reclamaciones arte nazi, revirtiendo efectos decisión Suprema Corte 2021</li><li>• Primera jurisprudencia definitoria sobre IA y copyright: obras puramente generativas carecen protección, solo contribuciones humanas sustanciales protegibles</li><li>• TJUE amplía jurisdicción transfronteriza para casos PI extranjeros cuando demandado tiene domicilio UE</li><li>• Reino Unido extiende sanciones financieras a participantes mercado artístico con multas hasta £1M efectivas mayo 2025</li><li>• ARR se internacionaliza: Australia expande a 26 países, Reino Unido cambia umbrales a libras esterlinas</li><li>• Casos penales millonarios: Lisa Schiff 30 meses por esquema Ponzi $6.5M, Operación Pandora IX 80 arrestos 37,727 objetos</li><li>• Restituciones históricas: 119 Bronzes Benín a Nigeria, Operación Altarpiece España-Italia 62 bienes recuperados</li><li>• ICOM concluye revisión Código Ética con enfoque descolonización y sostenibilidad, votación 2026</li><li>• Francia impone recortes culturales 'violentos' €2.2 mil millones, Reino Unido responde con £270M Arts Everywhere Fund</li></ul>
+            <h2>Resumen Ejecutivo</h2>
+            <p></p>
+            
+            <h3>Puntos Clave</h3>
+            <ul>
+
+            </ul>
+            
+            <h3>Hallazgos Principales</h3>
+            <ul>
+<li>2025 marca un año definitorio en la intersección Derecho-Arte con precedentes jurisprudenciales importantes sobre IA y copyright, estableciendo que la autoría humana sigue siendo fundamental para la protección</li><li>La entrada en vigor plena del Reglamento UE 2019/880 establece nuevos estándares globales para importación de bienes culturales, con sistemas electrónicos centralizados ICG</li><li>Fortalecimiento significativo de marcos legales para restitución de arte nazi con el HEAR Act estadounidense y decisiones judiciales como el caso Schiele</li><li>Expansión internacional del Artist's Resale Right (ARR) con acuerdos recíprocos Reino Unido-Australia-Nueva Zelanda ampliando protección artistas</li><li>Endurecimiento regulatorio AML/KYC en mercado artístico con nuevas obligaciones para participantes UK y propuestas legislativas estadounidenses</li>
+            </ul>
         </section>
 
-        <section class="items">
-
-            <article class="item">
-                <h3><a href="https://taxation-customs.ec.europa.eu/news/protecting-cultural-heritage-eu-regulation-combat-illicit-trade-comes-effect-2025-06-30_en" target="_blank">1. Regulación UE sobre importación bienes culturales entra en vigor pleno estableciendo controles fronterizos unificados</a></h3>
-                <div class="item-meta">Unión Europea — 28-06-2025 — Comisión Europea</div>
-                <div class="item-content">El Reglamento (UE) 2019/880 alcanza implementación plena estableciendo el sistema electrónico centralizado ICG para licencias de importación de bienes culturales. La normativa requiere licencias obligatorias para bienes arqueológicos superiores a 250 años y declaraciones para objetos culturales mayores de 200 años valorados en €18,000 o más. Prohíbe totalmente la importación de bienes culturales exportados ilegalmente desde terceros países, estableciendo controles uniformes en las fronteras externas de la UE. El sistema ICG operacional permite procesar solicitudes centralizadamente, representando el marco regulatorio más comprehensivo para protección del patrimonio cultural en jurisdicción europea. La regulación afecta especialmente arte asiático, tribal, íconos rusos y antigüedades, requiriendo evidencia de exportación lícita desde país de origen.</div>
-                <div class="chips"><span class="chip">Etapa: Implementación normativa</span><span class="chip">Leyes: Reglamento (UE) 2019/880, ICG System</span><span class="chip">Flags: AML/KYC, Import controls, Cross-border</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Regulaci%C3%B3n%20UE%20sobre%20importaci%C3%B3n%20bienes%20culturales%20entra%20en%20vigor%20pleno%20estableciendo%20controles%20fronterizos%20unificados" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
         
-            <article class="item">
-                <h3><a href="https://www.theartnewspaper.com/2025/07/07/revamped-holocaust-recovery-bill-to-scupper-powerful-legal-defences" target="_blank">2. HEAR Act elimina defensas legales contra reclamaciones arte nazi revirtiendo precedente Suprema Corte</a></h3>
-                <div class="item-meta">Estados Unidos — 07-07-2025 — The Art Newspaper</div>
-                <div class="item-content">El Senado estadounidense introduce el Holocaust Expropriated Art Recovery Act de 2025, eliminando defensas procesales clave como 'laches', 'prescripción adquisitiva' y 'toma doméstica' en casos de arte nazi. Mantiene plazo limitativo de seis años tras descubrimiento pero revierte efectos de la decisión de la Suprema Corte de 2021 sobre el Tesoro Guelph. La legislación fortalece significativamente la posición jurídica de herederos en reclamaciones de restitución, eliminando obstáculos procesales que históricamente protegían a poseedores actuales. Actualmente en el Comité Judicial del Senado, representa el desarrollo más significativo en legislación de restitución de arte nazi desde la Ley HEAR original de 2016.</div>
-                <div class="chips"><span class="chip">Etapa: Legislativo pendiente</span><span class="chip">Leyes: HEAR Act 2025, 17 USC</span><span class="chip">Flags: Restitution, Nazi art, Procedural reform</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=HEAR%20Act%20elimina%20defensas%20legales%20contra%20reclamaciones%20arte%20nazi%20revirtiendo%20precedente%20Suprema%20Corte" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.cnbc.com/2025/03/19/ai-art-cannot-be-copyrighted-appeals-court-rules.html" target="_blank">3. Tribunal Apelaciones confirma que IA no puede obtener copyright estableciendo precedente autoría humana</a></h3>
-                <div class="item-meta">Estados Unidos — 19-03-2025 — CNBC</div>
-                <div class="item-content">El Tribunal Federal de Apelaciones del Circuito DC confirma definitivamente que el arte creado autónomamente por inteligencia artificial carece de protección copyright, estableciendo precedente fundamental sobre autoría humana. La decisión en Thaler v. Perlmutter rechaza argumentos constitucionales, determinando que obras puramente generativas como 'A Recent Entrance to Paradise' de Creativity Machine no califican para protección. El precedente clarifica que solo contribuciones humanas sustanciales en obras híbridas AI-humano reciben protección copyright. La decisión marca el año 2025 como definitorio en jurisprudencia IA-copyright, estableciendo marcos claros para industrias creativas en la era de generación automatizada. Impacta directamente mercado artístico digital y coleccionismo NFT.</div>
-                <div class="chips"><span class="chip">Etapa: Decisión judicial definitiva</span><span class="chip">Leyes: 17 USC, Copyright Act</span><span class="chip">Flags: AI governance, Copyright, Precedent setting</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Tribunal%20Apelaciones%20confirma%20que%20IA%20no%20puede%20obtener%20copyright%20estableciendo%20precedente%20autor%C3%ADa%20humana" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.theartnewspaper.com/2025/01/13/uk-financial-sanctions-expanded-to-include-art-trade" target="_blank">4. Reino Unido extiende sanciones financieras a participantes mercado artístico con multas hasta £1M</a></h3>
-                <div class="item-meta">Reino Unido — 13-01-2025 — The Art Newspaper</div>
-                <div class="item-content">A partir del 14 mayo 2025, participantes del mercado artístico y comerciantes de alto valor en Reino Unido deben cumplir obligaciones de reporte de sanciones financieras bajo supervisión OFSI. Los 'relevant firms' deben informar 'tan pronto como sea practicable' sobre personas designadas o infracciones. El régimen sancionador incluye multas hasta £1 millón o 50% del valor de la transacción, con prisión hasta 7 años para casos graves. OFSI identifica sub-reporte persistente de bienes de alto valor propiedad de personas sancionadas, destacando riesgos de manipulación de valuaciones, instalaciones de almacenamiento como 'puntos ciegos' y uso de cripto-activos para evadir sanciones. Reino Unido representa £11 mil millones del mercado artístico global de £65 mil millones.</div>
-                <div class="chips"><span class="chip">Etapa: Implementación regulatoria</span><span class="chip">Leyes: OFSI Regulations, Sanctions Act</span><span class="chip">Flags: Financial sanctions, Art market, OFSI</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Reino%20Unido%20extiende%20sanciones%20financieras%20a%20participantes%20mercado%20art%C3%ADstico%20con%20multas%20hasta%20%C2%A31M" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://art-crime.blogspot.com/2025/04/a-landmark-win-in-fight-for-restitution.html" target="_blank">5. Tribunal Supremo NY ordena devolución dibujo Schiele estableciendo precedente art nazi</a></h3>
-                <div class="item-meta">Nueva York, Estados Unidos — 23-04-2025 — ARCAblog</div>
-                <div class="item-content">La jueza Althea Drysdale falla a favor de la Fiscalía de Manhattan ordenando al Art Institute of Chicago devolver 'Russian War Prisoner' (1916) de Egon Schiele a herederos de Fritz Grünbaum. La decisión de 79 páginas establece que la obra constituye propiedad robada bajo ley neoyorkina desde su confiscación nazi de 1938, aplicando doctrina de prescripción adquisitiva limitada. El museo obtuvo suspensión temporal en mayo 2025 pero la decisión sienta precedente importante para casos similares. El fallo fortalece la posición jurídica de herederos del Holocausto en jurisdicción Nueva York, complementando desarrollos legislativos federales como el HEAR Act. Representa victoria significativa en litigio multi-jurisdiccional sobre colección Grünbaum dispersa globalmente.</div>
-                <div class="chips"><span class="chip">Etapa: Decisión judicial apelada</span><span class="chip">Leyes: NY Property Law, NSPA</span><span class="chip">Flags: Nazi art, Restitution, Museum compliance</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Tribunal%20Supremo%20NY%20ordena%20devoluci%C3%B3n%20dibujo%20Schiele%20estableciendo%20precedente%20art%20nazi" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.jonesday.com/en/insights/2025/03/cjeu-grants-jurisdiction-over-foreign-ip-infringement-cases" target="_blank">6. TJUE amplía jurisdicción tribunales UE para casos infracciones PI extranjeras</a></h3>
-                <div class="item-meta">Unión Europea — 25-02-2025 — Jones Day</div>
-                <div class="item-content">El TJUE en BSH Hausgeräte GmbH v. Electrolux AB establece que tribunales UE pueden conocer casos de infracción de derechos de propiedad intelectual extranjeros (copyright, marcas, diseños) cuando el demandado tenga domicilio en Estado miembro. Las decisiones tienen efecto inter partes únicamente, preservando la validez de derechos PI en jurisdicciones de registro original. Esta expansión jurisdiccional amplía significativamente las opciones de enforcement transfronterizo para titulares de derechos, especialmente beneficiando artistas y creadores con derechos registrados fuera de la UE. La decisión complementa el precedente Kwantum v. Vitra sobre protección obras de arte aplicado, creando marco jurisdiccional más robusto para protección internacional de derechos creativos en territorio europeo.</div>
-                <div class="chips"><span class="chip">Etapa: Decisión judicial definitiva</span><span class="chip">Leyes: Brussels I Regulation, CJEU</span><span class="chip">Flags: Cross-border IP, Jurisdiction, CJEU</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=TJUE%20ampl%C3%ADa%20jurisdicci%C3%B3n%20tribunales%20UE%20para%20casos%20infracciones%20PI%20extranjeras" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.justice.gov/usao-sdny/pr/prominent-art-advisor-sentenced-prison-defrauding-clients-including-leonardo-dicaprio" target="_blank">7. Lisa Schiff sentenciada 30 meses prisión por esquema Ponzi $6.5M afectando celebrities</a></h3>
-                <div class="item-meta">Distrito Sur Nueva York — 19-03-2025 — Departamento de Justicia SDNY</div>
-                <div class="item-content">Lisa Schiff (54), prestigiosa asesora de arte con clientela celebrity incluyendo Leonardo DiCaprio, sentenciada a 30 meses de prisión más 2 años supervisión por defraudar $6.5 millones mediante esquema tipo Ponzi entre 2018-2023. Debe entregarse el 1 julio 2025. Tribunal ordena restitución $9 millones más decomiso $6.4 millones. El esquema afectó 12 clientes, 1 artista, 1 galería y 1 patrimonio en transacciones de 55 obras de arte. Schiff utilizó fondos para mantener estilo de vida lujoso incluyendo apartamento Manhattan $25,000 mensuales, viajes Europa y compras diseñador. El caso representa el primer procesamiento penal de alto perfil de asesor artístico por fraude financiero en 2025, estableciendo precedente importante para enforcement en servicios de asesoría artística.</div>
-                <div class="chips"><span class="chip">Etapa: Sentencia definitiva</span><span class="chip">Leyes: Wire Fraud Act, RICO</span><span class="chip">Flags: Financial fraud, Art advisory, Ponzi scheme</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Lisa%20Schiff%20sentenciada%2030%20meses%20prisi%C3%B3n%20por%20esquema%20Ponzi%20%246.5M%20afectando%20celebrities" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.government.nl/latest/news/2025/06/18/benin-bronzes-from-the-netherlands-returning-home-to-nigeria" target="_blank">8. Países Bajos devuelve 119 Bronzes Benín Nigeria mayor restitución física historia</a></h3>
-                <div class="item-meta">Países Bajos-Nigeria — 21-06-2025 — Government.nl</div>
-                <div class="item-content">Ceremonia oficial en Museo Nacional de Lagos marca devolución histórica de 119 bronzes de Benín (113 del Wereldmuseum Leiden, 6 de Rotterdam) a Nigeria, constituyendo la mayor restitución física de bronzes hasta la fecha. Resultado de cooperación intensiva basada en investigación exhaustiva de procedencia entre instituciones holandesas y nigerianas. Ministro Eppo Bruins firmó acuerdo marco en febrero 2025. Nigeria decidirá ubicación final de exhibición en nueva instalación NCMM Oba Ovonramwen en Benin City. La restitución establece precedente para futuras devoluciones masivas de patrimonio colonial, demostrando momentum creciente en cooperación internacional para corrección histórica. Representa modelo de colaboración institucional transnacional en restitución cultural.</div>
-                <div class="chips"><span class="chip">Etapa: Restitución completada</span><span class="chip">Leyes: Acuerdo bilateral, Research cooperation</span><span class="chip">Flags: Colonial heritage, International cooperation, Museum ethics</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Pa%C3%ADses%20Bajos%20devuelve%20119%20Bronzes%20Ben%C3%ADn%20Nigeria%20mayor%20restituci%C3%B3n%20f%C3%ADsica%20historia" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.americanbanker.com/news/senate-bill-would-tighten-aml-regulations-on-u-s-art-market" target="_blank">9. Senadores bipartidistas presentan Art Market Integrity Act extendiendo BSA mercado artístico US</a></h3>
-                <div class="item-meta">Estados Unidos — 28-07-2025 — American Banker</div>
-                <div class="item-content">Coalición bipartidista liderada por senador Fetterman presenta Art Market Integrity Act para extender regulaciones anti-lavado bajo Bank Secrecy Act a comerciantes de arte y casas de subastas estadounidenses. La legislación incluye excepciones para artistas vendiendo obra propia y negocios con menos de $50,000 anuales en transacciones artísticas. Motivada por reporte Treasury 2024 identificando vulnerabilidades significativas del mercado artístico para lavado de dinero. El proyecto establecería obligaciones AML similares a las vigentes en Reino Unido y Unión Europea, requiriendo políticas internas, entrenamiento, auditorías independientes y due diligence mejorada. Representa mayor iniciativa regulatoria AML para mercado artístico estadounidense en décadas, buscando cerrar brecha regulatoria internacional identificada por FATF.</div>
-                <div class="chips"><span class="chip">Etapa: Propuesta legislativa</span><span class="chip">Leyes: Bank Secrecy Act, FinCEN</span><span class="chip">Flags: AML compliance, Art market, BSA extension</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Senadores%20bipartidistas%20presentan%20Art%20Market%20Integrity%20Act%20extendiendo%20BSA%20mercado%20art%C3%ADstico%20US" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.interpol.int/News-and-Events/News/2025/Operation-Pandora-IX-results-in-80-arrests" target="_blank">10. Operación Pandora IX Interpol resulta 80 arrestos incautación 37,727 objetos culturales</a></h3>
-                <div class="item-meta">23 países coordinados por España — 15-01-2025 — Interpol</div>
-                <div class="item-content">Novena edición Operación Pandora coordinada por Guardia Civil española resultó en 80 arrestos e incautación 37,727 objetos culturales (piezas arqueológicas, obras arte, monedas, instrumentos musicales) en 23 países. Casos destacados incluyen España interceptando 55 monedas antiguas más anillo en vuelo Mallorca-Alemania; Grecia recuperando 5 íconos bizantinos valorados €70,000; Italia incautando pintura falsa atribuida a Jannis Kounellis valorada €100,000; Ucrania confiscando 87 bienes culturales transportados ilegalmente. Operativo también incautó 69 detectores metales y 23 herramientas excavación ilegal. Representa coordinación internacional más exitosa 2025 contra tráfico ilícito patrimonio cultural, utilizando base datos Interpol con 57,000 objetos robados registrados.</div>
-                <div class="chips"><span class="chip">Etapa: Operativo ejecutado</span><span class="chip">Leyes: UNESCO 1970, CITES</span><span class="chip">Flags: International cooperation, Cultural trafficking, Law enforcement</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Operaci%C3%B3n%20Pandora%20IX%20Interpol%20resulta%2080%20arrestos%20incautaci%C3%B3n%2037%2C727%20objetos%20culturales" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.arts.gov.au/funding-and-support/resale-royalty-scheme" target="_blank">11. Australia expande ARR a 26 países estableciendo mayor red internacional derechos reventa</a></h3>
-                <div class="item-meta">Australia — 31-03-2025 — Office for the Arts</div>
-                <div class="item-content">Australia extendió derechos Artist's Resale Right (ARR) a nueve países adicionales mediante acuerdos recíprocos, ampliando de 17 a 26 países participantes en 2025. Artistas australianos ahora pueden recibir regalías del 5% en reventas comerciales superiores a $1,000 en múltiples jurisdicciones internacionales. Esta expansión fortalece significativamente la protección internacional de derechos de reventa para artistas visuales, estableciendo la red ARR más extensa globalmente. Los acuerdos incluyen mecanismos de reciprocidad con Reino Unido (que cambió umbrales a libras esterlinas) y Nueva Zelanda, creando sistema integrado de protección transfronteriza. El desarrollo representa consolidación internacional más importante del ARR desde directivas europeas originales, beneficiando especialmente artistas contemporáneos con mercados globales.</div>
-                <div class="chips"><span class="chip">Etapa: Expansión regulatoria</span><span class="chip">Leyes: Resale Royalty Scheme, Bilateral agreements</span><span class="chip">Flags: Artist rights, International agreements, Resale royalties</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Australia%20expande%20ARR%20a%2026%20pa%C3%ADses%20estableciendo%20mayor%20red%20internacional%20derechos%20reventa" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.theartnewspaper.com/2025/02/07/french-culture-sector-faces-violent-cuts-as-parliament-adopts-2025-budget" target="_blank">12. Francia impone recortes culturales 'violentos' €2.2 mil millones amenazando 40,000 trabajadores</a></h3>
-                <div class="item-meta">Francia — 07-02-2025 — The Art Newspaper</div>
-                <div class="item-content">Presupuesto francés 2025 impone recortes severos al sector cultural con €2.2 mil millones menos en subsidios estatales a consejos locales, afectando desproporcionadamente diferentes regiones (8%-70% según localización). Valle del Loira sufre reducciones hasta 70%. Los recortes amenazan 40,000 trabajadores culturales con estimación de 1,500 despidos directos. Académie des beaux-arts denuncia 'violencia' de las medidas y ataques verbales contra artistas por parte de funcionarios. La reducción presupuestaria representa el ajuste más severo al sector cultural francés desde austeridad post-2008, contrastando con política cultural histórica francesa. Impacta programas educativos, festivales, subvenciones institucionales y ayudas directas artistas, generando movilizaciones sectoriales sin precedentes en quinto république.</div>
-                <div class="chips"><span class="chip">Etapa: Presupuesto adoptado</span><span class="chip">Leyes: Loi de finances 2025, Subsidios estatales</span><span class="chip">Flags: Budget cuts, Cultural policy, Public funding</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Francia%20impone%20recortes%20culturales%20%27violentos%27%20%E2%82%AC2.2%20mil%20millones%20amenazando%2040%2C000%20trabajadores" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.gov.uk/government/news/85-million-to-support-arts-and-cultural-organisations-across-the-country" target="_blank">13. Reino Unido responde crisis cultural con £270M Arts Everywhere Fund contrarrestando recortes</a></h3>
-                <div class="item-meta">Reino Unido — 27-08-2025 — GOV.UK</div>
-                <div class="item-content">Gobierno británico anuncia paquete financiación £270 millones Arts Everywhere Fund tras revisión independiente Arts Council England liderada por Baronesa Hodge. El fondo incluye £85 millones Creative Foundations Fund, £67 millones infraestructura cultural y transferencia £3.2 millones programas educativos culturales desde Department for Education. Arts Council extiende contratos National Portfolio Organizations por un año debido a proceso revisión. Medida responde a crisis financiera sectorial post-pandemia y busca mantener organizaciones culturales regionales operativas. Contrasta con recortes severos Francia, posicionando Reino Unido como destino preferencial para inversión cultural europea. Incluye aumento 5% presupuestos museos nacionales y £120 millones infraestructura instituciones culturales públicas.</div>
-                <div class="chips"><span class="chip">Etapa: Anuncio presupuestario</span><span class="chip">Leyes: Arts Council England, DCMS funding</span><span class="chip">Flags: Cultural recovery, Public investment, Arts Council</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Reino%20Unido%20responde%20crisis%20cultural%20con%20%C2%A3270M%20Arts%20Everywhere%20Fund%20contrarrestando%20recortes" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://icom.museum/en/resources/standards-guidelines/code-of-ethics/" target="_blank">14. ICOM concluye revisión Código Ética Museos enfocando descolonización sostenibilidad</a></h3>
-                <div class="item-meta">Internacional — 30-04-2025 — ICOM</div>
-                <div class="item-content">Comité Permanente de Ética (ETHCOM) de ICOM concluyó cuarta y última consulta del proceso revisión iniciado en 2022 para modernizar Código de Ética para Museos. El nuevo código se estructura en cinco principios fundamentales y será presentado para votación en Conferencia General ICOM junio 2026. La revisión aborda temas contemporáneos como descolonización, justicia climática, sostenibilidad ambiental y inclusión digital. Representa actualización más comprehensiva del código desde su adopción original, integrando desenvolvimientos post-pandemia, movimientos restitución cultural y crisis climática. El proceso consultivo involucró más de 40,000 profesionales museísticos globalmente, estableciendo nuevos estándares éticos para gobernanza museística del siglo XXI. Incluye principios específicos sobre transparencia, responsabilidad social y heritage at risk.</div>
-                <div class="chips"><span class="chip">Etapa: Consulta completada</span><span class="chip">Leyes: ICOM Code of Ethics, Professional standards</span><span class="chip">Flags: Museum ethics, Decolonization, Sustainability</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=ICOM%20concluye%20revisi%C3%B3n%20C%C3%B3digo%20%C3%89tica%20Museos%20enfocando%20descolonizaci%C3%B3n%20sostenibilidad" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.artnews.com/art-news/market/italy-cuts-art-vat-to-5-percent-1234745954/" target="_blank">15. Italia reduce IVA arte del 22% al 5% tras presión sector estableciendo tasa más baja UE</a></h3>
-                <div class="item-meta">Italia — 15-05-2025 — ARTnews</div>
-                <div class="item-content">Gobierno italiano aprueba reducción drástica IVA ventas arte de 22% a 5% tras campaña presión intensiva de galerías y casas subastas nacionales. Nueva tasa constituye la más baja en Unión Europea, posicionando Italia como destino preferencial para transacciones artísticas europeas. Art Bonus permanente mantiene crédito fiscal 65% para donaciones patrimonio cultural, creando régimen fiscal dual altamente competitivo. Medida busca revitalizar mercado arte italiano frente competencia de centros como Londres, París y Zurich. Se estima impacto de €200 millones anuales en pérdida recaudatoria compensada por incremento actividad económica sectorial. Reforma efectiva desde junio 2025, aplicando retroactivamente a transacciones desde enero 2025.</div>
-                <div class="chips"><span class="chip">Etapa: Reforma fiscal implementada</span><span class="chip">Leyes: IVA reduction, Art Bonus</span><span class="chip">Flags: Tax reform, Market competitiveness, EU compliance</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Italia%20reduce%20IVA%20arte%20del%2022%25%20al%205%25%20tras%20presi%C3%B3n%20sector%20estableciendo%20tasa%20m%C3%A1s%20baja%20UE" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.copyright.gov/ai/" target="_blank">16. Copyright Office publica Parte 2 reporte IA estableciendo autoría humana como requisito fundamental</a></h3>
-                <div class="item-meta">Estados Unidos — 29-01-2025 — U.S. Copyright Office</div>
-                <div class="item-content">Oficina de Copyright estadounidense publica Parte 2 del reporte 'Copyright and Artificial Intelligence: Copyrightability' estableciendo definitivamente que obras generadas completamente por IA carecen de autoría humana necesaria para protección copyright. Solo contribuciones humanas sustanciales en obras híbridas AI-humano pueden recibir protección. El reporte rechaza categóricamente protección para obras puramente generativas, reafirmando que autoría humana constituye pilar fundamental del derecho de autor estadounidense. Clarifica criterios para registros híbridos exitosos como 'A Collection of Objects Which Do Not Exist' y 'Film clip for song Just Like In A Movie', requiriendo demostración de contribución creativa humana sustancial, demostrable e independientemente protegible. Establece marco definitivo para era IA en industrias creativas.</div>
-                <div class="chips"><span class="chip">Etapa: Guía regulatoria oficial</span><span class="chip">Leyes: 17 USC, Copyright registration</span><span class="chip">Flags: AI copyright, Human authorship, Registration guidance</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Copyright%20Office%20publica%20Parte%202%20reporte%20IA%20estableciendo%20autor%C3%ADa%20humana%20como%20requisito%20fundamental" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.justice.gov/usao-sdfl/pr/coconut-grove-art-dealer-charged-conspiracy-commit-wire-fraud-and-money-laundering" target="_blank">17. Leslie Roberts imputado por conspiracy fraude con Warhols falsos esquema millonario Miami</a></h3>
-                <div class="item-meta">Distrito Sur Florida — 09-04-2025 — DOJ Southern District Florida</div>
-                <div class="item-content">Leslie Roberts (62, Miami) y Carlos Miguel Rodriguez Melendez (37, Sunny Isles) arrestados tras allanamiento FBI a Miami Fine Art Gallery en Coconut Grove. Roberts enfrenta cargos conspiracy fraude electrónico más lavado dinero por vender obras falsas Andy Warhol con facturas y autenticaciones fraudulentas. Afirmaba fraudulentamente adquirir obras directamente de Andy Warhol Foundation usando email falso (@andywarholfoundation.co vs oficial .org). Lavado incluye transferencias $150,000, $40,000, $50,000 a cuenta personal. Caso vinculado demanda civil familia Perlman por $6 millones en Warhols falsos. Roberts tiene historial: condena 2015 esquema Peter Max, condena 1980s robar millones tío abuelo. Penas potenciales 20 años más 10 años adicionales lavado.</div>
-                <div class="chips"><span class="chip">Etapa: Imputación penal</span><span class="chip">Leyes: Wire Fraud Act, Money Laundering Control Act</span><span class="chip">Flags: Art forgery, Money laundering, Authentication fraud</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Leslie%20Roberts%20imputado%20por%20conspiracy%20fraude%20con%20Warhols%20falsos%20esquema%20millonario%20Miami" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.theartnewspaper.com/2025/03/21/latest-round-of-money-laundering-penalties-hit-uk-trade" target="_blank">18. HMRC multa casi 50 empresas artísticas UK por incumplimiento regulaciones AML</a></h3>
-                <div class="item-meta">Reino Unido — 21-03-2025 — The Art Newspaper</div>
-                <div class="item-content">Casi 50 empresas artísticas británicas multadas entre enero-septiembre 2024 por incumplir regulaciones anti-lavado, con efectos reportados en 2025. Incluye galerías prestigiosas Opera y Carl Kostyál, más campaña enforcement contra White Cube. Multas promedio £3,000, máximo £13,000, todas por no registrarse antes del plazo obligatorio junio 2021 bajo Money Laundering Regulations 2017. HMRC ofrece registro voluntario tardío reduciendo multas 50%, pago dentro 30 días reduce 25% adicional. Enforcement demuestra intensificación supervisión regulatoria sector artístico UK, estableciendo precedente cumplimiento obligatorio para participantes mercado. Casos incluyen tanto galerías establecidas como comerciantes emergentes, indicando aplicación uniforme independiente del tamaño empresarial.</div>
-                <div class="chips"><span class="chip">Etapa: Enforcement administrativo</span><span class="chip">Leyes: Money Laundering Regulations 2017, HMRC powers</span><span class="chip">Flags: AML compliance, HMRC enforcement, Registration penalties</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=HMRC%20multa%20casi%2050%20empresas%20art%C3%ADsticas%20UK%20por%20incumplimiento%20regulaciones%20AML" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://www.jw.com/news/insights-federal-court-ai-copyright-decision/" target="_blank">19. Tribunal Federal Delaware establece precedente entrenamiento IA con contenido protegido</a></h3>
-                <div class="item-meta">Delaware, Estados Unidos — 11-02-2025 — Jackson Walker LLP</div>
-                <div class="item-content">Juez concede sentencia sumaria parcial favor Thomson Reuters contra ROSS Intelligence, rechazando defensa uso justo en caso entrenamiento IA. Tribunal determina que uso contenido protegido Westlaw para entrenar inteligencia artificial no constituía uso transformativo y perjudicaba mercado obra original. Decisión establece precedente importante sobre entrenamiento IA con material protegido derechos autor, favoreciendo titulares derechos originales sobre desarrolladores IA. El fallo complementa guías Copyright Office sobre autoría humana, creando marco jurisprudencial más restrictivo para industria IA generativa. Caso Thomson Reuters v. ROSS Intelligence marca primera decisión judicial importante 2025 sobre límites uso justo en contexto entrenamiento modelos generativos, con implicaciones amplias para sector tecnológico y creative industries.</div>
-                <div class="chips"><span class="chip">Etapa: Sentencia sumaria</span><span class="chip">Leyes: Fair Use Doctrine, Copyright infringement</span><span class="chip">Flags: AI training, Fair use, Copyright protection</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Tribunal%20Federal%20Delaware%20establece%20precedente%20entrenamiento%20IA%20con%20contenido%20protegido" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-            <article class="item">
-                <h3><a href="https://art-crime.blogspot.com/2025/07/these-legal-requirements-are-designed.html" target="_blank">20. España recupera 62 bienes culturales Italia Operación Altarpiece cooperación internacional</a></h3>
-                <div class="item-meta">España-Italia — 03-07-2025 — ARCAblog</div>
-                <div class="item-content">Investigación dos años culmina con restitución 62 activos culturales valiosos a España mediante Operación Altarpiece. Caso dirigido por Juzgado No. 1 Marbella con cooperación estrecha Guardia Civil española y Carabinieri italianos bajo marco UNESCO 1970. Incluye retablo policromado siglo XVI y obras atribuidas Modigliani, Rodin y Brueghel incautadas en territorio italiano. Operación destaca importancia crítica permisos exportación legales y due diligence rigurosa en transacciones mercado artístico internacional. Establece modelo cooperación judicial transfronteriza para recuperación patrimonio cultural, utilizando canales diplomáticos y policiales integrados. Resultado demuestra efectividad coordination entre autoridades europeas para combatir tráfico ilícito bienes culturales mediante investigación proactiva y intercambio información especializada.</div>
-                <div class="chips"><span class="chip">Etapa: Restitución completada</span><span class="chip">Leyes: UNESCO 1970, Cooperation agreements</span><span class="chip">Flags: International cooperation, Cultural heritage, Due diligence</span></div>
-                <div class="item-links">
-                    <a href="https://www.google.com/search?q=Espa%C3%B1a%20recupera%2062%20bienes%20culturales%20Italia%20Operaci%C3%B3n%20Altarpiece%20cooperaci%C3%B3n%20internacional" target="_blank" class="link-btn google-link">Buscar en Google</a>
-                </div>
-            </article>
-        
-        </section>
     </main>
 
     <footer class="footer">
         <p>&copy; 2025 Kepler Karst Law Firm. Todos los derechos reservados.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Boletín semanal de Arte y Derecho</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Reporte Consolidado de Arte y Derecho</p>
         <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">Hecho por Laura Villarraga</p>
     </footer>
 </body>
