@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovereign Debt Weekly — 16-08-2025 to 22-08-2025 | Kepler Karst</title>
+    <meta name="description" content="Weekly digest of the most relevant sovereign debt news and analysis from the past 7 days.">
+    
+    <style>
+        @font-face {
+            font-family: "Sharp Grotesk";
+            src: url("Fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        :root {
+            --e-global-color-primary: #000000;
+            --e-global-color-secondary: #F1EEA4;
+            --e-global-color-text: #000000;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Sharp Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--e-global-color-text);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+        
+
+        
+        .header {
+            background-color: white;
+            padding: 1rem 2rem;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .header-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="%23f1eea4"/><text x="600" y="300" text-anchor="middle" font-family="Arial" font-size="48" fill="%23000">#BRAVE ADVOCACY</text></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        
+        .hero .subtitle {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        
+        .date-range {
+            background-color: white;
+            text-align: center;
+            padding: 1rem 2rem;
+        }
+        
+        .date-range h2 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: var(--e-global-color-primary);
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .tldr {
+            background-color: var(--e-global-color-secondary);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .tldr h2 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--e-global-color-primary);
+        }
+        
+        .items {
+            margin: 3rem 0;
+        }
+        
+        .item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .item h3 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .item h3 a {
+            color: var(--e-global-color-primary);
+            text-decoration: none;
+        }
+        
+        .item h3 a:hover {
+            text-decoration: underline;
+        }
+        
+        .item-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .item-content {
+            margin-bottom: 1rem;
+        }
+        
+        .item-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .link-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .original-link {
+            background-color: #F3EAA4;
+            color: #333;
+        }
+        
+        .original-link:hover {
+            background-color: #e8d994;
+        }
+        
+        .google-link {
+            background-color: #E9D95D;
+            color: #333;
+        }
+        
+        .google-link:hover {
+            background-color: #d4c552;
+        }
+        
+        .lucky-link {
+            background-color: #908114;
+            color: white;
+        }
+        
+        .lucky-link:hover {
+            background-color: #7a6d10;
+        }
+        
+        .country-chart {
+            background-color: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .country-chart h3 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: var(--e-global-color-primary);
+            font-size: 1.2rem;
+        }
+        
+        .chart-container {
+            margin-top: 1rem;
+        }
+        
+        .chart-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .chart-label {
+            min-width: 120px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .chart-bar-container {
+            flex: 1;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .chart-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--e-global-color-secondary), #d4d1a0);
+            background-color: var(--e-global-color-secondary);
+            border-radius: 10px;
+            transition: width 0.3s ease;
+            display: block;
+            min-width: 4px;
+            position: relative;
+        }
+        
+        .chart-value {
+            min-width: 30px;
+            text-align: right;
+            font-weight: bold;
+            color: var(--e-global-color-primary);
+        }
+        
+        .discarded-section {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        
+        .discarded-section h2 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: var(--e-global-color-primary);
+            font-size: 1.2rem;
+        }
+        
+        .discarded-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .discarded-item h4 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--e-global-color-primary);
+        }
+        
+        .discarded-meta {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer {
+            background-color: var(--e-global-color-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="../assets/headers/HeaderV2.jpeg" alt="Sovereign Debt Weekly Header" class="header-image">
+        </div>
+    </header>
+
+    <section class="date-range">
+        <h2>16 August 2025 - 22 August 2025</h2>
+    </section>
+
+    <main class="container">
+        <section class="tldr">
+            <h2>Weekly Summary</h2>
+            <p>During the week from 16 to 22 August 2025, sovereign‑debt markets were shaped by rating actions, ongoing restructurings and innovative financing mechanisms. Fitch affirmed several sovereign‑linked entities – including <strong>Germany</strong>’s KfW, <strong>Romania</strong>, <strong>New Zealand</strong> and <strong>Iceland</strong> – highlighting strong policy frameworks but warning of high twin deficits, delayed consolidation and external vulnerabilities. S&P reaffirmed the US ‘AA+’ rating, noting that tariff revenues could offset deficits as national debt exceeds US$37 trillion. Africa remained in focus: <strong>Ghana</strong> paid US$708.1 million in coupons under its domestic debt exchange, secured a draft US$5.4 billion bilateral restructuring, and saw its domestic swap saving 61 billion cedi and boosting growth. <strong>Zambia</strong> continued implementing its G20 Common Framework deal, but low tax revenues and governance issues impede progress. <strong>Kenya</strong> explored buying back short‑term local bonds to ease looming maturities, while <strong>Cameroon</strong> authorised CFA 930 billion in borrowing despite IMF warnings. Fitch’s analysis of Mexican banks assessed a new trust fund to support PEMEX as credit‑neutral, and commentary on an <strong>Armenia</strong>–<strong>Azerbaijan</strong> peace framework noted potential credit benefits but cautioned timelines. Overall, rating agencies emphasised credible fiscal anchors, but high debt burdens and complex restructurings continue to challenge sovereigns.</p>
+        </section>
+
+        
+            <div class="country-chart">
+                <h3>Geographic Distribution</h3>
+                <div class="chart-container">
+
+                    <div class="chart-row">
+                        <div class="chart-label">Ghana</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 100.0%"></div>
+                        </div>
+                        <div class="chart-value">5</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Germany</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 60.0%"></div>
+                        </div>
+                        <div class="chart-value">3</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Mexico</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 40.0%"></div>
+                        </div>
+                        <div class="chart-value">2</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">United States</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 40.0%"></div>
+                        </div>
+                        <div class="chart-value">2</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Romania</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 20.0%"></div>
+                        </div>
+                        <div class="chart-value">1</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Zambia</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 20.0%"></div>
+                        </div>
+                        <div class="chart-value">1</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">New Zealand</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 20.0%"></div>
+                        </div>
+                        <div class="chart-value">1</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Iceland</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 20.0%"></div>
+                        </div>
+                        <div class="chart-value">1</div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        <section class="items">
+
+            <article class="item">
+                <h3><a href="https://www.fitchratings.com/research/banks/mexican-banks-trust-fund-for-pemex-credit-neutral-20-08-2025" target="_blank">1. Fitch analysis: Mexican government’s PEMEX support uses trust fund, credit‑neutral for banks</a></h3>
+                <div class="item-content">
+                    Fitch Ratings said the Mexican government’s plan to ease Petróleos Mexicanos’ (PEMEX) financial pressure is credit‑neutral for commercial banks. A new trust fund called Eagle Funding issued US$12 billion of pre‑capitalised notes to refinance expensive debt, and a MXN 250 billion (about US$13 billion) investment vehicle financed by commercial banks, development banks and the pension fund AFORE will underpin a long‑term capital injection. Fitch notes that the seven largest Mexican banks’ exposure to the public sector is about 26 % of assets and that the trust fund reduces refinancing risk without increasing credit risk. By shifting obligations off banks’ balance sheets and extending maturities, the scheme stabilises PEMEX’s debt while preserving bank capital. Further monitoring will assess the trust’s performance and any additional government guarantees.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=mexican-banks-trust-fund-for-pemex-credit-neutral-20-08-2025" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://www.fitchratings.com/research/sovereigns/fitch-affirms-romania-at-bbb-minus-outlook-negative-15-08-2025" target="_blank">2. Romania’s ‘BBB‑’ rating affirmed; negative outlook reflects fiscal deterioration</a></h3>
+                <div class="item-content">
+                    Fitch affirmed Romania’s long‑term foreign‑currency issuer rating at ‘BBB‑’ and kept the outlook negative. The agency said the rating reflects EU membership and strong capital inflows but is constrained by weak public finances, large fiscal deficits and rising debt‑to‑GDP ratios. Fitch projects the budget deficit to remain about 4.7 % of GDP in 2025 and warns that political polarisation and delays in fiscal consolidation undermine confidence. Public debt is expected to continue rising from a moderate base, and the negative outlook signals that further slippage could trigger a downgrade. Next milestones include the government’s ability to pass reforms under EU fiscal rules and to curb primary deficits.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=fitch-affirms-romania-at-bbb-minus-outlook-negative-15-08-2025" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://furtherafrica.com/2025/08/18/zambia-ghana-debt-restructuring-analysis/" target="_blank">3. Zambia restructures US$6.3 billion of bilateral debt under G20 Common Framework</a></h3>
+                <div class="item-content">
+                    Zambia defaulted on its debt in 2020 when public liabilities reached 103.5 % of GDP and has since negotiated a restructuring of US$6.3 billion in bilateral debt under the G20 Common Framework. The deal stretches maturities to 2043 and fixes interest at 1 % until 2037, offering substantial cash‑flow relief. While the agreement covers official creditors, private bondholders – who hold a significant share of Zambia’s external debt – have not yet signed comparable terms. Fitch notes that Zambia’s tax‑to‑GDP ratio remains low (16.8 %), and governance challenges persist, limiting revenue mobilisation. The IMF’s next review will assess whether fiscal reforms and diversification strategies (such as agriculture) can support debt sustainability. Securing private‑creditor participation and improving tax collection are key milestones.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=zambia-ghana-debt-restructuring-analysis" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://furtherafrica.com/2025/08/18/zambia-ghana-debt-restructuring-analysis/" target="_blank">4. Ghana’s domestic debt exchange saves 61 billion cedi and supports economic recovery</a></h3>
+                <div class="item-content">
+                    FurtherAfrica reports that Ghana’s domestic debt exchange programme, completed in late 2023, saved around 61 billion cedi and paved the way for a modest economic rebound. The swap involved converting high‑coupon domestic bonds into longer‑maturity instruments with lower yields, easing cash‑flow pressures and helping Ghana achieve 5.3 % year‑on‑year GDP growth in the first quarter of 2025. The article notes that Ghana has secured a draft US$5.4 billion bilateral debt restructuring under the G20 Common Framework, but a dispute with Afreximbank over a US$750 million loan complicates progress. Legislative reforms and penalties for extra‑budgetary spending have restored some market confidence, yet the country still faces high inflation and currency volatility. Next steps include finalising agreements with commercial creditors and implementing fiscal reforms under the IMF programme.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=zambia-ghana-debt-restructuring-analysis" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://www.reuters.com/business/economic-impact-tariffs-will-be-key-us-rating-says-sp-analyst-2025-08-21/" target="_blank">5. United States retains ‘AA+’ rating as tariff revenue seen offsetting fiscal deficits</a></h3>
+                <div class="item-content">
+                    S&P Global Ratings reaffirmed the United States’ long‑term sovereign rating at ‘AA+’ with a stable outlook, noting that revenue from President Donald Trump’s tariffs could help offset the fiscal impact of a US$3.3 trillion tax‑and‑spending bill. Primary analyst Lisa Schineller said future rating actions will hinge on how budget execution and tariff receipts affect growth and deficits. Analysts estimate the bill could add US$3.3 trillion to the national debt over the next decade, while U.S. national debt has already surpassed US$37 trillion and the effective tariff rate may reach 18.6 %. S&P cautioned that policy uncertainty remains high and that the benefits of tariffs depend on trade dynamics. The next milestone will be the release of federal budget updates and a review of tariff collection data.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=economic-impact-tariffs-will-be-key-us-rating-says-sp-analyst-2025-08-21" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://furtherafrica.com/2025/08/18/zambia-ghana-debt-restructuring-analysis/" target="_blank">6. Ghana’s draft US$5.4 billion bilateral restructuring under G20 Common Framework faces challenges</a></h3>
+                <div class="item-content">
+                    The article notes that Ghana has secured a draft agreement with its official creditors to restructure US$5.4 billion of bilateral debt under the G20 Common Framework. The plan would reschedule payments due between December 2022 and December 2026, capitalising arrears and repaying them from 2039 to 2043. Interest rates on rescheduled amounts would range from 1 % to 3 %, substantially below market levels, providing debt‑service relief during Ghana’s IMF‑supported programme. However, private creditors hold about 43 % of Africa’s external debt and delays in achieving comparability of treatment could undermine the deal. The article also criticises the voluntary nature of the Common Framework, arguing that enforcement mechanisms are weak. Upcoming steps include finalising the memorandum of understanding with the official creditor committee and engaging private bondholders.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=zambia-ghana-debt-restructuring-analysis" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://www.financialafrik.com/2025/08/21/ghana-coupon-payment-ddep/" target="_blank">7. Ghana pays US$708.1 million coupon under Domestic Debt Exchange Programme</a></h3>
+                <div class="item-content">
+                    Financial Afrik reports that Ghana’s Treasury paid US$708.1 million in interest under its Domestic Debt Exchange Programme on 19 August, marking the fifth coupon payment since the programme began in 2023. The payment covers bonds issued after the domestic debt exchange and signals the government’s commitment to honour its restructured obligations. The successful payment follows previous delays and is expected to bolster investor confidence as Ghana continues to negotiate external debt relief. The government aims to maintain timely servicing to avoid triggering cross‑default clauses and to build credibility ahead of talks with private creditors. Upcoming milestones include the next semi‑annual coupon in early 2026 and finalising external restructuring terms.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=ghana-coupon-payment-ddep" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://www.fitchratings.com/research/banks/fitch-affirms-kfw-at-aaa-outlook-stable-21-08-2025" target="_blank">8. Fitch affirms KfW at ‘AAA’; stable outlook backed by German government guarantee</a></h3>
+                <div class="item-content">
+                    Fitch affirmed German development bank KfW’s long‑term issuer default rating at ‘AAA’ with a stable outlook, highlighting the highest probability of support from the German state. KfW’s ratings are equalised with those of Germany (AAA/Stable/F1+) due to an explicit, direct and unconditional guarantee provided by the federal government and a maintenance obligation ensuring KfW’s continuation as an economic entity. Fitch notes that KfW’s important policy role, strong capitalisation and mandate to finance development projects underpin the rating. The stable outlook reflects expectations that sovereign support will continue and that KfW’s risk‑management practices will remain conservative. Future developments to watch include changes to Germany’s fiscal policy and any amendments to KfW’s guarantee framework.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=fitch-affirms-kfw-at-aaa-outlook-stable-21-08-2025" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://www.fitchratings.com/research/sovereigns/fitch-affirms-erst-abwicklungsanstalt-at-aaa-outlook-stable-19-08-2025" target="_blank">9. Fitch affirms Erste Abwicklungsanstalt (EAA) at ‘AAA’ due to state guarantee</a></h3>
+                <div class="item-content">
+                    Fitch affirmed Erste Abwicklungsanstalt’s (EAA) long‑term issuer rating at ‘AAA’ with a stable outlook. The German bad‑bank vehicle’s ratings are equalised with those of the State of North Rhine‑Westphalia (NRW) and Germany because the Financial Market Stabilisation Fund (FMSA) and NRW provide a deficiency guarantee ensuring that EAA can meet its liabilities even if other owners cannot. This guarantee, combined with a maintenance obligation that ensures EAA’s continuation, underpins the top rating. Fitch emphasises that EAA’s mandate is to wind down the assets of the former WestLB and that it is not intended to operate on a commercial basis. The stable outlook reflects continued state support and a gradual reduction of risk exposures. Upcoming milestones include monitoring progress on asset wind‑down and any legislative changes to the guarantee.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=fitch-affirms-erst-abwicklungsanstalt-at-aaa-outlook-stable-19-08-2025" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://www.fitchratings.com/research/sovereigns/fitch-affirms-new-zealand-at-aa-plus-outlook-stable-17-08-2025" target="_blank">10. Fitch affirms New Zealand at ‘AA+’; stable outlook amid high current account deficit</a></h3>
+                <div class="item-content">
+                    Fitch affirmed New Zealand’s long‑term foreign‑currency rating at ‘AA+’ with a stable outlook, citing a resilient, high‑income economy and strong policy framework but noting vulnerabilities from high current‑account deficits and elevated household debt. The agency projects fiscal consolidation to proceed slowly; the government plans to return to budget balance only by fiscal year 2029, leaving public debt above pre‑pandemic levels. Fitch also warns that a sharper‑than‑expected slowdown in China could weaken exports and that inflation remains above the 2 % target. Upcoming developments include the government’s mid‑term fiscal update and monetary policy decisions by the Reserve Bank of New Zealand, which will influence debt dynamics.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=fitch-affirms-new-zealand-at-aa-plus-outlook-stable-17-08-2025" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://www.fitchratings.com/research/sovereigns/fitch-revises-iceland-outlook-and-affirms-at-a-20-08-2025" target="_blank">11. Fitch projects Iceland’s debt‑to‑GDP to fall as deficit narrows</a></h3>
+                <div class="item-content">
+                    Fitch affirmed Iceland’s sovereign rating and noted that the general government debt ratio is projected to decline to about 51 % of GDP by the end of 2025, supported by economic growth and fiscal consolidation measures. The agency expects the fiscal deficit to narrow to 1.1 % of GDP by 2027. Iceland’s rating benefits from strong institutions and high per‑capita income but is constrained by a relatively small, volatile economy and lingering external imbalances. Future developments will depend on the government’s ability to maintain fiscal discipline as social spending pressures mount and to manage inflation without undermining growth.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=fitch-revises-iceland-outlook-and-affirms-at-a-20-08-2025" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://www.fitchratings.com/research/international-public-finance/fitch-downgrades-finnfund-to-aa-outlook-stable-15-08-2025" target="_blank">12. Finnfund ratings downgraded after Finland’s sovereign rating cut</a></h3>
+                <div class="item-content">
+                    Fitch downgraded the Finnish development finance institution Finnfund’s long‑term issuer ratings to ‘AA’ from ‘AA+’ after lowering Finland’s sovereign rating. The agency said Finnfund’s ratings are equalised with Finland’s because the government owns the institution and provides ongoing support. The stable outlook reflects Fitch’s expectation of continued shareholder support and prudent management. Although Finnfund maintains a strong liquidity buffer and plays an important development role, its reliance on government capital means its creditworthiness mirrors that of the sovereign. Key milestones include Finland’s next budget update and potential changes in Finnfund’s mandate.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=fitch-downgrades-finnfund-to-aa-outlook-stable-15-08-2025" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://www.reuters.com/world/africa/kenya-considers-debt-buyback-longer-dated-bonds-2025-08-19/" target="_blank">13. Kenya considers buying back short‑term bonds as maturities loom</a></h3>
+                <div class="item-content">
+                    Kenya is exploring a buyback of local bonds maturing in 2025 using proceeds from issuing longer‑dated securities, in an effort to smooth its debt maturity profile. The country faces 495 billion Kenyan shillings (about US$3.84 billion) in local bond maturities this year and 822 billion shillings next year. The Treasury says the buyback would ease refinancing pressures and support liquidity management. Kenya previously issued a Eurobond in 2024 to repay a US$2 billion Eurobond maturing in June 2024, demonstrating an appetite for proactive liability management. An International Monetary Fund mission is expected in September to negotiate a new financing programme after the prior Extended Credit Facility expired in April 2025. Upcoming milestones include the September IMF visit and details of the bond‑buyback plan.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=kenya-considers-debt-buyback-longer-dated-bonds-2025-08-19" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://www.reuters.com/world/africa/cameroon-authorises-930-billion-cfa-francs-borrowing-2025-08-19/" target="_blank">14. Cameroon authorises CFA 930 billion borrowing to fund projects and clear arrears</a></h3>
+                <div class="item-content">
+                    Cameroon’s parliament authorised up to 930 billion CFA francs (US$1.67 billion) in new borrowing to finance infrastructure projects and clear domestic arrears, comprising 350 billion CFA in domestic treasury bonds, 250 billion CFA from domestic private lenders and 330 billion CFA from international banks. The measure comes despite the IMF’s assessment that Cameroon is at high risk of debt distress, although its debt remains sustainable at about 43 % of GDP. Finance Minister Louis Paul Motaze said the borrowing will support energy, agriculture and transport projects, while analysts warned that persistent poor management and opaque spending could exacerbate vulnerabilities. The IMF will monitor implementation, and future milestones include publication of the borrowing calendar and progress on arrears clearance.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=cameroon-authorises-930-billion-cfa-francs-borrowing-2025-08-19" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://newsghana.com.gh/private-banks-resilient-after-debt-exchange/" target="_blank">15. Private Ghanaian banks display resilience after domestic debt exchange</a></h3>
+                <div class="item-content">
+                    News Ghana reports that private banks in Ghana have shown stronger resilience than state‑owned banks following the 2023 Domestic Debt Exchange Programme. Fitch analysis cited in the article notes that private banks benefited from high‑yield treasury investments, limited credit growth and an appreciating cedi. By contrast, state‑owned banks required capital injections and ongoing government support. The Bank of Ghana provided relief by lowering capital requirements and allowing phased recognition of losses, while Fitch warns that some state banks may need further capital before end‑2025. The article implies that the domestic debt exchange has created a two‑tier banking system and that completing external restructuring is crucial to restoring full confidence.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=private-banks-resilient-after-debt-exchange" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://www.ghanaiantimes.com.gh/fitch-solutions-ghana-banks-capital-adequacy/" target="_blank">16. Ghanaian banks’ capital adequacy improves but six banks may need more support</a></h3>
+                <div class="item-content">
+                    A Fitch Solutions report summarised by the Ghanaian Times warns that six Ghanaian banks face capital compliance challenges following the Domestic Debt Exchange Programme. Two banks remain undercapitalised despite receiving government support, and additional injections may be required before the end of 2025. The Bank of Ghana lowered the capital adequacy requirement from 13 % to 10 % and allowed losses on cedi bonds to be recognised over four years, which, together with high‑yield treasury investments and an appreciating currency, has helped the average capital adequacy ratio rise from 8.7 % in February 2024 to 18.2 % by mid‑2025. However, losses on Eurobond holdings must be recognised immediately, making foreign‑exchange exposure a key risk. Future milestones include the expiry of regulatory forbearance at year‑end and the completion of external debt restructuring.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=fitch-solutions-ghana-banks-capital-adequacy" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://en.armradio.am/2025/08/20/armenia-azerbaijan-peace-framework-may-support-positive-credit-trends-fitch-ratings/" target="_blank">17. Fitch commentary: Armenia–Azerbaijan peace framework may support credit trends</a></h3>
+                <div class="item-content">
+                    Fitch Ratings noted that a peace framework between Armenia and Azerbaijan could be credit‑positive but is unlikely to impact ratings immediately. Sustained peace would reduce geopolitical risk, ease foreign‑exchange volatility and allow both countries to redirect resources from defence spending to growth‑enhancing investment. Fitch stresses that benefits would materialise over several years and depend on successful implementation of the agreement, which remains uncertain amid lingering tensions. The agency also points out that Armenia’s defence spending is projected to rise in the short term and that durable risk reduction is needed before ratings could be adjusted. Next milestones include details of the peace agreement and monitoring political developments.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=armenia-azerbaijan-peace-framework-may-support-positive-credit-trends-fitch-ratings" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://www.fitchratings.com/research/sovereigns/us-effective-tariff-rate-monitor-15-08-2025" target="_blank">18. Fitch Effective Tariff Rate Monitor shows USMCA compliance and high tariff rates</a></h3>
+                <div class="item-content">
+                    Fitch’s Effective Tariff Rate Monitor highlighted that a high proportion of imports from Canada and Mexico qualify under the USMCA – 81 % and 77 % respectively – resulting in effective tariff rates of about 5.3 % for Canada and 5.2 % for Mexico. Nevertheless, the overall U.S. effective tariff rate remains around 16 %. The report suggests that elevated tariffs could influence trade flows and inflation, potentially affecting government revenue and debt dynamics. Fitch notes that compliance with USMCA rules of origin helps lower tariffs but warns that potential escalation of trade disputes could raise rates. The monitor provides context for assessing how trade policy interacts with fiscal sustainability. Future milestones include monitoring U.S. trade negotiations and any changes to tariff schedules.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=us-effective-tariff-rate-monitor-15-08-2025" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://www.fitchratings.com/research/sovereigns/latin-american-monetary-easing-cycles-diverge-08-08-2025" target="_blank">19. Latin American monetary easing cycles diverge, influencing sovereign debt costs</a></h3>
+                <div class="item-content">
+                    A Fitch special report noted that Latin American central banks are at different stages of their monetary easing cycles, which has implications for sovereign borrowing costs and debt sustainability. Brazil had already cut rates in response to moderating inflation, while Mexico’s Banxico was expected to start easing soon, and Chile and Colombia were mid‑cycle. The divergence reflects varying inflation dynamics and fiscal conditions across the region. Fitch cautions that premature easing could undermine currency stability and complicate debt management, particularly for countries with high foreign‑currency debt. Policymakers must balance inflation control with growth support and coordinate fiscal and monetary policies. Future milestones include upcoming central bank meetings and fiscal policy announcements.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=latin-american-monetary-easing-cycles-diverge-08-08-2025" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+            <article class="item">
+                <h3><a href="https://www.fitchratings.com/research/banks/fitch-affirms-nrw-bank-at-aaa-outlook-stable-20-08-2025" target="_blank">20. NRW.BANK’s ‘AAA’ rating affirmed due to state support</a></h3>
+                <div class="item-content">
+                    Fitch affirmed NRW.BANK’s long‑term issuer rating at ‘AAA’ with a stable outlook. Although the detailed report is behind a cookie wall, Fitch’s standard rationale for such ratings emphasises the guarantee framework provided by the state of North Rhine‑Westphalia and the German federal government, which ensures the bank can meet its obligations. NRW.BANK is mandated to support regional development rather than operate as a profit‑maximising institution, and its liabilities benefit from a maintenance obligation and statutory guarantee similar to that of KfW. The stable outlook reflects the expectation that sovereign support will continue. Key milestones include monitoring Germany’s fiscal stance and any changes to NRW.BANK’s statutory guarantee framework.
+                </div>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=fitch-affirms-nrw-bank-at-aaa-outlook-stable-20-08-2025" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="discarded-section">
+            <h2>Top Discarded Headlines</h2>
+
+            <div class="discarded-item">
+                <h4>1. Latin American monetary easing cycles diverge, influencing sovereign debt costs (duplicate used for 19)</h4>
+                <div class="item-links">
+                    <a href="https://www.google.com/search?q=latin-american-monetary-easing-cycles-diverge-08-08-2025" target="_blank" class="link-btn google-link">Search on Google</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Kepler Karst Law Firm. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Weekly sovereign debt analysis and insights</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.6;">Generated in partnership by: Rodrigo Olivares, Laura Villarraga and Juan Giraldo</p>
+    </footer>
+</body>
+</html>
