@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-JSON to HTML Converter v2 for Sovereign Debt Weekly Digest
+JSON to HTML Converter for CL format Sovereign Debt Weekly Digest
 Converts structured JSON data to Kepler Karst branded HTML
 Generates two files: original digest and meta analytics
 """
@@ -148,17 +148,17 @@ def generate_country_chart(items):
     country_counts = Counter()
     for item in items:
         countries = item.get('countries', [])
-        if len(countries) > 1:
-            country_name = countries[1]
-        elif countries:
-            country_name = countries[0]
-        else:
-            continue
-        
-        if len(country_name) <= 3 or country_name == 'GLOBAL':
-            continue
+        if countries:
+            # Handle both single country and multiple countries
+            if isinstance(countries, list):
+                country_name = countries[0]  # Take first country
+            else:
+                country_name = countries
             
-        country_counts[country_name] += 1
+            if len(country_name) <= 3 or country_name == 'GLOBAL':
+                continue
+                
+            country_counts[country_name] += 1
     
     top_countries = country_counts.most_common(8)
     
@@ -228,45 +228,46 @@ def generate_meta_html(data):
     metadata = data.get('metadata', {})
     analytics = data.get('analytics', {})
     items = data.get('items', [])
-    coverage_analysis = analytics.get('coverage_analysis', {})
-    content_metrics = analytics.get('content_metrics', {})
-    processing_statistics = analytics.get('processing_statistics', {})
+    geographic_distribution = analytics.get('geographic_distribution', {})
+    thematic_breakdown = analytics.get('thematic_breakdown', {})
+    source_tier_distribution = analytics.get('source_tier_distribution', {})
     
-    # Extract data for charts
-    category_distribution = coverage_analysis.get('category_distribution', {})
-    geographical_distribution = coverage_analysis.get('geographical_distribution', {})
-    score_distribution = content_metrics.get('score_distribution', {})
-    
-    # Collect secondary tags
-    all_secondary_tags = []
+    # Collect categories from items
+    all_categories = []
     for item in items:
-        secondary_tags = item.get('classification', {}).get('secondary_tags', [])
-        all_secondary_tags.extend(secondary_tags)
+        categories = item.get('categories', [])
+        if isinstance(categories, list):
+            all_categories.extend(categories)
+        elif categories:
+            all_categories.append(categories)
     
-    tag_counts = Counter(all_secondary_tags)
-    top_tags = tag_counts.most_common(10)
+    category_counts = Counter(all_categories)
+    top_categories = category_counts.most_common(10)
     
-    # Collect instruments
-    all_instruments = []
+    # Collect innovation elements
+    all_innovation_elements = []
     for item in items:
-        instruments = item.get('classification', {}).get('instruments', [])
-        all_instruments.extend(instruments)
+        innovation_elements = item.get('innovation_elements', [])
+        if isinstance(innovation_elements, list):
+            all_innovation_elements.extend(innovation_elements)
+        elif innovation_elements:
+            all_innovation_elements.append(innovation_elements)
     
-    instrument_counts = Counter(all_instruments)
-    top_instruments = instrument_counts.most_common(8)
+    innovation_counts = Counter(all_innovation_elements)
+    top_innovations = innovation_counts.most_common(8)
     
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytics Dashboard - {metadata.get('title', 'Sovereign Debt Weekly')} | Kepler Karst</title>
+    <title>Analytics Dashboard - {metadata.get('digest_title', 'Sovereign Debt Weekly')} | Kepler Karst</title>
     <meta name="description" content="Analytics and metrics dashboard for sovereign debt weekly digest">
     
     <style>
         @font-face {{
             font-family: "Sharp Grotesk";
-            src: url("Fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
+            src: url("../../../Fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
             font-weight: normal;
             font-style: normal;
         }}
@@ -453,26 +454,26 @@ def generate_meta_html(data):
 <body>
     <header class="header">
         <h1>Analytics Dashboard</h1>
-        <div class="subtitle">{metadata.get('title', 'Sovereign Debt Weekly')}</div>
-        <div class="subtitle">{format_date_for_display(metadata.get('period', {}).get('start_date', ''))} - {format_date_for_display(metadata.get('period', {}).get('end_date', ''))}</div>
+        <div class="subtitle">{metadata.get('digest_title', 'Sovereign Debt Weekly')}</div>
+        <div class="subtitle">{metadata.get('period', 'Period not specified')}</div>
     </header>
 
     <main class="container">
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-number">{processing_statistics.get('sources_scanned', 0)}</div>
-                <div class="stat-label">Sources Scanned</div>
+                <div class="stat-number">{metadata.get('total_items_reviewed', 0)}</div>
+                <div class="stat-label">Items Reviewed</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">{processing_statistics.get('articles_reviewed', 0)}</div>
-                <div class="stat-label">Articles Reviewed</div>
+                <div class="stat-number">{metadata.get('items_selected', 0)}</div>
+                <div class="stat-label">Items Selected</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">{processing_statistics.get('items_published', 0)}</div>
-                <div class="stat-label">Items Published</div>
+                <div class="stat-number">{analytics.get('countries_covered', 0)}</div>
+                <div class="stat-label">Countries Covered</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">{content_metrics.get('average_score', 0):.1f}</div>
+                <div class="stat-number">{analytics.get('average_score', 0):.1f}</div>
                 <div class="stat-label">Average Score</div>
             </div>
         </div>
@@ -484,13 +485,13 @@ def generate_meta_html(data):
 """
     
     # Category distribution chart
-    if category_distribution:
-        max_count = max(category_distribution.values())
-        for category, count in sorted(category_distribution.items(), key=lambda x: x[1], reverse=True):
+    if thematic_breakdown:
+        max_count = max(thematic_breakdown.values())
+        for category, count in sorted(thematic_breakdown.items(), key=lambda x: x[1], reverse=True):
             percentage = (count / max_count) * 100
             html += f"""
                     <div class="chart-row">
-                        <div class="chart-label">{category.replace('_', ' ').title()}</div>
+                        <div class="chart-label">{category}</div>
                         <div class="chart-bar-container">
                             <div class="chart-bar" style="width: {percentage}%"></div>
                         </div>
@@ -508,9 +509,9 @@ def generate_meta_html(data):
 """
     
     # Geographical distribution chart
-    if geographical_distribution:
-        max_count = max(geographical_distribution.values())
-        for region, count in sorted(geographical_distribution.items(), key=lambda x: x[1], reverse=True):
+    if geographic_distribution:
+        max_count = max(geographic_distribution.values())
+        for region, count in sorted(geographic_distribution.items(), key=lambda x: x[1], reverse=True):
             percentage = (count / max_count) * 100
             html += f"""
                     <div class="chart-row">
@@ -527,18 +528,18 @@ def generate_meta_html(data):
             </div>
 
             <div class="chart-card">
-                <h3>Score Distribution</h3>
+                <h3>Source Tier Distribution</h3>
                 <div class="chart-container">
 """
     
-    # Score distribution chart
-    if score_distribution:
-        max_count = max(score_distribution.values())
-        for score_range, count in sorted(score_distribution.items(), key=lambda x: _score_bucket_sort_key(x[0])):
+    # Source tier distribution chart
+    if source_tier_distribution:
+        max_count = max(source_tier_distribution.values())
+        for tier, count in sorted(source_tier_distribution.items(), key=lambda x: int(x[0].split()[-1])):
             percentage = (count / max_count) * 100
             html += f"""
                     <div class="chart-row">
-                        <div class="chart-label">{score_range}</div>
+                        <div class="chart-label">{tier}</div>
                         <div class="chart-bar-container">
                             <div class="chart-bar" style="width: {percentage}%"></div>
                         </div>
@@ -551,18 +552,18 @@ def generate_meta_html(data):
             </div>
 
             <div class="chart-card">
-                <h3>Top Financial Instruments</h3>
+                <h3>Top Innovation Elements</h3>
                 <div class="chart-container">
 """
     
-    # Instruments chart
-    if top_instruments:
-        max_count = max(count for _, count in top_instruments)
-        for instrument, count in top_instruments:
+    # Innovation elements chart
+    if top_innovations:
+        max_count = max(count for _, count in top_innovations)
+        for innovation, count in top_innovations:
             percentage = (count / max_count) * 100
             html += f"""
                     <div class="chart-row">
-                        <div class="chart-label">{instrument.replace('_', ' ').title()}</div>
+                        <div class="chart-label">{innovation}</div>
                         <div class="chart-bar-container">
                             <div class="chart-bar" style="width: {percentage}%"></div>
                         </div>
@@ -576,16 +577,16 @@ def generate_meta_html(data):
         </div>
 
         <div class="chart-card">
-            <h3>Top Secondary Tags</h3>
+            <h3>Top Categories</h3>
             <div class="tag-cloud">
 """
     
     # Tag cloud
-    if top_tags:
-        max_count = max(count for _, count in top_tags)
-        for tag, count in top_tags:
+    if top_categories:
+        max_count = max(count for _, count in top_categories)
+        for category, count in top_categories:
             size_class = f"tag-size-{min(5, max(1, int((count / max_count) * 5)))}"
-            html += f'<span class="tag {size_class}">{tag.replace("_", " ").title()} ({count})</span>'
+            html += f'<span class="tag {size_class}">{category} ({count})</span>'
     
     html += """
             </div>
@@ -602,13 +603,12 @@ def generate_meta_html(data):
     return html
 
 def generate_original_html(data):
-    """Generate the original HTML digest (simplified version of the original function)"""
+    """Generate the original HTML digest for CL format"""
     
     metadata = data.get('metadata', {})
     executive_summary = data.get('executive_summary', {})
     items = data.get('items', [])
     analytics = data.get('analytics', {})
-    processing_statistics = analytics.get('processing_statistics', {})
     discarded_items = data.get('discarded_items', [])
     
     html = f"""<!DOCTYPE html>
@@ -616,13 +616,13 @@ def generate_original_html(data):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{metadata.get('title', 'Sovereign Debt Weekly')} | Kepler Karst</title>
+    <title>{metadata.get('digest_title', 'Sovereign Debt Weekly')} | Kepler Karst</title>
     <meta name="description" content="Weekly digest of the most relevant sovereign debt news and analysis from the past 7 days.">
     
     <style>
         @font-face {{
             font-family: "Sharp Grotesk";
-            src: url("Fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
+            src: url("../../../Fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
             font-weight: normal;
             font-style: normal;
         }}
@@ -645,8 +645,6 @@ def generate_original_html(data):
             line-height: 1.6;
             background-color: #fff;
         }}
-        
-
         
         .header {{
             background-color: white;
@@ -718,6 +716,18 @@ def generate_original_html(data):
             font-weight: bold;
             margin-bottom: 1rem;
             color: var(--e-global-color-primary);
+        }}
+        
+        .tldr-section {{
+            margin-bottom: 1.5rem;
+        }}
+        
+        .tldr-section h3 {{
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--e-global-color-primary);
+            font-size: 1.1rem;
         }}
         
         .items {{
@@ -902,6 +912,13 @@ def generate_original_html(data):
             margin-bottom: 0.5rem;
         }}
         
+        .discarded-links {{
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }}
+        
         .footer {{
             background-color: var(--e-global-color-primary);
             color: white;
@@ -924,18 +941,33 @@ def generate_original_html(data):
 <body>
     <header class="header">
         <div class="header-content">
-            <img src="Headers/HeaderV2.jpeg" alt="Sovereign Debt Weekly Header" class="header-image">
+            <img src="../../../Headers/HeaderV2.jpeg" alt="Sovereign Debt Weekly Header" class="header-image">
         </div>
     </header>
 
     <section class="date-range">
-        <h2>{format_date_for_display(metadata.get('period', {}).get('start_date', 'DD-MM-YYYY'))} - {format_date_for_display(metadata.get('period', {}).get('end_date', 'DD-MM-YYYY'))}</h2>
+        <h2>{metadata.get('period', 'Period not specified')}</h2>
     </section>
 
     <main class="container">
         <section class="tldr">
-            <h2>Weekly Summary</h2>
-            <p>{highlight_countries(clean_text(executive_summary.get('weekly_overview', 'Weekly summary of sovereign debt developments.')))}</p>
+            <h2>Executive Summary</h2>
+            <div class="tldr-section">
+                <h3>Key Developments</h3>
+                <p>{highlight_countries(clean_text(executive_summary.get('key_developments', 'Key developments summary.')))}</p>
+            </div>
+            <div class="tldr-section">
+                <h3>Market Impact</h3>
+                <p>{highlight_countries(clean_text(executive_summary.get('market_impact', 'Market impact analysis.')))}</p>
+            </div>
+            <div class="tldr-section">
+                <h3>Policy Implications</h3>
+                <p>{highlight_countries(clean_text(executive_summary.get('policy_implications', 'Policy implications overview.')))}</p>
+            </div>
+            <div class="tldr-section">
+                <h3>Forward Trends</h3>
+                <p>{highlight_countries(clean_text(executive_summary.get('forward_trends', 'Forward-looking trends.')))}</p>
+            </div>
         </section>
 
         {generate_country_chart(items)}
@@ -946,17 +978,22 @@ def generate_original_html(data):
     # Generate items
     for i, item in enumerate(items, 1):
         headline = clean_text(item.get('headline', 'No title'))
-        original_url = item.get('source', {}).get('original_url', '#')
+        original_url = item.get('source', {}).get('url', '#')
         original_url_clean, google_url, lucky_url = get_smart_url(headline, original_url)
         countries = item.get('countries', [])
-        country = countries[1] if len(countries) > 1 else countries[0] if countries else 'Unknown'
-        date = item.get('publication_date', 'Unknown date')
+        country = countries[0] if countries else 'Unknown'
+        date = item.get('date', 'Unknown date')
         source_name = item.get('source', {}).get('name', 'Unknown source')
-        content_summary = clean_text(item.get('content', {}).get('summary', 'No content available.'))
+        content_summary = clean_text(item.get('content', 'No content available.'))
+        categories = item.get('categories', [])
+        categories_text = ', '.join(categories) if isinstance(categories, list) else categories
         
         html += f"""
             <article class="item">
                 <h3><a href="{original_url_clean}" target="_blank">{i}. {headline}</a></h3>
+                <div class="item-meta">
+                    <strong>Date:</strong> {date} | <strong>Country:</strong> {country} | <strong>Categories:</strong> {categories_text}
+                </div>
                 <div class="item-content">
                     {content_summary}
                 </div>
@@ -970,24 +1007,26 @@ def generate_original_html(data):
         </section>
 
         <section class="discarded-section">
-            <h2>Top Discarded Headlines</h2>
+            <h2>Discarded Items</h2>
 """
     
     # Generate discarded items
     for i, item in enumerate(discarded_items, 1):
         headline = clean_text(item.get('headline', 'No title'))
-        original_url = item.get('url', '#')
-        original_url_clean, google_url, lucky_url = get_smart_url(headline, original_url)
-        date = item.get('publication_date', 'Unknown date')
-        source_name = item.get('source', 'Unknown source')
-        discard_reason = item.get('discard_reason', 'Below threshold')
+        reason = item.get('reason', 'Below threshold')
         score = item.get('score', 0)
+        
+        # Create Google search URL for discarded items
+        google_search_url = create_google_search_url(headline, "")
         
         html += f"""
             <div class="discarded-item">
                 <h4>{i}. {headline}</h4>
-                <div class="item-links">
-                    <a href="{google_url}" target="_blank" class="link-btn google-link">Search on Google</a>
+                <div class="discarded-meta">
+                    <strong>Reason:</strong> {reason} | <strong>Score:</strong> {score}
+                </div>
+                <div class="discarded-links">
+                    <a href="{google_search_url}" target="_blank" class="link-btn google-link">Search on Google</a>
                 </div>
             </div>
 """
@@ -1009,8 +1048,8 @@ def generate_original_html(data):
 def main():
     """Main function"""
     if len(sys.argv) != 2:
-        print("Usage: python json_to_html_converter_v2.py <json_file>")
-        print("Example: python json_to_html_converter_v2.py weekly_digest.json")
+        print("Usage: python json_to_html_converter_cl.py <json_file>")
+        print("Example: python json_to_html_converter_cl.py weekly_digest.json")
         sys.exit(1)
     
     json_file = sys.argv[1]

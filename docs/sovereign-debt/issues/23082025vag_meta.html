@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - Sovereign Debt Weekly — 16-08-2025 to 22-08-2025 | Kepler Karst</title>
+    <meta name="description" content="Analytics and metrics dashboard for sovereign debt weekly digest">
+    
+    <style>
+        @font-face {
+            font-family: "Sharp Grotesk";
+            src: url("Fonts/SharpGroteskBook16-Regular.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        :root {
+            --e-global-color-primary: #000000;
+            --e-global-color-secondary: #F1EEA4;
+            --e-global-color-text: #000000;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Sharp Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--e-global-color-text);
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        
+        .header {
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .header h1 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            font-size: 2.5rem;
+            color: var(--e-global-color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .chart-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .chart-card h3 {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--e-global-color-primary);
+            font-size: 1.2rem;
+        }
+        
+        .chart-container {
+            margin-top: 1rem;
+        }
+        
+        .chart-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .chart-label {
+            min-width: 120px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .chart-bar-container {
+            flex: 1;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .chart-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--e-global-color-secondary), #d4d1a0);
+            background-color: var(--e-global-color-secondary);
+            border-radius: 10px;
+            transition: width 0.3s ease;
+            display: block;
+            min-width: 4px;
+            position: relative;
+        }
+        
+        .chart-value {
+            min-width: 30px;
+            text-align: right;
+            font-weight: bold;
+            color: var(--e-global-color-primary);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--e-global-color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tag {
+            background: var(--e-global-color-secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .tag-size-1 { font-size: 0.7rem; opacity: 0.6; }
+        .tag-size-2 { font-size: 0.8rem; opacity: 0.8; }
+        .tag-size-3 { font-size: 0.9rem; opacity: 1; }
+        .tag-size-4 { font-size: 1rem; opacity: 1; }
+        .tag-size-5 { font-size: 1.1rem; opacity: 1; }
+        
+        .footer {
+            background-color: var(--e-global-color-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Analytics Dashboard</h1>
+        <div class="subtitle">Sovereign Debt Weekly — 16-08-2025 to 22-08-2025</div>
+        <div class="subtitle">16 August 2025 - 22 August 2025</div>
+    </header>
+
+    <main class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">45</div>
+                <div class="stat-label">Sources Scanned</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">127</div>
+                <div class="stat-label">Articles Reviewed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">20</div>
+                <div class="stat-label">Items Published</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">86.5</div>
+                <div class="stat-label">Average Score</div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="chart-card">
+                <h3>Category Distribution</h3>
+                <div class="chart-container">
+
+                    <div class="chart-row">
+                        <div class="chart-label">Rating Action</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 100.0%"></div>
+                        </div>
+                        <div class="chart-value">8</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Restructuring</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 75.0%"></div>
+                        </div>
+                        <div class="chart-value">6</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Market Event</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 62.5%"></div>
+                        </div>
+                        <div class="chart-value">5</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Legal Development</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 12.5%"></div>
+                        </div>
+                        <div class="chart-value">1</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Innovation</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 0.0%"></div>
+                        </div>
+                        <div class="chart-value">0</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h3>Geographical Distribution</h3>
+                <div class="chart-container">
+
+                    <div class="chart-row">
+                        <div class="chart-label">Africa</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 100.0%"></div>
+                        </div>
+                        <div class="chart-value">7</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Europe</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 100.0%"></div>
+                        </div>
+                        <div class="chart-value">7</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Americas</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 28.57142857142857%"></div>
+                        </div>
+                        <div class="chart-value">2</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Latin America</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 28.57142857142857%"></div>
+                        </div>
+                        <div class="chart-value">2</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Global</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 28.57142857142857%"></div>
+                        </div>
+                        <div class="chart-value">2</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h3>Score Distribution</h3>
+                <div class="chart-container">
+
+                    <div class="chart-row">
+                        <div class="chart-label"><60</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 11.11111111111111%"></div>
+                        </div>
+                        <div class="chart-value">1</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">60-69</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 11.11111111111111%"></div>
+                        </div>
+                        <div class="chart-value">1</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">70-79</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 33.33333333333333%"></div>
+                        </div>
+                        <div class="chart-value">3</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">80-89</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 100.0%"></div>
+                        </div>
+                        <div class="chart-value">9</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">90-100</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 66.66666666666666%"></div>
+                        </div>
+                        <div class="chart-value">6</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h3>Top Financial Instruments</h3>
+                <div class="chart-container">
+
+                    <div class="chart-row">
+                        <div class="chart-label">Credit Rating</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 100.0%"></div>
+                        </div>
+                        <div class="chart-value">8</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Bilateral Debt</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 37.5%"></div>
+                        </div>
+                        <div class="chart-value">3</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Interest Rate Reduction</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 25.0%"></div>
+                        </div>
+                        <div class="chart-value">2</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Capital Injections</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 25.0%"></div>
+                        </div>
+                        <div class="chart-value">2</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Pre‑Capitalised Notes</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 12.5%"></div>
+                        </div>
+                        <div class="chart-value">1</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Investment Fund</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 12.5%"></div>
+                        </div>
+                        <div class="chart-value">1</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Bond Swap</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 12.5%"></div>
+                        </div>
+                        <div class="chart-value">1</div>
+                    </div>
+
+                    <div class="chart-row">
+                        <div class="chart-label">Government Bonds</div>
+                        <div class="chart-bar-container">
+                            <div class="chart-bar" style="width: 12.5%"></div>
+                        </div>
+                        <div class="chart-value">1</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <h3>Top Secondary Tags</h3>
+            <div class="tag-cloud">
+<span class="tag tag-size-5">Fiscal Deficit (3)</span><span class="tag tag-size-5">G20 Common Framework (3)</span><span class="tag tag-size-5">Domestic Debt Exchange (3)</span><span class="tag tag-size-5">State Guarantee (3)</span><span class="tag tag-size-3">Development Bank (2)</span><span class="tag tag-size-3">Capital Adequacy (2)</span><span class="tag tag-size-1">State‑Contingent Instrument (1)</span><span class="tag tag-size-1">Public‑Sector Exposure (1)</span><span class="tag tag-size-1">Trust Fund (1)</span><span class="tag tag-size-1">Eu Membership (1)</span>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Kepler Karst Law Firm. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Analytics Dashboard for Sovereign Debt Weekly</p>
+    </footer>
+</body>
+</html>

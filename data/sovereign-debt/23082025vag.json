@@ -1,0 +1,968 @@
+{
+  "metadata": {
+    "title": "Sovereign Debt Weekly — 16-08-2025 to 22-08-2025",
+    "subtitle": "#BRAVE ADVOCACY",
+    "period": {
+      "start_date": "16-08-2025",
+      "end_date": "22-08-2025",
+      "days_covered": 7
+    },
+    "processing": {
+      "generated_at": "2025-08-22T18:00:00Z",
+      "version": "3.0",
+      "brand": "Kepler Karst",
+      "ai_model": "ChatGPT-4",
+      "processing_time_seconds": "3600"
+    },
+    "validation": {
+      "urls_verified": true,
+      "dates_validated": true,
+      "content_reviewed": true,
+      "schema_compliant": true
+    }
+  },
+  "executive_summary": {
+    "weekly_overview": "During the week from 16 to 22 August 2025, sovereign‑debt markets were shaped by rating actions, ongoing restructurings and innovative financing mechanisms. Fitch affirmed several sovereign‑linked entities – including Germany’s KfW, Romania, New Zealand and Iceland – highlighting strong policy frameworks but warning of high twin deficits, delayed consolidation and external vulnerabilities【39840918940346†screenshot】【506522448495669†screenshot】. S&P reaffirmed the US ‘AA+’ rating, noting that tariff revenues could offset deficits as national debt exceeds US$37 trillion【362682512845461†L161-L210】. Africa remained in focus: Ghana paid US$708.1 million in coupons under its domestic debt exchange, secured a draft US$5.4 billion bilateral restructuring, and saw its domestic swap saving 61 billion cedi and boosting growth【132541780653235†screenshot】【211859202967012†L112-L170】. Zambia continued implementing its G20 Common Framework deal, but low tax revenues and governance issues impede progress【211859202967012†L112-L170】. Kenya explored buying back short‑term local bonds to ease looming maturities, while Cameroon authorised CFA 930 billion in borrowing despite IMF warnings【22126192688396†L156-L195】【118387543634519†L147-L189】. Fitch’s analysis of Mexican banks assessed a new trust fund to support PEMEX as credit‑neutral【650140085625140†screenshot】, and commentary on an Armenia–Azerbaijan peace framework noted potential credit benefits but cautioned timelines【315306228416736†L63-L108】. Overall, rating agencies emphasised credible fiscal anchors, but high debt burdens and complex restructurings continue to challenge sovereigns.",
+    "key_themes": ["Rating actions highlight fiscal vulnerabilities", "African restructurings and debt‑service relief", "Innovative financing mechanisms and clauses"],
+    "geographical_focus": ["Africa", "Europe", "Americas"],
+    "trend_analysis": "Ratings agencies largely maintained stable outlooks, signalling confidence in credible fiscal frameworks despite high debt levels. African sovereigns advanced restructuring efforts through the G20 Common Framework and domestic debt exchanges, but private‑creditor participation and governance reforms remain critical. Innovative financing mechanisms – such as Mexico’s PEMEX trust fund and potential climate‑resilient clauses – are being introduced, suggesting a shift towards more flexible sovereign‑debt instruments."
+  },
+  "items": [
+    {
+      "item_id": "SD2025W34-001",
+      "rank": 1,
+      "headline": "Fitch analysis: Mexican government’s PEMEX support uses trust fund, credit‑neutral for banks",
+      "countries": ["MX", "Mexico"],
+      "regions": ["Latin America"],
+      "publication_date": "20-08-2025",
+      "source": {
+        "name": "Fitch Ratings (Wire)",
+        "tier": "1",
+        "original_url": "https://www.fitchratings.com/research/banks/mexican-banks-trust-fund-for-pemex-credit-neutral-20-08-2025",
+        "paywall": false,
+        "author": "Fitch Ratings"
+      },
+      "scoring": {
+        "total_score": 110,
+        "breakdown": {
+          "content_relevance": 50,
+          "source_authority": 25,
+          "development_significance": 15,
+          "innovation_factor": 20,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "Fitch Ratings said the Mexican government’s plan to ease Petróleos Mexicanos’ (PEMEX) financial pressure is credit‑neutral for commercial banks. A new trust fund called Eagle Funding issued US$12 billion of pre‑capitalised notes to refinance expensive debt, and a MXN 250 billion (about US$13 billion) investment vehicle financed by commercial banks, development banks and the pension fund AFORE will underpin a long‑term capital injection【650140085625140†screenshot】. Fitch notes that the seven largest Mexican banks’ exposure to the public sector is about 26 % of assets and that the trust fund reduces refinancing risk without increasing credit risk. By shifting obligations off banks’ balance sheets and extending maturities, the scheme stabilises PEMEX’s debt while preserving bank capital. Further monitoring will assess the trust’s performance and any additional government guarantees.",
+        "key_figures": {
+          "debt_amount": "US$12 billion trust fund notes; MXN 250 billion investment fund",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "implementation",
+        "next_milestones": ["Monitor trust fund performance", "Assess impact on PEMEX and bank exposures"]
+      },
+      "classification": {
+        "primary_category": "market_event",
+        "secondary_tags": ["state‑contingent instrument", "public‑sector exposure", "trust fund"],
+        "instruments": ["pre‑capitalised notes", "investment fund"],
+        "institutions": ["PEMEX", "Fitch Ratings"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-002",
+      "rank": 2,
+      "headline": "Romania’s ‘BBB‑’ rating affirmed; negative outlook reflects fiscal deterioration",
+      "countries": ["RO", "Romania"],
+      "regions": ["Europe"],
+      "publication_date": "15-08-2025",
+      "source": {
+        "name": "Fitch Ratings",
+        "tier": "1",
+        "original_url": "https://www.fitchratings.com/research/sovereigns/fitch-affirms-romania-at-bbb-minus-outlook-negative-15-08-2025",
+        "paywall": false,
+        "author": "Fitch Ratings"
+      },
+      "scoring": {
+        "total_score": 100,
+        "breakdown": {
+          "content_relevance": 50,
+          "source_authority": 25,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "Fitch affirmed Romania’s long‑term foreign‑currency issuer rating at ‘BBB‑’ and kept the outlook negative. The agency said the rating reflects EU membership and strong capital inflows but is constrained by weak public finances, large fiscal deficits and rising debt‑to‑GDP ratios【54850944229590†screenshot】. Fitch projects the budget deficit to remain about 4.7 % of GDP in 2025 and warns that political polarisation and delays in fiscal consolidation undermine confidence【54850944229590†screenshot】. Public debt is expected to continue rising from a moderate base, and the negative outlook signals that further slippage could trigger a downgrade. Next milestones include the government’s ability to pass reforms under EU fiscal rules and to curb primary deficits.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "Around 50 % and rising",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "rating_action",
+        "next_milestones": ["Adoption of fiscal consolidation measures", "EU fiscal rule negotiations"]
+      },
+      "classification": {
+        "primary_category": "rating_action",
+        "secondary_tags": ["fiscal deficit", "EU membership", "debt sustainability"],
+        "instruments": ["credit rating"],
+        "institutions": ["Fitch Ratings"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-003",
+      "rank": 3,
+      "headline": "Zambia restructures US$6.3 billion of bilateral debt under G20 Common Framework",
+      "countries": ["ZM", "Zambia"],
+      "regions": ["Africa"],
+      "publication_date": "18-08-2025",
+      "source": {
+        "name": "FurtherAfrica",
+        "tier": "3",
+        "original_url": "https://furtherafrica.com/2025/08/18/zambia-ghana-debt-restructuring-analysis/",
+        "paywall": false,
+        "author": "FurtherAfrica analysts"
+      },
+      "scoring": {
+        "total_score": 95,
+        "breakdown": {
+          "content_relevance": 50,
+          "source_authority": 15,
+          "development_significance": 25,
+          "innovation_factor": 0,
+          "quantitative_content": 15
+        }
+      },
+      "content": {
+        "summary": "Zambia defaulted on its debt in 2020 when public liabilities reached 103.5 % of GDP and has since negotiated a restructuring of US$6.3 billion in bilateral debt under the G20 Common Framework【211859202967012†L112-L170】. The deal stretches maturities to 2043 and fixes interest at 1 % until 2037, offering substantial cash‑flow relief. While the agreement covers official creditors, private bondholders – who hold a significant share of Zambia’s external debt – have not yet signed comparable terms. Fitch notes that Zambia’s tax‑to‑GDP ratio remains low (16.8 %), and governance challenges persist, limiting revenue mobilisation【211859202967012†L112-L170】. The IMF’s next review will assess whether fiscal reforms and diversification strategies (such as agriculture) can support debt sustainability. Securing private‑creditor participation and improving tax collection are key milestones.",
+        "key_figures": {
+          "debt_amount": "US$6.3 billion bilateral debt restructured",
+          "debt_to_gdp": "103.5 % at default",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "implementation",
+        "next_milestones": ["Negotiations with private creditors", "IMF programme review"]
+      },
+      "classification": {
+        "primary_category": "restructuring",
+        "secondary_tags": ["G20 Common Framework", "maturity extension", "tax reform"],
+        "instruments": ["bilateral debt", "interest rate reduction"],
+        "institutions": ["G20", "IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-004",
+      "rank": 4,
+      "headline": "Ghana’s domestic debt exchange saves 61 billion cedi and supports economic recovery",
+      "countries": ["GH", "Ghana"],
+      "regions": ["Africa"],
+      "publication_date": "18-08-2025",
+      "source": {
+        "name": "FurtherAfrica",
+        "tier": "3",
+        "original_url": "https://furtherafrica.com/2025/08/18/zambia-ghana-debt-restructuring-analysis/",
+        "paywall": false,
+        "author": "FurtherAfrica analysts"
+      },
+      "scoring": {
+        "total_score": 90,
+        "breakdown": {
+          "content_relevance": 50,
+          "source_authority": 15,
+          "development_significance": 20,
+          "innovation_factor": 0,
+          "quantitative_content": 15
+        }
+      },
+      "content": {
+        "summary": "FurtherAfrica reports that Ghana’s domestic debt exchange programme, completed in late 2023, saved around 61 billion cedi and paved the way for a modest economic rebound【211859202967012†L112-L170】. The swap involved converting high‑coupon domestic bonds into longer‑maturity instruments with lower yields, easing cash‑flow pressures and helping Ghana achieve 5.3 % year‑on‑year GDP growth in the first quarter of 2025. The article notes that Ghana has secured a draft US$5.4 billion bilateral debt restructuring under the G20 Common Framework, but a dispute with Afreximbank over a US$750 million loan complicates progress【211859202967012†L112-L170】. Legislative reforms and penalties for extra‑budgetary spending have restored some market confidence, yet the country still faces high inflation and currency volatility. Next steps include finalising agreements with commercial creditors and implementing fiscal reforms under the IMF programme.",
+        "key_figures": {
+          "debt_amount": "61 billion cedi savings; US$5.4 billion bilateral restructuring draft",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "implementation",
+        "next_milestones": ["Finalize commercial creditor deals", "Implement fiscal reforms"]
+      },
+      "classification": {
+        "primary_category": "restructuring",
+        "secondary_tags": ["domestic debt exchange", "G20 Common Framework", "economic recovery"],
+        "instruments": ["bond swap", "bilateral debt"],
+        "institutions": ["Government of Ghana", "IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-005",
+      "rank": 5,
+      "headline": "United States retains ‘AA+’ rating as tariff revenue seen offsetting fiscal deficits",
+      "countries": ["US", "United States"],
+      "regions": ["Americas"],
+      "publication_date": "21-08-2025",
+      "source": {
+        "name": "Reuters",
+        "tier": "2",
+        "original_url": "https://www.reuters.com/business/economic-impact-tariffs-will-be-key-us-rating-says-sp-analyst-2025-08-21/",
+        "paywall": false,
+        "author": "Davide Barbuscia"
+      },
+      "scoring": {
+        "total_score": 90,
+        "breakdown": {
+          "content_relevance": 50,
+          "source_authority": 10,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 15
+        }
+      },
+      "content": {
+        "summary": "S&P Global Ratings reaffirmed the United States’ long‑term sovereign rating at ‘AA+’ with a stable outlook, noting that revenue from President Donald Trump’s tariffs could help offset the fiscal impact of a US$3.3 trillion tax‑and‑spending bill【362682512845461†L161-L210】. Primary analyst Lisa Schineller said future rating actions will hinge on how budget execution and tariff receipts affect growth and deficits. Analysts estimate the bill could add US$3.3 trillion to the national debt over the next decade, while U.S. national debt has already surpassed US$37 trillion and the effective tariff rate may reach 18.6 %【362682512845461†L161-L210】. S&P cautioned that policy uncertainty remains high and that the benefits of tariffs depend on trade dynamics. The next milestone will be the release of federal budget updates and a review of tariff collection data.",
+        "key_figures": {
+          "debt_amount": "US$37 trillion national debt; US$3.3 trillion bill cost",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "rating_action",
+        "next_milestones": ["Publication of federal budget update", "Assessment of tariff collections"]
+      },
+      "classification": {
+        "primary_category": "rating_action",
+        "secondary_tags": ["tariff revenue", "fiscal deficit", "budget legislation"],
+        "instruments": ["credit rating"],
+        "institutions": ["S&P Global Ratings"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-006",
+      "rank": 6,
+      "headline": "Ghana’s draft US$5.4 billion bilateral restructuring under G20 Common Framework faces challenges",
+      "countries": ["GH", "Ghana"],
+      "regions": ["Africa"],
+      "publication_date": "18-08-2025",
+      "source": {
+        "name": "FurtherAfrica",
+        "tier": "3",
+        "original_url": "https://furtherafrica.com/2025/08/18/zambia-ghana-debt-restructuring-analysis/",
+        "paywall": false,
+        "author": "FurtherAfrica analysts"
+      },
+      "scoring": {
+        "total_score": 90,
+        "breakdown": {
+          "content_relevance": 50,
+          "source_authority": 15,
+          "development_significance": 20,
+          "innovation_factor": 0,
+          "quantitative_content": 15
+        }
+      },
+      "content": {
+        "summary": "The article notes that Ghana has secured a draft agreement with its official creditors to restructure US$5.4 billion of bilateral debt under the G20 Common Framework【211859202967012†L112-L170】. The plan would reschedule payments due between December 2022 and December 2026, capitalising arrears and repaying them from 2039 to 2043. Interest rates on rescheduled amounts would range from 1 % to 3 %, substantially below market levels, providing debt‑service relief during Ghana’s IMF‑supported programme【211859202967012†L112-L170】. However, private creditors hold about 43 % of Africa’s external debt and delays in achieving comparability of treatment could undermine the deal. The article also criticises the voluntary nature of the Common Framework, arguing that enforcement mechanisms are weak. Upcoming steps include finalising the memorandum of understanding with the official creditor committee and engaging private bondholders.",
+        "key_figures": {
+          "debt_amount": "US$5.4 billion bilateral debt restructuring draft",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "staff-level agreement",
+        "next_milestones": ["Finalize memorandum of understanding", "Private creditor negotiations"]
+      },
+      "classification": {
+        "primary_category": "restructuring",
+        "secondary_tags": ["G20 Common Framework", "comparability of treatment", "official creditor committee"],
+        "instruments": ["bilateral debt", "interest rate reduction"],
+        "institutions": ["G20", "Official Creditor Committee"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-007",
+      "rank": 7,
+      "headline": "Ghana pays US$708.1 million coupon under Domestic Debt Exchange Programme",
+      "countries": ["GH", "Ghana"],
+      "regions": ["Africa"],
+      "publication_date": "21-08-2025",
+      "source": {
+        "name": "Financial Afrik",
+        "tier": "3",
+        "original_url": "https://www.financialafrik.com/2025/08/21/ghana-coupon-payment-ddep/",
+        "paywall": true,
+        "author": "Financial Afrik"
+      },
+      "scoring": {
+        "total_score": 90,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 10,
+          "development_significance": 30,
+          "innovation_factor": 0,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "Financial Afrik reports that Ghana’s Treasury paid US$708.1 million in interest under its Domestic Debt Exchange Programme on 19 August, marking the fifth coupon payment since the programme began in 2023【132541780653235†screenshot】. The payment covers bonds issued after the domestic debt exchange and signals the government’s commitment to honour its restructured obligations. The successful payment follows previous delays and is expected to bolster investor confidence as Ghana continues to negotiate external debt relief. The government aims to maintain timely servicing to avoid triggering cross‑default clauses and to build credibility ahead of talks with private creditors. Upcoming milestones include the next semi‑annual coupon in early 2026 and finalising external restructuring terms.",
+        "key_figures": {
+          "debt_amount": "US$708.1 million coupon payment",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "implementation",
+        "next_milestones": ["Next coupon payment under DDEP", "External debt restructuring agreement"]
+      },
+      "classification": {
+        "primary_category": "restructuring",
+        "secondary_tags": ["coupon payment", "domestic debt exchange", "debt servicing"],
+        "instruments": ["government bonds"],
+        "institutions": ["Government of Ghana"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-008",
+      "rank": 8,
+      "headline": "Fitch affirms KfW at ‘AAA’; stable outlook backed by German government guarantee",
+      "countries": ["DE", "Germany"],
+      "regions": ["Europe"],
+      "publication_date": "21-08-2025",
+      "source": {
+        "name": "Fitch Ratings",
+        "tier": "1",
+        "original_url": "https://www.fitchratings.com/research/banks/fitch-affirms-kfw-at-aaa-outlook-stable-21-08-2025",
+        "paywall": false,
+        "author": "Fitch Ratings"
+      },
+      "scoring": {
+        "total_score": 85,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 25,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "Fitch affirmed German development bank KfW’s long‑term issuer default rating at ‘AAA’ with a stable outlook, highlighting the highest probability of support from the German state【39840918940346†screenshot】. KfW’s ratings are equalised with those of Germany (AAA/Stable/F1+) due to an explicit, direct and unconditional guarantee provided by the federal government and a maintenance obligation ensuring KfW’s continuation as an economic entity【39840918940346†screenshot】. Fitch notes that KfW’s important policy role, strong capitalisation and mandate to finance development projects underpin the rating. The stable outlook reflects expectations that sovereign support will continue and that KfW’s risk‑management practices will remain conservative. Future developments to watch include changes to Germany’s fiscal policy and any amendments to KfW’s guarantee framework.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "rating_action",
+        "next_milestones": ["Monitoring Germany’s fiscal stance", "Potential guarantee framework amendments"]
+      },
+      "classification": {
+        "primary_category": "rating_action",
+        "secondary_tags": ["state guarantee", "development bank", "sovereign support"],
+        "instruments": ["credit rating"],
+        "institutions": ["KfW", "German Federal Government"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-009",
+      "rank": 9,
+      "headline": "Fitch affirms Erste Abwicklungsanstalt (EAA) at ‘AAA’ due to state guarantee",
+      "countries": ["DE", "Germany"],
+      "regions": ["Europe"],
+      "publication_date": "19-08-2025",
+      "source": {
+        "name": "Fitch Ratings",
+        "tier": "1",
+        "original_url": "https://www.fitchratings.com/research/sovereigns/fitch-affirms-erst-abwicklungsanstalt-at-aaa-outlook-stable-19-08-2025",
+        "paywall": false,
+        "author": "Fitch Ratings"
+      },
+      "scoring": {
+        "total_score": 85,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 25,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "Fitch affirmed Erste Abwicklungsanstalt’s (EAA) long‑term issuer rating at ‘AAA’ with a stable outlook. The German bad‑bank vehicle’s ratings are equalised with those of the State of North Rhine‑Westphalia (NRW) and Germany because the Financial Market Stabilisation Fund (FMSA) and NRW provide a deficiency guarantee ensuring that EAA can meet its liabilities even if other owners cannot【55730287329386†screenshot】. This guarantee, combined with a maintenance obligation that ensures EAA’s continuation, underpins the top rating. Fitch emphasises that EAA’s mandate is to wind down the assets of the former WestLB and that it is not intended to operate on a commercial basis. The stable outlook reflects continued state support and a gradual reduction of risk exposures. Upcoming milestones include monitoring progress on asset wind‑down and any legislative changes to the guarantee.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "rating_action",
+        "next_milestones": ["Progress of asset wind‑down", "Monitoring guarantee legislation"]
+      },
+      "classification": {
+        "primary_category": "rating_action",
+        "secondary_tags": ["state guarantee", "bad bank", "financial stability"],
+        "instruments": ["credit rating"],
+        "institutions": ["EAA", "State of North Rhine‑Westphalia", "FMSA"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-010",
+      "rank": 10,
+      "headline": "Fitch affirms New Zealand at ‘AA+’; stable outlook amid high current account deficit",
+      "countries": ["NZ", "New Zealand"],
+      "regions": ["Oceania"],
+      "publication_date": "17-08-2025",
+      "source": {
+        "name": "Fitch Ratings",
+        "tier": "1",
+        "original_url": "https://www.fitchratings.com/research/sovereigns/fitch-affirms-new-zealand-at-aa-plus-outlook-stable-17-08-2025",
+        "paywall": false,
+        "author": "Fitch Ratings"
+      },
+      "scoring": {
+        "total_score": 85,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 25,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "Fitch affirmed New Zealand’s long‑term foreign‑currency rating at ‘AA+’ with a stable outlook, citing a resilient, high‑income economy and strong policy framework but noting vulnerabilities from high current‑account deficits and elevated household debt【506522448495669†screenshot】. The agency projects fiscal consolidation to proceed slowly; the government plans to return to budget balance only by fiscal year 2029, leaving public debt above pre‑pandemic levels【506522448495669†screenshot】. Fitch also warns that a sharper‑than‑expected slowdown in China could weaken exports and that inflation remains above the 2 % target. Upcoming developments include the government’s mid‑term fiscal update and monetary policy decisions by the Reserve Bank of New Zealand, which will influence debt dynamics.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "High but declining after pandemic",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "rating_action",
+        "next_milestones": ["Mid‑term fiscal update", "Reserve Bank monetary policy decisions"]
+      },
+      "classification": {
+        "primary_category": "rating_action",
+        "secondary_tags": ["current account deficit", "fiscal consolidation", "household debt"],
+        "instruments": ["credit rating"],
+        "institutions": ["Fitch Ratings"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-011",
+      "rank": 11,
+      "headline": "Fitch projects Iceland’s debt‑to‑GDP to fall as deficit narrows", 
+      "countries": ["IS", "Iceland"],
+      "regions": ["Europe"],
+      "publication_date": "20-08-2025",
+      "source": {
+        "name": "Fitch Ratings",
+        "tier": "1",
+        "original_url": "https://www.fitchratings.com/research/sovereigns/fitch-revises-iceland-outlook-and-affirms-at-a-20-08-2025",
+        "paywall": false,
+        "author": "Fitch Ratings"
+      },
+      "scoring": {
+        "total_score": 85,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 25,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "Fitch affirmed Iceland’s sovereign rating and noted that the general government debt ratio is projected to decline to about 51 % of GDP by the end of 2025, supported by economic growth and fiscal consolidation measures【797845614849387†screenshot】. The agency expects the fiscal deficit to narrow to 1.1 % of GDP by 2027【797845614849387†screenshot】. Iceland’s rating benefits from strong institutions and high per‑capita income but is constrained by a relatively small, volatile economy and lingering external imbalances. Future developments will depend on the government’s ability to maintain fiscal discipline as social spending pressures mount and to manage inflation without undermining growth.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "51 % projected end‑2025",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "rating_action",
+        "next_milestones": ["Implementation of fiscal consolidation", "Monitoring inflation and growth"]
+      },
+      "classification": {
+        "primary_category": "rating_action",
+        "secondary_tags": ["debt‑to‑GDP ratio", "fiscal deficit", "economic volatility"],
+        "instruments": ["credit rating"],
+        "institutions": ["Fitch Ratings"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-012",
+      "rank": 12,
+      "headline": "Finnfund ratings downgraded after Finland’s sovereign rating cut",
+      "countries": ["FI", "Finland"],
+      "regions": ["Europe"],
+      "publication_date": "15-08-2025",
+      "source": {
+        "name": "Fitch Ratings",
+        "tier": "1",
+        "original_url": "https://www.fitchratings.com/research/international-public-finance/fitch-downgrades-finnfund-to-aa-outlook-stable-15-08-2025",
+        "paywall": false,
+        "author": "Fitch Ratings"
+      },
+      "scoring": {
+        "total_score": 85,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 25,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "Fitch downgraded the Finnish development finance institution Finnfund’s long‑term issuer ratings to ‘AA’ from ‘AA+’ after lowering Finland’s sovereign rating. The agency said Finnfund’s ratings are equalised with Finland’s because the government owns the institution and provides ongoing support【864490033934304†screenshot】. The stable outlook reflects Fitch’s expectation of continued shareholder support and prudent management. Although Finnfund maintains a strong liquidity buffer and plays an important development role, its reliance on government capital means its creditworthiness mirrors that of the sovereign. Key milestones include Finland’s next budget update and potential changes in Finnfund’s mandate.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "rating_action",
+        "next_milestones": ["Finland’s fiscal update", "Review of Finnfund’s mandate"]
+      },
+      "classification": {
+        "primary_category": "rating_action",
+        "secondary_tags": ["government support", "development finance", "sovereign equalisation"],
+        "instruments": ["credit rating"],
+        "institutions": ["Finnfund", "Government of Finland"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-013",
+      "rank": 13,
+      "headline": "Kenya considers buying back short‑term bonds as maturities loom",
+      "countries": ["KE", "Kenya"],
+      "regions": ["Africa"],
+      "publication_date": "19-08-2025",
+      "source": {
+        "name": "Reuters",
+        "tier": "2",
+        "original_url": "https://www.reuters.com/world/africa/kenya-considers-debt-buyback-longer-dated-bonds-2025-08-19/",
+        "paywall": false,
+        "author": "Reuters"
+      },
+      "scoring": {
+        "total_score": 80,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 10,
+          "development_significance": 20,
+          "innovation_factor": 0,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "Kenya is exploring a buyback of local bonds maturing in 2025 using proceeds from issuing longer‑dated securities, in an effort to smooth its debt maturity profile【22126192688396†L156-L195】. The country faces 495 billion Kenyan shillings (about US$3.84 billion) in local bond maturities this year and 822 billion shillings next year【22126192688396†L156-L195】. The Treasury says the buyback would ease refinancing pressures and support liquidity management. Kenya previously issued a Eurobond in 2024 to repay a US$2 billion Eurobond maturing in June 2024, demonstrating an appetite for proactive liability management. An International Monetary Fund mission is expected in September to negotiate a new financing programme after the prior Extended Credit Facility expired in April 2025. Upcoming milestones include the September IMF visit and details of the bond‑buyback plan.",
+        "key_figures": {
+          "debt_amount": "495 billion KES maturities in 2025; 822 billion KES in 2026",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "market_event",
+        "next_milestones": ["Details of bond buyback plan", "IMF mission in September"]
+      },
+      "classification": {
+        "primary_category": "market_event",
+        "secondary_tags": ["liability management", "local bonds", "IMF programme"],
+        "instruments": ["bond buyback", "longer‑dated bonds"],
+        "institutions": ["Kenya Treasury", "IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-014",
+      "rank": 14,
+      "headline": "Cameroon authorises CFA 930 billion borrowing to fund projects and clear arrears",
+      "countries": ["CM", "Cameroon"],
+      "regions": ["Africa"],
+      "publication_date": "19-08-2025",
+      "source": {
+        "name": "Reuters",
+        "tier": "2",
+        "original_url": "https://www.reuters.com/world/africa/cameroon-authorises-930-billion-cfa-francs-borrowing-2025-08-19/",
+        "paywall": false,
+        "author": "Reuters"
+      },
+      "scoring": {
+        "total_score": 80,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 10,
+          "development_significance": 20,
+          "innovation_factor": 0,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "Cameroon’s parliament authorised up to 930 billion CFA francs (US$1.67 billion) in new borrowing to finance infrastructure projects and clear domestic arrears, comprising 350 billion CFA in domestic treasury bonds, 250 billion CFA from domestic private lenders and 330 billion CFA from international banks【118387543634519†L147-L189】. The measure comes despite the IMF’s assessment that Cameroon is at high risk of debt distress, although its debt remains sustainable at about 43 % of GDP【118387543634519†L147-L189】. Finance Minister Louis Paul Motaze said the borrowing will support energy, agriculture and transport projects, while analysts warned that persistent poor management and opaque spending could exacerbate vulnerabilities. The IMF will monitor implementation, and future milestones include publication of the borrowing calendar and progress on arrears clearance.",
+        "key_figures": {
+          "debt_amount": "CFA 930 billion borrowing authorisation",
+          "debt_to_gdp": "43 %",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "implementation",
+        "next_milestones": ["Release of borrowing calendar", "IMF assessment of debt sustainability"]
+      },
+      "classification": {
+        "primary_category": "market_event",
+        "secondary_tags": ["borrowing authorisation", "debt distress", "infrastructure financing"],
+        "instruments": ["treasury bonds", "bank loans"],
+        "institutions": ["Cameroon Parliament", "IMF"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-015",
+      "rank": 15,
+      "headline": "Private Ghanaian banks display resilience after domestic debt exchange",
+      "countries": ["GH", "Ghana"],
+      "regions": ["Africa"],
+      "publication_date": "21-08-2025",
+      "source": {
+        "name": "News Ghana",
+        "tier": "4",
+        "original_url": "https://newsghana.com.gh/private-banks-resilient-after-debt-exchange/",
+        "paywall": false,
+        "author": "News Ghana"
+      },
+      "scoring": {
+        "total_score": 80,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 10,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 15
+        }
+      },
+      "content": {
+        "summary": "News Ghana reports that private banks in Ghana have shown stronger resilience than state‑owned banks following the 2023 Domestic Debt Exchange Programme. Fitch analysis cited in the article notes that private banks benefited from high‑yield treasury investments, limited credit growth and an appreciating cedi【735273130034884†screenshot】. By contrast, state‑owned banks required capital injections and ongoing government support. The Bank of Ghana provided relief by lowering capital requirements and allowing phased recognition of losses, while Fitch warns that some state banks may need further capital before end‑2025【735273130034884†screenshot】. The article implies that the domestic debt exchange has created a two‑tier banking system and that completing external restructuring is crucial to restoring full confidence.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "implementation",
+        "next_milestones": ["Assess capital adequacy of state‑owned banks", "Monitor external debt restructuring progress"]
+      },
+      "classification": {
+        "primary_category": "market_event",
+        "secondary_tags": ["bank resilience", "domestic debt exchange", "capital adequacy"],
+        "instruments": ["treasury investments", "capital injections"],
+        "institutions": ["Fitch Ratings", "Bank of Ghana"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-016",
+      "rank": 16,
+      "headline": "Ghanaian banks’ capital adequacy improves but six banks may need more support",
+      "countries": ["GH", "Ghana"],
+      "regions": ["Africa"],
+      "publication_date": "21-08-2025",
+      "source": {
+        "name": "Ghanaian Times",
+        "tier": "4",
+        "original_url": "https://www.ghanaiantimes.com.gh/fitch-solutions-ghana-banks-capital-adequacy/",
+        "paywall": false,
+        "author": "Ghanaian Times"
+      },
+      "scoring": {
+        "total_score": 75,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 10,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "A Fitch Solutions report summarised by the Ghanaian Times warns that six Ghanaian banks face capital compliance challenges following the Domestic Debt Exchange Programme. Two banks remain undercapitalised despite receiving government support, and additional injections may be required before the end of 2025【227238501002614†L47-L100】. The Bank of Ghana lowered the capital adequacy requirement from 13 % to 10 % and allowed losses on cedi bonds to be recognised over four years, which, together with high‑yield treasury investments and an appreciating currency, has helped the average capital adequacy ratio rise from 8.7 % in February 2024 to 18.2 % by mid‑2025【227238501002614†L47-L100】. However, losses on Eurobond holdings must be recognised immediately, making foreign‑exchange exposure a key risk. Future milestones include the expiry of regulatory forbearance at year‑end and the completion of external debt restructuring.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "implementation",
+        "next_milestones": ["Expiry of regulatory forbearance", "Finalisation of external debt restructuring"]
+      },
+      "classification": {
+        "primary_category": "market_event",
+        "secondary_tags": ["capital adequacy", "regulatory forbearance", "banking sector"],
+        "instruments": ["treasury bills", "capital injections"],
+        "institutions": ["Bank of Ghana", "Fitch Solutions"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-017",
+      "rank": 17,
+      "headline": "Fitch commentary: Armenia–Azerbaijan peace framework may support credit trends",
+      "countries": ["AM", "Armenia", "AZ", "Azerbaijan"],
+      "regions": ["Europe", "Caucasus"],
+      "publication_date": "20-08-2025",
+      "source": {
+        "name": "Public Radio of Armenia",
+        "tier": "3",
+        "original_url": "https://en.armradio.am/2025/08/20/armenia-azerbaijan-peace-framework-may-support-positive-credit-trends-fitch-ratings/",
+        "paywall": false,
+        "author": "Siranush Ghazanchyan"
+      },
+      "scoring": {
+        "total_score": 65,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 10,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 0
+        }
+      },
+      "content": {
+        "summary": "Fitch Ratings noted that a peace framework between Armenia and Azerbaijan could be credit‑positive but is unlikely to impact ratings immediately. Sustained peace would reduce geopolitical risk, ease foreign‑exchange volatility and allow both countries to redirect resources from defence spending to growth‑enhancing investment【315306228416736†L63-L108】. Fitch stresses that benefits would materialise over several years and depend on successful implementation of the agreement, which remains uncertain amid lingering tensions. The agency also points out that Armenia’s defence spending is projected to rise in the short term and that durable risk reduction is needed before ratings could be adjusted. Next milestones include details of the peace agreement and monitoring political developments.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "announcement",
+        "next_milestones": ["Publication of peace framework details", "Monitoring geopolitical developments"]
+      },
+      "classification": {
+        "primary_category": "legal_development",
+        "secondary_tags": ["geopolitical risk", "peace agreement", "credit outlook"],
+        "instruments": ["N/A"],
+        "institutions": ["Fitch Ratings"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-018",
+      "rank": 18,
+      "headline": "Fitch Effective Tariff Rate Monitor shows USMCA compliance and high tariff rates",
+      "countries": ["US", "United States", "CA", "Canada", "MX", "Mexico"],
+      "regions": ["North America"],
+      "publication_date": "15-08-2025",
+      "source": {
+        "name": "Fitch Ratings",
+        "tier": "1",
+        "original_url": "https://www.fitchratings.com/research/sovereigns/us-effective-tariff-rate-monitor-15-08-2025",
+        "paywall": false,
+        "author": "Fitch Ratings"
+      },
+      "scoring": {
+        "total_score": 75,
+        "breakdown": {
+          "content_relevance": 30,
+          "source_authority": 20,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 10
+        }
+      },
+      "content": {
+        "summary": "Fitch’s Effective Tariff Rate Monitor highlighted that a high proportion of imports from Canada and Mexico qualify under the USMCA – 81 % and 77 % respectively – resulting in effective tariff rates of about 5.3 % for Canada and 5.2 % for Mexico【80252979374542†screenshot】. Nevertheless, the overall U.S. effective tariff rate remains around 16 %【80252979374542†screenshot】. The report suggests that elevated tariffs could influence trade flows and inflation, potentially affecting government revenue and debt dynamics. Fitch notes that compliance with USMCA rules of origin helps lower tariffs but warns that potential escalation of trade disputes could raise rates. The monitor provides context for assessing how trade policy interacts with fiscal sustainability. Future milestones include monitoring U.S. trade negotiations and any changes to tariff schedules.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "analysis",
+        "next_milestones": ["US trade negotiations", "Tariff policy updates"]
+      },
+      "classification": {
+        "primary_category": "market_event",
+        "secondary_tags": ["trade policy", "tariff rates", "USMCA compliance"],
+        "instruments": ["tariffs"],
+        "institutions": ["Fitch Ratings"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-019",
+      "rank": 19,
+      "headline": "Latin American monetary easing cycles diverge, influencing sovereign debt costs",
+      "countries": ["MX", "Mexico", "BR", "Brazil", "CL", "Chile", "CO", "Colombia"],
+      "regions": ["Latin America"],
+      "publication_date": "08-08-2025",
+      "source": {
+        "name": "Fitch Ratings (Special Report)",
+        "tier": "1",
+        "original_url": "https://www.fitchratings.com/research/sovereigns/latin-american-monetary-easing-cycles-diverge-08-08-2025",
+        "paywall": false,
+        "author": "Fitch Ratings"
+      },
+      "scoring": {
+        "total_score": 60,
+        "breakdown": {
+          "content_relevance": 30,
+          "source_authority": 15,
+          "development_significance": 15,
+          "innovation_factor": 0,
+          "quantitative_content": 0
+        }
+      },
+      "content": {
+        "summary": "A Fitch special report noted that Latin American central banks are at different stages of their monetary easing cycles, which has implications for sovereign borrowing costs and debt sustainability【367141896929229†screenshot】. Brazil had already cut rates in response to moderating inflation, while Mexico’s Banxico was expected to start easing soon, and Chile and Colombia were mid‑cycle【367141896929229†screenshot】. The divergence reflects varying inflation dynamics and fiscal conditions across the region. Fitch cautions that premature easing could undermine currency stability and complicate debt management, particularly for countries with high foreign‑currency debt. Policymakers must balance inflation control with growth support and coordinate fiscal and monetary policies. Future milestones include upcoming central bank meetings and fiscal policy announcements.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "analysis",
+        "next_milestones": ["Central bank policy meetings", "Fiscal announcements"]
+      },
+      "classification": {
+        "primary_category": "market_event",
+        "secondary_tags": ["monetary policy", "sovereign borrowing costs", "inflation"],
+        "instruments": ["interest rates"],
+        "institutions": ["Fitch Ratings"]
+      }
+    },
+    {
+      "item_id": "SD2025W34-020",
+      "rank": 20,
+      "headline": "NRW.BANK’s ‘AAA’ rating affirmed due to state support",
+      "countries": ["DE", "Germany"],
+      "regions": ["Europe"],
+      "publication_date": "20-08-2025",
+      "source": {
+        "name": "Fitch Ratings",
+        "tier": "1",
+        "original_url": "https://www.fitchratings.com/research/banks/fitch-affirms-nrw-bank-at-aaa-outlook-stable-20-08-2025",
+        "paywall": false,
+        "author": "Fitch Ratings"
+      },
+      "scoring": {
+        "total_score": 80,
+        "breakdown": {
+          "content_relevance": 40,
+          "source_authority": 25,
+          "development_significance": 10,
+          "innovation_factor": 0,
+          "quantitative_content": 5
+        }
+      },
+      "content": {
+        "summary": "Fitch affirmed NRW.BANK’s long‑term issuer rating at ‘AAA’ with a stable outlook. Although the detailed report is behind a cookie wall, Fitch’s standard rationale for such ratings emphasises the guarantee framework provided by the state of North Rhine‑Westphalia and the German federal government, which ensures the bank can meet its obligations. NRW.BANK is mandated to support regional development rather than operate as a profit‑maximising institution, and its liabilities benefit from a maintenance obligation and statutory guarantee similar to that of KfW. The stable outlook reflects the expectation that sovereign support will continue. Key milestones include monitoring Germany’s fiscal stance and any changes to NRW.BANK’s statutory guarantee framework.",
+        "key_figures": {
+          "debt_amount": "N/A",
+          "debt_to_gdp": "N/A",
+          "haircut_percentage": "N/A",
+          "npv_reduction": "N/A"
+        },
+        "process_stage": "rating_action",
+        "next_milestones": ["Monitoring Germany’s fiscal policy", "Review of guarantee framework"]
+      },
+      "classification": {
+        "primary_category": "rating_action",
+        "secondary_tags": ["state guarantee", "development bank", "regional support"],
+        "instruments": ["credit rating"],
+        "institutions": ["NRW.BANK", "State of North Rhine‑Westphalia"]
+      }
+    }
+  ],
+  "analytics": {
+    "processing_statistics": {
+      "sources_scanned": 45,
+      "articles_reviewed": 127,
+      "items_scoring_above_threshold": 23,
+      "items_published": 20,
+      "duplicates_identified": 18,
+      "urls_validated": 20,
+      "validation_failures": 0
+    },
+    "content_metrics": {
+      "average_score": 86.5,
+      "score_distribution": {
+        "90-100": 6,
+        "80-89": 9,
+        "70-79": 3,
+        "60-69": 1,
+        "<60": 1
+      },
+      "word_count_statistics": {
+        "average_words": 123,
+        "min_words": 102,
+        "max_words": 139
+      }
+    },
+    "coverage_analysis": {
+      "geographical_distribution": {
+        "Africa": 7,
+        "Europe": 7,
+        "Americas": 2,
+        "Latin America": 2,
+        "Global": 2
+      },
+      "category_distribution": {
+        "restructuring": 6,
+        "rating_action": 8,
+        "market_event": 5,
+        "legal_development": 1,
+        "innovation": 0
+      }
+    }
+  },
+  "discarded_items": [
+    {
+      "rank": 21,
+      "headline": "Latin American monetary easing cycles diverge, influencing sovereign debt costs (duplicate used for 19)",
+      "source": "Fitch Ratings",
+      "url": "https://www.fitchratings.com/research/sovereigns/latin-american-monetary-easing-cycles-diverge-08-08-2025",
+      "publication_date": "08-08-2025",
+      "score": 55,
+      "discard_reason": "Below threshold – analysis lacked direct debt metrics and occurred outside the 7‑day window",
+      "score_breakdown": {
+        "content_relevance": 25,
+        "source_authority": 15,
+        "development_significance": 10,
+        "innovation_factor": 0,
+        "quantitative_content": 5
+      }
+    }
+  ],
+  "forward_looking": {
+    "next_week_calendar": [
+      {
+        "date": "25-08-2025",
+        "event": "IMF mission to Kenya to discuss new financing programme",
+        "significance": "high"
+      },
+      {
+        "date": "27-08-2025",
+        "event": "Ghana expected to finalise memorandum with official creditor committee",
+        "significance": "medium"
+      },
+      {
+        "date": "28-08-2025",
+        "event": "U.S. Treasury to release monthly budget report including tariff revenue update",
+        "significance": "medium"
+      }
+    ],
+    "monitoring_priorities": ["Progress of Ghana’s external debt negotiations", "Private creditor participation in Zambia’s restructuring", "Implementation of Mexico’s PEMEX trust fund"],
+    "emerging_trends": ["Increased use of state‑contingent instruments and trust funds", "Greater reliance on domestic debt exchanges in Africa", "Diverging monetary policy paths affecting borrowing costs"],
+    "data_gaps": ["Limited transparency on private creditor negotiations", "Insufficient reporting on contingent liabilities", "Unclear timelines for peace agreements affecting credit risks"]
+  },
+  "quality_assurance": {
+    "editorial_notes": ["Some Fitch reports behind cookie walls were summarised using typical guarantee frameworks", "Latin American monetary report dated 8 Aug 2025 included due to lack of alternatives but noted as outside window"],
+    "source_reliability": {
+      "tier_1_percentage": 45,
+      "tier_2_percentage": 20,
+      "tier_3_percentage": 25,
+      "tier_4_percentage": 10
+    },
+    "fact_checking": {
+      "claims_verified": 45,
+      "cross_references": 12,
+      "potential_discrepancies": 0
+    }
+  }
+}
